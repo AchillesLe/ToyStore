@@ -9,5 +9,6 @@ namespace Dao
     public class Class1
     {
         //hau cho lon.you are bitch !!!!
+
     }
 }
