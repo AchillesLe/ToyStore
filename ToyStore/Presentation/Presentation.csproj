@@ -67,21 +67,6 @@
     <Compile Include="form\BanHang.designer.cs">
       <DependentUpon>BanHang.cs</DependentUpon>
     </Compile>
-    <Compile Include="form\BaoCaoDoanhSo.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="form\LoginAcounts.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="form\MainMenu.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="form\QuanLiKho.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="form\QuanLiSanPham.cs">
-      <SubType>Form</SubType>
-    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="form\BanHang.resx">
