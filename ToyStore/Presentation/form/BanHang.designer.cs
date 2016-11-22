@@ -1,4 +1,4 @@
-﻿namespace Project_beta1.form
+﻿namespace Presentation.form
 {
     partial class BanHang
     {
@@ -50,9 +50,8 @@
             this.panel1.Controls.Add(this.Close);
             this.panel1.Location = new System.Drawing.Point(-1, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(849, 30);
+            this.panel1.Size = new System.Drawing.Size(849, 32);
             this.panel1.TabIndex = 0;
-            this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
             // button1
             // 
@@ -65,7 +64,7 @@
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button1.Location = new System.Drawing.Point(6, 3);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(20, 20);
+            this.button1.Size = new System.Drawing.Size(20, 22);
             this.button1.TabIndex = 12;
             this.button1.UseVisualStyleBackColor = false;
             // 
@@ -73,7 +72,7 @@
             // 
             this.name.AutoSize = true;
             this.name.BackColor = System.Drawing.Color.Transparent;
-            this.name.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.name.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.name.ForeColor = System.Drawing.Color.White;
             this.name.Location = new System.Drawing.Point(70, 4);
             this.name.Name = "name";
@@ -92,7 +91,7 @@
             this.icon.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.icon.Location = new System.Drawing.Point(47, 2);
             this.icon.Name = "icon";
-            this.icon.Size = new System.Drawing.Size(17, 17);
+            this.icon.Size = new System.Drawing.Size(17, 18);
             this.icon.TabIndex = 10;
             this.icon.UseVisualStyleBackColor = false;
             // 
@@ -107,7 +106,7 @@
             this.Down.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Down.Location = new System.Drawing.Point(737, 4);
             this.Down.Name = "Down";
-            this.Down.Size = new System.Drawing.Size(20, 21);
+            this.Down.Size = new System.Drawing.Size(20, 23);
             this.Down.TabIndex = 9;
             this.Down.UseVisualStyleBackColor = false;
             // 
@@ -122,7 +121,7 @@
             this.minimize.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.minimize.Location = new System.Drawing.Point(779, 4);
             this.minimize.Name = "minimize";
-            this.minimize.Size = new System.Drawing.Size(20, 21);
+            this.minimize.Size = new System.Drawing.Size(20, 23);
             this.minimize.TabIndex = 8;
             this.minimize.UseVisualStyleBackColor = false;
             // 
@@ -135,34 +134,33 @@
             this.Close.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(188)))), ((int)(((byte)(156)))));
             this.Close.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(188)))), ((int)(((byte)(156)))));
             this.Close.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Close.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.Close.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.Close.ForeColor = System.Drawing.Color.White;
             this.Close.Location = new System.Drawing.Point(815, 3);
             this.Close.Name = "Close";
-            this.Close.Size = new System.Drawing.Size(20, 21);
+            this.Close.Size = new System.Drawing.Size(20, 23);
             this.Close.TabIndex = 7;
             this.Close.UseVisualStyleBackColor = false;
             // 
             // QuanLiSanPham
             // 
             this.QuanLiSanPham.BackColor = System.Drawing.Color.DarkSlateGray;
-            this.QuanLiSanPham.Location = new System.Drawing.Point(-1, 27);
+            this.QuanLiSanPham.Location = new System.Drawing.Point(-1, 29);
             this.QuanLiSanPham.Name = "QuanLiSanPham";
-            this.QuanLiSanPham.Size = new System.Drawing.Size(849, 491);
+            this.QuanLiSanPham.Size = new System.Drawing.Size(849, 529);
             this.QuanLiSanPham.TabIndex = 13;
-            this.QuanLiSanPham.Paint += new System.Windows.Forms.PaintEventHandler(this.QuanLiSanPham_Paint);
             // 
             // BanHang
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 14F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(160)))), ((int)(((byte)(133)))));
-            this.ClientSize = new System.Drawing.Size(845, 510);
+            this.ClientSize = new System.Drawing.Size(845, 549);
             this.Controls.Add(this.QuanLiSanPham);
             this.Controls.Add(this.panel1);
             this.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(188)))), ((int)(((byte)(156)))));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.MaximumSize = new System.Drawing.Size(845, 510);
+            this.MaximumSize = new System.Drawing.Size(845, 549);
             this.Name = "BanHang";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "BanHang";

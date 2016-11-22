@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Dao
 {
-    public class Class1
+    public class DoChoiDao
     {
         //hau cho lon.you are bitch !!!!
 
