@@ -9,6 +9,9 @@ namespace Dao
     public class DoChoiDao
     {
         //hau cho lon.you are bitch !!!!
+        public List<DOCHOI>DSDoChoi()
+        {
+        }
 
     }
 }
