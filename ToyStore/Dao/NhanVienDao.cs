@@ -11,7 +11,7 @@ namespace Dao
         public List<NHANVIEN>DSNhanVien()
         {
             List<NHANVIEN> listNv = new List<NHANVIEN>();
-            using (ToyEntityModel context=new ToyEntityModel())
+            using (ToyEntitesModel context =new ToyEntitesModel())
             {
                 var query = (from c in context.NHANVIENs select new { c.CMT,c.MANV,c.NGAYSINH,c.PHAI,c.TENNV,c.SDT,c.PASS});
                  foreach(var a in query)
@@ -32,7 +32,7 @@ namespace Dao
         public NHANVIEN NhanVienByID(int ID)
         {
             NHANVIEN nv = new NHANVIEN();
-            using (ToyEntityModel context = new ToyEntityModel())
+            using (ToyEntitesModel context = new ToyEntitesModel())
             {
                 var a = context.NHANVIENs.SingleOrDefault(x => x.MANV==ID);
                 nv.MANV = a.MANV;
@@ -44,6 +44,16 @@ namespace Dao
                 nv.CMT = a.CMT;
             }
             return nv;
+        }
+        public int addNV(NHANVIEN nv)
+        {
+            int s;
+            using (ToyEntitesModel context = new ToyEntitesModel())
+            {
+                var a = context.NHANVIENs.Add(nv);
+                s = context.SaveChanges();   
+            }
+            return s;
         }
     }
 }

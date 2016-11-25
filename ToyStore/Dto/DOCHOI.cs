@@ -26,6 +26,11 @@ namespace Dto
         [StringLength(15)]
         public string NUOCSX { get; set; }
 
+        [StringLength(30)]
+        public string LOAI { get; set; }
+
+        public double? GIA { get; set; }
+
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<CTHD> CTHDs { get; set; }
 

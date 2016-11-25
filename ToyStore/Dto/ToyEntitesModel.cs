@@ -5,10 +5,10 @@ namespace Dto
     using System.ComponentModel.DataAnnotations.Schema;
     using System.Linq;
 
-    public partial class ToyEntityModel : DbContext
+    public partial class ToyEntitesModel : DbContext
     {
-        public ToyEntityModel()
-            : base("name=ToyEntities")
+        public ToyEntitesModel()
+            : base("name=ToyEntitesModel")
         {
         }
 
@@ -29,8 +29,7 @@ namespace Dto
 
             modelBuilder.Entity<DOCHOI>()
                 .HasOptional(e => e.QUA)
-                .WithRequired(e => e.DOCHOI)
-                 .WillCascadeOnDelete(false);
+                .WithRequired(e => e.DOCHOI);
 
             modelBuilder.Entity<HOADON>()
                 .HasMany(e => e.CTHDs)

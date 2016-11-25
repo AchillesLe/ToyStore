@@ -11,7 +11,7 @@ namespace Dao
         public List<KHACHHANG> dsKhachHang()
         {
             List<KHACHHANG> listKhanghang = new List<KHACHHANG>();
-            using (ToyEntityModel context = new ToyEntityModel())
+            using (ToyEntitesModel context = new ToyEntitesModel())
             {
                 var query = (from c in context.KHACHHANGs select new {c.CMT,c.DIEMTL,c.MAKH,c.SDT,c.TENKH });
                 foreach (var a in query)
@@ -31,7 +31,7 @@ namespace Dao
         public KHACHHANG KhachHangById(int id)
         {
             KHACHHANG kh = new KHACHHANG();
-            using (ToyEntityModel context = new ToyEntityModel())
+            using (ToyEntitesModel context = new ToyEntitesModel())
             {
                 KHACHHANG khachhang = context.KHACHHANGs.SingleOrDefault(x=>x.MAKH==id);
             }            

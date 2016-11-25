@@ -19,5 +19,9 @@ namespace Bus
 
             return dcdao.DochoiById(ID);
         }
+        public int AddDoChoi(DOCHOI dc)
+        {
+            return dcdao.AddDoChoi(dc);
+        }
     }
 }

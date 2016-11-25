@@ -37,17 +37,7 @@ namespace Dto
 
         [StringLength(20)]
         public string PASS { get; set; }
-        public NHANVIEN(int manv,string ten,DateTime ngaysinh,string sdt, string phai,string cmt, string pass)
-        {
-            this.CMT = cmt;
-            this.MANV = manv;
-            this.NGAYSINH = ngaysinh;
-            this.PHAI = phai;
-            this.SDT = sdt;
-            this.PASS = pass;
-            this.TENNV = ten;
-           
-        }
+
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<HOADON> HOADONs { get; set; }
     }
