@@ -30,19 +30,16 @@ namespace Dao
         }
         public DOCHOI DochoiById(int ID)
         {
-            
+            DOCHOI dc = new DOCHOI();
             using (ToyEntityModel context = new ToyEntityModel())
             {
-                var a= context.DOCHOIs.SingleOrDefault(x => x.MADC == ID);
-                DOCHOI dc = new DOCHOI();
+                var a= context.DOCHOIs.Single(x => x.MADC == ID);               
                 dc.MADC = a.MADC;
                 dc.NUOCSX = a.NUOCSX;
                 dc.SL = a.SL;
-                dc.TENDC = a.TENDC;
-                return dc;
+                dc.TENDC = a.TENDC;        
             }
-                
+            return dc;
         }
-
     }
 }

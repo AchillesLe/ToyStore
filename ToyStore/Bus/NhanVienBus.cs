@@ -10,11 +10,15 @@ namespace Bus
 {
     public class NhanVienBus
     {
+        NhanVienDao nvdao = new NhanVienDao();
         public List<NHANVIEN>DSNhanVien()
         {
-            NhanVienDao nvdao = new NhanVienDao();
-
+          
             return nvdao.DSNhanVien();
+        }
+        public NHANVIEN NhanVienByID(int ID)
+        {
+            return nvdao.NhanVienByID(ID);
         }
     }
 }

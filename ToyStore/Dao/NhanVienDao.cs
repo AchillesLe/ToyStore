@@ -29,5 +29,21 @@ namespace Dao
             }
             return listNv;
         }
+        public NHANVIEN NhanVienByID(int ID)
+        {
+            NHANVIEN nv = new NHANVIEN();
+            using (ToyEntityModel context = new ToyEntityModel())
+            {
+                var a = context.NHANVIENs.SingleOrDefault(x => x.MANV==ID);
+                nv.MANV = a.MANV;
+                nv.NGAYSINH = a.NGAYSINH;
+                nv.PASS = a.PASS;
+                nv.PHAI = a.PHAI;
+                nv.TENNV = a.TENNV;
+                nv.SDT = a.SDT;
+                nv.CMT = a.CMT;
+            }
+            return nv;
+        }
     }
 }

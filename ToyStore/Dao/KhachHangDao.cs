@@ -34,8 +34,7 @@ namespace Dao
             using (ToyEntityModel context = new ToyEntityModel())
             {
                 KHACHHANG khachhang = context.KHACHHANGs.SingleOrDefault(x=>x.MAKH==id);
-            }
-                ///////to do something
+            }            
                 return kh;
         }
     }

@@ -16,5 +16,9 @@ namespace Bus
         {
             return khdao.dsKhachHang();
         }
+        public KHACHHANG KhachHangByID(int id)
+        {
+            return khdao.KhachHangById(id);
+        }
     }
 }
