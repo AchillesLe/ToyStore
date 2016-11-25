@@ -14,5 +14,10 @@ namespace Bus
         {
             return dcdao.DSDoChoi();
         }
+        public DOCHOI DochoiById(int ID)
+        {
+
+            return dcdao.DochoiById(ID);
+        }
     }
 }

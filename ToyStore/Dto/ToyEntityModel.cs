@@ -29,7 +29,8 @@ namespace Dto
 
             modelBuilder.Entity<DOCHOI>()
                 .HasOptional(e => e.QUA)
-                .WithRequired(e => e.DOCHOI);
+                .WithRequired(e => e.DOCHOI)
+                 .WillCascadeOnDelete(false);
 
             modelBuilder.Entity<HOADON>()
                 .HasMany(e => e.CTHDs)

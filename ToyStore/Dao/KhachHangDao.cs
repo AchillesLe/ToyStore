@@ -13,7 +13,7 @@ namespace Dao
             List<KHACHHANG> listKhanghang = new List<KHACHHANG>();
             using (ToyEntityModel context = new ToyEntityModel())
             {
-                var query = (from c in context.KHACHHANGs select c).ToList();
+                var query = (from c in context.KHACHHANGs select new {c.CMT,c.DIEMTL,c.MAKH,c.SDT,c.TENKH });
                 foreach (var a in query)
                 {
                     KHACHHANG kh = new KHACHHANG();
@@ -24,9 +24,9 @@ namespace Dao
                     kh.SDT = a.SDT;
 
                     listKhanghang.Add(kh);
-                }
-                return listKhanghang;
+                }             
             }
+            return listKhanghang;
         }
         public KHACHHANG KhachHangById(int id)
         {
