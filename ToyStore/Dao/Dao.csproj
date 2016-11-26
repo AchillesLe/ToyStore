@@ -51,6 +51,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="DoChoiDao.cs" />
+    <Compile Include="HoaDonDao.cs" />
     <Compile Include="KhachHangDao.cs" />
     <Compile Include="NhanVienDao.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
