@@ -7,13 +7,23 @@ using System.Linq;
 using System.Text;
 using System.Windows.Forms;
 
-namespace Project_beta1.form
+namespace Presentation
 {
-    public partial class BaoCaoDoanhSo : Form
+    public partial class Kho : Form
     {
-        public BaoCaoDoanhSo()
+        public Kho()
         {
             InitializeComponent();
+        }
+
+        private void button6_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label2_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

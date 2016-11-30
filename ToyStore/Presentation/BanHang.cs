@@ -7,7 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Windows.Forms;
 
-namespace Project_beta1.form
+namespace Presentation
 {
     public partial class BanHang : Form
     {

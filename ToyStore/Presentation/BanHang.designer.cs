@@ -1,4 +1,4 @@
-﻿namespace Project_beta1.form
+﻿namespace Presentation
 {
     partial class BanHang
     {

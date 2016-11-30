@@ -8,7 +8,7 @@ using System.Text;
 using System.Windows.Forms;
 
 
-namespace Project_beta1
+namespace Presentation
 {
     public partial class LoginAcounts : Form
     {
@@ -51,5 +51,9 @@ namespace Project_beta1
 
         }
 
+        private void panel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 }

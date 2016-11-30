@@ -55,37 +55,55 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Form1.cs">
+    <Compile Include="BanHang.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form1.Designer.cs">
-      <DependentUpon>Form1.cs</DependentUpon>
-    </Compile>
-    <Compile Include="form\BanHang.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="form\BanHang.designer.cs">
+    <Compile Include="BanHang.designer.cs">
       <DependentUpon>BanHang.cs</DependentUpon>
     </Compile>
-    <Compile Include="form\BaoCaoDoanhSo.cs">
+    <Compile Include="BaoCaoDoanhSo.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="form\LoginAcounts.cs">
+    <Compile Include="BaoCaoDoanhSo.designer.cs">
+      <DependentUpon>BaoCaoDoanhSo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LoginAcounts.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="form\MainMenu.cs">
+    <Compile Include="LoginAcounts.designer.cs">
+      <DependentUpon>LoginAcounts.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MainMenu.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="form\QuanLiKho.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="form\QuanLiSanPham.cs">
-      <SubType>Form</SubType>
+    <Compile Include="MainMenu.designer.cs">
+      <DependentUpon>MainMenu.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="form\BanHang.resx">
+    <Compile Include="QuanLiKho.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="QuanLiKho.designer.cs">
+      <DependentUpon>QuanLiKho.cs</DependentUpon>
+    </Compile>
+    <Compile Include="QuanLiSanPham.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="QuanLiSanPham.designer.cs">
+      <DependentUpon>QuanLiSanPham.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="BanHang.resx">
       <DependentUpon>BanHang.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BaoCaoDoanhSo.resx">
+      <DependentUpon>BaoCaoDoanhSo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LoginAcounts.resx">
+      <DependentUpon>LoginAcounts.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainMenu.resx">
+      <DependentUpon>MainMenu.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -96,6 +114,12 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="QuanLiKho.resx">
+      <DependentUpon>QuanLiKho.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="QuanLiSanPham.resx">
+      <DependentUpon>QuanLiSanPham.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

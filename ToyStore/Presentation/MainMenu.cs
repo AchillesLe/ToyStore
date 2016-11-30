@@ -7,7 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Windows.Forms;
 
-namespace Project_beta1
+namespace Presentation
 {
     public partial class MainMenu : Form
     {
@@ -33,11 +33,6 @@ namespace Project_beta1
             this.Close();
             Application.Exit();
         }
-        private void minimize_Click(object sender, EventArgs e)
-        {
-           
-        }
-
         private void Down_Click(object sender, EventArgs e)
         {
             this.WindowState = FormWindowState.Minimized;
@@ -49,9 +44,9 @@ namespace Project_beta1
             bt_BanHang.BackColor = TransparencyKey ; //mau button khi ko nhap vao
             bt_BaoCaoDoanhSo.BackColor = TransparencyKey;
             bt_QuanLiKho.BackColor = Color.FromArgb(26, 188, 156); //mau button khi nhap vao
-           // QuanLiBanHang.Hide();
-           //BaoCaoDoanhSo.Hide();
-            QuanLiKho.BringToFront();
+            QuanLiBanHang.Visible = false;
+            BaoCao.Visible = false;
+            QuanLiKho.Show();
             
         }
 
@@ -60,24 +55,19 @@ namespace Project_beta1
             bt_QuanLiKho.BackColor = TransparencyKey ; //mau button khi ko nhap vao
             bt_BaoCaoDoanhSo.BackColor = TransparencyKey;
             bt_BanHang.BackColor = Color.FromArgb(26, 188, 156); //mau button khi nhap vao
-            
-            QuanLiBanHang.BringToFront();
+            QuanLiKho.Visible = false;
+            BaoCao.Visible = false;
+            QuanLiBanHang.Show();
         }
-        
-        
+
         private void bt_BaoCaoDoanhSo_Click(object sender, EventArgs e)
         {
-            bt_BanHang.BackColor = TransparencyKey;
             bt_QuanLiKho.BackColor = TransparencyKey; //mau button khi ko nhap vao
+            bt_BanHang.BackColor = TransparencyKey;
             bt_BaoCaoDoanhSo.BackColor = Color.FromArgb(26, 188, 156); //mau button khi nhap vao
-                                                                       // QuanLiKho.Hide();
-                                                                       //QuanLiBanHang.Hide();
-            BaoCao.BringToFront();
-        }
-
-        private void BaoCao_Enter(object sender, EventArgs e)
-        {
-
+            QuanLiKho.Visible = false;
+            QuanLiBanHang.Visible = false;
+            BaoCao.Show();
         }
     }
 }
