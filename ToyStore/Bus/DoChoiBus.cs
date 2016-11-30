@@ -23,5 +23,13 @@ namespace Bus
         {
             return dcdao.AddDoChoi(dc);
         }
+        public bool deleteDC(int madc)
+        {
+            return dcdao.deleteDC(madc);
+        }
+        public bool editDC(DOCHOI dc)
+        {
+            return dcdao.editDC(dc);
+        }
     }
 }

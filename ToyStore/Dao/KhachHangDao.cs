@@ -37,5 +37,59 @@ namespace Dao
             }            
                 return kh;
         }
+        public int AddKH(KHACHHANG kh)
+        {
+            int s;
+            using (ToyEntitesModel cn = new ToyEntitesModel())
+            {
+                cn.KHACHHANGs.Add(kh);
+                s = cn.SaveChanges();
+            }
+            return s;
+        }
+        public bool deleteKH(int maKH)
+        {
+            bool check = false;
+            using (ToyEntitesModel con = new ToyEntitesModel())
+            {
+                try
+                {
+                    KHACHHANG kh = con.KHACHHANGs.Single(x => x.MAKH == maKH);
+                    con.KHACHHANGs.Remove(kh);
+                    if (con.SaveChanges() >= 0)
+                    {
+                        check = true;
+                    }
+                }
+                catch (Exception ex)
+                {
+                    Console.WriteLine(ex.ToString());
+                }
+
+            }
+            return check;
+        }
+        public bool editKH(KHACHHANG kh)
+        {
+            bool chek = false;
+            using (ToyEntitesModel context = new ToyEntitesModel())
+            {
+                try
+                {
+                    var s = context.KHACHHANGs.Single(x => x.MAKH == kh.MAKH);
+                    s.TENKH = kh.TENKH;
+                    s.SDT = kh.SDT;
+                    s.DIEMTL = kh.DIEMTL;
+                    s.CMT = kh.CMT;
+
+                    if (context.SaveChanges() >= 0)
+                        chek = true;
+                }catch(Exception ex)
+                {
+                    Console.WriteLine(ex.ToString());
+                }
+            }
+            return chek;
+        }
     }
 }

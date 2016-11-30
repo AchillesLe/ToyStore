@@ -55,5 +55,50 @@ namespace Dao
             }
             return s;
         }
+        public bool deleteNV(int maNV)
+        {
+            bool check = false;
+            using (ToyEntitesModel con = new ToyEntitesModel())
+            {
+                try
+                {
+                    NHANVIEN kh = con.NHANVIENs.Single(x => x.MANV == maNV);
+                    con.NHANVIENs.Remove(kh);
+                    if (con.SaveChanges() >= 0)
+                    {
+                        check = true;
+                    }
+                }
+                catch(Exception ex)
+                {
+                    Console.WriteLine(ex.ToString());
+                }
+            }
+            return check;
+        }
+        public bool editNV(NHANVIEN kh)
+        {
+            bool chek = false;
+            using (ToyEntitesModel context = new ToyEntitesModel())
+            {
+                try
+                {
+                    var s = context.NHANVIENs.Single(x => x.MANV == kh.MANV);
+                    s.TENNV = kh.TENNV;
+                    s.SDT = kh.SDT;
+                    s.PHAI = kh.PHAI;
+                    s.CMT = kh.CMT;
+                    s.NGAYSINH = kh.NGAYSINH;
+                    s.PASS = kh.PASS;
+                    if (context.SaveChanges() >= 0)
+                        chek = true;
+                }
+                catch (Exception ex)
+                {
+                    Console.WriteLine(ex.ToString());
+                }
+            }
+            return chek;
+        }
     }
 }

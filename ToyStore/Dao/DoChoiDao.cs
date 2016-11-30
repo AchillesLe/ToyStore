@@ -50,10 +50,62 @@ namespace Dao
             int s;
             using (ToyEntitesModel context = new ToyEntitesModel())
             {
-                context.DOCHOIs.Add(dc);
-                s = context.SaveChanges();            
+                //try
+                //{
+                    context.DOCHOIs.Add(dc);
+                    s = context.SaveChanges();
+                //}
+                //catch (Exception e)
+                //{
+                //    Console.WriteLine(e.ToString());
+                //}          
             }
             return s;
         }
+        public bool deleteDC(int maDC)
+        {
+            bool check = false;
+            using (ToyEntitesModel con = new ToyEntitesModel())
+            {
+                try
+                {
+                    DOCHOI hd = con.DOCHOIs.Single(x => x.MADC == maDC);
+                    con.DOCHOIs.Remove(hd);
+                    if (con.SaveChanges() >= 0)
+                    {
+                        check = true;
+                    }
+                }
+                catch(Exception ex)
+                {
+                    Console.WriteLine(ex.ToString());
+                }
+            }
+            return check;
+        }
+        public bool editDC(DOCHOI dc)
+        {
+            bool chek = false;
+            using (ToyEntitesModel context = new ToyEntitesModel())
+            {
+                try
+                {
+                    var s = context.DOCHOIs.Single(x => x.MADC == dc.MADC);
+                    s.TENDC = dc.TENDC;
+                    s.SL = dc.SL;
+                    s.NUOCSX = dc.NUOCSX;
+                    s.LOAI = dc.LOAI;
+                    s.GIA = dc.GIA;
+                    if (context.SaveChanges() >= 0)
+                        chek = true;
+                }
+                catch(Exception ec)
+                {
+                    Console.WriteLine(ec.ToString());
+                }
+            }
+            return chek;
+        }
+
     }
 }

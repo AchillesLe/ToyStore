@@ -9,7 +9,7 @@ namespace Dao
 {
     public class HoaDonDao
     {
-        public List<HOADON> dsKhachHang()
+        public List<HOADON> dsHoaDon()
         {
             List<HOADON> listHD = new List<HOADON>();
             using (ToyEntitesModel context = new ToyEntitesModel())
@@ -44,9 +44,57 @@ namespace Dao
           
             return hd;
         }
-        //public int AddHoaDon(HOADON hd)
-        //{
+        public int AddHoaDon(HOADON hd)
+        {
+            int s;
+            using (ToyEntitesModel cn = new ToyEntitesModel())
+            {
+                cn.HOADONs.Add(hd);
+                s = cn.SaveChanges();
+            }
+            return s;
+        }
+        public bool deleteHD(int maHD)
+        {
+            bool check = false;
+            using (ToyEntitesModel con = new ToyEntitesModel())
+            {
+                try
+                {
 
-        //}
+                    HOADON hd = con.HOADONs.Single(x => x.MAHD == maHD);
+                    con.HOADONs.Remove(hd);
+                    if (con.SaveChanges() >= 0)
+                    {
+                        check = true;
+                    }
+                }catch(Exception ex)
+                {
+                    Console.WriteLine(ex.ToString());
+                }           
+            }
+                return check;
+        }
+        public bool editHD(HOADON hd)
+        {
+            bool chek = false;
+            using (ToyEntitesModel context=new ToyEntitesModel())
+            {
+                try
+                {
+                    var s = context.HOADONs.Single(x => x.MAHD == hd.MAHD);
+                    s.MAKH = hd.MAKH;
+                    s.MANV = hd.MANV;
+                    s.NGAYHD = hd.NGAYHD;
+                    s.TRIGIA = hd.TRIGIA;
+                    if (context.SaveChanges() >= 0)
+                        chek = true;
+                }catch(Exception ex)
+                {
+                    Console.WriteLine(ex.ToString());
+                }
+            }
+                return chek;
+        }
     }
 }

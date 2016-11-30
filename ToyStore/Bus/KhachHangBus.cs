@@ -20,5 +20,17 @@ namespace Bus
         {
             return khdao.KhachHangById(id);
         }
+        public int addKh(KHACHHANG kh)
+        {
+            return khdao.AddKH(kh);
+        }
+        public bool delete(int makh)
+        {
+            return khdao.deleteKH(makh);
+        }
+        public bool edit(KHACHHANG kh)
+        {
+            return khdao.editKH(kh);
+        }
     }
 }
