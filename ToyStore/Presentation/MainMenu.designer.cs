@@ -44,28 +44,28 @@
             this.button4 = new System.Windows.Forms.Button();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.label5 = new System.Windows.Forms.Label();
+            this.QuanLiKho = new System.Windows.Forms.Panel();
+            this.button1 = new System.Windows.Forms.Button();
+            this.button2 = new System.Windows.Forms.Button();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.label4 = new System.Windows.Forms.Label();
             this.Close = new System.Windows.Forms.Button();
             this.minimize = new System.Windows.Forms.Button();
             this.Down = new System.Windows.Forms.Button();
             this.name = new System.Windows.Forms.Label();
             this.icon = new System.Windows.Forms.Button();
-            this.QuanLiKho = new System.Windows.Forms.Panel();
-            this.BaoCao = new System.Windows.Forms.GroupBox();
-            this.label2 = new System.Windows.Forms.Label();
-            this.button5 = new System.Windows.Forms.Button();
-            this.pictureBox3 = new System.Windows.Forms.PictureBox();
-            this.button6 = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.label4 = new System.Windows.Forms.Label();
+            this.BaoCaoDoanhSo = new System.Windows.Forms.Panel();
+            this.button7 = new System.Windows.Forms.Button();
+            this.button9 = new System.Windows.Forms.Button();
+            this.pictureBox4 = new System.Windows.Forms.PictureBox();
+            this.label6 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.QuanLiBanHang.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.QuanLiKho.SuspendLayout();
-            this.BaoCao.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.BaoCaoDoanhSo.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -103,8 +103,12 @@
             this.button8.BackColor = System.Drawing.Color.Transparent;
             this.button8.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button8.BackgroundImage")));
             this.button8.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.button8.Enabled = false;
             this.button8.FlatAppearance.BorderSize = 0;
+            this.button8.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.button8.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.button8.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button8.ForeColor = System.Drawing.Color.Transparent;
             this.button8.Location = new System.Drawing.Point(5, 12);
             this.button8.Name = "button8";
             this.button8.Size = new System.Drawing.Size(20, 20);
@@ -236,9 +240,9 @@
             this.QuanLiBanHang.Controls.Add(this.button4);
             this.QuanLiBanHang.Controls.Add(this.pictureBox2);
             this.QuanLiBanHang.Controls.Add(this.label5);
-            this.QuanLiBanHang.Location = new System.Drawing.Point(202, 26);
+            this.QuanLiBanHang.Location = new System.Drawing.Point(231, 38);
             this.QuanLiBanHang.Name = "QuanLiBanHang";
-            this.QuanLiBanHang.Size = new System.Drawing.Size(645, 491);
+            this.QuanLiBanHang.Size = new System.Drawing.Size(214, 145);
             this.QuanLiBanHang.TabIndex = 1;
             // 
             // button3
@@ -250,10 +254,10 @@
             this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.button3.ForeColor = System.Drawing.Color.DarkSlateGray;
-            this.button3.Location = new System.Drawing.Point(1, 99);
+            this.button3.Location = new System.Drawing.Point(4, 99);
             this.button3.Name = "button3";
             this.button3.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.button3.Size = new System.Drawing.Size(642, 30);
+            this.button3.Size = new System.Drawing.Size(639, 30);
             this.button3.TabIndex = 14;
             this.button3.Text = "         Xem Chi Tiết Hóa Đơn";
             this.button3.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -268,10 +272,10 @@
             this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.button4.ForeColor = System.Drawing.Color.DarkSlateGray;
-            this.button4.Location = new System.Drawing.Point(0, 51);
+            this.button4.Location = new System.Drawing.Point(4, 51);
             this.button4.Name = "button4";
             this.button4.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.button4.Size = new System.Drawing.Size(640, 30);
+            this.button4.Size = new System.Drawing.Size(636, 30);
             this.button4.TabIndex = 12;
             this.button4.Text = "         Hóa Đơn Bán Lẻ";
             this.button4.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -300,6 +304,77 @@
             this.label5.TabIndex = 11;
             this.label5.Text = "Bán Hàng";
             // 
+            // QuanLiKho
+            // 
+            this.QuanLiKho.BackColor = System.Drawing.SystemColors.Menu;
+            this.QuanLiKho.Controls.Add(this.button1);
+            this.QuanLiKho.Controls.Add(this.button2);
+            this.QuanLiKho.Controls.Add(this.pictureBox1);
+            this.QuanLiKho.Controls.Add(this.label4);
+            this.QuanLiKho.Location = new System.Drawing.Point(451, 39);
+            this.QuanLiKho.Name = "QuanLiKho";
+            this.QuanLiKho.Size = new System.Drawing.Size(261, 144);
+            this.QuanLiKho.TabIndex = 7;
+            // 
+            // button1
+            // 
+            this.button1.BackColor = System.Drawing.Color.Transparent;
+            this.button1.FlatAppearance.BorderSize = 0;
+            this.button1.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(188)))), ((int)(((byte)(156)))));
+            this.button1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(188)))), ((int)(((byte)(156)))));
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.button1.ForeColor = System.Drawing.Color.DarkSlateGray;
+            this.button1.Location = new System.Drawing.Point(3, 99);
+            this.button1.Name = "button1";
+            this.button1.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.button1.Size = new System.Drawing.Size(645, 30);
+            this.button1.TabIndex = 10;
+            this.button1.Text = "         Xem Chi Tiết Kho ";
+            this.button1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button1.UseVisualStyleBackColor = false;
+            // 
+            // button2
+            // 
+            this.button2.BackColor = System.Drawing.Color.Transparent;
+            this.button2.FlatAppearance.BorderSize = 0;
+            this.button2.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(188)))), ((int)(((byte)(156)))));
+            this.button2.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(188)))), ((int)(((byte)(156)))));
+            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.button2.ForeColor = System.Drawing.Color.DarkSlateGray;
+            this.button2.Location = new System.Drawing.Point(3, 51);
+            this.button2.Name = "button2";
+            this.button2.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.button2.Size = new System.Drawing.Size(639, 30);
+            this.button2.TabIndex = 8;
+            this.button2.Text = "         Xem Chi Tiết Theo Sản Phẩm ";
+            this.button2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button2.UseVisualStyleBackColor = false;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox1.BackgroundImage")));
+            this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pictureBox1.Location = new System.Drawing.Point(6, 3);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(30, 30);
+            this.pictureBox1.TabIndex = 9;
+            this.pictureBox1.TabStop = false;
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.BackColor = System.Drawing.Color.Transparent;
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.label4.ForeColor = System.Drawing.Color.DarkSlateGray;
+            this.label4.Location = new System.Drawing.Point(33, 10);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(126, 24);
+            this.label4.TabIndex = 8;
+            this.label4.Text = "Quản Lí Kho";
+            // 
             // Close
             // 
             this.Close.BackColor = System.Drawing.Color.Transparent;
@@ -323,6 +398,7 @@
             this.minimize.BackColor = System.Drawing.Color.Transparent;
             this.minimize.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("minimize.BackgroundImage")));
             this.minimize.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.minimize.Enabled = false;
             this.minimize.FlatAppearance.BorderSize = 0;
             this.minimize.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(188)))), ((int)(((byte)(156)))));
             this.minimize.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(188)))), ((int)(((byte)(156)))));
@@ -376,148 +452,76 @@
             this.icon.TabIndex = 5;
             this.icon.UseVisualStyleBackColor = false;
             // 
-            // QuanLiKho
+            // BaoCaoDoanhSo
             // 
-            this.QuanLiKho.BackColor = System.Drawing.SystemColors.Menu;
-            this.QuanLiKho.Controls.Add(this.BaoCao);
-            this.QuanLiKho.Controls.Add(this.button1);
-            this.QuanLiKho.Controls.Add(this.button2);
-            this.QuanLiKho.Controls.Add(this.pictureBox1);
-            this.QuanLiKho.Controls.Add(this.label4);
-            this.QuanLiKho.Location = new System.Drawing.Point(202, 26);
-            this.QuanLiKho.Name = "QuanLiKho";
-            this.QuanLiKho.Size = new System.Drawing.Size(645, 491);
-            this.QuanLiKho.TabIndex = 7;
+            this.BaoCaoDoanhSo.BackColor = System.Drawing.SystemColors.MenuBar;
+            this.BaoCaoDoanhSo.Controls.Add(this.button7);
+            this.BaoCaoDoanhSo.Controls.Add(this.button9);
+            this.BaoCaoDoanhSo.Controls.Add(this.pictureBox4);
+            this.BaoCaoDoanhSo.Controls.Add(this.label6);
+            this.BaoCaoDoanhSo.Location = new System.Drawing.Point(454, 189);
+            this.BaoCaoDoanhSo.Name = "BaoCaoDoanhSo";
+            this.BaoCaoDoanhSo.Size = new System.Drawing.Size(261, 139);
+            this.BaoCaoDoanhSo.TabIndex = 8;
             // 
-            // BaoCao
+            // button7
             // 
-            this.BaoCao.Controls.Add(this.label2);
-            this.BaoCao.Controls.Add(this.button5);
-            this.BaoCao.Controls.Add(this.pictureBox3);
-            this.BaoCao.Controls.Add(this.button6);
-            this.BaoCao.Location = new System.Drawing.Point(2, 3);
-            this.BaoCao.Name = "BaoCao";
-            this.BaoCao.Size = new System.Drawing.Size(795, 503);
-            this.BaoCao.TabIndex = 17;
-            this.BaoCao.TabStop = false;
+            this.button7.BackColor = System.Drawing.Color.Transparent;
+            this.button7.FlatAppearance.BorderSize = 0;
+            this.button7.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(188)))), ((int)(((byte)(156)))));
+            this.button7.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(188)))), ((int)(((byte)(156)))));
+            this.button7.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button7.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.button7.ForeColor = System.Drawing.Color.DarkSlateGray;
+            this.button7.Location = new System.Drawing.Point(3, 107);
+            this.button7.Name = "button7";
+            this.button7.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.button7.Size = new System.Drawing.Size(645, 30);
+            this.button7.TabIndex = 16;
+            this.button7.Text = "         Xem Doanh Số Tháng";
+            this.button7.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button7.UseVisualStyleBackColor = false;
             // 
-            // label2
+            // button9
             // 
-            this.label2.AutoSize = true;
-            this.label2.BackColor = System.Drawing.Color.Transparent;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.label2.ForeColor = System.Drawing.Color.DarkSlateGray;
-            this.label2.Location = new System.Drawing.Point(33, 9);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(187, 24);
-            this.label2.TabIndex = 8;
-            this.label2.Text = "Báo Cáo Doanh Số";
+            this.button9.BackColor = System.Drawing.Color.Transparent;
+            this.button9.FlatAppearance.BorderSize = 0;
+            this.button9.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(188)))), ((int)(((byte)(156)))));
+            this.button9.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(188)))), ((int)(((byte)(156)))));
+            this.button9.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button9.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.button9.ForeColor = System.Drawing.Color.DarkSlateGray;
+            this.button9.Location = new System.Drawing.Point(3, 59);
+            this.button9.Name = "button9";
+            this.button9.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.button9.Size = new System.Drawing.Size(642, 30);
+            this.button9.TabIndex = 15;
+            this.button9.Text = "         Xem Doanh Số Theo Ngày";
+            this.button9.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button9.UseVisualStyleBackColor = false;
             // 
-            // button5
+            // pictureBox4
             // 
-            this.button5.BackColor = System.Drawing.Color.Transparent;
-            this.button5.FlatAppearance.BorderSize = 0;
-            this.button5.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(188)))), ((int)(((byte)(156)))));
-            this.button5.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(188)))), ((int)(((byte)(156)))));
-            this.button5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.button5.ForeColor = System.Drawing.Color.DarkSlateGray;
-            this.button5.Location = new System.Drawing.Point(3, 100);
-            this.button5.Name = "button5";
-            this.button5.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.button5.Size = new System.Drawing.Size(642, 30);
-            this.button5.TabIndex = 16;
-            this.button5.Text = "         Xem Doanh Số Tháng";
-            this.button5.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button5.UseVisualStyleBackColor = false;
+            this.pictureBox4.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox4.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox4.BackgroundImage")));
+            this.pictureBox4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pictureBox4.Location = new System.Drawing.Point(6, 11);
+            this.pictureBox4.Name = "pictureBox4";
+            this.pictureBox4.Size = new System.Drawing.Size(30, 30);
+            this.pictureBox4.TabIndex = 9;
+            this.pictureBox4.TabStop = false;
             // 
-            // pictureBox3
+            // label6
             // 
-            this.pictureBox3.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox3.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox3.BackgroundImage")));
-            this.pictureBox3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox3.Location = new System.Drawing.Point(6, 2);
-            this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(30, 30);
-            this.pictureBox3.TabIndex = 9;
-            this.pictureBox3.TabStop = false;
-            // 
-            // button6
-            // 
-            this.button6.BackColor = System.Drawing.Color.Transparent;
-            this.button6.FlatAppearance.BorderSize = 0;
-            this.button6.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(188)))), ((int)(((byte)(156)))));
-            this.button6.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(188)))), ((int)(((byte)(156)))));
-            this.button6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button6.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.button6.ForeColor = System.Drawing.Color.DarkSlateGray;
-            this.button6.Location = new System.Drawing.Point(2, 52);
-            this.button6.Name = "button6";
-            this.button6.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.button6.Size = new System.Drawing.Size(640, 30);
-            this.button6.TabIndex = 15;
-            this.button6.Text = "         Xem Doanh Số Theo Ngày";
-            this.button6.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button6.UseVisualStyleBackColor = false;
-            // 
-            // button1
-            // 
-            this.button1.BackColor = System.Drawing.Color.Transparent;
-            this.button1.FlatAppearance.BorderSize = 0;
-            this.button1.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(188)))), ((int)(((byte)(156)))));
-            this.button1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(188)))), ((int)(((byte)(156)))));
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.button1.ForeColor = System.Drawing.Color.DarkSlateGray;
-            this.button1.Location = new System.Drawing.Point(3, 99);
-            this.button1.Name = "button1";
-            this.button1.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.button1.Size = new System.Drawing.Size(642, 30);
-            this.button1.TabIndex = 10;
-            this.button1.Text = "         Xem Chi Tiết Kho ";
-            this.button1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button1.UseVisualStyleBackColor = false;
-            // 
-            // button2
-            // 
-            this.button2.BackColor = System.Drawing.Color.Transparent;
-            this.button2.FlatAppearance.BorderSize = 0;
-            this.button2.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(188)))), ((int)(((byte)(156)))));
-            this.button2.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(188)))), ((int)(((byte)(156)))));
-            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.button2.ForeColor = System.Drawing.Color.DarkSlateGray;
-            this.button2.Location = new System.Drawing.Point(2, 51);
-            this.button2.Name = "button2";
-            this.button2.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.button2.Size = new System.Drawing.Size(640, 30);
-            this.button2.TabIndex = 8;
-            this.button2.Text = "         Xem Chi Tiết Theo Sản Phẩm ";
-            this.button2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button2.UseVisualStyleBackColor = false;
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox1.BackgroundImage")));
-            this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox1.Location = new System.Drawing.Point(6, 3);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(30, 30);
-            this.pictureBox1.TabIndex = 9;
-            this.pictureBox1.TabStop = false;
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.BackColor = System.Drawing.Color.Transparent;
-            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.label4.ForeColor = System.Drawing.Color.DarkSlateGray;
-            this.label4.Location = new System.Drawing.Point(33, 10);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(126, 24);
-            this.label4.TabIndex = 8;
-            this.label4.Text = "Quản Lí Kho";
+            this.label6.AutoSize = true;
+            this.label6.BackColor = System.Drawing.Color.Transparent;
+            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.label6.ForeColor = System.Drawing.Color.DarkSlateGray;
+            this.label6.Location = new System.Drawing.Point(33, 18);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(187, 24);
+            this.label6.TabIndex = 8;
+            this.label6.Text = "Báo Cáo Doanh Số";
             // 
             // MainMenu
             // 
@@ -525,13 +529,14 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(160)))), ((int)(((byte)(133)))));
             this.ClientSize = new System.Drawing.Size(845, 510);
+            this.Controls.Add(this.BaoCaoDoanhSo);
             this.Controls.Add(this.name);
             this.Controls.Add(this.icon);
             this.Controls.Add(this.Down);
             this.Controls.Add(this.minimize);
+            this.Controls.Add(this.QuanLiKho);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.Close);
-            this.Controls.Add(this.QuanLiKho);
             this.Controls.Add(this.QuanLiBanHang);
             this.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(188)))), ((int)(((byte)(156)))));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
@@ -548,10 +553,10 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.QuanLiKho.ResumeLayout(false);
             this.QuanLiKho.PerformLayout();
-            this.BaoCao.ResumeLayout(false);
-            this.BaoCao.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            this.BaoCaoDoanhSo.ResumeLayout(false);
+            this.BaoCaoDoanhSo.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -584,10 +589,10 @@
         private System.Windows.Forms.Button button4;
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.GroupBox BaoCao;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Button button5;
-        private System.Windows.Forms.PictureBox pictureBox3;
-        private System.Windows.Forms.Button button6;
+        private System.Windows.Forms.Panel BaoCaoDoanhSo;
+        private System.Windows.Forms.Button button7;
+        private System.Windows.Forms.Button button9;
+        private System.Windows.Forms.PictureBox pictureBox4;
+        private System.Windows.Forms.Label label6;
     }
 }
