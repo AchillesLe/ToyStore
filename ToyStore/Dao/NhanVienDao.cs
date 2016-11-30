@@ -101,5 +101,24 @@ namespace Dao
             return chek;
             //change
         }
+        public bool checkPass(int manv,string pass)
+        {
+            bool check = false;
+            using (ToyEntitesModel context = new ToyEntitesModel())
+            {
+                try
+                {
+
+                    var query = from c in context.NHANVIENs where c.MANV == manv && c.PASS == pass select c;
+                    if (query != null)
+                        check = true;
+                }
+                catch (Exception ex)
+                {
+                    Console.WriteLine(ex.ToString());
+                }
+            }
+                return check;
+        }
     }
 }

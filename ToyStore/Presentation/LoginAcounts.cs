@@ -6,6 +6,7 @@ using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Windows.Forms;
+using Bus;
 
 
 namespace Presentation
@@ -18,6 +19,8 @@ namespace Presentation
         public LoginAcounts()
         {
             InitializeComponent();
+            tb_matKhau.UseSystemPasswordChar = true;
+          //  tb_matKhau.PasswordChar = '*';
         }
         protected override void WndProc(ref Message message)
         {
@@ -36,24 +39,30 @@ namespace Presentation
             this.Close();
 
         }
-        private void bt_enter_MouseClick(object sender, MouseEventArgs e)
+        public void bt_enter_MouseClick(object sender, MouseEventArgs e)
         {
-            //Hide LoginAcountsForm
-            Visible = false;
-            ShowInTaskbar = false;
-            //Show MainMenuForm
-            MainMenu mainMenu = new MainMenu();
-            mainMenu.Show();
-        }
+            NhanVienBus nvBus = new NhanVienBus();
+            int manv = Int32.Parse(tb_TenDangNhap.Text);
+            string pass = tb_matKhau.Text;
+            if (nvBus.checkNV(manv, pass) == true)
+            {
+                MainMenu mainMenu = new MainMenu();
+                mainMenu.Show();
+                this.Visible = false;
+            }
+            else
+            {
+                MessageBox.Show("Tên đăng nhập hoặc mật khẩu không đúng.Hãy kiểm tra và nhập lại!");
+                tb_matKhau.Text = "";
 
-        private void LoginAcounts_Load(object sender, EventArgs e)
+            }
+            
+        }    
+
+        private void tb_matKhau_KeyDown(object sender, KeyEventArgs e)
         {
-
-        }
-
-        private void panel1_Paint(object sender, PaintEventArgs e)
-        {
-
+            if (e.KeyCode == Keys.Enter)
+                bt_enter_MouseClick(null, null);
         }
     }
 }

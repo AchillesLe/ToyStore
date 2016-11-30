@@ -12,8 +12,8 @@ namespace Dto
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
         public KHACHHANG()
         {
-           // HOADONs = new HashSet<HOADON>();
-            HOADONs = new List<HOADON>();
+            HOADONs = new HashSet<HOADON>();
+           // HOADONs = new List<HOADON>();
         }
 
         [Key]
@@ -31,7 +31,7 @@ namespace Dto
         public int? DIEMTL { get; set; }
 
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-      //  public virtual ICollection<HOADON> HOADONs { get; set; }
-        public virtual List<HOADON> HOADONs { get; set; }
+        public virtual ICollection<HOADON> HOADONs { get; set; }
+        //public virtual List<HOADON> HOADONs { get; set; }
     }
 }
