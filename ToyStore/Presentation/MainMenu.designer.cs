@@ -59,6 +59,16 @@
             this.button9 = new System.Windows.Forms.Button();
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.label6 = new System.Windows.Forms.Label();
+            this.QuanLiSanPham = new System.Windows.Forms.Panel();
+            this.button5 = new System.Windows.Forms.Button();
+            this.button6 = new System.Windows.Forms.Button();
+            this.pictureBox3 = new System.Windows.Forms.PictureBox();
+            this.label2 = new System.Windows.Forms.Label();
+            this.QuanLiNhanVien = new System.Windows.Forms.Panel();
+            this.button10 = new System.Windows.Forms.Button();
+            this.button11 = new System.Windows.Forms.Button();
+            this.pictureBox5 = new System.Windows.Forms.PictureBox();
+            this.label7 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.QuanLiBanHang.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
@@ -66,6 +76,10 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.BaoCaoDoanhSo.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
+            this.QuanLiSanPham.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
+            this.QuanLiNhanVien.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -83,7 +97,7 @@
             this.panel1.Controls.Add(this.bt_BanHang);
             this.panel1.Location = new System.Drawing.Point(0, 26);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(203, 491);
+            this.panel1.Size = new System.Drawing.Size(203, 436);
             this.panel1.TabIndex = 0;
             // 
             // label3
@@ -121,7 +135,7 @@
             this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(24, 460);
+            this.label1.Location = new System.Drawing.Point(23, 405);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(70, 18);
             this.label1.TabIndex = 7;
@@ -134,7 +148,7 @@
             this.user.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.user.FlatAppearance.BorderSize = 0;
             this.user.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.user.Location = new System.Drawing.Point(5, 458);
+            this.user.Location = new System.Drawing.Point(4, 403);
             this.user.Name = "user";
             this.user.Size = new System.Drawing.Size(20, 20);
             this.user.TabIndex = 5;
@@ -157,6 +171,7 @@
             this.bt_QuanLiNhanVien.Text = "        Quản Lí Nhân Viên";
             this.bt_QuanLiNhanVien.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.bt_QuanLiNhanVien.UseVisualStyleBackColor = false;
+            this.bt_QuanLiNhanVien.Click += new System.EventHandler(this.bt_QuanLiNhanVien_Click);
             // 
             // bt_QuanLiSanPham
             // 
@@ -175,6 +190,7 @@
             this.bt_QuanLiSanPham.Text = "        Quản Lí Sản Phẩm";
             this.bt_QuanLiSanPham.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.bt_QuanLiSanPham.UseVisualStyleBackColor = false;
+            this.bt_QuanLiSanPham.Click += new System.EventHandler(this.bt_QuanLiSanPham_Click);
             // 
             // bt_BaoCaoDoanhSo
             // 
@@ -240,9 +256,9 @@
             this.QuanLiBanHang.Controls.Add(this.button4);
             this.QuanLiBanHang.Controls.Add(this.pictureBox2);
             this.QuanLiBanHang.Controls.Add(this.label5);
-            this.QuanLiBanHang.Location = new System.Drawing.Point(231, 38);
+            this.QuanLiBanHang.Location = new System.Drawing.Point(220, 28);
             this.QuanLiBanHang.Name = "QuanLiBanHang";
-            this.QuanLiBanHang.Size = new System.Drawing.Size(214, 145);
+            this.QuanLiBanHang.Size = new System.Drawing.Size(244, 130);
             this.QuanLiBanHang.TabIndex = 1;
             // 
             // button3
@@ -311,9 +327,9 @@
             this.QuanLiKho.Controls.Add(this.button2);
             this.QuanLiKho.Controls.Add(this.pictureBox1);
             this.QuanLiKho.Controls.Add(this.label4);
-            this.QuanLiKho.Location = new System.Drawing.Point(451, 39);
+            this.QuanLiKho.Location = new System.Drawing.Point(470, 29);
             this.QuanLiKho.Name = "QuanLiKho";
-            this.QuanLiKho.Size = new System.Drawing.Size(261, 144);
+            this.QuanLiKho.Size = new System.Drawing.Size(261, 129);
             this.QuanLiKho.TabIndex = 7;
             // 
             // button1
@@ -459,9 +475,9 @@
             this.BaoCaoDoanhSo.Controls.Add(this.button9);
             this.BaoCaoDoanhSo.Controls.Add(this.pictureBox4);
             this.BaoCaoDoanhSo.Controls.Add(this.label6);
-            this.BaoCaoDoanhSo.Location = new System.Drawing.Point(454, 189);
+            this.BaoCaoDoanhSo.Location = new System.Drawing.Point(220, 161);
             this.BaoCaoDoanhSo.Name = "BaoCaoDoanhSo";
-            this.BaoCaoDoanhSo.Size = new System.Drawing.Size(261, 139);
+            this.BaoCaoDoanhSo.Size = new System.Drawing.Size(244, 139);
             this.BaoCaoDoanhSo.TabIndex = 8;
             // 
             // button7
@@ -523,12 +539,160 @@
             this.label6.TabIndex = 8;
             this.label6.Text = "Báo Cáo Doanh Số";
             // 
+            // QuanLiSanPham
+            // 
+            this.QuanLiSanPham.BackColor = System.Drawing.SystemColors.Menu;
+            this.QuanLiSanPham.Controls.Add(this.button5);
+            this.QuanLiSanPham.Controls.Add(this.button6);
+            this.QuanLiSanPham.Controls.Add(this.pictureBox3);
+            this.QuanLiSanPham.Controls.Add(this.label2);
+            this.QuanLiSanPham.Location = new System.Drawing.Point(470, 164);
+            this.QuanLiSanPham.Name = "QuanLiSanPham";
+            this.QuanLiSanPham.Size = new System.Drawing.Size(217, 139);
+            this.QuanLiSanPham.TabIndex = 9;
+            // 
+            // button5
+            // 
+            this.button5.BackColor = System.Drawing.Color.Transparent;
+            this.button5.FlatAppearance.BorderSize = 0;
+            this.button5.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(188)))), ((int)(((byte)(156)))));
+            this.button5.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(188)))), ((int)(((byte)(156)))));
+            this.button5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.button5.ForeColor = System.Drawing.Color.DarkSlateGray;
+            this.button5.Location = new System.Drawing.Point(0, 107);
+            this.button5.Name = "button5";
+            this.button5.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.button5.Size = new System.Drawing.Size(631, 30);
+            this.button5.TabIndex = 10;
+            this.button5.Text = "        Tìm Kiếm Thông Tin Sản Phẩm ";
+            this.button5.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button5.UseVisualStyleBackColor = false;
+            // 
+            // button6
+            // 
+            this.button6.BackColor = System.Drawing.Color.Transparent;
+            this.button6.FlatAppearance.BorderSize = 0;
+            this.button6.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(188)))), ((int)(((byte)(156)))));
+            this.button6.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(188)))), ((int)(((byte)(156)))));
+            this.button6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button6.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.button6.ForeColor = System.Drawing.Color.DarkSlateGray;
+            this.button6.Location = new System.Drawing.Point(0, 59);
+            this.button6.Name = "button6";
+            this.button6.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.button6.Size = new System.Drawing.Size(631, 30);
+            this.button6.TabIndex = 8;
+            this.button6.Text = "         Cập Nhật Giá ";
+            this.button6.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button6.UseVisualStyleBackColor = false;
+            // 
+            // pictureBox3
+            // 
+            this.pictureBox3.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox3.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox3.BackgroundImage")));
+            this.pictureBox3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pictureBox3.ErrorImage = ((System.Drawing.Image)(resources.GetObject("pictureBox3.ErrorImage")));
+            this.pictureBox3.InitialImage = ((System.Drawing.Image)(resources.GetObject("pictureBox3.InitialImage")));
+            this.pictureBox3.Location = new System.Drawing.Point(6, 11);
+            this.pictureBox3.Name = "pictureBox3";
+            this.pictureBox3.Size = new System.Drawing.Size(30, 30);
+            this.pictureBox3.TabIndex = 9;
+            this.pictureBox3.TabStop = false;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.BackColor = System.Drawing.Color.Transparent;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.label2.ForeColor = System.Drawing.Color.DarkSlateGray;
+            this.label2.Location = new System.Drawing.Point(33, 18);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(184, 24);
+            this.label2.TabIndex = 8;
+            this.label2.Text = "Quản Lí Sản Phẩm";
+            // 
+            // QuanLiNhanVien
+            // 
+            this.QuanLiNhanVien.BackColor = System.Drawing.SystemColors.Menu;
+            this.QuanLiNhanVien.Controls.Add(this.button10);
+            this.QuanLiNhanVien.Controls.Add(this.button11);
+            this.QuanLiNhanVien.Controls.Add(this.pictureBox5);
+            this.QuanLiNhanVien.Controls.Add(this.label7);
+            this.QuanLiNhanVien.Location = new System.Drawing.Point(220, 304);
+            this.QuanLiNhanVien.Name = "QuanLiNhanVien";
+            this.QuanLiNhanVien.Size = new System.Drawing.Size(218, 139);
+            this.QuanLiNhanVien.TabIndex = 11;
+            // 
+            // button10
+            // 
+            this.button10.BackColor = System.Drawing.Color.Transparent;
+            this.button10.FlatAppearance.BorderSize = 0;
+            this.button10.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(188)))), ((int)(((byte)(156)))));
+            this.button10.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(188)))), ((int)(((byte)(156)))));
+            this.button10.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button10.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.button10.ForeColor = System.Drawing.Color.DarkSlateGray;
+            this.button10.Location = new System.Drawing.Point(0, 107);
+            this.button10.Name = "button10";
+            this.button10.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.button10.Size = new System.Drawing.Size(631, 30);
+            this.button10.TabIndex = 10;
+            this.button10.Text = "        Xem Chi Tiết Nhân Viên";
+            this.button10.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button10.UseVisualStyleBackColor = false;
+            // 
+            // button11
+            // 
+            this.button11.BackColor = System.Drawing.Color.Transparent;
+            this.button11.FlatAppearance.BorderSize = 0;
+            this.button11.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(188)))), ((int)(((byte)(156)))));
+            this.button11.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(188)))), ((int)(((byte)(156)))));
+            this.button11.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button11.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.button11.ForeColor = System.Drawing.Color.DarkSlateGray;
+            this.button11.Location = new System.Drawing.Point(0, 59);
+            this.button11.Name = "button11";
+            this.button11.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.button11.Size = new System.Drawing.Size(631, 30);
+            this.button11.TabIndex = 8;
+            this.button11.Text = "         Thêm Nhân Viên Mới ";
+            this.button11.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button11.UseVisualStyleBackColor = false;
+            // 
+            // pictureBox5
+            // 
+            this.pictureBox5.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox5.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox5.BackgroundImage")));
+            this.pictureBox5.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pictureBox5.ErrorImage = ((System.Drawing.Image)(resources.GetObject("pictureBox5.ErrorImage")));
+            this.pictureBox5.InitialImage = ((System.Drawing.Image)(resources.GetObject("pictureBox5.InitialImage")));
+            this.pictureBox5.Location = new System.Drawing.Point(6, 12);
+            this.pictureBox5.Name = "pictureBox5";
+            this.pictureBox5.Size = new System.Drawing.Size(30, 30);
+            this.pictureBox5.TabIndex = 9;
+            this.pictureBox5.TabStop = false;
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.BackColor = System.Drawing.Color.Transparent;
+            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.label7.ForeColor = System.Drawing.Color.DarkSlateGray;
+            this.label7.Location = new System.Drawing.Point(33, 18);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(188, 24);
+            this.label7.TabIndex = 8;
+            this.label7.Text = "Quản Lí Nhân Viên";
+            // 
             // MainMenu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(160)))), ((int)(((byte)(133)))));
-            this.ClientSize = new System.Drawing.Size(845, 510);
+            this.ClientSize = new System.Drawing.Size(845, 455);
+            this.Controls.Add(this.QuanLiNhanVien);
+            this.Controls.Add(this.QuanLiSanPham);
             this.Controls.Add(this.BaoCaoDoanhSo);
             this.Controls.Add(this.name);
             this.Controls.Add(this.icon);
@@ -557,6 +721,12 @@
             this.BaoCaoDoanhSo.ResumeLayout(false);
             this.BaoCaoDoanhSo.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
+            this.QuanLiSanPham.ResumeLayout(false);
+            this.QuanLiSanPham.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
+            this.QuanLiNhanVien.ResumeLayout(false);
+            this.QuanLiNhanVien.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -594,5 +764,15 @@
         private System.Windows.Forms.Button button9;
         private System.Windows.Forms.PictureBox pictureBox4;
         private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Panel QuanLiSanPham;
+        private System.Windows.Forms.Button button5;
+        private System.Windows.Forms.Button button6;
+        private System.Windows.Forms.PictureBox pictureBox3;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Panel QuanLiNhanVien;
+        private System.Windows.Forms.Button button10;
+        private System.Windows.Forms.Button button11;
+        private System.Windows.Forms.PictureBox pictureBox5;
+        private System.Windows.Forms.Label label7;
     }
 }

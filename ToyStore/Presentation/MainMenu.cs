@@ -20,8 +20,13 @@ namespace Presentation
             InitializeComponent();
             QuanLiBanHang.Size = new Size(645, 491);
             QuanLiBanHang.Location = new Point(202, 26);
-            QuanLiKho.Hide();
-            BaoCaoDoanhSo.Hide();
+            // chỉ hiện panel chính
+            {
+                QuanLiSanPham.Hide();
+                QuanLiKho.Hide();
+                BaoCaoDoanhSo.Hide();
+                QuanLiNhanVien.Hide();
+            }
             QuanLiBanHang.Show();
 
         }
@@ -49,9 +54,13 @@ namespace Presentation
             // click vao QuanLiKho
             bt_BanHang.BackColor = TransparencyKey ; //mau button khi ko nhap vao
             bt_BaoCaoDoanhSo.BackColor = TransparencyKey;
+            bt_QuanLiNhanVien.BackColor = TransparencyKey;
+            bt_QuanLiSanPham.BackColor = TransparencyKey;
             bt_QuanLiKho.BackColor = Color.FromArgb(26, 188, 156); //mau button khi nhap vao            
-            //BaoCaoDoanhSo.Hide();
-            //QuanLiKho.Hide();
+            BaoCaoDoanhSo.Hide();
+            QuanLiBanHang.Hide();
+            QuanLiSanPham.Hide();
+            QuanLiNhanVien.Hide();
             QuanLiKho.Size = new Size(645, 491);
             QuanLiKho.Location = new Point(202, 26);
             QuanLiKho.Show();
@@ -62,9 +71,13 @@ namespace Presentation
         {
             bt_QuanLiKho.BackColor = TransparencyKey ; //mau button khi ko nhap vao
             bt_BaoCaoDoanhSo.BackColor = TransparencyKey;
+            bt_QuanLiSanPham.BackColor = TransparencyKey;
+            bt_QuanLiNhanVien.BackColor = TransparencyKey;
             bt_BanHang.BackColor = Color.FromArgb(26, 188, 156); //mau button khi nhap vao
             QuanLiKho.Hide();
             BaoCaoDoanhSo.Hide();
+            QuanLiSanPham.Hide();
+            QuanLiNhanVien.Hide();
             QuanLiBanHang.Size = new Size(645, 491);
             QuanLiBanHang.Location = new Point(202, 26);
             QuanLiBanHang.Show();
@@ -74,12 +87,49 @@ namespace Presentation
         {
             bt_QuanLiKho.BackColor = TransparencyKey; //mau button khi ko nhap vao
             bt_BanHang.BackColor = TransparencyKey;
+            bt_QuanLiSanPham.BackColor = TransparencyKey;
+            bt_QuanLiNhanVien.BackColor = TransparencyKey;
             bt_BaoCaoDoanhSo.BackColor = Color.FromArgb(26, 188, 156); //mau button khi nhap vao
             QuanLiKho.Hide();
             QuanLiBanHang.Hide();
+            QuanLiSanPham.Hide();
+            QuanLiNhanVien.Hide();
             BaoCaoDoanhSo.Size = new Size(645, 491);
             BaoCaoDoanhSo.Location = new Point(202, 26);
             BaoCaoDoanhSo.Show();
+        }
+
+        private void bt_QuanLiSanPham_Click(object sender, EventArgs e)
+        {
+
+            bt_QuanLiKho.BackColor = TransparencyKey; //mau button khi ko nhap vao
+            bt_BanHang.BackColor = TransparencyKey;
+            bt_BaoCaoDoanhSo.BackColor = TransparencyKey;
+            bt_QuanLiNhanVien.BackColor = TransparencyKey;
+            bt_QuanLiSanPham.BackColor = Color.FromArgb(26, 188, 156); //mau button khi cick vao
+            QuanLiKho.Hide();
+            QuanLiBanHang.Hide();
+            BaoCaoDoanhSo.Hide();
+            QuanLiNhanVien.Hide();
+            QuanLiSanPham.Size = new Size(645, 491);
+            QuanLiSanPham.Location = new Point(202, 26);
+            QuanLiSanPham.Show();
+        }
+
+        private void bt_QuanLiNhanVien_Click(object sender, EventArgs e)
+        {
+            bt_QuanLiKho.BackColor = TransparencyKey; //mau button khi ko nhap vao
+            bt_BanHang.BackColor = TransparencyKey;
+            bt_BaoCaoDoanhSo.BackColor = TransparencyKey;
+            bt_QuanLiSanPham.BackColor = TransparencyKey;
+            bt_QuanLiNhanVien.BackColor = Color.FromArgb(26, 188, 156); //mau button khi cick vao
+            QuanLiKho.Hide();
+            QuanLiBanHang.Hide();
+            BaoCaoDoanhSo.Hide();
+            QuanLiSanPham.Hide();
+            QuanLiNhanVien.Size = new Size(645, 491);
+            QuanLiNhanVien.Location = new Point(202, 26);
+            QuanLiNhanVien.Show();
         }
     }
 }

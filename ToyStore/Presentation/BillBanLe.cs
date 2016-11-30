@@ -9,11 +9,16 @@ using System.Windows.Forms;
 
 namespace Presentation
 {
-    public partial class Kho : Form
+    public partial class BillBanLe : Form
     {
-        public Kho()
+        public BillBanLe()
         {
             InitializeComponent();
+        }
+
+        private void QuanLiSanPham_Paint(object sender, PaintEventArgs e)
+        {
+
         }
     }
 }
