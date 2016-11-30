@@ -46,7 +46,7 @@ namespace Presentation
             bt_QuanLiKho.BackColor = Color.FromArgb(26, 188, 156); //mau button khi nhap vao
             QuanLiBanHang.Visible = false;
             BaoCao.Visible = false;
-            QuanLiKho.Show();
+            QuanLiKho.Visible = true;
             
         }
 
@@ -57,7 +57,7 @@ namespace Presentation
             bt_BanHang.BackColor = Color.FromArgb(26, 188, 156); //mau button khi nhap vao
             QuanLiKho.Visible = false;
             BaoCao.Visible = false;
-            QuanLiBanHang.Show();
+            QuanLiBanHang.Visible= true;
         }
 
         private void bt_BaoCaoDoanhSo_Click(object sender, EventArgs e)
@@ -67,7 +67,7 @@ namespace Presentation
             bt_BaoCaoDoanhSo.BackColor = Color.FromArgb(26, 188, 156); //mau button khi nhap vao
             QuanLiKho.Visible = false;
             QuanLiBanHang.Visible = false;
-            BaoCao.Show();
+            BaoCao.Visible = true;
         }
     }
 }
