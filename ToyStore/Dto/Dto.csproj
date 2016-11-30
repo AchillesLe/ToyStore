@@ -4,7 +4,7 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{8B8787C8-2CBE-4588-A92C-FAE8E4444A11}</ProjectGuid>
+    <ProjectGuid>{9FB9F19C-5CB8-49A6-A42A-22D2AD36CEE7}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>Dto</RootNamespace>
@@ -59,7 +59,7 @@
     <Compile Include="NHANVIEN.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="QUA.cs" />
-    <Compile Include="ToyEntityModel.cs" />
+    <Compile Include="ToyEntitesModel.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

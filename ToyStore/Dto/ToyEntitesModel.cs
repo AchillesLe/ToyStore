@@ -5,10 +5,10 @@ namespace Dto
     using System.ComponentModel.DataAnnotations.Schema;
     using System.Linq;
 
-    public partial class ToyEntityModel : DbContext
+    public partial class ToyEntitesModel : DbContext
     {
-        public ToyEntityModel()
-            : base("name=ToyEntities")
+        public ToyEntitesModel()
+            : base("name=ToyEntitesModel")
         {
         }
 
