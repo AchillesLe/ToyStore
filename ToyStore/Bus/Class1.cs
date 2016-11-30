@@ -7,6 +7,6 @@ using System.Threading.Tasks;
 namespace Bus
 {
     public class Class1
-    {
+    {//ghjhgjhgj
     }
 }
