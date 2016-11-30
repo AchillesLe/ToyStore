@@ -9,19 +9,14 @@ using System.Windows.Forms;
 
 namespace Presentation
 {
-    public partial class BanHang : Form
+    public partial class BillBanLe : Form
     {
-        public BanHang()
+        public BillBanLe()
         {
             InitializeComponent();
         }
 
         private void QuanLiSanPham_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void panel1_Paint(object sender, PaintEventArgs e)
         {
 
         }

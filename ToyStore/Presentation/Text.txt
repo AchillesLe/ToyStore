@@ -1,0 +1,2 @@
+﻿Size: 645, 491  location: 202, 26
+// size và location của panel main menu
