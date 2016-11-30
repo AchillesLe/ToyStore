@@ -15,15 +15,5 @@ namespace Presentation
         {
             InitializeComponent();
         }
-
-        private void button6_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label2_Click(object sender, EventArgs e)
-        {
-
-        }
     }
 }

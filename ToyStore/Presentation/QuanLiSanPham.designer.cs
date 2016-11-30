@@ -40,7 +40,7 @@
             // 
             // QuanLiSanPham
             // 
-            this.QuanLiSanPham.BackColor = System.Drawing.Color.DarkSlateGray;
+            this.QuanLiSanPham.BackColor = System.Drawing.SystemColors.Menu;
             this.QuanLiSanPham.Controls.Add(this.button7);
             this.QuanLiSanPham.Controls.Add(this.button6);
             this.QuanLiSanPham.Controls.Add(this.pictureBox1);
@@ -49,7 +49,6 @@
             this.QuanLiSanPham.Name = "QuanLiSanPham";
             this.QuanLiSanPham.Size = new System.Drawing.Size(645, 491);
             this.QuanLiSanPham.TabIndex = 2;
-            // 
             // button7
             // 
             this.button7.BackColor = System.Drawing.Color.Transparent;
@@ -58,11 +57,11 @@
             this.button7.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(188)))), ((int)(((byte)(156)))));
             this.button7.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button7.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.button7.ForeColor = System.Drawing.Color.Transparent;
-            this.button7.Location = new System.Drawing.Point(3, 94);
+            this.button7.ForeColor = System.Drawing.Color.DarkSlateGray;
+            this.button7.Location = new System.Drawing.Point(0, 94);
             this.button7.Name = "button7";
             this.button7.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.button7.Size = new System.Drawing.Size(260, 30);
+            this.button7.Size = new System.Drawing.Size(631, 30);
             this.button7.TabIndex = 10;
             this.button7.Text = "        Tìm Kiếm Thông Tin Sản Phẩm ";
             this.button7.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -76,16 +75,15 @@
             this.button6.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(188)))), ((int)(((byte)(156)))));
             this.button6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button6.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.button6.ForeColor = System.Drawing.Color.Transparent;
-            this.button6.Location = new System.Drawing.Point(2, 46);
+            this.button6.ForeColor = System.Drawing.Color.DarkSlateGray;
+            this.button6.Location = new System.Drawing.Point(0, 46);
             this.button6.Name = "button6";
             this.button6.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.button6.Size = new System.Drawing.Size(260, 30);
+            this.button6.Size = new System.Drawing.Size(631, 30);
             this.button6.TabIndex = 8;
             this.button6.Text = "         Cập Nhật Giá ";
             this.button6.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.button6.UseVisualStyleBackColor = false;
-            this.button6.Click += new System.EventHandler(this.button6_Click);
             // 
             // pictureBox1
             // 
@@ -103,13 +101,12 @@
             this.label2.AutoSize = true;
             this.label2.BackColor = System.Drawing.Color.Transparent;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(188)))), ((int)(((byte)(156)))));
+            this.label2.ForeColor = System.Drawing.Color.DarkSlateGray;
             this.label2.Location = new System.Drawing.Point(33, 18);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(184, 24);
             this.label2.TabIndex = 8;
             this.label2.Text = "Quản Lí Sản Phẩm";
-            this.label2.Click += new System.EventHandler(this.label2_Click);
             // 
             // Kho
             // 
