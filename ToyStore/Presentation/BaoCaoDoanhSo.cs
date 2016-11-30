@@ -26,7 +26,7 @@ namespace Presentation
             this.dOCHOITableAdapter.Fill(this.toyStoreDataSet.DOCHOI);
             load_dochoi();
             load_NV();
-            load_kh();
+            load_kh();//
         }
         public void load_dochoi()
         {
