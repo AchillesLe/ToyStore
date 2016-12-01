@@ -296,6 +296,7 @@
             this.button4.Text = "         Hóa Đơn Bán Lẻ";
             this.button4.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.button4.UseVisualStyleBackColor = false;
+            this.button4.Click += new System.EventHandler(this.button4_Click);
             // 
             // pictureBox2
             // 
@@ -445,11 +446,11 @@
             // 
             this.name.AutoSize = true;
             this.name.BackColor = System.Drawing.Color.Transparent;
-            this.name.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.name.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.name.ForeColor = System.Drawing.Color.White;
             this.name.Location = new System.Drawing.Point(37, 5);
             this.name.Name = "name";
-            this.name.Size = new System.Drawing.Size(60, 15);
+            this.name.Size = new System.Drawing.Size(66, 16);
             this.name.TabIndex = 6;
             this.name.Text = "Olaft Beta";
             // 
@@ -548,7 +549,7 @@
             this.QuanLiSanPham.Controls.Add(this.label2);
             this.QuanLiSanPham.Location = new System.Drawing.Point(470, 164);
             this.QuanLiSanPham.Name = "QuanLiSanPham";
-            this.QuanLiSanPham.Size = new System.Drawing.Size(217, 139);
+            this.QuanLiSanPham.Size = new System.Drawing.Size(261, 139);
             this.QuanLiSanPham.TabIndex = 9;
             // 
             // button5
@@ -621,7 +622,7 @@
             this.QuanLiNhanVien.Controls.Add(this.label7);
             this.QuanLiNhanVien.Location = new System.Drawing.Point(220, 304);
             this.QuanLiNhanVien.Name = "QuanLiNhanVien";
-            this.QuanLiNhanVien.Size = new System.Drawing.Size(218, 139);
+            this.QuanLiNhanVien.Size = new System.Drawing.Size(244, 139);
             this.QuanLiNhanVien.TabIndex = 11;
             // 
             // button10
@@ -710,6 +711,7 @@
             this.Opacity = 0.98D;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "MainMenu";
+            this.Load += new System.EventHandler(this.MainMenu_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.QuanLiBanHang.ResumeLayout(false);

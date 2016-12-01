@@ -131,6 +131,27 @@ namespace Presentation
             QuanLiNhanVien.Location = new Point(202, 26);
             QuanLiNhanVien.Show();
         }
+        private void button4_Click(object sender, EventArgs e)
+        {
+            //Hide MainMenu
+            Visible = false;
+            ShowInTaskbar = false;
+            //Show BillBanLe Form
+            BillBanLe BillBanLe = new BillBanLe();
+            BillBanLe.Show();
+        }
+
+        private void MainMenu_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        internal class Show
+        {
+            public Show()
+            {
+            }
+        }
     }
 }
     

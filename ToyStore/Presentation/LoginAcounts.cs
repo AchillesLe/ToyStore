@@ -45,15 +45,5 @@ namespace Presentation
             MainMenu mainMenu = new MainMenu();
             mainMenu.Show();
         }
-
-        private void LoginAcounts_Load(object sender, EventArgs e)
-        {
-
-        }
-
-        private void panel1_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
     }
 }
