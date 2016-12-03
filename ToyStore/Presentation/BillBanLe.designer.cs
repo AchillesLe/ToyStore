@@ -210,9 +210,8 @@
             this.textBox1.BackColor = System.Drawing.SystemColors.MenuBar;
             this.textBox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.textBox1.Location = new System.Drawing.Point(631, 327);
+            this.textBox1.Location = new System.Drawing.Point(631, 332);
             this.textBox1.Name = "textBox1";
-            this.textBox1.ReadOnly = true;
             this.textBox1.Size = new System.Drawing.Size(196, 15);
             this.textBox1.TabIndex = 25;
             this.textBox1.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
