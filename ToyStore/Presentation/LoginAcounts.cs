@@ -6,6 +6,7 @@ using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Windows.Forms;
+using Bus;
 
 
 namespace Presentation
@@ -18,6 +19,8 @@ namespace Presentation
         public LoginAcounts()
         {
             InitializeComponent();
+            tb_matKhau.UseSystemPasswordChar = true;
+          //  tb_matKhau.PasswordChar = '*';
         }
         protected override void WndProc(ref Message message)
         {
@@ -36,7 +39,7 @@ namespace Presentation
             this.Close();
 
         }
-        private void bt_enter_MouseClick(object sender, MouseEventArgs e)
+        public void bt_enter_MouseClick(object sender, MouseEventArgs e)
         {
             //Hide LoginAcountsForm
             Visible = false;
@@ -44,6 +47,16 @@ namespace Presentation
             //Show MainMenuForm
             MainMenu mainMenu = new MainMenu();
             mainMenu.Show();
+        }
+
+        private void LoginAcounts_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void panel1_Paint(object sender, PaintEventArgs e)
+        {
+
         }
     }
 }

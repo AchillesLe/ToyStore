@@ -50,86 +50,136 @@ namespace Presentation
         }
 
         private void bt_QuanLiKho_Click(object sender, EventArgs e)
-        {
-            // click vao QuanLiKho
-            bt_BanHang.BackColor = TransparencyKey ; //mau button khi ko nhap vao
-            bt_BaoCaoDoanhSo.BackColor = TransparencyKey;
-            bt_QuanLiNhanVien.BackColor = TransparencyKey;
-            bt_QuanLiSanPham.BackColor = TransparencyKey;
-            bt_QuanLiKho.BackColor = Color.FromArgb(26, 188, 156); //mau button khi nhap vao            
-            BaoCaoDoanhSo.Hide();
-            QuanLiBanHang.Hide();
-            QuanLiSanPham.Hide();
-            QuanLiNhanVien.Hide();
-            QuanLiKho.Size = new Size(645, 491);
-            QuanLiKho.Location = new Point(202, 26);
-            QuanLiKho.Show();
-
+        {           
+            Hide_Visible(QuanLiKho);
+            Bt_click(bt_QuanLiKho);
         }
 
         private void bt_BanHang_Click_(object sender, EventArgs e)
-        {
-            bt_QuanLiKho.BackColor = TransparencyKey ; //mau button khi ko nhap vao
-            bt_BaoCaoDoanhSo.BackColor = TransparencyKey;
-            bt_QuanLiSanPham.BackColor = TransparencyKey;
-            bt_QuanLiNhanVien.BackColor = TransparencyKey;
-            bt_BanHang.BackColor = Color.FromArgb(26, 188, 156); //mau button khi nhap vao
-            QuanLiKho.Hide();
-            BaoCaoDoanhSo.Hide();
-            QuanLiSanPham.Hide();
-            QuanLiNhanVien.Hide();
-            QuanLiBanHang.Size = new Size(645, 491);
-            QuanLiBanHang.Location = new Point(202, 26);
-            QuanLiBanHang.Show();
+        {            
+            Hide_Visible(QuanLiBanHang);
+            Bt_click(bt_BanHang);
         }
 
         private void bt_BaoCaoDoanhSo_Click(object sender, EventArgs e)
-        {
-            bt_QuanLiKho.BackColor = TransparencyKey; //mau button khi ko nhap vao
-            bt_BanHang.BackColor = TransparencyKey;
-            bt_QuanLiSanPham.BackColor = TransparencyKey;
-            bt_QuanLiNhanVien.BackColor = TransparencyKey;
-            bt_BaoCaoDoanhSo.BackColor = Color.FromArgb(26, 188, 156); //mau button khi nhap vao
-            QuanLiKho.Hide();
-            QuanLiBanHang.Hide();
-            QuanLiSanPham.Hide();
-            QuanLiNhanVien.Hide();
-            BaoCaoDoanhSo.Size = new Size(645, 491);
-            BaoCaoDoanhSo.Location = new Point(202, 26);
-            BaoCaoDoanhSo.Show();
+        {           
+            Hide_Visible(BaoCaoDoanhSo);
+            Bt_click(bt_BaoCaoDoanhSo);
         }
 
         private void bt_QuanLiSanPham_Click(object sender, EventArgs e)
-        {
-
-            bt_QuanLiKho.BackColor = TransparencyKey; //mau button khi ko nhap vao
-            bt_BanHang.BackColor = TransparencyKey;
-            bt_BaoCaoDoanhSo.BackColor = TransparencyKey;
-            bt_QuanLiNhanVien.BackColor = TransparencyKey;
-            bt_QuanLiSanPham.BackColor = Color.FromArgb(26, 188, 156); //mau button khi cick vao
-            QuanLiKho.Hide();
-            QuanLiBanHang.Hide();
-            BaoCaoDoanhSo.Hide();
-            QuanLiNhanVien.Hide();
-            QuanLiSanPham.Size = new Size(645, 491);
-            QuanLiSanPham.Location = new Point(202, 26);
-            QuanLiSanPham.Show();
+        {       
+            Hide_Visible(QuanLiSanPham);
+            Bt_click(bt_QuanLiSanPham);
         }
 
         private void bt_QuanLiNhanVien_Click(object sender, EventArgs e)
         {
-            bt_QuanLiKho.BackColor = TransparencyKey; //mau button khi ko nhap vao
-            bt_BanHang.BackColor = TransparencyKey;
-            bt_BaoCaoDoanhSo.BackColor = TransparencyKey;
-            bt_QuanLiSanPham.BackColor = TransparencyKey;
-            bt_QuanLiNhanVien.BackColor = Color.FromArgb(26, 188, 156); //mau button khi cick vao
-            QuanLiKho.Hide();
-            QuanLiBanHang.Hide();
-            BaoCaoDoanhSo.Hide();
-            QuanLiSanPham.Hide();
-            QuanLiNhanVien.Size = new Size(645, 491);
-            QuanLiNhanVien.Location = new Point(202, 26);
-            QuanLiNhanVien.Show();
+           
+            Hide_Visible(QuanLiNhanVien);
+            Bt_click(bt_QuanLiNhanVien);
+        }
+        public void Hide_Visible(Panel pn)
+        {
+            if(pn==QuanLiKho)
+            {
+                QuanLiBanHang.Hide();
+                QuanLiNhanVien.Hide();
+                QuanLiSanPham.Hide();
+                BaoCaoDoanhSo.Hide();
+                pn.Size = new Size(645, 491);
+                pn.Location = new Point(202, 26);
+                pn.Show();
+            }
+            else if(pn==QuanLiSanPham)
+            {
+                QuanLiBanHang.Hide();
+                QuanLiNhanVien.Hide();
+                QuanLiKho.Hide();
+                BaoCaoDoanhSo.Hide();
+                pn.Size = new Size(645, 491);
+                pn.Location = new Point(202, 26);
+                pn.Show();
+            }
+            else if(pn==QuanLiNhanVien)
+            {
+                QuanLiBanHang.Hide();
+                QuanLiKho.Hide();
+                QuanLiSanPham.Hide();
+                BaoCaoDoanhSo.Hide();
+                pn.Size = new Size(645, 491);
+                pn.Location = new Point(202, 26);
+                pn.Show();
+            }
+            else  if(pn==QuanLiBanHang)
+            {
+                QuanLiKho.Hide();
+                QuanLiNhanVien.Hide();
+                QuanLiSanPham.Hide();
+                BaoCaoDoanhSo.Hide();
+                pn.Size = new Size(645, 491);
+                pn.Location = new Point(202, 26);
+                pn.Show();
+            }
+            else if(pn==BaoCaoDoanhSo)
+            {
+                QuanLiBanHang.Hide();
+                QuanLiNhanVien.Hide();
+                QuanLiSanPham.Hide();
+                QuanLiKho.Hide();
+                pn.Size = new Size(645, 491);
+                pn.Location = new Point(202, 26);
+                pn.Show();
+            }
+                
+        }
+        public void Bt_click(Button bt)
+        {
+            if(bt==bt_QuanLiKho)
+            {
+                bt_BanHang.BackColor = TransparencyKey; //mau button khi ko nhap vao
+                bt_BaoCaoDoanhSo.BackColor = TransparencyKey;
+                bt_QuanLiNhanVien.BackColor = TransparencyKey;
+                bt_QuanLiSanPham.BackColor = TransparencyKey;
+                bt.BackColor = Color.FromArgb(26, 188, 156); //mau button khi nhap vao 
+            }
+            else if(bt==bt_BanHang)
+            {
+                bt_QuanLiKho.BackColor = TransparencyKey; //mau button khi ko nhap vao
+                bt_BaoCaoDoanhSo.BackColor = TransparencyKey;
+                bt_QuanLiNhanVien.BackColor = TransparencyKey;
+                bt_QuanLiSanPham.BackColor = TransparencyKey;
+                bt.BackColor = Color.FromArgb(26, 188, 156); //mau button khi nhap vao 
+
+            }
+            else if (bt == bt_QuanLiNhanVien)
+            {
+                bt_QuanLiKho.BackColor = TransparencyKey; //mau button khi ko nhap vao
+                bt_BaoCaoDoanhSo.BackColor = TransparencyKey;
+                bt_BanHang.BackColor = TransparencyKey;
+                bt_QuanLiSanPham.BackColor = TransparencyKey;
+                bt.BackColor = Color.FromArgb(26, 188, 156); //mau button khi nhap vao 
+
+            }
+            else if (bt == bt_BaoCaoDoanhSo)
+            {
+                bt_QuanLiKho.BackColor = TransparencyKey; //mau button khi ko nhap vao
+                bt_BanHang.BackColor = TransparencyKey;
+                bt_QuanLiNhanVien.BackColor = TransparencyKey;
+                bt_QuanLiSanPham.BackColor = TransparencyKey;
+                bt.BackColor = Color.FromArgb(26, 188, 156); //mau button khi nhap vao 
+
+            }
+            else if (bt == bt_QuanLiSanPham)
+            {
+                bt_QuanLiKho.BackColor = TransparencyKey; //mau button khi ko nhap vao
+                bt_BaoCaoDoanhSo.BackColor = TransparencyKey;
+                bt_QuanLiNhanVien.BackColor = TransparencyKey;
+                bt_BanHang.BackColor = TransparencyKey;
+                bt.BackColor = Color.FromArgb(26, 188, 156); //mau button khi nhap vao 
+
+            }
+
         }
         private void button4_Click(object sender, EventArgs e)
         {
