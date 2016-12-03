@@ -181,27 +181,21 @@ namespace Presentation
             }
 
         }
-        private void button4_Click(object sender, EventArgs e)
+        private void bt_HoaDon_Click(object sender, EventArgs e)
         {
             //Hide MainMenu
-            Visible = false;
-            ShowInTaskbar = false;
+            this.Close();
             //Show BillBanLe Form
             BillBanLe BillBanLe = new BillBanLe();
             BillBanLe.Show();
         }
-
-        private void MainMenu_Load(object sender, EventArgs e)
-        {
-
-        }
-
         internal class Show
         {
             public Show()
             {
             }
         }
+        
     }
 }
     

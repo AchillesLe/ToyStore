@@ -5,20 +5,23 @@ using System.Data;
 using System.Drawing;
 using System.Linq;
 using System.Text;
+using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace Presentation
 {
-    public partial class BillBanLe : Form
+    public partial class QuanLiNhanVien : Form
     {
         const int WM_NCHITTEST = 0x84;
         const int HTCLIENT = 0x1;
         const int HTCAPTION = 0x2;
-      
-        public BillBanLe()
+        public QuanLiNhanVien()
         {
             InitializeComponent();
         }
+
+
+        //move window without title bar
         protected override void WndProc(ref Message message)
         {
             base.WndProc(ref message);
@@ -27,24 +30,30 @@ namespace Presentation
                 message.Result = (IntPtr)HTCAPTION;
         }
 
+       
+        private void Down_Click(object sender, EventArgs e)
+        {
+            this.WindowState = FormWindowState.Minimized;
+        }
+
         private void Close_Click(object sender, EventArgs e)
         {
             this.Close();
             Application.Exit();
         }
 
-        private void Down_Click(object sender, EventArgs e)
-        {
-            this.WindowState = FormWindowState.Minimized;
-        }
-
         private void back_Click(object sender, EventArgs e)
         {
-            // hide BillBanLe Form
+            // hide QuanLiNv Form
             this.Close();
             //Show MainMenuForm
             MainMenu MainMenu = new MainMenu();
             MainMenu.Show();
+        }
+
+        private void panel1_Paint(object sender, PaintEventArgs e)
+        {
+
         }
     }
 }
