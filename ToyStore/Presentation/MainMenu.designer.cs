@@ -69,6 +69,7 @@
             this.button11 = new System.Windows.Forms.Button();
             this.pictureBox5 = new System.Windows.Forms.PictureBox();
             this.label7 = new System.Windows.Forms.Label();
+            this.bt_out = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.QuanLiBanHang.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
@@ -86,6 +87,7 @@
             // 
             this.panel1.BackColor = System.Drawing.Color.DarkSlateGray;
             this.panel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.panel1.Controls.Add(this.bt_out);
             this.panel1.Controls.Add(this.label3);
             this.panel1.Controls.Add(this.button8);
             this.panel1.Controls.Add(this.label1);
@@ -692,6 +694,22 @@
             this.label7.TabIndex = 8;
             this.label7.Text = "Quản Lí Nhân Viên";
             // 
+            // bt_out
+            // 
+            this.bt_out.BackColor = System.Drawing.Color.Transparent;
+            this.bt_out.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("bt_out.BackgroundImage")));
+            this.bt_out.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.bt_out.FlatAppearance.BorderSize = 0;
+            this.bt_out.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(188)))), ((int)(((byte)(156)))));
+            this.bt_out.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(188)))), ((int)(((byte)(156)))));
+            this.bt_out.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.bt_out.ForeColor = System.Drawing.Color.Transparent;
+            this.bt_out.Location = new System.Drawing.Point(98, 402);
+            this.bt_out.Name = "bt_out";
+            this.bt_out.Size = new System.Drawing.Size(20, 20);
+            this.bt_out.TabIndex = 10;
+            this.bt_out.UseVisualStyleBackColor = false;
+            // 
             // MainMenu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -782,5 +800,6 @@
         private System.Windows.Forms.Button button11;
         private System.Windows.Forms.PictureBox pictureBox5;
         private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Button bt_out;
     }
 }
