@@ -63,7 +63,7 @@
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Dto\Dto.csproj">
-      <Project>{9fb9f19c-5cb8-49a6-a42a-22d2ad36cee7}</Project>
+      <Project>{a9f37e99-eec7-4c21-bc4c-1da7b9ae85bd}</Project>
       <Name>Dto</Name>
     </ProjectReference>
   </ItemGroup>

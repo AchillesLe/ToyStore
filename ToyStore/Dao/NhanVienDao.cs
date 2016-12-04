@@ -13,17 +13,18 @@ namespace Dao
             List<NHANVIEN> listNv = new List<NHANVIEN>();
             using (ToyEntitesModel context =new ToyEntitesModel())
             {
-                var query = (from c in context.NHANVIENs select new { c.CMT,c.MANV,c.NGAYSINH,c.PHAI,c.TENNV,c.SDT,c.PASS});
+                var query = (from c in context.NHANVIENs select c);
                  foreach(var a in query)
                 {
                     NHANVIEN nv = new NHANVIEN();
                     nv.CMT = a.CMT;
                     nv.TENNV = a.TENNV;
                     nv.SDT = a.SDT;
-                    nv.PHAI = a.PHAI;
+                    nv.PHAI = a.PHAI; 
                     nv.PASS = a.PASS;
                     nv.NGAYSINH = a.NGAYSINH;
                     nv.MANV = a.MANV;
+                    nv.QUEQUAN = a.QUEQUAN;
                     listNv.Add(nv);
                 }                
             }
@@ -42,6 +43,7 @@ namespace Dao
                 nv.TENNV = a.TENNV;
                 nv.SDT = a.SDT;
                 nv.CMT = a.CMT;
+                nv.QUEQUAN = a.QUEQUAN;
             }
             return nv;
         }
@@ -50,7 +52,15 @@ namespace Dao
             int s;
             using (ToyEntitesModel context = new ToyEntitesModel())
             {
-                var a = context.NHANVIENs.Add(nv);
+                NHANVIEN  kh = new NHANVIEN();
+                kh.CMT = nv.CMT;
+                kh.NGAYSINH = nv.NGAYSINH;
+                kh.PASS = nv.PASS;
+                kh.PHAI = nv.PHAI;
+                kh.QUEQUAN = nv.QUEQUAN;
+                kh.SDT = nv.SDT;
+                kh.TENNV = nv.TENNV;
+                 context.NHANVIENs.Add(kh);
                 s = context.SaveChanges();   
             }
             return s;
@@ -89,7 +99,8 @@ namespace Dao
                     s.PHAI = kh.PHAI;
                     s.CMT = kh.CMT;
                     s.NGAYSINH = kh.NGAYSINH;
-                    s.PASS = kh.PASS;
+                    s.QUEQUAN = kh.QUEQUAN;
+                    s.PASS = s.PASS;
                     if (context.SaveChanges() >= 0)
                         chek = true;
                 }

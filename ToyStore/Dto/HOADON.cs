@@ -13,7 +13,6 @@ namespace Dto
         public HOADON()
         {
             CTHDs = new HashSet<CTHD>();
-           // CTHDs = new List<CTHD>();
         }
 
         [Key]
@@ -30,7 +29,6 @@ namespace Dto
 
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<CTHD> CTHDs { get; set; }
-        //public virtual List<CTHD> CTHDs { get; set; }
 
         public virtual KHACHHANG KHACHHANG { get; set; }
 

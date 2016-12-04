@@ -81,6 +81,11 @@
       <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.SqlServer.dll</HintPath>
       <Private>True</Private>
     </Reference>
+    <Reference Include="Microsoft.Office.Interop.Excel, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+      <HintPath>..\packages\Microsoft.Office.Interop.Excel.15.0.4795.1000\lib\net20\Microsoft.Office.Interop.Excel.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Core" />
@@ -121,6 +126,7 @@
     <Compile Include="QuanLiNhanVien.Designer.cs">
       <DependentUpon>QuanLiNhanVien.cs</DependentUpon>
     </Compile>
+    <Compile Include="toolTip1\ExportToExcel.cs" />
     <Compile Include="toolTip1\Show.cs" />
     <EmbeddedResource Include="BillBanLe.resx">
       <DependentUpon>BillBanLe.cs</DependentUpon>
@@ -165,7 +171,7 @@
       <Name>Bus</Name>
     </ProjectReference>
     <ProjectReference Include="..\Dto\Dto.csproj">
-      <Project>{8b8787c8-2cbe-4588-a92c-fae8e4444a11}</Project>
+      <Project>{a9f37e99-eec7-4c21-bc4c-1da7b9ae85bd}</Project>
       <Name>Dto</Name>
     </ProjectReference>
   </ItemGroup>

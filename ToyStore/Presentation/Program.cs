@@ -16,9 +16,9 @@ namespace Presentation
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new LoginAcounts());
+            //Application.Run(new LoginAcounts());
             //Application.Run(new BillBanLe());
-            //Application.Run(new QuanLiNhanVien());
+            Application.Run(new QuanLiNhanVien());
             
 
         }

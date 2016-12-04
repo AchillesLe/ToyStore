@@ -13,7 +13,6 @@ namespace Dto
         public DOCHOI()
         {
             CTHDs = new HashSet<CTHD>();
-           // CTHDs = new List<CTHD>();
         }
 
         [Key]
@@ -33,9 +32,8 @@ namespace Dto
         public double? GIA { get; set; }
 
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-       public virtual ICollection<CTHD> CTHDs { get; set; }
-       // public virtual List<CTHD> CTHDs { get; set; }
+        public virtual ICollection<CTHD> CTHDs { get; set; }
 
-        public virtual QUA QUA{ get; set; }
+        public virtual QUA QUA { get; set; }
     }
 }

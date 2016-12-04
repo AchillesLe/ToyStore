@@ -13,7 +13,6 @@ namespace Dto
         public NHANVIEN()
         {
             HOADONs = new HashSet<HOADON>();
-           // HOADONs = new List<HOADON>();
         }
 
         [Key]
@@ -22,25 +21,31 @@ namespace Dto
         [Required]
         [StringLength(50)]
         public string TENNV { get; set; }
-
+        
         [Column(TypeName = "date")]
         public DateTime NGAYSINH { get; set; }
-
+        [Required]
         [StringLength(11)]
         public string SDT { get; set; }
 
-        [StringLength(4)]
+        [StringLength(60)]
+        public string QUEQUAN { get; set; }
+
+        [StringLength(4)]     
         public string PHAI { get; set; }
 
-        [Required]
+        
         [StringLength(9)]
         public string CMT { get; set; }
+
+        
+        
+
 
         [StringLength(20)]
         public string PASS { get; set; }
 
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<HOADON> HOADONs { get; set; }
-        //public virtual List<HOADON> HOADONs { get; set; }
     }
 }
