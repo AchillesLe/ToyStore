@@ -53,6 +53,8 @@ namespace Presentation
         {           
             Hide_Visible(QuanLiKho);
             Bt_click(bt_QuanLiKho);
+
+
         }
 
         private void bt_BanHang_Click_(object sender, EventArgs e)
