@@ -32,9 +32,6 @@ namespace Bus
         {
             return nvdao.editNV(nv);
         }
-        public bool checkNV(int manv,string pass)
-        {
-            return nvdao.checkPass(manv, pass);
-        }
+        
     }
 }

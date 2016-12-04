@@ -105,11 +105,11 @@ namespace Dao
             {
                 try
                 {
-                    //ACCOUNT ac = context.ACCOUNTs.SingleOrDefault(x => x.USERNAME == username && x.PASS == pass);
+                    ACCOUNT ac = context.ACCOUNTs.SingleOrDefault(x => x.USERNAME == username && x.PASS == pass);
                     var query = from c in context.ACCOUNTs where c.USERNAME == username
                                 && c.PASS == pass select c;
 
-                    if (query != null)
+                    if (ac != null)
                         check = true;
                 }
                 catch (Exception ex)

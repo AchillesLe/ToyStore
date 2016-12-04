@@ -30,7 +30,6 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainMenu));
             this.panel1 = new System.Windows.Forms.Panel();
-            this.bt_out = new System.Windows.Forms.Button();
             this.label3 = new System.Windows.Forms.Label();
             this.button8 = new System.Windows.Forms.Button();
             this.tbAccount = new System.Windows.Forms.Label();
@@ -100,22 +99,6 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(203, 470);
             this.panel1.TabIndex = 0;
-            // 
-            // bt_out
-            // 
-            this.bt_out.BackColor = System.Drawing.Color.Transparent;
-            this.bt_out.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("bt_out.BackgroundImage")));
-            this.bt_out.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.bt_out.FlatAppearance.BorderSize = 0;
-            this.bt_out.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(188)))), ((int)(((byte)(156)))));
-            this.bt_out.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(188)))), ((int)(((byte)(156)))));
-            this.bt_out.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.bt_out.ForeColor = System.Drawing.Color.Transparent;
-            this.bt_out.Location = new System.Drawing.Point(98, 433);
-            this.bt_out.Name = "bt_out";
-            this.bt_out.Size = new System.Drawing.Size(20, 22);
-            this.bt_out.TabIndex = 10;
-            this.bt_out.UseVisualStyleBackColor = false;
             // 
             // label3
             // 
@@ -772,7 +755,6 @@
         private System.Windows.Forms.Button bt_QuanLiNhanVien;
         private System.Windows.Forms.Button bt_QuanLiSanPham;
         private System.Windows.Forms.Button user;
-        private System.Windows.Forms.Label tbAccount;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Button button8;
         private System.Windows.Forms.Panel QuanLiKho;
@@ -799,5 +781,6 @@
         private System.Windows.Forms.Button button11;
         private System.Windows.Forms.PictureBox pictureBox5;
         private System.Windows.Forms.Label label7;
+        public System.Windows.Forms.Label tbAccount;
     }
 }

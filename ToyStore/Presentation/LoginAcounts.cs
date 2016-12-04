@@ -16,7 +16,7 @@ namespace Presentation
         const int WM_NCHITTEST = 0x84;
         const int HTCLIENT = 0x1;
         const int HTCAPTION = 0x2;
-        public  string UserName;
+        
        
         public LoginAcounts()
         {
@@ -52,27 +52,25 @@ namespace Presentation
 
         private void bt_enter_Click(object sender, EventArgs e)
         {
-            //Hide LoginAcountsForm
-            Visible = false;
-            ShowInTaskbar = false;
-            //Show MainMenuForm
+
             AccountBus acBus = new AccountBus();
             string username =(tb_TenDangNhap.Text);
             string pass = tb_matKhau.Text;
-            UserName = tb_TenDangNhap.Text;
-            if (acBus.checkac(username, pass))
+           
+            if (acBus.checkac(username, pass)==true)
             {
                 MainMenu mainMenu = new MainMenu();
                 mainMenu.Show();
+               mainMenu.tbAccount= tb_TenDangNhap.Text;
                 this.Visible = false;
             }
             else
             {
                 MessageBox.Show("Tên đăng nhập hoặc mật khẩu không đúng.Hãy kiểm tra và nhập lại!");
                 tb_matKhau.Text = "";
+                
             }
-            //MainMenu mainMenu = new MainMenu();
-            //mainMenu.Show();
+
         }
 
         public void getUsername()

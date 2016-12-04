@@ -82,7 +82,7 @@ namespace Dao
                     s.PHAI = kh.PHAI;
                     s.CMT = kh.CMT;
                     s.NGAYSINH = kh.NGAYSINH;
-                    s.PASS = kh.PASS;
+                    
                     if (context.SaveChanges() >= 0)
                         chek = true;
                 }

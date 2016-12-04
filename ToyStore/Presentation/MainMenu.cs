@@ -29,8 +29,7 @@ namespace Presentation
                 QuanLiNhanVien.Hide();
             }
             QuanLiBanHang.Show();
-            LoginAcounts lg = new LoginAcounts();
-            tbAccount.Text = lg.UserName;
+         
 
         }
         //move window without title bar
