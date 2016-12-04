@@ -30,7 +30,7 @@ namespace Presentation
             }
             QuanLiBanHang.Show();
             LoginAcounts lg = new LoginAcounts();
-            label1.Text=lg.manv
+            tbAccount.Text = lg.UserName;
 
         }
         //move window without title bar

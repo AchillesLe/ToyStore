@@ -56,8 +56,7 @@ namespace Presentation
         private void loadDSNhanVien()
         {
             NhanVienBus nvBus = new NhanVienBus();
-            tbl_NhanVien.DataSource = nvBus.DSNhanVien();
-            tbl_NhanVien.Columns["PASS"].Visible = false;          
+            tbl_NhanVien.DataSource = nvBus.DSNhanVien();       
         }
        //ok
         private void bt_save_Click(object sender, EventArgs e)

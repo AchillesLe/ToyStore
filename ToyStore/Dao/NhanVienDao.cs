@@ -21,7 +21,7 @@ namespace Dao
                     nv.TENNV = a.TENNV;
                     nv.SDT = a.SDT;
                     nv.PHAI = a.PHAI; 
-                   // nv.PASS = a.PASS;
+                
                     nv.NGAYSINH = a.NGAYSINH;
                     nv.MANV = a.MANV;
                     nv.QUEQUAN = a.QUEQUAN;
@@ -38,7 +38,7 @@ namespace Dao
                 var a = context.NHANVIENs.SingleOrDefault(x => x.MANV==ID);
                 nv.MANV = a.MANV;
                 nv.NGAYSINH = a.NGAYSINH;
-                nv.PASS = a.PASS;
+             
                 nv.PHAI = a.PHAI;
                 nv.TENNV = a.TENNV;
                 nv.SDT = a.SDT;
@@ -55,7 +55,7 @@ namespace Dao
                 NHANVIEN  kh = new NHANVIEN();
                 kh.CMT = nv.CMT;
                 kh.NGAYSINH = nv.NGAYSINH;
-                kh.PASS = nv.PASS;
+              
                 kh.PHAI = nv.PHAI;
                 kh.QUEQUAN = nv.QUEQUAN;
                 kh.SDT = nv.SDT;
@@ -100,7 +100,7 @@ namespace Dao
                     s.CMT = kh.CMT;
                     s.NGAYSINH = kh.NGAYSINH;
                     s.QUEQUAN = kh.QUEQUAN;
-                    s.PASS = s.PASS;
+                   
                     if (context.SaveChanges() >= 0)
                         chek = true;
                 }
@@ -112,24 +112,6 @@ namespace Dao
             return chek;
             //change
         }
-        public bool checkPass(int manv,string pass)
-        {
-            bool check = false;
-            using (ContextEntites context = new ContextEntites())
-            {
-                try
-                {
-
-                    var query = from c in context.NHANVIENs where c.MANV == manv && c.PASS == pass select c;
-                    if (query != null)
-                        check = true;
-                }
-                catch (Exception ex)
-                {
-                    Console.WriteLine(ex.ToString());
-                }
-            }
-                return check;
-        }
+        
     }
 }

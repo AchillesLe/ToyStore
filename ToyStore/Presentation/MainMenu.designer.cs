@@ -33,7 +33,7 @@
             this.bt_out = new System.Windows.Forms.Button();
             this.label3 = new System.Windows.Forms.Label();
             this.button8 = new System.Windows.Forms.Button();
-            this.label1 = new System.Windows.Forms.Label();
+            this.tbAccount = new System.Windows.Forms.Label();
             this.user = new System.Windows.Forms.Button();
             this.bt_QuanLiNhanVien = new System.Windows.Forms.Button();
             this.bt_QuanLiSanPham = new System.Windows.Forms.Button();
@@ -90,7 +90,7 @@
             this.panel1.Controls.Add(this.bt_out);
             this.panel1.Controls.Add(this.label3);
             this.panel1.Controls.Add(this.button8);
-            this.panel1.Controls.Add(this.label1);
+            this.panel1.Controls.Add(this.tbAccount);
             this.panel1.Controls.Add(this.user);
             this.panel1.Controls.Add(this.bt_QuanLiNhanVien);
             this.panel1.Controls.Add(this.bt_QuanLiSanPham);
@@ -147,17 +147,17 @@
             this.button8.TabIndex = 8;
             this.button8.UseVisualStyleBackColor = false;
             // 
-            // label1
+            // tbAccount
             // 
-            this.label1.AutoSize = true;
-            this.label1.BackColor = System.Drawing.Color.Transparent;
-            this.label1.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(23, 436);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(69, 17);
-            this.label1.TabIndex = 7;
-            this.label1.Text = "LuanTran";
+            this.tbAccount.AutoSize = true;
+            this.tbAccount.BackColor = System.Drawing.Color.Transparent;
+            this.tbAccount.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.tbAccount.ForeColor = System.Drawing.Color.White;
+            this.tbAccount.Location = new System.Drawing.Point(23, 436);
+            this.tbAccount.Name = "tbAccount";
+            this.tbAccount.Size = new System.Drawing.Size(69, 17);
+            this.tbAccount.TabIndex = 7;
+            this.tbAccount.Text = "LuanTran";
             // 
             // user
             // 
@@ -773,7 +773,7 @@
         private System.Windows.Forms.Button bt_QuanLiNhanVien;
         private System.Windows.Forms.Button bt_QuanLiSanPham;
         private System.Windows.Forms.Button user;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label tbAccount;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Button button8;
         private System.Windows.Forms.Panel QuanLiKho;

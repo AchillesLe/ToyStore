@@ -16,9 +16,9 @@ namespace Dto
         public virtual DbSet<CTHD> CTHDs { get; set; }
         public virtual DbSet<DOCHOI> DOCHOIs { get; set; }
         public virtual DbSet<HOADON> HOADONs { get; set; }
-        public virtual DbSet<KHACHHANG> KHACHHANGs { get; set; }
+        public virtual DbSet<ACCOUNT> ACCOUNTs { get; set; }
         public virtual DbSet<NHANVIEN> NHANVIENs { get; set; }
-        public virtual DbSet<QUA> QUAs { get; set; }
+
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
@@ -26,10 +26,6 @@ namespace Dto
             //    .HasMany(e => e.CTHDs)
             //    .WithRequired(e => e.DOCHOI)
             //    .WillCascadeOnDelete(false);
-
-            //modelBuilder.Entity<DOCHOI>()
-            //    .HasOptional(e => e.QUA)
-            //    .WithRequired(e => e.DOCHOI);
 
             //modelBuilder.Entity<HOADON>()
             //    .HasMany(e => e.CTHDs)

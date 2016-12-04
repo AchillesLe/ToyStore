@@ -16,7 +16,7 @@ namespace Presentation
         const int WM_NCHITTEST = 0x84;
         const int HTCLIENT = 0x1;
         const int HTCAPTION = 0x2;
-        public int manv;
+        public  string UserName;
        
         public LoginAcounts()
         {
@@ -41,10 +41,6 @@ namespace Presentation
             this.Close();
 
         }
-        private void bt_enter_MouseClick(object sender, MouseEventArgs e)
-        {
-            
-        }
 
 
         private void tb_matKhau_KeyDown(object sender, KeyEventArgs e)
@@ -60,10 +56,11 @@ namespace Presentation
             Visible = false;
             ShowInTaskbar = false;
             //Show MainMenuForm
-            NhanVienBus nvBus = new NhanVienBus();
-            int manv = Int32.Parse(tb_TenDangNhap.Text);
+            AccountBus acBus = new AccountBus();
+            string username =(tb_TenDangNhap.Text);
             string pass = tb_matKhau.Text;
-            if (nvBus.checkNV(manv, pass) == true)
+            UserName = tb_TenDangNhap.Text;
+            if (acBus.checkac(username, pass))
             {
                 MainMenu mainMenu = new MainMenu();
                 mainMenu.Show();
@@ -80,7 +77,8 @@ namespace Presentation
 
         public void getUsername()
         {
-
+            AccountBus acBus = new AccountBus();
+            
         }
     }
 }
