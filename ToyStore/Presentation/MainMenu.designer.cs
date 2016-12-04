@@ -87,7 +87,6 @@
             // 
             this.panel1.BackColor = System.Drawing.Color.DarkSlateGray;
             this.panel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.panel1.Controls.Add(this.bt_out);
             this.panel1.Controls.Add(this.label3);
             this.panel1.Controls.Add(this.button8);
             this.panel1.Controls.Add(this.tbAccount);
@@ -800,6 +799,5 @@
         private System.Windows.Forms.Button button11;
         private System.Windows.Forms.PictureBox pictureBox5;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.Button bt_out;
     }
 }
