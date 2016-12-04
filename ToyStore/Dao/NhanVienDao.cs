@@ -25,7 +25,7 @@ namespace Dao
                     nv.NGAYSINH = a.NGAYSINH;
                     nv.MANV = a.MANV;
                     nv.QUEQUAN = a.QUEQUAN;
-                    listNv.Add(nv);
+                    listNv.Add(nv);//
                 }                
             }
             return listNv;
