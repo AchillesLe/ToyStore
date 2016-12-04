@@ -20,6 +20,7 @@ namespace Presentation
             InitializeComponent();
             QuanLiBanHang.Size = new Size(645, 491);
             QuanLiBanHang.Location = new Point(202, 26);
+            bt_BanHang.BackColor = Color.FromArgb(26, 188, 156); //mau button khi nhap vao 
             // chỉ hiện panel chính
             {
                 QuanLiSanPham.Hide();
@@ -182,6 +183,20 @@ namespace Presentation
 
             }
 
+        }
+        private void bt_HoaDon_Click(object sender, EventArgs e)
+        {
+            //Hide MainMenu
+            this.Close();
+            //Show BillBanLe Form
+            BillBanLe BillBanLe = new BillBanLe();
+            BillBanLe.Show();
+        }
+        internal class Show
+        {
+            public Show()
+            {
+            }
         }
     }
 }

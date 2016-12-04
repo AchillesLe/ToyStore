@@ -41,28 +41,22 @@ namespace Presentation
         }
         public void bt_enter_MouseClick(object sender, MouseEventArgs e)
         {
-            NhanVienBus nvBus = new NhanVienBus();
-            int manv = Int32.Parse(tb_TenDangNhap.Text);
-            string pass = tb_matKhau.Text;
-            if (nvBus.checkNV(manv, pass) == true)
-            {
-                MainMenu mainMenu = new MainMenu();
-                mainMenu.Show();
-                this.Visible = false;
-            }
-            else
-            {
-                MessageBox.Show("Tên đăng nhập hoặc mật khẩu không đúng.Hãy kiểm tra và nhập lại!");
-                tb_matKhau.Text = "";
+            //Hide LoginAcountsForm
+            Visible = false;
+            ShowInTaskbar = false;
+            //Show MainMenuForm
+            MainMenu mainMenu = new MainMenu();
+            mainMenu.Show();
+        }
 
-            }
-            
-        }    
-
-        private void tb_matKhau_KeyDown(object sender, KeyEventArgs e)
+        private void LoginAcounts_Load(object sender, EventArgs e)
         {
-            if (e.KeyCode == Keys.Enter)
-                bt_enter_MouseClick(null, null);
+
+        }
+
+        private void panel1_Paint(object sender, PaintEventArgs e)
+        {
+
         }
     }
 }
