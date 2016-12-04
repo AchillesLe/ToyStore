@@ -12,7 +12,7 @@ namespace Dao
         public List<DOCHOI>DSDoChoi()
         {
             List<DOCHOI> listDoChoi = new List<DOCHOI>();
-            using (ToyEntitesModel context = new ToyEntitesModel())
+            using (ContextEntites context = new ContextEntites())
             {
                 var query = (from c in context.DOCHOIs select new { c.MADC, c.SL, c.TENDC, c.NUOCSX,c.LOAI,c.GIA });
                 foreach(var a in query)
@@ -33,7 +33,7 @@ namespace Dao
         public DOCHOI DochoiById(int ID)
         {
             DOCHOI dc = new DOCHOI();
-            using (ToyEntitesModel context = new ToyEntitesModel())
+            using (ContextEntites context = new ContextEntites())
             {
                 var a= context.DOCHOIs.Single(x => x.MADC == ID);               
                 dc.MADC = a.MADC;
@@ -48,7 +48,7 @@ namespace Dao
         public int AddDoChoi(DOCHOI dc)
         {
             int s;
-            using (ToyEntitesModel context = new ToyEntitesModel())
+            using (ContextEntites context = new ContextEntites())
             {
                 //try
                 //{
@@ -65,7 +65,7 @@ namespace Dao
         public bool deleteDC(int maDC)
         {
             bool check = false;
-            using (ToyEntitesModel con = new ToyEntitesModel())
+            using (ContextEntites con = new ContextEntites())
             {
                 try
                 {
@@ -86,7 +86,7 @@ namespace Dao
         public bool editDC(DOCHOI dc)
         {
             bool chek = false;
-            using (ToyEntitesModel context = new ToyEntitesModel())
+            using (ContextEntites context = new ContextEntites())
             {
                 try
                 {

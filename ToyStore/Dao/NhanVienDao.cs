@@ -11,9 +11,9 @@ namespace Dao
         public List<NHANVIEN>DSNhanVien()
         {
             List<NHANVIEN> listNv = new List<NHANVIEN>();
-            using (ToyEntitesModel context =new ToyEntitesModel())
+            using (ContextEntites context =new ContextEntites())
             {
-                var query = (from c in context.NHANVIENs select c);
+                var query = (from c in context.NHANVIENs select new { c.CMT,c.MANV,c.NGAYSINH,c.PHAI,c.SDT,c.TENNV,c.QUEQUAN});
                  foreach(var a in query)
                 {
                     NHANVIEN nv = new NHANVIEN();
@@ -21,7 +21,7 @@ namespace Dao
                     nv.TENNV = a.TENNV;
                     nv.SDT = a.SDT;
                     nv.PHAI = a.PHAI; 
-                    nv.PASS = a.PASS;
+                   // nv.PASS = a.PASS;
                     nv.NGAYSINH = a.NGAYSINH;
                     nv.MANV = a.MANV;
                     nv.QUEQUAN = a.QUEQUAN;
@@ -33,7 +33,7 @@ namespace Dao
         public NHANVIEN NhanVienByID(int ID)
         {
             NHANVIEN nv = new NHANVIEN();
-            using (ToyEntitesModel context = new ToyEntitesModel())
+            using (ContextEntites context = new ContextEntites())
             {
                 var a = context.NHANVIENs.SingleOrDefault(x => x.MANV==ID);
                 nv.MANV = a.MANV;
@@ -50,7 +50,7 @@ namespace Dao
         public int addNV(NHANVIEN nv)
         {
             int s;
-            using (ToyEntitesModel context = new ToyEntitesModel())
+            using (ContextEntites context = new ContextEntites())
             {
                 NHANVIEN  kh = new NHANVIEN();
                 kh.CMT = nv.CMT;
@@ -68,7 +68,7 @@ namespace Dao
         public bool deleteNV(int maNV)
         {
             bool check = false;
-            using (ToyEntitesModel con = new ToyEntitesModel())
+            using (ContextEntites con = new ContextEntites())
             {
                 try
                 {
@@ -89,7 +89,7 @@ namespace Dao
         public bool editNV(NHANVIEN kh)
         {
             bool chek = false;
-            using (ToyEntitesModel context = new ToyEntitesModel())
+            using (ContextEntites context = new ContextEntites())
             {
                 try
                 {
@@ -115,7 +115,7 @@ namespace Dao
         public bool checkPass(int manv,string pass)
         {
             bool check = false;
-            using (ToyEntitesModel context = new ToyEntitesModel())
+            using (ContextEntites context = new ContextEntites())
             {
                 try
                 {

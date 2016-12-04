@@ -45,9 +45,9 @@
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(51, 607);
+            this.button1.Location = new System.Drawing.Point(51, 654);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
+            this.button1.Size = new System.Drawing.Size(75, 25);
             this.button1.TabIndex = 0;
             this.button1.Text = "button1";
             this.button1.UseVisualStyleBackColor = true;
@@ -62,9 +62,9 @@
             this.bt_exit.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
             this.bt_exit.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.bt_exit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.bt_exit.Location = new System.Drawing.Point(421, 201);
+            this.bt_exit.Location = new System.Drawing.Point(421, 216);
             this.bt_exit.Name = "bt_exit";
-            this.bt_exit.Size = new System.Drawing.Size(35, 35);
+            this.bt_exit.Size = new System.Drawing.Size(35, 38);
             this.bt_exit.TabIndex = 1;
             this.bt_exit.UseVisualStyleBackColor = false;
             this.bt_exit.Click += new System.EventHandler(this.bt_exit_Click);
@@ -75,18 +75,18 @@
             this.TenDangNhap.AutoSize = true;
             this.TenDangNhap.BackColor = System.Drawing.Color.Transparent;
             this.TenDangNhap.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.TenDangNhap.Location = new System.Drawing.Point(61, 131);
+            this.TenDangNhap.Location = new System.Drawing.Point(94, 141);
             this.TenDangNhap.Name = "TenDangNhap";
-            this.TenDangNhap.Size = new System.Drawing.Size(93, 16);
+            this.TenDangNhap.Size = new System.Drawing.Size(66, 16);
             this.TenDangNhap.TabIndex = 2;
-            this.TenDangNhap.Text = "Tên đăng nhập";
+            this.TenDangNhap.Text = "Tài Khoản";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
             this.label2.BackColor = System.Drawing.Color.Transparent;
             this.label2.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.label2.Location = new System.Drawing.Point(98, 166);
+            this.label2.Location = new System.Drawing.Point(98, 179);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(62, 16);
             this.label2.TabIndex = 3;
@@ -99,7 +99,7 @@
             this.panel1.Controls.Add(this.icon);
             this.panel1.Location = new System.Drawing.Point(-2, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(464, 25);
+            this.panel1.Size = new System.Drawing.Size(464, 27);
             this.panel1.TabIndex = 4;
             // 
             // name
@@ -123,7 +123,7 @@
             this.icon.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.icon.Location = new System.Drawing.Point(14, 3);
             this.icon.Name = "icon";
-            this.icon.Size = new System.Drawing.Size(17, 17);
+            this.icon.Size = new System.Drawing.Size(17, 18);
             this.icon.TabIndex = 0;
             this.icon.UseVisualStyleBackColor = false;
             // 
@@ -136,9 +136,9 @@
             this.logoSign.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
             this.logoSign.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.logoSign.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.logoSign.Location = new System.Drawing.Point(184, 31);
+            this.logoSign.Location = new System.Drawing.Point(184, 33);
             this.logoSign.Name = "logoSign";
-            this.logoSign.Size = new System.Drawing.Size(90, 90);
+            this.logoSign.Size = new System.Drawing.Size(90, 97);
             this.logoSign.TabIndex = 5;
             this.logoSign.UseVisualStyleBackColor = false;
             // 
@@ -149,11 +149,12 @@
             this.tb_matKhau.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.tb_matKhau.Cursor = System.Windows.Forms.Cursors.Default;
             this.tb_matKhau.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.tb_matKhau.Location = new System.Drawing.Point(163, 164);
+            this.tb_matKhau.Location = new System.Drawing.Point(163, 177);
             this.tb_matKhau.Name = "tb_matKhau";
             this.tb_matKhau.PasswordChar = '*';
             this.tb_matKhau.Size = new System.Drawing.Size(193, 22);
             this.tb_matKhau.TabIndex = 7;
+            this.tb_matKhau.KeyDown += new System.Windows.Forms.KeyEventHandler(this.tb_matKhau_KeyDown);
             // 
             // bt_enter
             // 
@@ -161,19 +162,19 @@
             this.bt_enter.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.bt_enter.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.bt_enter.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(188)))), ((int)(((byte)(156)))));
-            this.bt_enter.Location = new System.Drawing.Point(337, 165);
+            this.bt_enter.Location = new System.Drawing.Point(337, 177);
             this.bt_enter.Name = "bt_enter";
-            this.bt_enter.Size = new System.Drawing.Size(19, 20);
+            this.bt_enter.Size = new System.Drawing.Size(19, 22);
             this.bt_enter.TabIndex = 9;
             this.bt_enter.UseVisualStyleBackColor = true;
-            this.bt_enter.MouseClick += new System.Windows.Forms.MouseEventHandler(this.bt_enter_MouseClick);
+            this.bt_enter.Click += new System.EventHandler(this.bt_enter_Click);
             // 
             // tb_TenDangNhap
             // 
             this.tb_TenDangNhap.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.tb_TenDangNhap.Cursor = System.Windows.Forms.Cursors.Default;
             this.tb_TenDangNhap.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.tb_TenDangNhap.Location = new System.Drawing.Point(162, 129);
+            this.tb_TenDangNhap.Location = new System.Drawing.Point(162, 139);
             this.tb_TenDangNhap.Name = "tb_TenDangNhap";
             this.tb_TenDangNhap.Size = new System.Drawing.Size(193, 22);
             this.tb_TenDangNhap.TabIndex = 10;
@@ -181,12 +182,12 @@
             // LoginAcounts
             // 
             this.AcceptButton = this.bt_enter;
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 14F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.DarkSlateGray;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.CancelButton = this.bt_exit;
-            this.ClientSize = new System.Drawing.Size(458, 237);
+            this.ClientSize = new System.Drawing.Size(458, 255);
             this.Controls.Add(this.tb_TenDangNhap);
             this.Controls.Add(this.bt_enter);
             this.Controls.Add(this.tb_matKhau);
@@ -201,7 +202,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
-            this.MaximumSize = new System.Drawing.Size(458, 237);
+            this.MaximumSize = new System.Drawing.Size(458, 255);
             this.Name = "LoginAcounts";
             this.Opacity = 0.96D;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;

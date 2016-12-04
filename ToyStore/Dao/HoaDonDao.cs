@@ -12,7 +12,7 @@ namespace Dao
         public List<HOADON> dsHoaDon()
         {
             List<HOADON> listHD = new List<HOADON>();
-            using (ToyEntitesModel context = new ToyEntitesModel())
+            using (ContextEntites context = new ContextEntites())
             {
                 var query = (from c in context.HOADONs select new { c.MAHD,c.MAKH,c.MANV,c.NGAYHD,c.TRIGIA });
                 foreach (var a in query)
@@ -32,7 +32,7 @@ namespace Dao
         public HOADON HoaDonById(int id)
         {
             HOADON hd = new HOADON();
-            using (ToyEntitesModel context = new ToyEntitesModel())
+            using (ContextEntites context = new ContextEntites())
             {
                var s = context.HOADONs.SingleOrDefault(x => x.MAHD == id);
                 hd.MAHD = s.MAHD;
@@ -47,7 +47,7 @@ namespace Dao
         public int AddHoaDon(HOADON hd)
         {
             int s;
-            using (ToyEntitesModel cn = new ToyEntitesModel())
+            using (ContextEntites cn = new ContextEntites())
             {
                 cn.HOADONs.Add(hd);
                 s = cn.SaveChanges();
@@ -57,7 +57,7 @@ namespace Dao
         public bool deleteHD(int maHD)
         {
             bool check = false;
-            using (ToyEntitesModel con = new ToyEntitesModel())
+            using (ContextEntites con = new ContextEntites())
             {
                 try
                 {
@@ -78,7 +78,7 @@ namespace Dao
         public bool editHD(HOADON hd)
         {
             bool chek = false;
-            using (ToyEntitesModel context=new ToyEntitesModel())
+            using (ContextEntites context=new ContextEntites())
             {
                 try
                 {

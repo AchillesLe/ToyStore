@@ -57,15 +57,16 @@ namespace Presentation
         {
             NhanVienBus nvBus = new NhanVienBus();
             tbl_NhanVien.DataSource = nvBus.DSNhanVien();
-            tbl_NhanVien.Columns["PASS"].Visible = false;
-            tbl_NhanVien.Columns["HOADONS"].Visible = false;
+            tbl_NhanVien.Columns["PASS"].Visible = false;          
         }
-        //có liên quan tới hàm tbl_NhanVien_CellDoubleClick nên cũng chưa xong.
+       //ok
         private void bt_save_Click(object sender, EventArgs e)
         {
             NHANVIEN nv = new NHANVIEN();
             nv.MANV = Int32.Parse(txt_manv.Text);
             nv.NGAYSINH =DateTime.Parse( txt_ngaysinh.Text);
+            //DateTime d = Convert.ToDateTime(nv.NGAYSINH);
+            
             if (rd_nam.Checked == true) nv.PHAI = "Nam";
             else nv.PHAI = "Nu";
             nv.QUEQUAN = txt_QQ.Text;
@@ -79,22 +80,32 @@ namespace Presentation
                 MessageBox.Show("Edit successted !");
             else MessageBox.Show("Edit not successted !");
             loadDSNhanVien();
+            txt_CMT.Text = "";
+            txt_hoten.Text = "";
+            txt_manv.Text = "";
+            txt_ngaysinh.Text = "";
+            txt_QQ.Text = "";
+            txt_SDT.Text = "";
+            rd_nam.Checked = true;
+
         }
 
        
-        //có chút vấn đề vs hàm này .Méo hiểu tại sao.Đang tìm hiểu .
+        //ok
         private void tbl_NhanVien_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
             txt_manv.Text = tbl_NhanVien.Rows[tbl_NhanVien.CurrentCell.RowIndex].Cells[0].Value.ToString();
             txt_hoten.Text = tbl_NhanVien.Rows[tbl_NhanVien.CurrentCell.RowIndex].Cells[1].Value.ToString();
             txt_ngaysinh.Text = tbl_NhanVien.Rows[tbl_NhanVien.CurrentCell.RowIndex].Cells[2].Value.ToString();
+            DateTime d = Convert.ToDateTime(txt_ngaysinh.Text);
+            txt_ngaysinh.Text = d.ToString("MM/dd/yyyy");
             txt_SDT.Text = tbl_NhanVien.Rows[tbl_NhanVien.CurrentCell.RowIndex].Cells[3].Value.ToString();
-            //txt_QQ.Text = tbl_NhanVien.Rows[tbl_NhanVien.CurrentCell.RowIndex].Cells[4].Value.ToString();
+            txt_QQ.Text = tbl_NhanVien.Rows[tbl_NhanVien.CurrentCell.RowIndex].Cells[4].Value.ToString();
             string phai=tbl_NhanVien.Rows[tbl_NhanVien.CurrentCell.RowIndex].Cells[5].Value.ToString();
             if (phai=="Nam")
             {
                 rd_nam.Checked = true;
-                MessageBox.Show(phai);
+                
             }                
             else rd_nu.Checked = true;
             txt_CMT.Text = tbl_NhanVien.Rows[tbl_NhanVien.CurrentCell.RowIndex].Cells[6].Value.ToString();

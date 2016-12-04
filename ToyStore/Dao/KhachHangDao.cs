@@ -11,7 +11,7 @@ namespace Dao
         public List<KHACHHANG> dsKhachHang()
         {
             List<KHACHHANG> listKhanghang = new List<KHACHHANG>();
-            using (ToyEntitesModel context = new ToyEntitesModel())
+            using (ContextEntites context = new ContextEntites())
             {
                 var query = (from c in context.KHACHHANGs select new {c.CMT,c.DIEMTL,c.MAKH,c.SDT,c.TENKH });
                 foreach (var a in query)
@@ -31,7 +31,7 @@ namespace Dao
         public KHACHHANG KhachHangById(int id)
         {
             KHACHHANG kh = new KHACHHANG();
-            using (ToyEntitesModel context = new ToyEntitesModel())
+            using (ContextEntites context = new ContextEntites())
             {
                 KHACHHANG khachhang = context.KHACHHANGs.SingleOrDefault(x=>x.MAKH==id);
             }            
@@ -40,7 +40,7 @@ namespace Dao
         public int AddKH(KHACHHANG kh)
         {
             int s;
-            using (ToyEntitesModel cn = new ToyEntitesModel())
+            using (ContextEntites cn = new ContextEntites())
             {
                 cn.KHACHHANGs.Add(kh);
                 s = cn.SaveChanges();
@@ -50,7 +50,7 @@ namespace Dao
         public bool deleteKH(int maKH)
         {
             bool check = false;
-            using (ToyEntitesModel con = new ToyEntitesModel())
+            using (ContextEntites con = new ContextEntites())
             {
                 try
                 {
@@ -72,7 +72,7 @@ namespace Dao
         public bool editKH(KHACHHANG kh)
         {
             bool chek = false;
-            using (ToyEntitesModel context = new ToyEntitesModel())
+            using (ContextEntites context = new ContextEntites())
             {
                 try
                 {

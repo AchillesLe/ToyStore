@@ -52,7 +52,7 @@
       <Name>Dao</Name>
     </ProjectReference>
     <ProjectReference Include="..\Dto\Dto.csproj">
-      <Project>{a9f37e99-eec7-4c21-bc4c-1da7b9ae85bd}</Project>
+      <Project>{2a1f4739-9e20-4118-8a1f-8ec4c9533f81}</Project>
       <Name>Dto</Name>
     </ProjectReference>
   </ItemGroup>

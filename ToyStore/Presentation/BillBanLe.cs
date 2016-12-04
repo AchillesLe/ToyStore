@@ -46,5 +46,11 @@ namespace Presentation
             MainMenu MainMenu = new MainMenu();
             MainMenu.Show();
         }
+
+        private void show()
+        {
+            LoginAcounts lg = new LoginAcounts();
+           
+        }
     }
 }

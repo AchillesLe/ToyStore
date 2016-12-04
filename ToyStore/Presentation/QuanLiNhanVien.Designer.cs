@@ -35,7 +35,10 @@
             this.Down = new System.Windows.Forms.Button();
             this.name = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.tbl_NhanVien = new System.Windows.Forms.DataGridView();
             this.panel3 = new System.Windows.Forms.Panel();
+            this.label3 = new System.Windows.Forms.Label();
+            this.txt_QQ = new System.Windows.Forms.TextBox();
             this.bt_save = new System.Windows.Forms.Button();
             this.pictureBox8 = new System.Windows.Forms.PictureBox();
             this.pictureBox6 = new System.Windows.Forms.PictureBox();
@@ -65,9 +68,8 @@
             this.bt_Moi = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.pictureBox10 = new System.Windows.Forms.PictureBox();
-            this.txt_QQ = new System.Windows.Forms.TextBox();
-            this.tbl_NhanVien = new System.Windows.Forms.DataGridView();
             this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.tbl_NhanVien)).BeginInit();
             this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
@@ -78,7 +80,6 @@
             this.Gb_GioiTinh.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox10)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.tbl_NhanVien)).BeginInit();
             this.SuspendLayout();
             // 
             // Close
@@ -185,12 +186,29 @@
             this.panel1.Size = new System.Drawing.Size(845, 462);
             this.panel1.TabIndex = 19;
             // 
+            // tbl_NhanVien
+            // 
+            this.tbl_NhanVien.AllowUserToAddRows = false;
+            this.tbl_NhanVien.AllowUserToResizeColumns = false;
+            this.tbl_NhanVien.AllowUserToResizeRows = false;
+            this.tbl_NhanVien.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.tbl_NhanVien.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
+            this.tbl_NhanVien.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.tbl_NhanVien.Location = new System.Drawing.Point(18, 61);
+            this.tbl_NhanVien.MultiSelect = false;
+            this.tbl_NhanVien.Name = "tbl_NhanVien";
+            this.tbl_NhanVien.ReadOnly = true;
+            this.tbl_NhanVien.Size = new System.Drawing.Size(801, 185);
+            this.tbl_NhanVien.TabIndex = 43;
+            this.tbl_NhanVien.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.tbl_NhanVien_CellDoubleClick);
+            // 
             // panel3
             // 
             this.panel3.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.panel3.AutoSize = true;
+            this.panel3.Controls.Add(this.label3);
             this.panel3.Controls.Add(this.txt_QQ);
             this.panel3.Controls.Add(this.bt_save);
             this.panel3.Controls.Add(this.pictureBox8);
@@ -217,6 +235,28 @@
             this.panel3.Size = new System.Drawing.Size(801, 198);
             this.panel3.TabIndex = 42;
             // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.BackColor = System.Drawing.SystemColors.InactiveCaption;
+            this.label3.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.label3.ForeColor = System.Drawing.Color.DarkSlateGray;
+            this.label3.Location = new System.Drawing.Point(689, 29);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(93, 19);
+            this.label3.TabIndex = 30;
+            this.label3.Text = "(MM/DD/YY)";
+            // 
+            // txt_QQ
+            // 
+            this.txt_QQ.BackColor = System.Drawing.SystemColors.MenuBar;
+            this.txt_QQ.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txt_QQ.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.txt_QQ.Location = new System.Drawing.Point(158, 127);
+            this.txt_QQ.Name = "txt_QQ";
+            this.txt_QQ.Size = new System.Drawing.Size(438, 18);
+            this.txt_QQ.TabIndex = 29;
+            // 
             // bt_save
             // 
             this.bt_save.BackColor = System.Drawing.Color.Transparent;
@@ -225,7 +265,7 @@
             this.bt_save.Name = "bt_save";
             this.bt_save.Size = new System.Drawing.Size(139, 38);
             this.bt_save.TabIndex = 28;
-            this.bt_save.Text = "Save";
+            this.bt_save.Text = "Lưu";
             this.bt_save.UseVisualStyleBackColor = false;
             this.bt_save.Click += new System.EventHandler(this.bt_save_Click);
             // 
@@ -362,7 +402,7 @@
             this.txt_manv.BackColor = System.Drawing.SystemColors.InactiveCaption;
             this.txt_manv.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txt_manv.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.txt_manv.Location = new System.Drawing.Point(160, 31);
+            this.txt_manv.Location = new System.Drawing.Point(160, 32);
             this.txt_manv.Name = "txt_manv";
             this.txt_manv.ReadOnly = true;
             this.txt_manv.Size = new System.Drawing.Size(231, 18);
@@ -384,9 +424,9 @@
             this.txt_ngaysinh.BackColor = System.Drawing.SystemColors.MenuBar;
             this.txt_ngaysinh.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txt_ngaysinh.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.txt_ngaysinh.Location = new System.Drawing.Point(551, 28);
+            this.txt_ngaysinh.Location = new System.Drawing.Point(551, 29);
             this.txt_ngaysinh.Name = "txt_ngaysinh";
-            this.txt_ngaysinh.Size = new System.Drawing.Size(231, 18);
+            this.txt_ngaysinh.Size = new System.Drawing.Size(143, 18);
             this.txt_ngaysinh.TabIndex = 13;
             // 
             // lb_TenNv
@@ -557,29 +597,6 @@
             this.pictureBox10.TabIndex = 31;
             this.pictureBox10.TabStop = false;
             // 
-            // txt_QQ
-            // 
-            this.txt_QQ.BackColor = System.Drawing.SystemColors.MenuBar;
-            this.txt_QQ.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txt_QQ.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.txt_QQ.Location = new System.Drawing.Point(158, 127);
-            this.txt_QQ.Name = "txt_QQ";
-            this.txt_QQ.Size = new System.Drawing.Size(438, 18);
-            this.txt_QQ.TabIndex = 29;
-            // 
-            // tbl_NhanVien
-            // 
-            this.tbl_NhanVien.AllowUserToAddRows = false;
-            this.tbl_NhanVien.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.tbl_NhanVien.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
-            this.tbl_NhanVien.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.tbl_NhanVien.Location = new System.Drawing.Point(18, 61);
-            this.tbl_NhanVien.Name = "tbl_NhanVien";
-            this.tbl_NhanVien.ReadOnly = true;
-            this.tbl_NhanVien.Size = new System.Drawing.Size(801, 185);
-            this.tbl_NhanVien.TabIndex = 43;
-            this.tbl_NhanVien.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.tbl_NhanVien_CellDoubleClick);
-            // 
             // QuanLiNhanVien
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 14F);
@@ -601,6 +618,7 @@
             this.Text = "QuanLiNhanVien";
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.tbl_NhanVien)).EndInit();
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).EndInit();
@@ -613,7 +631,6 @@
             this.Gb_GioiTinh.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox10)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.tbl_NhanVien)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -652,12 +669,13 @@
         private System.Windows.Forms.Label lb_MaHd;
         private System.Windows.Forms.TextBox txt_ngaysinh;
         private System.Windows.Forms.Label lb_TenNv;
-        private System.Windows.Forms.Label lb_Ngay;
         private System.Windows.Forms.GroupBox Gb_GioiTinh;
         private System.Windows.Forms.RadioButton rd_nu;
         private System.Windows.Forms.RadioButton rd_nam;
         private System.Windows.Forms.Button bt_save;
         private System.Windows.Forms.TextBox txt_QQ;
         private System.Windows.Forms.DataGridView tbl_NhanVien;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label lb_Ngay;
     }
 }

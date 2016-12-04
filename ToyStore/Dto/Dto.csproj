@@ -4,7 +4,7 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{A9F37E99-EEC7-4C21-BC4C-1DA7B9AE85BD}</ProjectGuid>
+    <ProjectGuid>{2A1F4739-9E20-4118-8A1F-8EC4C9533F81}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>Dto</RootNamespace>
@@ -52,6 +52,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="BAOCAO.cs" />
+    <Compile Include="ContextEntites.cs" />
     <Compile Include="CTHD.cs" />
     <Compile Include="DOCHOI.cs" />
     <Compile Include="HOADON.cs" />
@@ -59,7 +60,6 @@
     <Compile Include="NHANVIEN.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="QUA.cs" />
-    <Compile Include="ToyEntitesModel.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

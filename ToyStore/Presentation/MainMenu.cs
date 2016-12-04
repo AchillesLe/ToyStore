@@ -29,6 +29,8 @@ namespace Presentation
                 QuanLiNhanVien.Hide();
             }
             QuanLiBanHang.Show();
+            LoginAcounts lg = new LoginAcounts();
+            label1.Text=lg.manv
 
         }
         //move window without title bar
@@ -197,6 +199,13 @@ namespace Presentation
             public Show()
             {
             }
+        }//tính làm gì vậy ????
+
+        private void bt_out_Click(object sender, EventArgs e)
+        {
+            LoginAcounts lg = new LoginAcounts();
+            lg.Show();
+            this.Close();
         }
     }
 }

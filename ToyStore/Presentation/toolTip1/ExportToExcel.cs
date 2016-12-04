@@ -26,14 +26,15 @@ namespace Presentation.toolTip1
                 excel.Application exapp = new excel.Application();
                 excel.Workbook exbook = exapp.Workbooks.Add(excel.XlWBATemplate.xlWBATWorksheet);
                 excel.Worksheet exSheet = (excel.Worksheet)exbook.Worksheets[1];
-               // excel.Range cellrange;
+                excel.Range cellrange;
 
                 exSheet.Name = fileName;
 
-                List<string> field = new List<string>();
-                field.Add("Mã NV"); field.Add("Tên NV"); field.Add("Ngày Sinh");
-                field.Add("SDT"); field.Add("Quê Quán"); field.Add("Phái"); field.Add("CMT");
-               
+                //List<string> field = new List<string>();
+                //field.Add("MANV"); field.Add("TENNV"); field.Add("NGAYSINH");
+                //field.Add("SDT"); field.Add("QUEQUAN"); field.Add("PHAI"); field.Add("CMT");
+                cellrange = exSheet.Range[exSheet.Cells[1, 1], exSheet.Cells[dgv.Rows.Count + 1, dgv.Columns.Count]];
+                cellrange.NumberFormat = "@";
 
                 for(int i=0;i<dgv.ColumnCount;i++)
                 {
@@ -42,18 +43,23 @@ namespace Presentation.toolTip1
 
                 for(int i=0;i<dgv.Rows.Count;i++)
                 {
-                    for(int j=0;j<dgv.ColumnCount;j++)
+                    for(int j=0;j < dgv.ColumnCount; j++)
                     {
-                        exSheet.Cells[i + 2, j + 1] = dgv.Rows[i].Cells[dgv.Columns[i].HeaderText].Value.ToString();                     
+                        exSheet.Cells[i+2 , j+1] = dgv.Rows[i+1].Cells[dgv.Columns[j].HeaderText].Value.ToString();                     
                     }
                 }
 
-                exapp.Visible = true;
+               cellrange.EntireColumn.AutoFit();
+               exapp.Visible = true;
+
                 exbook.SaveAs(sfdSave.FileName,
                     excel.XlFileFormat.xlWorkbookNormal,
                     null, null, false, false,
                     excel.XlSaveAsAccessMode.xlExclusive,
                     false, false, false, false, false);
+
+                exbook.Close();
+                exapp.Quit();
             }
         }
     }

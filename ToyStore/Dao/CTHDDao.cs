@@ -11,7 +11,7 @@ namespace Dao
         public List<CTHD> DSNhanVien()
         {
             List<CTHD> listCTHD = new List<CTHD>();
-            using (ToyEntitesModel context = new ToyEntitesModel())
+            using (ContextEntites context = new ContextEntites())
             {
                 var query = (from c in context.CTHDs select c);
                 foreach (var c in query)
@@ -29,18 +29,18 @@ namespace Dao
         public CTHD CTHDbyID(int mahd,int madc)
         {
             CTHD ct = new CTHD();
-            using (ToyEntitesModel context = new ToyEntitesModel())
+            using (ContextEntites context = new ContextEntites())
             {
                 var a = context.CTHDs.SingleOrDefault(x => x.MAHD == mahd && x.MADC==madc);
                 ct.MADC = a.MADC;
                 
             }
-            return nv;//
+            return ct;//
         }
         public int addNV(NHANVIEN nv)
         {
             int s;
-            using (ToyEntitesModel context = new ToyEntitesModel())
+            using (ContextEntites context = new ContextEntites())
             {
                 var a = context.NHANVIENs.Add(nv);
                 s = context.SaveChanges();
@@ -50,7 +50,7 @@ namespace Dao
         public bool deleteNV(int maNV)
         {
             bool check = false;
-            using (ToyEntitesModel con = new ToyEntitesModel())
+            using (ContextEntites con = new ContextEntites())
             {
                 try
                 {
@@ -71,7 +71,8 @@ namespace Dao
         public bool editNV(NHANVIEN kh)
         {
             bool chek = false;
-            using (ToyEntitesModel context = new ToyEntitesModel())
+            using (ContextEntites context = new ContextEntites
+                ())
             {
                 try
                 {
