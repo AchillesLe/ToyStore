@@ -61,7 +61,7 @@ namespace Presentation
             {
                 MainMenu mainMenu = new MainMenu();
                 mainMenu.Show();
-               mainMenu.tbAccount= tb_TenDangNhap.Text;
+        
                 this.Visible = false;
             }
             else

@@ -20,6 +20,7 @@ namespace Presentation
         {
             InitializeComponent();
             loadDSNhanVien();
+            txt_hoten.
         }
 
 

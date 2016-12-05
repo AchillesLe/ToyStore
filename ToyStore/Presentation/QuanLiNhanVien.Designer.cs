@@ -378,6 +378,7 @@
             this.txt_hoten.Name = "txt_hoten";
             this.txt_hoten.Size = new System.Drawing.Size(228, 18);
             this.txt_hoten.TabIndex = 7;
+            this.txt_hoten.Tag = "";
             // 
             // pictureBox4
             // 
