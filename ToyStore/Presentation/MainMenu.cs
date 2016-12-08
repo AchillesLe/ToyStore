@@ -23,7 +23,7 @@ namespace Presentation
             bt_BanHang.BackColor = Color.FromArgb(26, 188, 156); //mau button khi nhap vao 
             // chỉ hiện panel chính
             {
-                QuanLiSanPham.Hide();
+               
                 QuanLiKho.Hide();
                 BaoCaoDoanhSo.Hide();
                 QuanLiNhanVien.Hide();
@@ -73,11 +73,7 @@ namespace Presentation
             Bt_click(bt_BaoCaoDoanhSo);
         }
 
-        private void bt_QuanLiSanPham_Click(object sender, EventArgs e)
-        {       
-            Hide_Visible(QuanLiSanPham);
-            Bt_click(bt_QuanLiSanPham);
-        }
+       
 
         private void bt_QuanLiNhanVien_Click(object sender, EventArgs e)
         {
@@ -91,27 +87,16 @@ namespace Presentation
             {
                 QuanLiBanHang.Hide();
                 QuanLiNhanVien.Hide();
-                QuanLiSanPham.Hide();
                 BaoCaoDoanhSo.Hide();
                 pn.Size = new Size(645, 491);
                 pn.Location = new Point(202, 26);
                 pn.Show();
             }
-            else if(pn==QuanLiSanPham)
-            {
-                QuanLiBanHang.Hide();
-                QuanLiNhanVien.Hide();
-                QuanLiKho.Hide();
-                BaoCaoDoanhSo.Hide();
-                pn.Size = new Size(645, 491);
-                pn.Location = new Point(202, 26);
-                pn.Show();
-            }
+           
             else if(pn==QuanLiNhanVien)
             {
                 QuanLiBanHang.Hide();
                 QuanLiKho.Hide();
-                QuanLiSanPham.Hide();
                 BaoCaoDoanhSo.Hide();
                 pn.Size = new Size(645, 491);
                 pn.Location = new Point(202, 26);
@@ -121,7 +106,6 @@ namespace Presentation
             {
                 QuanLiKho.Hide();
                 QuanLiNhanVien.Hide();
-                QuanLiSanPham.Hide();
                 BaoCaoDoanhSo.Hide();
                 pn.Size = new Size(645, 491);
                 pn.Location = new Point(202, 26);
@@ -131,7 +115,6 @@ namespace Presentation
             {
                 QuanLiBanHang.Hide();
                 QuanLiNhanVien.Hide();
-                QuanLiSanPham.Hide();
                 QuanLiKho.Hide();
                 pn.Size = new Size(645, 491);
                 pn.Location = new Point(202, 26);
@@ -146,7 +129,6 @@ namespace Presentation
                 bt_BanHang.BackColor = TransparencyKey; //mau button khi ko nhap vao
                 bt_BaoCaoDoanhSo.BackColor = TransparencyKey;
                 bt_QuanLiNhanVien.BackColor = TransparencyKey;
-                bt_QuanLiSanPham.BackColor = TransparencyKey;
                 bt.BackColor = Color.FromArgb(26, 188, 156); //mau button khi nhap vao 
             }
             else if(bt==bt_BanHang)
@@ -154,7 +136,6 @@ namespace Presentation
                 bt_QuanLiKho.BackColor = TransparencyKey; //mau button khi ko nhap vao
                 bt_BaoCaoDoanhSo.BackColor = TransparencyKey;
                 bt_QuanLiNhanVien.BackColor = TransparencyKey;
-                bt_QuanLiSanPham.BackColor = TransparencyKey;
                 bt.BackColor = Color.FromArgb(26, 188, 156); //mau button khi nhap vao 
 
             }
@@ -163,7 +144,6 @@ namespace Presentation
                 bt_QuanLiKho.BackColor = TransparencyKey; //mau button khi ko nhap vao
                 bt_BaoCaoDoanhSo.BackColor = TransparencyKey;
                 bt_BanHang.BackColor = TransparencyKey;
-                bt_QuanLiSanPham.BackColor = TransparencyKey;
                 bt.BackColor = Color.FromArgb(26, 188, 156); //mau button khi nhap vao 
 
             }
@@ -172,19 +152,10 @@ namespace Presentation
                 bt_QuanLiKho.BackColor = TransparencyKey; //mau button khi ko nhap vao
                 bt_BanHang.BackColor = TransparencyKey;
                 bt_QuanLiNhanVien.BackColor = TransparencyKey;
-                bt_QuanLiSanPham.BackColor = TransparencyKey;
                 bt.BackColor = Color.FromArgb(26, 188, 156); //mau button khi nhap vao 
 
             }
-            else if (bt == bt_QuanLiSanPham)
-            {
-                bt_QuanLiKho.BackColor = TransparencyKey; //mau button khi ko nhap vao
-                bt_BaoCaoDoanhSo.BackColor = TransparencyKey;
-                bt_QuanLiNhanVien.BackColor = TransparencyKey;
-                bt_BanHang.BackColor = TransparencyKey;
-                bt.BackColor = Color.FromArgb(26, 188, 156); //mau button khi nhap vao 
-
-            }
+            
 
         }
         private void bt_HoaDon_Click(object sender, EventArgs e)
@@ -229,7 +200,6 @@ namespace Presentation
                 QuanLiBanHang.Enabled = false;
                 QuanLiKho.Enabled = false;
                 QuanLiNhanVien.Enabled = false;
-                QuanLiSanPham.Enabled = false;
                 BaoCaoDoanhSo.Enabled = false;
             }
         }
@@ -251,7 +221,6 @@ namespace Presentation
                 QuanLiBanHang.Enabled = true;
                 QuanLiKho.Enabled = true;
                 QuanLiNhanVien.Enabled = true;
-                QuanLiSanPham.Enabled = true;
                 BaoCaoDoanhSo.Enabled = true;
             }
         }
