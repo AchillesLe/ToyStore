@@ -20,7 +20,11 @@ namespace Presentation
         {
             InitializeComponent();
             loadDSNhanVien();
-            txt_hoten.
+            bt_moi.Hide();
+            lb_pass.Hide();
+            tb_pass.Hide();
+            pic_pass.Hide();
+
         }
 
 
@@ -42,7 +46,8 @@ namespace Presentation
         private void Close_Click(object sender, EventArgs e)
         {
             this.Close();
-            Application.Exit();
+            MainMenu mn = new MainMenu();
+            mn.Show();
         }
 
         private void back_Click(object sender, EventArgs e)
@@ -69,10 +74,10 @@ namespace Presentation
             
             if (rd_nam.Checked == true) nv.PHAI = "Nam";
             else nv.PHAI = "Nu";
-            nv.QUEQUAN = txt_QQ.Text;
-            nv.SDT = txt_SDT.Text;
+            nv.QUEQUAN = txt_DiaChi.Text;
+            nv.SDT = txt_NgayLam.Text;
             nv.TENNV = txt_hoten.Text;
-            nv.CMT = txt_CMT.Text;
+            nv.CMT = txt_CMND.Text;
             
             NhanVienBus nvBus = new NhanVienBus();
 
@@ -80,12 +85,12 @@ namespace Presentation
                 MessageBox.Show("Edit successted !");
             else MessageBox.Show("Edit not successted !");
             loadDSNhanVien();
-            txt_CMT.Text = "";
+            txt_CMND.Text = "";
             txt_hoten.Text = "";
             txt_manv.Text = "";
             txt_ngaysinh.Text = "";
-            txt_QQ.Text = "";
-            txt_SDT.Text = "";
+            txt_DiaChi.Text = "";
+            txt_NgayLam.Text = "";
             rd_nam.Checked = true;
 
         }
@@ -99,8 +104,8 @@ namespace Presentation
             txt_ngaysinh.Text = tbl_NhanVien.Rows[tbl_NhanVien.CurrentCell.RowIndex].Cells[2].Value.ToString();
             DateTime d = Convert.ToDateTime(txt_ngaysinh.Text);
             txt_ngaysinh.Text = d.ToString("MM/dd/yyyy");
-            txt_SDT.Text = tbl_NhanVien.Rows[tbl_NhanVien.CurrentCell.RowIndex].Cells[3].Value.ToString();
-            txt_QQ.Text = tbl_NhanVien.Rows[tbl_NhanVien.CurrentCell.RowIndex].Cells[4].Value.ToString();
+            txt_NgayLam.Text = tbl_NhanVien.Rows[tbl_NhanVien.CurrentCell.RowIndex].Cells[3].Value.ToString();
+            txt_DiaChi.Text = tbl_NhanVien.Rows[tbl_NhanVien.CurrentCell.RowIndex].Cells[4].Value.ToString();
             string phai=tbl_NhanVien.Rows[tbl_NhanVien.CurrentCell.RowIndex].Cells[5].Value.ToString();
             if (phai=="Nam")
             {
@@ -108,7 +113,7 @@ namespace Presentation
                 
             }                
             else rd_nu.Checked = true;
-            txt_CMT.Text = tbl_NhanVien.Rows[tbl_NhanVien.CurrentCell.RowIndex].Cells[6].Value.ToString();
+            txt_CMND.Text = tbl_NhanVien.Rows[tbl_NhanVien.CurrentCell.RowIndex].Cells[6].Value.ToString();
             
         }
         //Thiếu form thêm.(Click vào nút thêm thì sẽ ra form thêm.)
@@ -157,6 +162,24 @@ namespace Presentation
         {
             toolTip1.ExportToExcel excel = new toolTip1.ExportToExcel();
             excel.ExportToExcelFromDatagridview(tbl_NhanVien, "Danh Sách Nhân Viên");
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            bt_Huy.Show();
+            bt_Luu.Show();
+        }
+
+        private void bt_them_Click(object sender, EventArgs e)
+        {
+            bt_moi.Show();
+            lb_pass.Show();
+            tb_pass.Show();
+            pic_pass.Show();
+            bt_Luu.Hide();
+            bt_Sua.Hide();
+            bt_Xoa.Hide();
+            bt_Huy.Hide(); 
         }
     }
 }

@@ -5,33 +5,19 @@ using System.Data;
 using System.Drawing;
 using System.Linq;
 using System.Text;
+using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace Presentation
 {
-    public partial class BillBanLe : Form
+    public partial class ChiTietHd : Form
     {
         const int WM_NCHITTEST = 0x84;
         const int HTCLIENT = 0x1;
         const int HTCAPTION = 0x2;
-      
-        public BillBanLe()
+        public ChiTietHd()
         {
             InitializeComponent();
-        }
-        protected override void WndProc(ref Message message)
-        {
-            base.WndProc(ref message);
-
-            if (message.Msg == WM_NCHITTEST && (int)message.Result == HTCLIENT)
-                message.Result = (IntPtr)HTCAPTION;
-        }
-
-        private void Close_Click(object sender, EventArgs e)
-        {
-            this.Close();
-            MainMenu mn = new MainMenu();
-            mn.Show();
         }
 
         private void Down_Click(object sender, EventArgs e)
@@ -39,20 +25,28 @@ namespace Presentation
             this.WindowState = FormWindowState.Minimized;
         }
 
+        private void Close_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
         private void back_Click(object sender, EventArgs e)
         {
-            // hide BillBanLe Form
+            // hide this Form
             this.Close();
             //Show MainMenuForm
             MainMenu MainMenu = new MainMenu();
             MainMenu.Show();
         }
-
-        private void show()
+        
+        private void rd_MaHd_CheckedChanged(object sender, EventArgs e)
         {
-            LoginAcounts lg = new LoginAcounts();
-           
+
         }
 
+        private void rd_NgayHd_CheckedChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

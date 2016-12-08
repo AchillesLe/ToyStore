@@ -100,11 +100,23 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BaoCaoDs.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BaoCaoDs.Designer.cs">
+      <DependentUpon>BaoCaoDs.cs</DependentUpon>
+    </Compile>
     <Compile Include="BillBanLe.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="BillBanLe.designer.cs">
       <DependentUpon>BillBanLe.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ChiTietHd.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ChiTietHd.Designer.cs">
+      <DependentUpon>ChiTietHd.cs</DependentUpon>
     </Compile>
     <Compile Include="LoginAcounts.cs">
       <SubType>Form</SubType>
@@ -118,6 +130,12 @@
     <Compile Include="MainMenu.designer.cs">
       <DependentUpon>MainMenu.cs</DependentUpon>
     </Compile>
+    <Compile Include="NhapKho.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="NhapKho.Designer.cs">
+      <DependentUpon>NhapKho.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="QuanLiNhanVien.cs">
@@ -126,16 +144,37 @@
     <Compile Include="QuanLiNhanVien.Designer.cs">
       <DependentUpon>QuanLiNhanVien.cs</DependentUpon>
     </Compile>
+    <Compile Include="ThongKeKho.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ThongKeKho.Designer.cs">
+      <DependentUpon>ThongKeKho.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ThongTinNv.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ThongTinNv.Designer.cs">
+      <DependentUpon>ThongTinNv.cs</DependentUpon>
+    </Compile>
     <Compile Include="toolTip1\ExportToExcel.cs" />
     <Compile Include="toolTip1\Show.cs" />
+    <EmbeddedResource Include="BaoCaoDs.resx">
+      <DependentUpon>BaoCaoDs.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="BillBanLe.resx">
       <DependentUpon>BillBanLe.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ChiTietHd.resx">
+      <DependentUpon>ChiTietHd.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="LoginAcounts.resx">
       <DependentUpon>LoginAcounts.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="MainMenu.resx">
       <DependentUpon>MainMenu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NhapKho.resx">
+      <DependentUpon>NhapKho.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -148,6 +187,12 @@
     </Compile>
     <EmbeddedResource Include="QuanLiNhanVien.resx">
       <DependentUpon>QuanLiNhanVien.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ThongKeKho.resx">
+      <DependentUpon>ThongKeKho.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ThongTinNv.resx">
+      <DependentUpon>ThongTinNv.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">

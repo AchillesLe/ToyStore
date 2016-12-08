@@ -1,2 +1,10 @@
 ﻿Size: 645, 491  location: 202, 26
 // size và location của panel main menu
+màu nền extend menu 22, 160, 133
+màu icon : 26, 188, 156
+Màu đậm : DarkSlateGray 
+nhạt hơn: #375d5d
+QUản Lí Kho: Nhập Kho
+//Acount: Thay mật khẩu( xem chi tiết cá nhân)
+//Quản Lí Nv: Tạo Tài kHoản Mới: Form : ID, Pass, rePass,Tên Đăng Nhập
+1h15 

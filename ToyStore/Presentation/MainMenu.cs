@@ -11,7 +11,7 @@ namespace Presentation
 {
     public partial class MainMenu : Form
     {
-
+        int click = 0;
         const int WM_NCHITTEST = 0x84;
         const int HTCLIENT = 0x1;
         const int HTCAPTION = 0x2;
@@ -27,6 +27,8 @@ namespace Presentation
                 QuanLiKho.Hide();
                 BaoCaoDoanhSo.Hide();
                 QuanLiNhanVien.Hide();
+                pn_DangXuat.Hide();
+                pn_ThongBao.Hide();
             }
             QuanLiBanHang.Show();
          
@@ -188,23 +190,112 @@ namespace Presentation
         private void bt_HoaDon_Click(object sender, EventArgs e)
         {
             //Hide MainMenu
-            this.Close();
+            this.Hide();
             //Show BillBanLe Form
             BillBanLe BillBanLe = new BillBanLe();
             BillBanLe.Show();
         }
-        internal class Show
-        {
-            public Show()
-            {
-            }
-        }//tính làm gì vậy ????
-
         private void bt_out_Click(object sender, EventArgs e)
         {
             LoginAcounts lg = new LoginAcounts();
             lg.Show();
             this.Close();
+        }
+
+        private void bt_XemNv_Click(object sender, EventArgs e)
+        {
+            QuanLiNhanVien QuanLiNv = new QuanLiNhanVien();
+            QuanLiNv.Show();
+        }
+        private void bt_Account_Click(object sender, EventArgs e)
+        {
+            click++;
+            if (click % 2 != 0) //click chuot thu 1
+                pn_DangXuat.Show();
+            else //click chuot lan nua
+                pn_DangXuat.Hide();
+        }
+
+        private void bt_DangXuat_Click(object sender, EventArgs e)
+        {
+            //hiện thông báo
+            pn_DangXuat.Hide();
+            pn_ThongBao.Show();
+            pn_ThongBao.BringToFront();
+            pn_ThongBao.Location = new Point(380, 163);
+            //khóa các chức năng khác
+            {
+                pn_menu.Enabled = false;
+                QuanLiBanHang.Enabled = false;
+                QuanLiKho.Enabled = false;
+                QuanLiNhanVien.Enabled = false;
+                QuanLiSanPham.Enabled = false;
+                BaoCaoDoanhSo.Enabled = false;
+            }
+        }
+
+        private void bt_DongY_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            LoginAcounts logic = new LoginAcounts();
+            logic.Show();
+        }
+
+        private void bt_huy_Click(object sender, EventArgs e)
+        {
+            pn_ThongBao.Hide();
+            pn_ThongBao.SendToBack();
+            //mở lại các chức năng khác
+            {
+                pn_menu.Enabled = true;
+                QuanLiBanHang.Enabled = true;
+                QuanLiKho.Enabled = true;
+                QuanLiNhanVien.Enabled = true;
+                QuanLiSanPham.Enabled = true;
+                BaoCaoDoanhSo.Enabled = true;
+            }
+        }
+
+        private void bt_XemThongTin_Click(object sender, EventArgs e)
+        {
+            ThongTinNv ThongTinNv = new ThongTinNv();
+            ThongTinNv.Show();
+            pn_DangXuat.Hide();
+
+        }
+
+        private void bt_ThemNv_Click(object sender, EventArgs e)
+        {
+            QuanLiNhanVien QuanLiNv = new QuanLiNhanVien();
+            QuanLiNv.Show();
+        }
+
+        private void bt_CtHd_Click(object sender, EventArgs e)
+        {
+            ChiTietHd Cthd = new ChiTietHd();
+            Cthd.Show();
+            this.Hide();
+        }
+
+        private void bt_XemNgay_Click(object sender, EventArgs e)
+        {
+            BaoCaoDs Bcds = new BaoCaoDs();
+            Bcds.Show();
+            this.Hide();
+        }
+
+        private void bt_CtSp_Click(object sender, EventArgs e)
+        {
+            ThongKeKho TKK = new ThongKeKho();
+            TKK.Show();
+            this.Hide();
+        }
+
+        private void bt_CtKho_Click(object sender, EventArgs e)
+        {
+            NhapKho TKK = new NhapKho();
+            TKK.Show();
+            this.Hide();
         }
     }
 }

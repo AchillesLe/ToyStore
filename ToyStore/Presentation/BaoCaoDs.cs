@@ -5,17 +5,17 @@ using System.Data;
 using System.Drawing;
 using System.Linq;
 using System.Text;
+using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace Presentation
 {
-    public partial class BillBanLe : Form
+    public partial class BaoCaoDs : Form
     {
         const int WM_NCHITTEST = 0x84;
         const int HTCLIENT = 0x1;
         const int HTCAPTION = 0x2;
-      
-        public BillBanLe()
+        public BaoCaoDs()
         {
             InitializeComponent();
         }
@@ -41,18 +41,11 @@ namespace Presentation
 
         private void back_Click(object sender, EventArgs e)
         {
-            // hide BillBanLe Form
+            // hide this Form
             this.Close();
             //Show MainMenuForm
             MainMenu MainMenu = new MainMenu();
             MainMenu.Show();
         }
-
-        private void show()
-        {
-            LoginAcounts lg = new LoginAcounts();
-           
-        }
-
     }
 }

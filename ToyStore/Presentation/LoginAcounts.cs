@@ -21,7 +21,7 @@ namespace Presentation
         public LoginAcounts()
         {
             InitializeComponent();
-            tb_matKhau.UseSystemPasswordChar = true;
+            tb_TenDangNhap.UseSystemPasswordChar = true;
           //  tb_matKhau.PasswordChar = '*';
         }
         protected override void WndProc(ref Message message)
@@ -34,6 +34,7 @@ namespace Presentation
         private void bt_exit_Click(object sender, EventArgs e)
         {
             this.Close();
+            Application.Exit();
         }
 
         private void bt_exit_MouseClick(object sender, MouseEventArgs e)
@@ -55,7 +56,7 @@ namespace Presentation
 
             AccountBus acBus = new AccountBus();
             string username =(tb_TenDangNhap.Text);
-            string pass = tb_matKhau.Text;
+            string pass = tb_MatKhau.Text;
            
             if (acBus.checkac(username, pass)==true)
             {
@@ -67,7 +68,7 @@ namespace Presentation
             else
             {
                 MessageBox.Show("Tên đăng nhập hoặc mật khẩu không đúng.Hãy kiểm tra và nhập lại!");
-                tb_matKhau.Text = "";
+                tb_TenDangNhap.Text = "";
                 
             }
 
@@ -78,5 +79,6 @@ namespace Presentation
             AccountBus acBus = new AccountBus();
             
         }
+        
     }
 }
