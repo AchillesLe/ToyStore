@@ -38,7 +38,6 @@
             this.label3 = new System.Windows.Forms.Label();
             this.button8 = new System.Windows.Forms.Button();
             this.bt_QuanLiNhanVien = new System.Windows.Forms.Button();
-            this.bt_QuanLiSanPham = new System.Windows.Forms.Button();
             this.bt_BaoCaoDoanhSo = new System.Windows.Forms.Button();
             this.bt_QuanLiKho = new System.Windows.Forms.Button();
             this.bt_BanHang = new System.Windows.Forms.Button();
@@ -54,10 +53,7 @@
             this.bt_DongY = new System.Windows.Forms.Button();
             this.pictureBox6 = new System.Windows.Forms.PictureBox();
             this.lb_ThongBao = new System.Windows.Forms.Label();
-            this.lb_QuanLiSp = new System.Windows.Forms.Label();
-            this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.bt_CapNhatGia = new System.Windows.Forms.Button();
-            this.QuanLiSanPham = new System.Windows.Forms.Panel();
             this.lb_QuanLiKho = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.bt_CtSp = new System.Windows.Forms.Button();
@@ -81,8 +77,6 @@
             this.pn_ThongBao.SuspendLayout();
             this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
-            this.QuanLiSanPham.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.QuanLiKho.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
@@ -103,7 +97,6 @@
             this.pn_menu.Controls.Add(this.label3);
             this.pn_menu.Controls.Add(this.button8);
             this.pn_menu.Controls.Add(this.bt_QuanLiNhanVien);
-            this.pn_menu.Controls.Add(this.bt_QuanLiSanPham);
             this.pn_menu.Controls.Add(this.bt_BaoCaoDoanhSo);
             this.pn_menu.Controls.Add(this.bt_QuanLiKho);
             this.pn_menu.Controls.Add(this.bt_BanHang);
@@ -227,7 +220,7 @@
             this.bt_QuanLiNhanVien.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.bt_QuanLiNhanVien.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.bt_QuanLiNhanVien.ForeColor = System.Drawing.Color.Transparent;
-            this.bt_QuanLiNhanVien.Location = new System.Drawing.Point(-3, 243);
+            this.bt_QuanLiNhanVien.Location = new System.Drawing.Point(0, 200);
             this.bt_QuanLiNhanVien.Name = "bt_QuanLiNhanVien";
             this.bt_QuanLiNhanVien.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.bt_QuanLiNhanVien.Size = new System.Drawing.Size(203, 31);
@@ -236,25 +229,6 @@
             this.bt_QuanLiNhanVien.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.bt_QuanLiNhanVien.UseVisualStyleBackColor = false;
             this.bt_QuanLiNhanVien.Click += new System.EventHandler(this.bt_QuanLiNhanVien_Click);
-            // 
-            // bt_QuanLiSanPham
-            // 
-            this.bt_QuanLiSanPham.BackColor = System.Drawing.Color.Transparent;
-            this.bt_QuanLiSanPham.FlatAppearance.BorderSize = 0;
-            this.bt_QuanLiSanPham.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(188)))), ((int)(((byte)(156)))));
-            this.bt_QuanLiSanPham.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(188)))), ((int)(((byte)(156)))));
-            this.bt_QuanLiSanPham.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.bt_QuanLiSanPham.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.bt_QuanLiSanPham.ForeColor = System.Drawing.Color.Transparent;
-            this.bt_QuanLiSanPham.Location = new System.Drawing.Point(-3, 195);
-            this.bt_QuanLiSanPham.Name = "bt_QuanLiSanPham";
-            this.bt_QuanLiSanPham.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.bt_QuanLiSanPham.Size = new System.Drawing.Size(203, 31);
-            this.bt_QuanLiSanPham.TabIndex = 3;
-            this.bt_QuanLiSanPham.Text = "        Quản Lí Sản Phẩm";
-            this.bt_QuanLiSanPham.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.bt_QuanLiSanPham.UseVisualStyleBackColor = false;
-            this.bt_QuanLiSanPham.Click += new System.EventHandler(this.bt_QuanLiSanPham_Click);
             // 
             // bt_BaoCaoDoanhSo
             // 
@@ -265,7 +239,7 @@
             this.bt_BaoCaoDoanhSo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.bt_BaoCaoDoanhSo.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.bt_BaoCaoDoanhSo.ForeColor = System.Drawing.Color.Transparent;
-            this.bt_BaoCaoDoanhSo.Location = new System.Drawing.Point(-3, 147);
+            this.bt_BaoCaoDoanhSo.Location = new System.Drawing.Point(0, 147);
             this.bt_BaoCaoDoanhSo.Name = "bt_BaoCaoDoanhSo";
             this.bt_BaoCaoDoanhSo.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.bt_BaoCaoDoanhSo.Size = new System.Drawing.Size(203, 31);
@@ -284,7 +258,7 @@
             this.bt_QuanLiKho.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.bt_QuanLiKho.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.bt_QuanLiKho.ForeColor = System.Drawing.Color.Transparent;
-            this.bt_QuanLiKho.Location = new System.Drawing.Point(-3, 99);
+            this.bt_QuanLiKho.Location = new System.Drawing.Point(0, 99);
             this.bt_QuanLiKho.Name = "bt_QuanLiKho";
             this.bt_QuanLiKho.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.bt_QuanLiKho.Size = new System.Drawing.Size(203, 31);
@@ -303,7 +277,7 @@
             this.bt_BanHang.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.bt_BanHang.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.bt_BanHang.ForeColor = System.Drawing.Color.Transparent;
-            this.bt_BanHang.Location = new System.Drawing.Point(-3, 51);
+            this.bt_BanHang.Location = new System.Drawing.Point(0, 51);
             this.bt_BanHang.Name = "bt_BanHang";
             this.bt_BanHang.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.bt_BanHang.Size = new System.Drawing.Size(203, 31);
@@ -481,31 +455,6 @@
             this.lb_ThongBao.TabIndex = 12;
             this.lb_ThongBao.Text = "Thông Báo";
             // 
-            // lb_QuanLiSp
-            // 
-            this.lb_QuanLiSp.AutoSize = true;
-            this.lb_QuanLiSp.BackColor = System.Drawing.Color.Transparent;
-            this.lb_QuanLiSp.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.lb_QuanLiSp.ForeColor = System.Drawing.Color.DarkSlateGray;
-            this.lb_QuanLiSp.Location = new System.Drawing.Point(33, 18);
-            this.lb_QuanLiSp.Name = "lb_QuanLiSp";
-            this.lb_QuanLiSp.Size = new System.Drawing.Size(181, 22);
-            this.lb_QuanLiSp.TabIndex = 8;
-            this.lb_QuanLiSp.Text = "Quản Lí Sản Phẩm";
-            // 
-            // pictureBox3
-            // 
-            this.pictureBox3.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox3.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox3.BackgroundImage")));
-            this.pictureBox3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox3.ErrorImage = null;
-            this.pictureBox3.InitialImage = null;
-            this.pictureBox3.Location = new System.Drawing.Point(6, 11);
-            this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(30, 30);
-            this.pictureBox3.TabIndex = 9;
-            this.pictureBox3.TabStop = false;
-            // 
             // bt_CapNhatGia
             // 
             this.bt_CapNhatGia.BackColor = System.Drawing.Color.Transparent;
@@ -515,7 +464,7 @@
             this.bt_CapNhatGia.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.bt_CapNhatGia.Font = new System.Drawing.Font("Arial", 12F);
             this.bt_CapNhatGia.ForeColor = System.Drawing.Color.DarkSlateGray;
-            this.bt_CapNhatGia.Location = new System.Drawing.Point(0, 59);
+            this.bt_CapNhatGia.Location = new System.Drawing.Point(5, 147);
             this.bt_CapNhatGia.Name = "bt_CapNhatGia";
             this.bt_CapNhatGia.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.bt_CapNhatGia.Size = new System.Drawing.Size(631, 30);
@@ -523,18 +472,6 @@
             this.bt_CapNhatGia.Text = "         Cập Nhập Thông Tin Sản Phẩm";
             this.bt_CapNhatGia.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.bt_CapNhatGia.UseVisualStyleBackColor = false;
-            // 
-            // QuanLiSanPham
-            // 
-            this.QuanLiSanPham.BackColor = System.Drawing.SystemColors.Menu;
-            this.QuanLiSanPham.Controls.Add(this.bt_CapNhatGia);
-            this.QuanLiSanPham.Controls.Add(this.pictureBox3);
-            this.QuanLiSanPham.Controls.Add(this.lb_QuanLiSp);
-            this.QuanLiSanPham.Location = new System.Drawing.Point(541, 163);
-            this.QuanLiSanPham.Name = "QuanLiSanPham";
-            this.QuanLiSanPham.Size = new System.Drawing.Size(261, 150);
-            this.QuanLiSanPham.TabIndex = 9;
-            this.QuanLiSanPham.Visible = false;
             // 
             // lb_QuanLiKho
             // 
@@ -600,13 +537,14 @@
             // QuanLiKho
             // 
             this.QuanLiKho.BackColor = System.Drawing.SystemColors.Menu;
+            this.QuanLiKho.Controls.Add(this.bt_CapNhatGia);
             this.QuanLiKho.Controls.Add(this.bt_CtKho);
             this.QuanLiKho.Controls.Add(this.bt_CtSp);
             this.QuanLiKho.Controls.Add(this.pictureBox1);
             this.QuanLiKho.Controls.Add(this.lb_QuanLiKho);
             this.QuanLiKho.Location = new System.Drawing.Point(226, 163);
             this.QuanLiKho.Name = "QuanLiKho";
-            this.QuanLiKho.Size = new System.Drawing.Size(261, 150);
+            this.QuanLiKho.Size = new System.Drawing.Size(281, 184);
             this.QuanLiKho.TabIndex = 7;
             this.QuanLiKho.Visible = false;
             // 
@@ -788,9 +726,9 @@
             this.QuanLiBanHang.Controls.Add(this.bt_HoaDon);
             this.QuanLiBanHang.Controls.Add(this.pictureBox2);
             this.QuanLiBanHang.Controls.Add(this.lb_BanHang);
-            this.QuanLiBanHang.Location = new System.Drawing.Point(226, 353);
+            this.QuanLiBanHang.Location = new System.Drawing.Point(541, 160);
             this.QuanLiBanHang.Name = "QuanLiBanHang";
-            this.QuanLiBanHang.Size = new System.Drawing.Size(261, 130);
+            this.QuanLiBanHang.Size = new System.Drawing.Size(261, 187);
             this.QuanLiBanHang.TabIndex = 1;
             this.QuanLiBanHang.Visible = false;
             // 
@@ -803,7 +741,6 @@
             this.ClientSize = new System.Drawing.Size(845, 505);
             this.Controls.Add(this.pn_ThongBao);
             this.Controls.Add(this.QuanLiNhanVien);
-            this.Controls.Add(this.QuanLiSanPham);
             this.Controls.Add(this.name);
             this.Controls.Add(this.icon);
             this.Controls.Add(this.Down);
@@ -828,9 +765,6 @@
             this.pn_ThongBao.PerformLayout();
             this.panel3.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
-            this.QuanLiSanPham.ResumeLayout(false);
-            this.QuanLiSanPham.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.QuanLiKho.ResumeLayout(false);
             this.QuanLiKho.PerformLayout();
@@ -860,7 +794,6 @@
         private System.Windows.Forms.Button bt_BaoCaoDoanhSo;
         private System.Windows.Forms.Button bt_QuanLiKho;
         private System.Windows.Forms.Button bt_QuanLiNhanVien;
-        private System.Windows.Forms.Button bt_QuanLiSanPham;
         private System.Windows.Forms.Button user;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Button button8;
@@ -875,10 +808,7 @@
         private System.Windows.Forms.Button bt_DongY;
         private System.Windows.Forms.PictureBox pictureBox6;
         private System.Windows.Forms.Label lb_ThongBao;
-        private System.Windows.Forms.Label lb_QuanLiSp;
-        private System.Windows.Forms.PictureBox pictureBox3;
         private System.Windows.Forms.Button bt_CapNhatGia;
-        private System.Windows.Forms.Panel QuanLiSanPham;
         private System.Windows.Forms.Label lb_QuanLiKho;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Button bt_CtSp;

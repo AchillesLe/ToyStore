@@ -112,6 +112,12 @@
     <Compile Include="BillBanLe.designer.cs">
       <DependentUpon>BillBanLe.cs</DependentUpon>
     </Compile>
+    <Compile Include="CapNhatSp.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CapNhatSp.Designer.cs">
+      <DependentUpon>CapNhatSp.cs</DependentUpon>
+    </Compile>
     <Compile Include="ChiTietHd.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -163,6 +169,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="BillBanLe.resx">
       <DependentUpon>BillBanLe.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CapNhatSp.resx">
+      <DependentUpon>CapNhatSp.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ChiTietHd.resx">
       <DependentUpon>ChiTietHd.cs</DependentUpon>

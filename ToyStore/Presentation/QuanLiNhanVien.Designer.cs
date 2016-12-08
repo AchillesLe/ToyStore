@@ -179,7 +179,7 @@
             this.panel1.Controls.Add(this.bt_XoaNhieu);
             this.panel1.Controls.Add(this.lb_DsNv);
             this.panel1.Controls.Add(this.pictureBox10);
-            this.panel1.Location = new System.Drawing.Point(0, 22);
+            this.panel1.Location = new System.Drawing.Point(0, 24);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(845, 418);
             this.panel1.TabIndex = 19;
