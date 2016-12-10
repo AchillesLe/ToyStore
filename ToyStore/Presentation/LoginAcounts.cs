@@ -16,13 +16,13 @@ namespace Presentation
         const int WM_NCHITTEST = 0x84;
         const int HTCLIENT = 0x1;
         const int HTCAPTION = 0x2;
-        
+       // public static string UserName = String.Empty;
        
         public LoginAcounts()
         {
             InitializeComponent();
-            tb_TenDangNhap.UseSystemPasswordChar = true;
-          //  tb_matKhau.PasswordChar = '*';
+            tb_MatKhau.UseSystemPasswordChar = true;
+            tb_MatKhau.PasswordChar = '*';
         }
         protected override void WndProc(ref Message message)
         {
@@ -43,7 +43,6 @@ namespace Presentation
 
         }
 
-
         private void tb_matKhau_KeyDown(object sender, KeyEventArgs e)
         {
            
@@ -57,27 +56,37 @@ namespace Presentation
             AccountBus acBus = new AccountBus();
             string username =(tb_TenDangNhap.Text);
             string pass = tb_MatKhau.Text;
-           
-            if (acBus.checkac(username, pass)==true)
+            try
             {
-                MainMenu mainMenu = new MainMenu();
-                mainMenu.Show();
-        
-                this.Visible = false;
+                if(String.IsNullOrEmpty(username))
+                {
+                    MessageBox.Show("Tên đăng nhập rỗng vui lòng kiểm tra lại!");
+                    return;
+                }
+                if(String.IsNullOrEmpty(pass))
+                {
+                    MessageBox.Show("Password rỗng vui lòng kiểm tra lại!");
+                    return;
+                }
+                if (acBus.checkac(username, pass) == true)
+                {
+                    MainMenu mainMenu = new MainMenu();
+                    MainMenu.UserName = username;
+                    mainMenu.Show();
+
+                    this.Visible = false;
+                }
+                else
+                {
+                    MessageBox.Show("Tên đăng nhập hoặc mật khẩu không đúng.Hãy kiểm tra và nhập lại!");
+                    tb_MatKhau.Text = "";
+                  
+                }
             }
-            else
+            catch(Exception ex)
             {
-                MessageBox.Show("Tên đăng nhập hoặc mật khẩu không đúng.Hãy kiểm tra và nhập lại!");
-                tb_TenDangNhap.Text = "";
-                
-            }
-
-        }
-
-        public void getUsername()
-        {
-            AccountBus acBus = new AccountBus();
-            
+                Console.WriteLine(ex.ToString());
+            }       
         }
         
     }

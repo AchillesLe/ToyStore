@@ -15,26 +15,12 @@ namespace Presentation
         const int WM_NCHITTEST = 0x84;
         const int HTCLIENT = 0x1;
         const int HTCAPTION = 0x2;
+        public static string UserName = String.Empty;
         public MainMenu()
         {
-            InitializeComponent();
-            QuanLiBanHang.Size = new Size(645, 491);
-            QuanLiBanHang.Location = new Point(202, 26);
-            bt_BanHang.BackColor = Color.FromArgb(26, 188, 156); //mau button khi nhap vao 
-            // chỉ hiện panel chính
-            {
-               
-                QuanLiKho.Hide();
-                BaoCaoDoanhSo.Hide();
-                QuanLiNhanVien.Hide();
-                pn_DangXuat.Hide();
-                pn_ThongBao.Hide();
-            }
-            QuanLiBanHang.Show();
-         
-
+            InitializeComponent();    
         }
-        //move window without title bar
+    
         protected override void WndProc(ref Message message)
         {
             base.WndProc(ref message);
@@ -52,7 +38,6 @@ namespace Presentation
         {
             this.WindowState = FormWindowState.Minimized;
         }
-
         private void bt_QuanLiKho_Click(object sender, EventArgs e)
         {           
             Hide_Visible(QuanLiKho);
@@ -60,21 +45,16 @@ namespace Presentation
 
 
         }
-
         private void bt_BanHang_Click_(object sender, EventArgs e)
         {            
             Hide_Visible(QuanLiBanHang);
             Bt_click(bt_BanHang);
         }
-
         private void bt_BaoCaoDoanhSo_Click(object sender, EventArgs e)
         {           
             Hide_Visible(BaoCaoDoanhSo);
             Bt_click(bt_BaoCaoDoanhSo);
         }
-
-       
-
         private void bt_QuanLiNhanVien_Click(object sender, EventArgs e)
         {
            
@@ -172,7 +152,6 @@ namespace Presentation
             lg.Show();
             this.Close();
         }
-
         private void bt_XemNv_Click(object sender, EventArgs e)
         {
             QuanLiNhanVien QuanLiNv = new QuanLiNhanVien();
@@ -186,7 +165,6 @@ namespace Presentation
             else //click chuot lan nua
                 pn_DangXuat.Hide();
         }
-
         private void bt_DangXuat_Click(object sender, EventArgs e)
         {
             //hiện thông báo
@@ -203,14 +181,12 @@ namespace Presentation
                 BaoCaoDoanhSo.Enabled = false;
             }
         }
-
         private void bt_DongY_Click(object sender, EventArgs e)
         {
             this.Hide();
             LoginAcounts logic = new LoginAcounts();
             logic.Show();
         }
-
         private void bt_huy_Click(object sender, EventArgs e)
         {
             pn_ThongBao.Hide();
@@ -224,7 +200,6 @@ namespace Presentation
                 BaoCaoDoanhSo.Enabled = true;
             }
         }
-
         private void bt_XemThongTin_Click(object sender, EventArgs e)
         {
             ThongTinNv ThongTinNv = new ThongTinNv();
@@ -232,39 +207,50 @@ namespace Presentation
             pn_DangXuat.Hide();
 
         }
-
         private void bt_ThemNv_Click(object sender, EventArgs e)
         {
             QuanLiNhanVien QuanLiNv = new QuanLiNhanVien();
             QuanLiNv.Show();
         }
-
         private void bt_CtHd_Click(object sender, EventArgs e)
         {
             ChiTietHd Cthd = new ChiTietHd();
             Cthd.Show();
             this.Hide();
         }
-
         private void bt_XemNgay_Click(object sender, EventArgs e)
         {
             BaoCaoDs Bcds = new BaoCaoDs();
             Bcds.Show();
             this.Hide();
         }
-
         private void bt_CtSp_Click(object sender, EventArgs e)
         {
             ThongKeKho TKK = new ThongKeKho();
             TKK.Show();
             this.Hide();
         }
-
         private void bt_CtKho_Click(object sender, EventArgs e)
         {
             NhapKho TKK = new NhapKho();
             TKK.Show();
             this.Hide();
+        }
+        private void MainMenu_Load(object sender, EventArgs e)
+        {
+            QuanLiBanHang.Size = new Size(645, 491);
+            QuanLiBanHang.Location = new Point(202, 26);
+            bt_BanHang.BackColor = Color.FromArgb(26, 188, 156); //mau button khi nhap vao 
+            // chỉ hiện panel chính
+            {
+                QuanLiKho.Hide();
+                BaoCaoDoanhSo.Hide();
+                QuanLiNhanVien.Hide();
+                pn_DangXuat.Hide();
+                pn_ThongBao.Hide();
+            }
+            QuanLiBanHang.Show();
+            bt_Account.Text = UserName;
         }
     }
 }
