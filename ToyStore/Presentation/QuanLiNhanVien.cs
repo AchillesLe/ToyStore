@@ -166,7 +166,7 @@ namespace Presentation
 
         private void button3_Click(object sender, EventArgs e)
         {
-            bt_Huy.Show();
+           
             bt_Luu.Show();
         }
 
@@ -177,9 +177,9 @@ namespace Presentation
             tb_pass.Show();
             pic_pass.Show();
             bt_Luu.Hide();
-            bt_Sua.Hide();
+           
             bt_Xoa.Hide();
-            bt_Huy.Hide(); 
+           
         }
     }
 }
