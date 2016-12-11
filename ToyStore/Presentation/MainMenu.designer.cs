@@ -472,6 +472,7 @@
             this.bt_CapNhatGia.Text = "         Cập Nhập Thông Tin Sản Phẩm";
             this.bt_CapNhatGia.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.bt_CapNhatGia.UseVisualStyleBackColor = false;
+            this.bt_CapNhatGia.Click += new System.EventHandler(this.bt_CapNhatGia_Click);
             // 
             // lb_QuanLiKho
             // 
