@@ -13,15 +13,15 @@ namespace Dao
             List<NHANVIEN> listNv = new List<NHANVIEN>();
             using (ContextEntites context =new ContextEntites())
             {
-                var query = (from c in context.NHANVIENs select new { c.CMT,c.MANV,c.NGAYSINH,c.PHAI,c.SDT,c.TENNV,c.QUEQUAN});
+                var query = (from c in context.NHANVIENs select c);
                  foreach(var a in query)
                 {
                     NHANVIEN nv = new NHANVIEN();
                     nv.CMT = a.CMT;
                     nv.TENNV = a.TENNV;
                     nv.SDT = a.SDT;
-                    nv.PHAI = a.PHAI; 
-                
+                    nv.PHAI = a.PHAI;
+                    nv.MACV = a.MACV;
                     nv.NGAYSINH = a.NGAYSINH;
                     nv.MANV = a.MANV;
                     nv.QUEQUAN = a.QUEQUAN;
@@ -38,7 +38,7 @@ namespace Dao
                 var a = context.NHANVIENs.SingleOrDefault(x => x.MANV==ID);
                 nv.MANV = a.MANV;
                 nv.NGAYSINH = a.NGAYSINH;
-             
+                nv.MACV = a.MACV;
                 nv.PHAI = a.PHAI;
                 nv.TENNV = a.TENNV;
                 nv.SDT = a.SDT;
@@ -55,7 +55,7 @@ namespace Dao
                 NHANVIEN  kh = new NHANVIEN();
                 kh.CMT = nv.CMT;
                 kh.NGAYSINH = nv.NGAYSINH;
-              
+                kh.MACV = nv.MACV;
                 kh.PHAI = nv.PHAI;
                 kh.QUEQUAN = nv.QUEQUAN;
                 kh.SDT = nv.SDT;
@@ -98,6 +98,7 @@ namespace Dao
                     s.SDT = kh.SDT;
                     s.PHAI = kh.PHAI;
                     s.CMT = kh.CMT;
+                    s.MACV = kh.MACV;
                     s.NGAYSINH = kh.NGAYSINH;
                     s.QUEQUAN = kh.QUEQUAN;
                    

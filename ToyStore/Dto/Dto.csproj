@@ -53,6 +53,7 @@
   <ItemGroup>
     <Compile Include="ACCOUNT.cs" />
     <Compile Include="BAOCAO.cs" />
+    <Compile Include="CHUCVU.cs" />
     <Compile Include="ContextEntites.cs" />
     <Compile Include="CTHD.cs" />
     <Compile Include="DOCHOI.cs" />

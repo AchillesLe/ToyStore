@@ -38,10 +38,13 @@ namespace Dto
         [StringLength(9)]
         public string CMT { get; set; }
 
-        
-        
+        [StringLength(4)]
+        public string MACV { get; set; }
 
-       // [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-       // public virtual ICollection<HOADON> HOADONs { get; set; }
+
+
+
+        // [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        // public virtual ICollection<HOADON> HOADONs { get; set; }
     }
 }

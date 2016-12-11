@@ -22,11 +22,10 @@ namespace Presentation
             loadDSNhanVien();
             bt_moi.Hide();
             lb_pass.Hide();
-            tb_pass.Hide();
+            txt_pass.Hide();
             pic_pass.Hide();
 
         }
-
 
         //move window without title bar
         protected override void WndProc(ref Message message)
@@ -61,8 +60,17 @@ namespace Presentation
 
         private void loadDSNhanVien()
         {
-            NhanVienBus nvBus = new NhanVienBus();
-            tbl_NhanVien.DataSource = nvBus.DSNhanVien();       
+            NhanVienBus nvBus = new NhanVienBus();         
+            ChucVuBus cvbus = new ChucVuBus();
+            List<CHUCVU> listcv = new List<CHUCVU>();
+            listcv = cvbus.DSCHUCVU();
+            for(int i=0;i<listcv.Count;i++)
+            {
+
+            }
+            tbl_NhanVien.DataSource = nvBus.DSNhanVien();
+            tbl_NhanVien.Columns["MACV"].Visible = false;
+            //tbl_NhanVien.Columns["TENCV"].HeaderText="TENCV";
         }
        //ok
         private void bt_save_Click(object sender, EventArgs e)
@@ -70,7 +78,7 @@ namespace Presentation
             NHANVIEN nv = new NHANVIEN();
             nv.MANV = Int32.Parse(txt_manv.Text);
             nv.NGAYSINH =DateTime.Parse( txt_ngaysinh.Text);
-            //DateTime d = Convert.ToDateTime(nv.NGAYSINH);
+            
             
             if (rd_nam.Checked == true) nv.PHAI = "Nam";
             else nv.PHAI = "Nu";
@@ -78,7 +86,10 @@ namespace Presentation
             nv.SDT = txt_NgayLam.Text;
             nv.TENNV = txt_hoten.Text;
             nv.CMT = txt_CMND.Text;
-            
+            //nv.MANV=cb_loaiNV.
+            ChucVuBus cvbus = new ChucVuBus();
+            CHUCVU cv = new CHUCVU();
+            nv.MACV=cvbus.GetCVbyName(cb_loaiNV.Text).MACV;
             NhanVienBus nvBus = new NhanVienBus();
 
             if (nvBus.editNV(nv))
@@ -91,11 +102,9 @@ namespace Presentation
             txt_ngaysinh.Text = "";
             txt_DiaChi.Text = "";
             txt_NgayLam.Text = "";
+            txt_pass.Text = "";
             rd_nam.Checked = true;
-
-        }
-
-       
+        }       
         //ok
         private void tbl_NhanVien_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
@@ -172,14 +181,19 @@ namespace Presentation
 
         private void bt_them_Click(object sender, EventArgs e)
         {
-            bt_moi.Show();
-            lb_pass.Show();
-            tb_pass.Show();
-            pic_pass.Show();
-            bt_Luu.Hide();
-           
+            bt_Luu.Hide();    
             bt_Xoa.Hide();
-           
+
+        }
+        private void Enable()
+        {
+            txt_Sdt.ReadOnly = false;
+            txt_hoten.ReadOnly = false;
+            txt_NgayLam.ReadOnly = false;
+            txt_ngaysinh.ReadOnly = false;
+            txt_DiaChi.ReadOnly = false;
+            txt_CMND.ReadOnly = false;
+            txt_Sdt.ReadOnly = false;
         }
     }
 }

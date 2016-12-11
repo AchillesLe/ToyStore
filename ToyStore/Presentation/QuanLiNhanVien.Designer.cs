@@ -39,18 +39,19 @@
             this.panel3 = new System.Windows.Forms.Panel();
             this.bt_moi = new System.Windows.Forms.Button();
             this.pic_pass = new System.Windows.Forms.PictureBox();
-            this.tb_pass = new System.Windows.Forms.TextBox();
+            this.txt_pass = new System.Windows.Forms.TextBox();
             this.lb_pass = new System.Windows.Forms.Label();
             this.pictureBox9 = new System.Windows.Forms.PictureBox();
-            this.tb_user = new System.Windows.Forms.TextBox();
+            this.txt_user = new System.Windows.Forms.TextBox();
             this.lb_user = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.pictureBox7 = new System.Windows.Forms.PictureBox();
-            this.tb_Sdt = new System.Windows.Forms.TextBox();
+            this.txt_Sdt = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
             this.bt_Luu = new System.Windows.Forms.Button();
             this.label3 = new System.Windows.Forms.Label();
             this.txt_DiaChi = new System.Windows.Forms.TextBox();
+            this.bt_Xoa = new System.Windows.Forms.Button();
             this.pictureBox8 = new System.Windows.Forms.PictureBox();
             this.pictureBox6 = new System.Windows.Forms.PictureBox();
             this.txt_NgayLam = new System.Windows.Forms.TextBox();
@@ -79,7 +80,9 @@
             this.lb_DsNv = new System.Windows.Forms.Label();
             this.pictureBox10 = new System.Windows.Forms.PictureBox();
             this.Close = new System.Windows.Forms.Button();
-            this.bt_Xoa = new System.Windows.Forms.Button();
+            this.label1 = new System.Windows.Forms.Label();
+            this.cb_loaiNV = new System.Windows.Forms.ComboBox();
+            this.pictureBox11 = new System.Windows.Forms.PictureBox();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.tbl_NhanVien)).BeginInit();
             this.panel3.SuspendLayout();
@@ -95,6 +98,7 @@
             this.Gb_GioiTinh.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox10)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox11)).BeginInit();
             this.SuspendLayout();
             // 
             // minimize
@@ -226,16 +230,19 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.panel3.AutoSize = true;
+            this.panel3.Controls.Add(this.pictureBox11);
+            this.panel3.Controls.Add(this.cb_loaiNV);
+            this.panel3.Controls.Add(this.label1);
             this.panel3.Controls.Add(this.bt_moi);
             this.panel3.Controls.Add(this.pic_pass);
-            this.panel3.Controls.Add(this.tb_pass);
+            this.panel3.Controls.Add(this.txt_pass);
             this.panel3.Controls.Add(this.lb_pass);
             this.panel3.Controls.Add(this.pictureBox9);
-            this.panel3.Controls.Add(this.tb_user);
+            this.panel3.Controls.Add(this.txt_user);
             this.panel3.Controls.Add(this.lb_user);
             this.panel3.Controls.Add(this.label5);
             this.panel3.Controls.Add(this.pictureBox7);
-            this.panel3.Controls.Add(this.tb_Sdt);
+            this.panel3.Controls.Add(this.txt_Sdt);
             this.panel3.Controls.Add(this.label6);
             this.panel3.Controls.Add(this.bt_Luu);
             this.panel3.Controls.Add(this.label3);
@@ -289,16 +296,17 @@
             this.pic_pass.TabIndex = 43;
             this.pic_pass.TabStop = false;
             // 
-            // tb_pass
+            // txt_pass
             // 
-            this.tb_pass.BackColor = System.Drawing.SystemColors.MenuBar;
-            this.tb_pass.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.tb_pass.Font = new System.Drawing.Font("Calibri", 11.25F);
-            this.tb_pass.Location = new System.Drawing.Point(566, 136);
-            this.tb_pass.Name = "tb_pass";
-            this.tb_pass.Size = new System.Drawing.Size(238, 19);
-            this.tb_pass.TabIndex = 42;
-            this.tb_pass.Tag = "";
+            this.txt_pass.BackColor = System.Drawing.SystemColors.MenuBar;
+            this.txt_pass.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txt_pass.Font = new System.Drawing.Font("Calibri", 11.25F);
+            this.txt_pass.Location = new System.Drawing.Point(564, 137);
+            this.txt_pass.Name = "txt_pass";
+            this.txt_pass.ReadOnly = true;
+            this.txt_pass.Size = new System.Drawing.Size(238, 19);
+            this.txt_pass.TabIndex = 42;
+            this.txt_pass.Tag = "";
             // 
             // lb_pass
             // 
@@ -314,29 +322,30 @@
             // pictureBox9
             // 
             this.pictureBox9.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox9.BackgroundImage")));
-            this.pictureBox9.Location = new System.Drawing.Point(160, 163);
+            this.pictureBox9.Location = new System.Drawing.Point(160, 187);
             this.pictureBox9.Name = "pictureBox9";
             this.pictureBox9.Size = new System.Drawing.Size(259, 1);
             this.pictureBox9.TabIndex = 40;
             this.pictureBox9.TabStop = false;
             // 
-            // tb_user
+            // txt_user
             // 
-            this.tb_user.BackColor = System.Drawing.SystemColors.MenuBar;
-            this.tb_user.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.tb_user.Font = new System.Drawing.Font("Calibri", 11.25F);
-            this.tb_user.Location = new System.Drawing.Point(165, 139);
-            this.tb_user.Name = "tb_user";
-            this.tb_user.Size = new System.Drawing.Size(259, 19);
-            this.tb_user.TabIndex = 39;
-            this.tb_user.Tag = "";
+            this.txt_user.BackColor = System.Drawing.SystemColors.MenuBar;
+            this.txt_user.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txt_user.Font = new System.Drawing.Font("Calibri", 11.25F);
+            this.txt_user.Location = new System.Drawing.Point(162, 166);
+            this.txt_user.Name = "txt_user";
+            this.txt_user.ReadOnly = true;
+            this.txt_user.Size = new System.Drawing.Size(257, 19);
+            this.txt_user.TabIndex = 39;
+            this.txt_user.Tag = "";
             // 
             // lb_user
             // 
             this.lb_user.AutoSize = true;
             this.lb_user.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.lb_user.ForeColor = System.Drawing.Color.DarkSlateGray;
-            this.lb_user.Location = new System.Drawing.Point(36, 143);
+            this.lb_user.Location = new System.Drawing.Point(36, 167);
             this.lb_user.Name = "lb_user";
             this.lb_user.Size = new System.Drawing.Size(108, 19);
             this.lb_user.TabIndex = 38;
@@ -363,15 +372,16 @@
             this.pictureBox7.TabIndex = 36;
             this.pictureBox7.TabStop = false;
             // 
-            // tb_Sdt
+            // txt_Sdt
             // 
-            this.tb_Sdt.BackColor = System.Drawing.SystemColors.MenuBar;
-            this.tb_Sdt.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.tb_Sdt.Font = new System.Drawing.Font("Calibri", 11.25F);
-            this.tb_Sdt.Location = new System.Drawing.Point(566, 107);
-            this.tb_Sdt.Name = "tb_Sdt";
-            this.tb_Sdt.Size = new System.Drawing.Size(238, 19);
-            this.tb_Sdt.TabIndex = 35;
+            this.txt_Sdt.BackColor = System.Drawing.SystemColors.MenuBar;
+            this.txt_Sdt.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txt_Sdt.Font = new System.Drawing.Font("Calibri", 11.25F);
+            this.txt_Sdt.Location = new System.Drawing.Point(564, 108);
+            this.txt_Sdt.Name = "txt_Sdt";
+            this.txt_Sdt.ReadOnly = true;
+            this.txt_Sdt.Size = new System.Drawing.Size(238, 19);
+            this.txt_Sdt.TabIndex = 35;
             // 
             // label6
             // 
@@ -416,11 +426,28 @@
             this.txt_DiaChi.BackColor = System.Drawing.SystemColors.MenuBar;
             this.txt_DiaChi.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txt_DiaChi.Font = new System.Drawing.Font("Calibri", 11.25F);
-            this.txt_DiaChi.Location = new System.Drawing.Point(165, 107);
+            this.txt_DiaChi.Location = new System.Drawing.Point(163, 132);
             this.txt_DiaChi.Multiline = true;
             this.txt_DiaChi.Name = "txt_DiaChi";
-            this.txt_DiaChi.Size = new System.Drawing.Size(259, 20);
+            this.txt_DiaChi.ReadOnly = true;
+            this.txt_DiaChi.Size = new System.Drawing.Size(256, 20);
             this.txt_DiaChi.TabIndex = 29;
+            // 
+            // bt_Xoa
+            // 
+            this.bt_Xoa.BackColor = System.Drawing.Color.Gainsboro;
+            this.bt_Xoa.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.bt_Xoa.FlatAppearance.BorderSize = 0;
+            this.bt_Xoa.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(160)))), ((int)(((byte)(133)))));
+            this.bt_Xoa.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(160)))), ((int)(((byte)(133)))));
+            this.bt_Xoa.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.bt_Xoa.Location = new System.Drawing.Point(706, 178);
+            this.bt_Xoa.Name = "bt_Xoa";
+            this.bt_Xoa.Size = new System.Drawing.Size(77, 24);
+            this.bt_Xoa.TabIndex = 28;
+            this.bt_Xoa.Text = "Xóa";
+            this.bt_Xoa.UseVisualStyleBackColor = false;
+            this.bt_Xoa.Click += new System.EventHandler(this.bt_save_Click);
             // 
             // pictureBox8
             // 
@@ -434,7 +461,7 @@
             // pictureBox6
             // 
             this.pictureBox6.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox6.BackgroundImage")));
-            this.pictureBox6.Location = new System.Drawing.Point(160, 129);
+            this.pictureBox6.Location = new System.Drawing.Point(160, 153);
             this.pictureBox6.Name = "pictureBox6";
             this.pictureBox6.Size = new System.Drawing.Size(259, 1);
             this.pictureBox6.TabIndex = 16;
@@ -445,8 +472,9 @@
             this.txt_NgayLam.BackColor = System.Drawing.SystemColors.MenuBar;
             this.txt_NgayLam.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txt_NgayLam.Font = new System.Drawing.Font("Calibri", 11.25F);
-            this.txt_NgayLam.Location = new System.Drawing.Point(566, 74);
+            this.txt_NgayLam.Location = new System.Drawing.Point(564, 75);
             this.txt_NgayLam.Name = "txt_NgayLam";
+            this.txt_NgayLam.ReadOnly = true;
             this.txt_NgayLam.Size = new System.Drawing.Size(143, 19);
             this.txt_NgayLam.TabIndex = 26;
             // 
@@ -455,7 +483,7 @@
             this.lb_Gio.AutoSize = true;
             this.lb_Gio.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.lb_Gio.ForeColor = System.Drawing.Color.DarkSlateGray;
-            this.lb_Gio.Location = new System.Drawing.Point(88, 110);
+            this.lb_Gio.Location = new System.Drawing.Point(88, 134);
             this.lb_Gio.Name = "lb_Gio";
             this.lb_Gio.Size = new System.Drawing.Size(56, 19);
             this.lb_Gio.TabIndex = 3;
@@ -475,7 +503,7 @@
             // pictureBox3
             // 
             this.pictureBox3.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox3.BackgroundImage")));
-            this.pictureBox3.Location = new System.Drawing.Point(160, 94);
+            this.pictureBox3.Location = new System.Drawing.Point(160, 118);
             this.pictureBox3.Name = "pictureBox3";
             this.pictureBox3.Size = new System.Drawing.Size(259, 1);
             this.pictureBox3.TabIndex = 24;
@@ -486,9 +514,10 @@
             this.txt_CMND.BackColor = System.Drawing.SystemColors.MenuBar;
             this.txt_CMND.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txt_CMND.Font = new System.Drawing.Font("Calibri", 11.25F);
-            this.txt_CMND.Location = new System.Drawing.Point(165, 73);
+            this.txt_CMND.Location = new System.Drawing.Point(163, 98);
             this.txt_CMND.Name = "txt_CMND";
-            this.txt_CMND.Size = new System.Drawing.Size(259, 19);
+            this.txt_CMND.ReadOnly = true;
+            this.txt_CMND.Size = new System.Drawing.Size(256, 19);
             this.txt_CMND.TabIndex = 23;
             // 
             // CMT
@@ -496,7 +525,7 @@
             this.CMT.AutoSize = true;
             this.CMT.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.CMT.ForeColor = System.Drawing.Color.DarkSlateGray;
-            this.CMT.Location = new System.Drawing.Point(97, 78);
+            this.CMT.Location = new System.Drawing.Point(97, 102);
             this.CMT.Name = "CMT";
             this.CMT.Size = new System.Drawing.Size(51, 19);
             this.CMT.TabIndex = 22;
@@ -505,7 +534,7 @@
             // pictureBox2
             // 
             this.pictureBox2.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox2.BackgroundImage")));
-            this.pictureBox2.Location = new System.Drawing.Point(160, 62);
+            this.pictureBox2.Location = new System.Drawing.Point(160, 86);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(259, 1);
             this.pictureBox2.TabIndex = 8;
@@ -527,9 +556,10 @@
             this.txt_hoten.BackColor = System.Drawing.SystemColors.MenuBar;
             this.txt_hoten.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txt_hoten.Font = new System.Drawing.Font("Calibri", 11.25F);
-            this.txt_hoten.Location = new System.Drawing.Point(165, 40);
+            this.txt_hoten.Location = new System.Drawing.Point(163, 65);
             this.txt_hoten.Name = "txt_hoten";
-            this.txt_hoten.Size = new System.Drawing.Size(259, 19);
+            this.txt_hoten.ReadOnly = true;
+            this.txt_hoten.Size = new System.Drawing.Size(256, 19);
             this.txt_hoten.TabIndex = 7;
             this.txt_hoten.Tag = "";
             // 
@@ -556,7 +586,7 @@
             this.txt_manv.BackColor = System.Drawing.SystemColors.Menu;
             this.txt_manv.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txt_manv.Font = new System.Drawing.Font("Calibri", 11.25F);
-            this.txt_manv.Location = new System.Drawing.Point(165, 9);
+            this.txt_manv.Location = new System.Drawing.Point(163, 10);
             this.txt_manv.Name = "txt_manv";
             this.txt_manv.ReadOnly = true;
             this.txt_manv.Size = new System.Drawing.Size(259, 19);
@@ -578,8 +608,9 @@
             this.txt_ngaysinh.BackColor = System.Drawing.SystemColors.MenuBar;
             this.txt_ngaysinh.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txt_ngaysinh.Font = new System.Drawing.Font("Calibri", 11.25F);
-            this.txt_ngaysinh.Location = new System.Drawing.Point(566, 43);
+            this.txt_ngaysinh.Location = new System.Drawing.Point(564, 44);
             this.txt_ngaysinh.Name = "txt_ngaysinh";
+            this.txt_ngaysinh.ReadOnly = true;
             this.txt_ngaysinh.Size = new System.Drawing.Size(143, 19);
             this.txt_ngaysinh.TabIndex = 13;
             // 
@@ -588,7 +619,7 @@
             this.lb_TenNv.AutoSize = true;
             this.lb_TenNv.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.lb_TenNv.ForeColor = System.Drawing.Color.DarkSlateGray;
-            this.lb_TenNv.Location = new System.Drawing.Point(75, 46);
+            this.lb_TenNv.Location = new System.Drawing.Point(75, 70);
             this.lb_TenNv.Name = "lb_TenNv";
             this.lb_TenNv.Size = new System.Drawing.Size(73, 19);
             this.lb_TenNv.TabIndex = 0;
@@ -631,6 +662,7 @@
             // rd_nam
             // 
             this.rd_nam.AutoSize = true;
+            this.rd_nam.Checked = true;
             this.rd_nam.Location = new System.Drawing.Point(6, 10);
             this.rd_nam.Name = "rd_nam";
             this.rd_nam.Size = new System.Drawing.Size(46, 18);
@@ -750,21 +782,35 @@
             this.Close.UseVisualStyleBackColor = false;
             this.Close.Click += new System.EventHandler(this.Close_Click);
             // 
-            // bt_Xoa
+            // label1
             // 
-            this.bt_Xoa.BackColor = System.Drawing.Color.Gainsboro;
-            this.bt_Xoa.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.bt_Xoa.FlatAppearance.BorderSize = 0;
-            this.bt_Xoa.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(160)))), ((int)(((byte)(133)))));
-            this.bt_Xoa.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(160)))), ((int)(((byte)(133)))));
-            this.bt_Xoa.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.bt_Xoa.Location = new System.Drawing.Point(706, 178);
-            this.bt_Xoa.Name = "bt_Xoa";
-            this.bt_Xoa.Size = new System.Drawing.Size(77, 24);
-            this.bt_Xoa.TabIndex = 28;
-            this.bt_Xoa.Text = "Xóa";
-            this.bt_Xoa.UseVisualStyleBackColor = false;
-            this.bt_Xoa.Click += new System.EventHandler(this.bt_save_Click);
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.label1.ForeColor = System.Drawing.Color.DarkSlateGray;
+            this.label1.Location = new System.Drawing.Point(43, 44);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(107, 19);
+            this.label1.TabIndex = 45;
+            this.label1.Text = "Loại Nhân Viên";
+            // 
+            // cb_loaiNV
+            // 
+            this.cb_loaiNV.BackColor = System.Drawing.SystemColors.Menu;
+            this.cb_loaiNV.Enabled = false;
+            this.cb_loaiNV.FormattingEnabled = true;
+            this.cb_loaiNV.Location = new System.Drawing.Point(161, 39);
+            this.cb_loaiNV.Name = "cb_loaiNV";
+            this.cb_loaiNV.Size = new System.Drawing.Size(259, 22);
+            this.cb_loaiNV.TabIndex = 46;
+            // 
+            // pictureBox11
+            // 
+            this.pictureBox11.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox11.BackgroundImage")));
+            this.pictureBox11.Location = new System.Drawing.Point(161, 61);
+            this.pictureBox11.Name = "pictureBox11";
+            this.pictureBox11.Size = new System.Drawing.Size(259, 1);
+            this.pictureBox11.TabIndex = 47;
+            this.pictureBox11.TabStop = false;
             // 
             // QuanLiNhanVien
             // 
@@ -803,6 +849,7 @@
             this.Gb_GioiTinh.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox10)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox11)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -848,17 +895,20 @@
         private System.Windows.Forms.Button bt_Luu;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.PictureBox pictureBox7;
-        private System.Windows.Forms.TextBox tb_Sdt;
+        private System.Windows.Forms.TextBox txt_Sdt;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Button bt_them;
         private System.Windows.Forms.Button bt_moi;
         private System.Windows.Forms.PictureBox pic_pass;
-        private System.Windows.Forms.TextBox tb_pass;
+        private System.Windows.Forms.TextBox txt_pass;
         private System.Windows.Forms.Label lb_pass;
         private System.Windows.Forms.PictureBox pictureBox9;
-        private System.Windows.Forms.TextBox tb_user;
+        private System.Windows.Forms.TextBox txt_user;
         private System.Windows.Forms.Label lb_user;
         private System.Windows.Forms.Button Close;
         private System.Windows.Forms.Button bt_Xoa;
+        private System.Windows.Forms.PictureBox pictureBox11;
+        private System.Windows.Forms.ComboBox cb_loaiNV;
+        private System.Windows.Forms.Label label1;
     }
 }

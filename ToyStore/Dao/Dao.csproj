@@ -52,6 +52,7 @@
   <ItemGroup>
     <Compile Include="AccountDao.cs" />
     <Compile Include="BaoCaoDao.cs" />
+    <Compile Include="ChucVuDao.cs" />
     <Compile Include="CTHDDao.cs" />
     <Compile Include="DoChoiDao.cs" />
     <Compile Include="HoaDonDao.cs" />
