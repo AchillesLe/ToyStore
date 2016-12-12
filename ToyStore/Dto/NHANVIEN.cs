@@ -37,6 +37,8 @@ namespace Dto
 
         [StringLength(9)]
         public string CMT { get; set; }
+        [Column(TypeName = "date")]
+        public DateTime? NGAYVAOLAM { get; set; }
 
         [StringLength(4)]
         public string MACV { get; set; }

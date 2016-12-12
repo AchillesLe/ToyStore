@@ -42,15 +42,16 @@ namespace Dao
         public int AddAc(ACCOUNT ac)
         {
             int s;
-            using (ContextEntites context = new ContextEntites())
-            {
-                ACCOUNT kh = new ACCOUNT();
-                kh.ID = ac.ID;
-                kh.PASS = ac.PASS;
-                kh.USERNAME = ac.USERNAME;
-                context.ACCOUNTs.Add(kh);
-                s = context.SaveChanges();
-            }
+                using (ContextEntites context = new ContextEntites())
+                {
+                    ACCOUNT kh = new ACCOUNT();
+                    kh.ID = ac.ID;
+                    kh.PASS = ac.PASS;
+                    kh.USERNAME = ac.USERNAME;
+                    context.ACCOUNTs.Add(kh);
+                    s = context.SaveChanges();
+                }
+
             return s;
         }
         public bool deleteac(int AcID)

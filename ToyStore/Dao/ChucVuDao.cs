@@ -24,16 +24,21 @@ namespace Dao
             }
             return listCV;
         }
-        public CHUCVU CHUCVUByID(string Macv)
+        public CHUCVU GETChucVuByID(string Macv)
         {
             CHUCVU cv = new CHUCVU();
-            using (ContextEntites context = new ContextEntites())
+            try
             {
-                var a = context.CHUCVUs.SingleOrDefault(x => x.MACV == Macv);
-                cv.MACV = a.MACV;
-                cv.TENCV = a.TENCV;
-
+                using (ContextEntites context = new ContextEntites())
+                {
+                    cv = context.CHUCVUs.SingleOrDefault(x => x.MACV == Macv);
+                   
+                }
+            }catch(Exception ex)
+            {
+                Console.WriteLine(ex.ToString());
             }
+                      
             return cv;
         }
         public int AddCV(CHUCVU ac)

@@ -16,7 +16,7 @@
         [StringLength(4)]
         [Required]
         public string MACV { get; set; }
-        [StringLength(20)]
+        [StringLength(30)]
         [Required]
         public string TENCV { get; set; }
 

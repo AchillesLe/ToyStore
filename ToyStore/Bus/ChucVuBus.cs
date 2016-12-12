@@ -18,7 +18,7 @@ namespace Bus
         }
         public CHUCVU CHUCVUByID(string macv)
         {
-            return cvdao.CHUCVUByID(macv);
+            return cvdao.GETChucVuByID(macv);
         }
         public int AddCV(CHUCVU cv)
         {
