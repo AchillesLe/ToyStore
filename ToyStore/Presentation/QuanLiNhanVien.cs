@@ -16,6 +16,7 @@ namespace Presentation
         const int WM_NCHITTEST = 0x84;
         const int HTCLIENT = 0x1;
         const int HTCAPTION = 0x2;
+        //private static int manv;
         public QuanLiNhanVien()
         {
             InitializeComponent();
@@ -55,8 +56,7 @@ namespace Presentation
         private void loadDSNhanVien()
         {
             NhanVienBus nvBus = new NhanVienBus();
-            tbl_NhanVien.DataSource = nvBus.DSNhanVien();
-
+            tbl_NhanVien.DataSource = nvBus.DSNhanVien();                    
         }
         //ok
         private void bt_save_Click(object sender, EventArgs e)
@@ -64,14 +64,30 @@ namespace Presentation
             NHANVIEN nv = new NHANVIEN();
             NhanVienBus nvBus = new NhanVienBus();
             nv.MANV = Int32.Parse(txt_manv.Text);
-            nv.NGAYSINH = DateTime.Parse(txt_ngayLam.Text);
+
+            if (toolTip1.Validation.check_NgaySinh(DateTime.Parse(txt_ngaysinh.Text)))
+            {
+                nv.NGAYSINH = DateTime.Parse(txt_ngayLam.Text);
+            }
+            else
+                MessageBox.Show(" Invalid NgaySinh!");              
             if (rd_nam.Checked == true) nv.PHAI = "Nam";
             else nv.PHAI = "Nu";
             nv.QUEQUAN = txt_DiaChi.Text;
-            nv.SDT = txt_Sdt.Text;
+            if(toolTip1.Validation.check_Phone(txt_Sdt.Text))
+            {
+                nv.SDT = txt_Sdt.Text;
+            }
+            else
+                MessageBox.Show("Invalid Mobile Phone !");
             nv.TENNV = txt_hoten.Text;
-            nv.CMT = txt_CMND.Text;
-            nv.NGAYVAOLAM = DateTime.Parse(txt_ngaysinh.Text);
+            if(toolTip1.Validation.Check_cmt(txt_CMND.Text))
+            {
+                nv.CMT = txt_CMND.Text;
+            }
+            else
+                MessageBox.Show("Invalid Identification !");
+            nv.NGAYVAOLAM = DateTime.Parse(txt_ngayLam.Text);
             ChucVuBus cvbus = new ChucVuBus();
             nv.MACV = cvbus.GetCVbyName(cb_loaiNV.Text).MACV;
             try
@@ -94,32 +110,48 @@ namespace Presentation
             NhanVienBus nvBus = new NhanVienBus();
             ACCOUNT ac = new ACCOUNT();
             AccountBus acBus = new AccountBus();
-
             nv.MANV = Int32.Parse(txt_manv.Text);
-            nv.NGAYSINH = DateTime.Parse(txt_ngaysinh.Text);
+            if (toolTip1.Validation.check_NgaySinh(DateTime.Parse(txt_ngaysinh.Text)))
+            {
+                nv.NGAYSINH = DateTime.Parse(txt_ngayLam.Text);
+            }
+            else
+                MessageBox.Show(" Invalid NgaySinh!");
             if (rd_nam.Checked == true) nv.PHAI = "Nam";
             else nv.PHAI = "Nu";
             nv.QUEQUAN = txt_DiaChi.Text;
-            nv.SDT = txt_Sdt.Text;
+            if (toolTip1.Validation.check_Phone(txt_Sdt.Text))
+            {
+                nv.SDT = txt_Sdt.Text;
+            }
+            else
+                MessageBox.Show("Invalid Mobile Phone !");
             nv.TENNV = txt_hoten.Text;
-            nv.CMT = txt_CMND.Text;
+            if (toolTip1.Validation.Check_cmt(txt_CMND.Text))
+            {
+                nv.CMT = txt_CMND.Text;
+            }
+            else
+                MessageBox.Show("Invalid Identification !");
             nv.NGAYVAOLAM =DateTime.Parse(txt_ngayLam.Text);
             ChucVuBus cvbus = new ChucVuBus();
             nv.MACV = cvbus.GetCVbyName(cb_loaiNV.Text).MACV;
-            if(!String.IsNullOrEmpty(txt_user.Text))
+            if (!String.IsNullOrEmpty(txt_user.Text))
             {
                 ac.ID = nv.MANV;
                 ac.USERNAME = txt_user.Text;
                 ac.PASS = txt_pass.Text;
             }
-            
             try
             {
-                if (nvBus.AddNV(nv)>0 && acBus.Addac(ac)>0)
-                {
+                if (nvBus.AddNV(nv) > 0)
+                {                
+                     acBus.Addac(ac);
+                   
                     MessageBox.Show("Add successted !");
+                  //  manv = nv.MANV;
+
                 }
-                    
                 else MessageBox.Show("Add not successted !");
                 loadDSNhanVien();
                 resettext();
@@ -175,6 +207,8 @@ namespace Presentation
                 if (nvBus.deleteNV(manv)) MessageBox.Show("Delete Successed !");
                 else MessageBox.Show("Delete not Successed !");
             }
+            resettext();
+            tbl_NhanVien.ClearSelection();
             loadDSNhanVien();
 
         }
@@ -196,7 +230,7 @@ namespace Presentation
             Enable();
             tbl_NhanVien.ClearSelection();
             NhanVienBus nvBus = new NhanVienBus();
-            txt_manv.Text = (nvBus.DSNhanVien()[nvBus.DSNhanVien().Count - 1].MANV + 1).ToString();
+            txt_manv.Text = ( Int32.Parse(tbl_NhanVien.Rows[tbl_NhanVien.RowCount - 1].Cells[0].Value.ToString()) +1).ToString();
             DateTime d = Convert.ToDateTime(DateTime.Now);
             txt_ngayLam.Text = d.ToString("MM/dd/yyyy");
             cb_loaiNV.Focus();
@@ -247,7 +281,7 @@ namespace Presentation
         public void loadCbBx()
         {
             ChucVuBus cvBus = new ChucVuBus();
-            //cb_loaiNV.DataSource = cvBus.DSCHUCVU();
+            
             int a = cvBus.DSCHUCVU().Count;
             for (int i = 0; i < a; i++)
             {
@@ -263,6 +297,7 @@ namespace Presentation
             loadDSNhanVien();
             bt_them.Visible = false;
             loadCbBx();
+           // manv = Int32.Parse(tbl_NhanVien.Rows[tbl_NhanVien.RowCount - 1].Cells[0].Value.ToString());
         }
 
         private void cb_loaiNV_SelectedIndexChanged(object sender, EventArgs e)

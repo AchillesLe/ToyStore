@@ -18,6 +18,7 @@ namespace Presentation
             Application.SetCompatibleTextRenderingDefault(false);
             //Application.Run(new LoginAcounts());
             Application.Run(new MainMenu());
+          
         }
     }
 }

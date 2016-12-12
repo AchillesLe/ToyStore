@@ -284,6 +284,7 @@
             // cb_loaiNV
             // 
             this.cb_loaiNV.AllowDrop = true;
+            this.cb_loaiNV.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
             this.cb_loaiNV.BackColor = System.Drawing.SystemColors.Menu;
             this.cb_loaiNV.FormattingEnabled = true;
             this.cb_loaiNV.Location = new System.Drawing.Point(161, 39);

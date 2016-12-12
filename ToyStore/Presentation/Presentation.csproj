@@ -164,6 +164,7 @@
     </Compile>
     <Compile Include="toolTip1\ExportToExcel.cs" />
     <Compile Include="toolTip1\Show.cs" />
+    <Compile Include="toolTip1\Validation.cs" />
     <EmbeddedResource Include="BaoCaoDs.resx">
       <DependentUpon>BaoCaoDs.cs</DependentUpon>
     </EmbeddedResource>

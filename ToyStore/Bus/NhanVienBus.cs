@@ -32,6 +32,10 @@ namespace Bus
         {
             return nvdao.editNV(nv);
         }
+        public int MaNVNow()
+        {
+            return nvdao.GetMaNVNow();
+        }
         
     }
 }

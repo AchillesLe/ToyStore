@@ -55,7 +55,7 @@ namespace Dao
             using (ContextEntites context = new ContextEntites())
             {
                 NHANVIEN  kh = new NHANVIEN();
-                kh.MANV = nv.MANV;
+                kh.MANV = nv.MANV; 
                 kh.CMT = nv.CMT;
                 kh.NGAYSINH = nv.NGAYSINH;
                 kh.MACV = nv.MACV;
@@ -117,6 +117,16 @@ namespace Dao
             }
             return chek;
             //change
+        }
+        public int GetMaNVNow()
+        {
+            int id;
+                using (ContextEntites context = new ContextEntites())
+                {
+                    id = (from c in context.NHANVIENs select c.MANV).Max();
+                }
+               
+            return id;
         }
         
     }
