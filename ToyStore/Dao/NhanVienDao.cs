@@ -40,6 +40,7 @@ namespace Dao
                 var a = context.NHANVIENs.SingleOrDefault(x => x.MANV==ID);
                 nv.MANV = a.MANV;
                 nv.NGAYSINH = a.NGAYSINH;
+                nv.NGAYVAOLAM = a.NGAYVAOLAM;
                 nv.MACV = a.MACV;
                 nv.PHAI = a.PHAI;
                 nv.TENNV = a.TENNV;

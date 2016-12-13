@@ -39,6 +39,24 @@ namespace Dao
             }
             return ac;
         }
+        public ACCOUNT ACCOUNTByName(string name)
+        {
+            ACCOUNT ac = new ACCOUNT();
+            try
+            {
+                using (ContextEntites context = new ContextEntites())
+                {
+                   var c = context.ACCOUNTs.SingleOrDefault(x=>x.USERNAME==name);
+                    ac.ID = c.ID;
+                    ac.PASS = c.PASS;
+                    ac.USERNAME = c.USERNAME;
+                }
+            }catch(Exception e)
+            {
+                Console.WriteLine(e.ToString());
+            }
+            return ac;
+        }
         public int AddAc(ACCOUNT ac)
         {
             int s;

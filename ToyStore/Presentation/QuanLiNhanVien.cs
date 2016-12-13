@@ -146,11 +146,9 @@ namespace Presentation
             {
                 if (nvBus.AddNV(nv) > 0)
                 {                
-                     acBus.Addac(ac);
-                   
+                     acBus.Addac(ac);                
                     MessageBox.Show("Add successted !");
                   //  manv = nv.MANV;
-
                 }
                 else MessageBox.Show("Add not successted !");
                 loadDSNhanVien();

@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Windows.Forms;
 
+
 namespace Presentation
 {
     public partial class MainMenu : Form
@@ -16,6 +17,7 @@ namespace Presentation
         const int HTCLIENT = 0x1;
         const int HTCAPTION = 0x2;
         public static string UserName = String.Empty;
+        
         public MainMenu()
         {
             InitializeComponent();    
@@ -35,7 +37,7 @@ namespace Presentation
             }
             QuanLiBanHang.Show();
             bt_Account.Text = UserName;
-            this.IsMdiContainer = true;
+            ThongTinNv.UserName_infor = bt_Account.Text;
         }
         public void Hide_Visible(Panel pn)
         {

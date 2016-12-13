@@ -20,6 +20,10 @@ namespace Bus
         {
             return acdao.ACCOUNTByID(ID);
         }
+        public ACCOUNT ACCOUNTByName(string name)
+        {
+            return acdao.ACCOUNTByName(name);
+        }
         public int Addac(ACCOUNT ac)
         {
             return acdao.AddAc(ac);
