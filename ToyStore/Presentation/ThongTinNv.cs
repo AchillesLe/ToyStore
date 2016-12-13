@@ -79,7 +79,7 @@ namespace Presentation
             txt_pass.Visible = false;
             txt_comfirmpass.Visible = false;
             bt_Huy.Visible = false;
-            bt_Luu.Visible = false; 
+            bt_Luu.Visible = false; //
             
         }
 
