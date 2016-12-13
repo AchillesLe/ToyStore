@@ -292,6 +292,7 @@
             this.cb_loaiNV.Size = new System.Drawing.Size(259, 22);
             this.cb_loaiNV.TabIndex = 46;
             this.cb_loaiNV.SelectedIndexChanged += new System.EventHandler(this.cb_loaiNV_SelectedIndexChanged);
+            this.cb_loaiNV.TextChanged += new System.EventHandler(this.cb_loaiNV_TextChanged);
             // 
             // label1
             // 

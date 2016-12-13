@@ -67,7 +67,7 @@ namespace Presentation
 
             if (toolTip1.Validation.check_NgaySinh(DateTime.Parse(txt_ngaysinh.Text)))
             {
-                nv.NGAYSINH = DateTime.Parse(txt_ngayLam.Text);
+                nv.NGAYSINH = DateTime.Parse(txt_ngaysinh.Text);
             }
             else
                 MessageBox.Show(" Invalid NgaySinh!");              
@@ -86,7 +86,9 @@ namespace Presentation
                 nv.CMT = txt_CMND.Text;
             }
             else
+            {
                 MessageBox.Show("Invalid Identification !");
+            }        
             nv.NGAYVAOLAM = DateTime.Parse(txt_ngayLam.Text);
             ChucVuBus cvbus = new ChucVuBus();
             nv.MACV = cvbus.GetCVbyName(cb_loaiNV.Text).MACV;
@@ -226,6 +228,7 @@ namespace Presentation
         {         
             resettext();
             Enable();
+            cb_loaiNV.Refresh();
             tbl_NhanVien.ClearSelection();
             NhanVienBus nvBus = new NhanVienBus();
             txt_manv.Text = ( Int32.Parse(tbl_NhanVien.Rows[tbl_NhanVien.RowCount - 1].Cells[0].Value.ToString()) +1).ToString();
@@ -320,6 +323,11 @@ namespace Presentation
         {
             txt_pass.Text = "123456";
            
+        }
+
+        private void cb_loaiNV_TextChanged(object sender, EventArgs e)
+        {
+            //cb_loaiNV.AutoCompleteCustomSource;
         }
     }
 }

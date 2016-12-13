@@ -21,8 +21,6 @@ namespace Presentation
         public LoginAcounts()
         {
             InitializeComponent();
-            tb_MatKhau.UseSystemPasswordChar = true;
-            tb_MatKhau.PasswordChar = '*';
         }
         protected override void WndProc(ref Message message)
         {
@@ -68,10 +66,11 @@ namespace Presentation
                     MessageBox.Show("Password rỗng vui lòng kiểm tra lại!");
                     return;
                 }
+
                 if (acBus.checkac(username, pass) == true)
                 {
                     MainMenu mainMenu = new MainMenu();
-                    MainMenu.UserName = username;
+                    MainMenu.UserName = acBus.ACCOUNTByName(username).USERNAME;
                     mainMenu.Show();
 
                     this.Visible = false;
@@ -80,7 +79,7 @@ namespace Presentation
                 {
                     MessageBox.Show("Tên đăng nhập hoặc mật khẩu không đúng.Hãy kiểm tra và nhập lại!");
                     tb_MatKhau.Text = "";
-                  
+
                 }
             }
             catch(Exception ex)
@@ -88,6 +87,12 @@ namespace Presentation
                 Console.WriteLine(ex.ToString());
             }       
         }
-        
+
+        private void LoginAcounts_Load(object sender, EventArgs e)
+        {
+            tb_MatKhau.UseSystemPasswordChar = true;
+            tb_MatKhau.PasswordChar = '*';
+            tb_TenDangNhap.Focus();
+        }
     }
 }

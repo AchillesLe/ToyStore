@@ -65,10 +65,10 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.bt_Huy = new System.Windows.Forms.Button();
             this.bt_Luu = new System.Windows.Forms.Button();
-            this.pictureBox10 = new System.Windows.Forms.PictureBox();
+            this.pic_comfirmpass = new System.Windows.Forms.PictureBox();
             this.txt_comfirmpass = new System.Windows.Forms.TextBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.lb_comfirmpass = new System.Windows.Forms.Label();
+            this.pic_newpass = new System.Windows.Forms.PictureBox();
             this.txt_newpass = new System.Windows.Forms.TextBox();
             this.lb_mkMoi = new System.Windows.Forms.Label();
             this.bt_Sua = new System.Windows.Forms.Button();
@@ -85,8 +85,8 @@
             this.Gb_GioiTinh.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pic_pass)).BeginInit();
             this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox10)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pic_comfirmpass)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pic_newpass)).BeginInit();
             this.SuspendLayout();
             // 
             // pictureBox9
@@ -437,7 +437,8 @@
             this.txt_pass.ForeColor = System.Drawing.Color.Gray;
             this.txt_pass.Location = new System.Drawing.Point(208, 334);
             this.txt_pass.Name = "txt_pass";
-            this.txt_pass.Size = new System.Drawing.Size(216, 19);
+            this.txt_pass.ReadOnly = true;
+            this.txt_pass.Size = new System.Drawing.Size(219, 19);
             this.txt_pass.TabIndex = 45;
             this.txt_pass.Tag = "";
             this.txt_pass.Text = "Nhập Mật Khẩu Cũ";
@@ -459,10 +460,10 @@
             this.panel1.BackColor = System.Drawing.Color.WhiteSmoke;
             this.panel1.Controls.Add(this.bt_Huy);
             this.panel1.Controls.Add(this.bt_Luu);
-            this.panel1.Controls.Add(this.pictureBox10);
+            this.panel1.Controls.Add(this.pic_comfirmpass);
             this.panel1.Controls.Add(this.txt_comfirmpass);
-            this.panel1.Controls.Add(this.label1);
-            this.panel1.Controls.Add(this.pictureBox1);
+            this.panel1.Controls.Add(this.lb_comfirmpass);
+            this.panel1.Controls.Add(this.pic_newpass);
             this.panel1.Controls.Add(this.txt_newpass);
             this.panel1.Controls.Add(this.lb_mkMoi);
             this.panel1.Controls.Add(this.bt_Sua);
@@ -516,6 +517,7 @@
             this.bt_Huy.TabIndex = 55;
             this.bt_Huy.Text = "Hủy";
             this.bt_Huy.UseVisualStyleBackColor = false;
+            this.bt_Huy.Click += new System.EventHandler(this.bt_Huy_Click);
             // 
             // bt_Luu
             // 
@@ -531,15 +533,16 @@
             this.bt_Luu.TabIndex = 54;
             this.bt_Luu.Text = "Lưu";
             this.bt_Luu.UseVisualStyleBackColor = false;
+            this.bt_Luu.Click += new System.EventHandler(this.bt_Luu_Click);
             // 
-            // pictureBox10
+            // pic_comfirmpass
             // 
-            this.pictureBox10.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox10.BackgroundImage")));
-            this.pictureBox10.Location = new System.Drawing.Point(203, 425);
-            this.pictureBox10.Name = "pictureBox10";
-            this.pictureBox10.Size = new System.Drawing.Size(238, 1);
-            this.pictureBox10.TabIndex = 53;
-            this.pictureBox10.TabStop = false;
+            this.pic_comfirmpass.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pic_comfirmpass.BackgroundImage")));
+            this.pic_comfirmpass.Location = new System.Drawing.Point(203, 425);
+            this.pic_comfirmpass.Name = "pic_comfirmpass";
+            this.pic_comfirmpass.Size = new System.Drawing.Size(238, 1);
+            this.pic_comfirmpass.TabIndex = 53;
+            this.pic_comfirmpass.TabStop = false;
             // 
             // txt_comfirmpass
             // 
@@ -548,39 +551,41 @@
             this.txt_comfirmpass.Font = new System.Drawing.Font("Calibri", 11.25F);
             this.txt_comfirmpass.Location = new System.Drawing.Point(208, 403);
             this.txt_comfirmpass.Name = "txt_comfirmpass";
+            this.txt_comfirmpass.PasswordChar = '*';
             this.txt_comfirmpass.Size = new System.Drawing.Size(238, 19);
             this.txt_comfirmpass.TabIndex = 52;
             this.txt_comfirmpass.Tag = "";
             // 
-            // label1
+            // lb_comfirmpass
             // 
-            this.label1.AutoSize = true;
-            this.label1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.label1.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.label1.ForeColor = System.Drawing.Color.DarkSlateGray;
-            this.label1.Location = new System.Drawing.Point(58, 403);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(126, 18);
-            this.label1.TabIndex = 51;
-            this.label1.Text = "Xác Nhận Mật Khẩu";
+            this.lb_comfirmpass.AutoSize = true;
+            this.lb_comfirmpass.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.lb_comfirmpass.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.lb_comfirmpass.ForeColor = System.Drawing.Color.DarkSlateGray;
+            this.lb_comfirmpass.Location = new System.Drawing.Point(58, 403);
+            this.lb_comfirmpass.Name = "lb_comfirmpass";
+            this.lb_comfirmpass.Size = new System.Drawing.Size(126, 18);
+            this.lb_comfirmpass.TabIndex = 51;
+            this.lb_comfirmpass.Text = "Xác Nhận Mật Khẩu";
             // 
-            // pictureBox1
+            // pic_newpass
             // 
-            this.pictureBox1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox1.BackgroundImage")));
-            this.pictureBox1.Location = new System.Drawing.Point(203, 389);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(238, 1);
-            this.pictureBox1.TabIndex = 50;
-            this.pictureBox1.TabStop = false;
+            this.pic_newpass.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pic_newpass.BackgroundImage")));
+            this.pic_newpass.Location = new System.Drawing.Point(203, 389);
+            this.pic_newpass.Name = "pic_newpass";
+            this.pic_newpass.Size = new System.Drawing.Size(238, 1);
+            this.pic_newpass.TabIndex = 50;
+            this.pic_newpass.TabStop = false;
             // 
             // txt_newpass
             // 
             this.txt_newpass.BackColor = System.Drawing.Color.WhiteSmoke;
             this.txt_newpass.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txt_newpass.Font = new System.Drawing.Font("Calibri", 11.25F);
-            this.txt_newpass.Location = new System.Drawing.Point(208, 366);
+            this.txt_newpass.Location = new System.Drawing.Point(208, 368);
             this.txt_newpass.Name = "txt_newpass";
-            this.txt_newpass.Size = new System.Drawing.Size(238, 19);
+            this.txt_newpass.PasswordChar = '*';
+            this.txt_newpass.Size = new System.Drawing.Size(219, 19);
             this.txt_newpass.TabIndex = 49;
             this.txt_newpass.Tag = "";
             // 
@@ -673,8 +678,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.pic_pass)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox10)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pic_comfirmpass)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pic_newpass)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -719,10 +724,10 @@
         private System.Windows.Forms.Label name;
         private System.Windows.Forms.Button Close;
         private System.Windows.Forms.Button bt_Sua;
-        private System.Windows.Forms.PictureBox pictureBox10;
+        private System.Windows.Forms.PictureBox pic_comfirmpass;
         private System.Windows.Forms.TextBox txt_comfirmpass;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.Label lb_comfirmpass;
+        private System.Windows.Forms.PictureBox pic_newpass;
         private System.Windows.Forms.TextBox txt_newpass;
         private System.Windows.Forms.Label lb_mkMoi;
         private System.Windows.Forms.Button bt_Huy;

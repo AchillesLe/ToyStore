@@ -73,33 +73,48 @@ namespace Presentation
             DateTime dm = Convert.ToDateTime(txt_ngaysinh.Text);
             txt_ngaysinh.Text = dm.ToString("MM/dd/yyyy");
             txt_Sdt.Text = nv.SDT;
-            txt_user.Text = ac.USERNAME;
-            txt_pass.Text = ac.PASS;
-            txt_newpass.Visible = false;
-            txt_pass.Visible = false;
-            txt_comfirmpass.Visible = false;
-            bt_Huy.Visible = false;
-            bt_Luu.Visible = false; //
-            
+            txt_user.Text = ac.USERNAME;          
+            Show_Hide(false);
         }
 
         private void bt_Sua_Click(object sender, EventArgs e)
         {
-            bt_Luu.Show();
-            bt_Huy.Show();
+            Show_Hide(true);
+            AccountBus acbus = new AccountBus();
+            ACCOUNT ac = new ACCOUNT();
+            ac = acbus.ACCOUNTByName(txt_user.Text);
+            txt_pass.Text = ac.PASS;
+        }
+        private void Show_Hide(bool enable)
+        {
+            txt_newpass.Visible = enable;
+            txt_pass.Visible = enable;
+            txt_comfirmpass.Visible = enable;
+            bt_Huy.Visible = enable;
+            bt_Luu.Visible = enable; 
+            lb_pass.Visible = enable;
+            lb_mkMoi.Visible = enable;
+            lb_comfirmpass.Visible = enable;
+            pic_pass.Visible = enable;
+            pic_newpass.Visible = enable;
+            pic_comfirmpass.Visible = enable;
+        }
+
+        private void bt_Luu_Click(object sender, EventArgs e)
+        {
             ACCOUNT ac = new ACCOUNT();
             AccountBus acBus = new AccountBus();
             try
             {
                 ac.ID = Int32.Parse(txt_manv.Text);
                 ac.USERNAME = txt_user.Text;
-                if ( !txt_comfirmpass.Text.Equals(txt_newpass.Text))
+                if (!txt_comfirmpass.Text.Equals(txt_newpass.Text))
                 {
                     MessageBox.Show("Invalid Pass !");
                     return;
                 }
-                    ac.PASS = txt_comfirmpass.Text;
-                if(acBus.editac(ac))
+                ac.PASS = txt_comfirmpass.Text;
+                if (acBus.editac(ac))
                 {
                     MessageBox.Show("Update Successed Password !");
                 }
@@ -109,11 +124,23 @@ namespace Presentation
                     return;
                 }
             }
-            catch(Exception ee)
+            catch (Exception ee)
             {
                 MessageBox.Show("Invalid Pass!");
             }
-           
+            resettext();
+            Show_Hide(false);
+        }
+        private void resettext()
+        {
+            txt_pass.Text = "";
+            txt_newpass.Text = "";
+            txt_comfirmpass.Text = "";
+        }
+        private void bt_Huy_Click(object sender, EventArgs e)
+        {
+            resettext();
+            Show_Hide(false);
         }
     }
 }

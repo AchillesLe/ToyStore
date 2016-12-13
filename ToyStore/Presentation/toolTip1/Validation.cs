@@ -27,7 +27,7 @@ namespace Presentation.toolTip1
         }
         public static bool Check_cmt(string cmt)
         {
-            if (Regex.IsMatch(cmt, @"\d{9}$"))
+            if (Regex.IsMatch(cmt, @"^\d{9}$"))
                 return true;
             else return false;
         }
