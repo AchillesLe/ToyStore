@@ -106,6 +106,24 @@ namespace Dao
             }
             return chek;
         }
-
+        public bool reduceDC(DOCHOI dc, int sl)
+        {
+            bool chek = false;
+            using (ContextEntites context = new ContextEntites())
+            {
+                try
+                {
+                    var s = context.DOCHOIs.Single(x => x.MADC == dc.MADC);
+                    s.SL = dc.SL - sl;
+                    if (context.SaveChanges() >= 0)
+                        chek = true;
+                }
+                catch (Exception ec)
+                {
+                    Console.WriteLine(ec.ToString());
+                }
+            }
+            return chek;
+        }
     }
 }

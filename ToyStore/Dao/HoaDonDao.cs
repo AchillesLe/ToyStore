@@ -14,14 +14,32 @@ namespace Dao
             List<HOADON> listHD = new List<HOADON>();
             using (ContextEntites context = new ContextEntites())
             {
-                var query = (from c in context.HOADONs select new { c.MAHD,c.MAKH,c.MANV,c.NGAYHD,c.TRIGIA });
+                var query = (from c in context.HOADONs select new { c.MAHD,c.MANV,c.NGAYHD,c.TRIGIA });
                 foreach (var a in query)
                 {
                     HOADON hd = new HOADON();
                     hd.TRIGIA = a.TRIGIA;
                     hd.MANV = a.MANV;
                     hd.NGAYHD = a.NGAYHD;
-                    hd.MAKH = a.MAKH;
+                    hd.MAHD = a.MAHD;
+
+                    listHD.Add(hd);
+                }
+            }
+            return listHD;
+        }
+        public List<HOADON> dsHoaDonFromTo(DateTime datefrom, DateTime dateto)
+        {
+            List<HOADON> listHD = new List<HOADON>();
+            using (ContextEntites context = new ContextEntites())
+            {
+                var query = (from c in context.HOADONs where (c.NGAYHD >= datefrom && c.NGAYHD <= dateto) select new { c.MAHD, c.MANV, c.NGAYHD, c.TRIGIA });
+                foreach (var a in query)
+                {
+                    HOADON hd = new HOADON();
+                    hd.TRIGIA = a.TRIGIA;
+                    hd.MANV = a.MANV;
+                    hd.NGAYHD = a.NGAYHD;
                     hd.MAHD = a.MAHD;
 
                     listHD.Add(hd);
@@ -36,7 +54,6 @@ namespace Dao
             {
                var s = context.HOADONs.SingleOrDefault(x => x.MAHD == id);
                 hd.MAHD = s.MAHD;
-                hd.MAKH = s.MAKH;
                 hd.MANV = s.MANV;
                 hd.NGAYHD = s.NGAYHD;
                 hd.TRIGIA = s.TRIGIA;
@@ -44,13 +61,42 @@ namespace Dao
           
             return hd;
         }
+        public List<HOADON> dsHoaDonById(int id)
+        {
+            List<HOADON> listHD = new List<HOADON>();
+            using (ContextEntites context = new ContextEntites())
+            {
+                var query = (from c in context.HOADONs where (c.MAHD == id) select new { c.MAHD, c.MANV, c.NGAYHD, c.TRIGIA });
+                if(query.Count() > 0)
+                foreach (var a in query)
+                {
+                    HOADON hd = new HOADON();
+                    hd.TRIGIA = a.TRIGIA;
+                    hd.MANV = a.MANV;
+                    hd.NGAYHD = a.NGAYHD;
+                    hd.MAHD = a.MAHD;
+
+                    listHD.Add(hd);
+                }
+            }
+            return listHD;
+        }
         public int AddHoaDon(HOADON hd)
         {
             int s;
             using (ContextEntites cn = new ContextEntites())
             {
-                cn.HOADONs.Add(hd);
-                s = cn.SaveChanges();
+                try
+                {
+                    cn.HOADONs.Add(hd);
+                    s = cn.SaveChanges();
+                }
+                catch (Exception ex)
+                {
+                    Console.WriteLine(ex.ToString());
+                    s = 0;
+                }
+                
             }
             return s;
         }
@@ -83,7 +129,6 @@ namespace Dao
                 try
                 {
                     var s = context.HOADONs.Single(x => x.MAHD == hd.MAHD);
-                    s.MAKH = hd.MAKH;
                     s.MANV = hd.MANV;
                     s.NGAYHD = hd.NGAYHD;
                     s.TRIGIA = hd.TRIGIA;

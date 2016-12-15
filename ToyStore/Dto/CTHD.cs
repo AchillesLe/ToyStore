@@ -21,6 +21,8 @@ namespace Dto
 
         public int? SL { get; set; }
 
+        public virtual double? GIA { get; set; }
+
         public virtual DOCHOI DOCHOI { get; set; }
 
         public virtual HOADON HOADON { get; set; }

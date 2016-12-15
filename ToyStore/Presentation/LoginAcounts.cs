@@ -21,6 +21,7 @@ namespace Presentation
         public LoginAcounts()
         {
             InitializeComponent();
+            tb_TenDangNhap.Select();
         }
         protected override void WndProc(ref Message message)
         {
@@ -71,6 +72,7 @@ namespace Presentation
                 {
                     MainMenu mainMenu = new MainMenu();
                     MainMenu.UserName = acBus.ACCOUNTByName(username).USERNAME;
+                    MainMenu.usrId = acBus.ACCOUNTByName(username).ID;
                     mainMenu.Show();
 
                     this.Visible = false;

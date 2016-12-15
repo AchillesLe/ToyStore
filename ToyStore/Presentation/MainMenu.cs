@@ -17,6 +17,7 @@ namespace Presentation
         const int HTCLIENT = 0x1;
         const int HTCAPTION = 0x2;
         public static string UserName = String.Empty;
+        public static int usrId = -1;
         
         public MainMenu()
         {

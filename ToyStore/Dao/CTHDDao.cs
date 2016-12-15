@@ -8,7 +8,7 @@ namespace Dao
 {
     public class CTHDDao
     {
-        public List<CTHD> DSNhanVien()
+        public List<CTHD> DSChiTIET()
         {
             List<CTHD> listCTHD = new List<CTHD>();
             using (ContextEntites context = new ContextEntites())
@@ -21,6 +21,26 @@ namespace Dao
                     ct.MADC = c.MADC;
                     ct.MAHD = c.MAHD;
                     ct.SL = c.SL;
+                    ct.GIA = c.GIA;
+                    listCTHD.Add(ct);
+                }
+            }
+            return listCTHD;
+        }
+        public List<CTHD> DSChiTIET(int mahd)
+        {
+            List<CTHD> listCTHD = new List<CTHD>();
+            using (ContextEntites context = new ContextEntites())
+            {
+                var query = (from c in context.CTHDs where c.MAHD == mahd select c);
+                foreach (var c in query)
+                {
+                    CTHD ct = new CTHD();
+                    // nv.
+                    ct.MADC = c.MADC;
+                    ct.MAHD = c.MAHD;
+                    ct.SL = c.SL;
+                    ct.GIA = c.GIA;
                     listCTHD.Add(ct);
                 }
             }
@@ -37,25 +57,44 @@ namespace Dao
             }
             return ct;//
         }
-        public int addNV(NHANVIEN nv)
+        public int addCTHD(CTHD ct)
         {
             int s;
+            CTHD add = new CTHD();
+            add.MAHD = ct.MAHD;
+            add.MADC = ct.MADC;
+            add.SL = ct.SL;
+            add.GIA = ct.GIA;
             using (ContextEntites context = new ContextEntites())
             {
-                var a = context.NHANVIENs.Add(nv);
+                var a = context.CTHDs.Add(add);
                 s = context.SaveChanges();
             }
             return s;
         }
-        public bool deleteNV(int maNV)
+        public int addCTHDs(List<CTHD> cts)
+        {
+            int s = 0;
+            foreach(CTHD ct in cts)
+            {
+                
+                using (ContextEntites context = new ContextEntites())
+                {
+                    var a = context.CTHDs.Add(ct);
+                    s += context.SaveChanges();
+                }
+            }
+            return s;
+        }
+        public bool deleteCTHD(int mahd, int madc)
         {
             bool check = false;
             using (ContextEntites con = new ContextEntites())
             {
                 try
                 {
-                    NHANVIEN kh = con.NHANVIENs.Single(x => x.MANV == maNV);
-                    con.NHANVIENs.Remove(kh);
+                    CTHD ct = con.CTHDs.Single(x => (x.MADC == madc && x.MAHD == mahd));
+                    con.CTHDs.Remove(ct);
                     if (con.SaveChanges() >= 0)
                     {
                         check = true;
@@ -68,20 +107,40 @@ namespace Dao
             }
             return check;
         }
-        public bool editNV(NHANVIEN kh)
+        public bool deleteCTHD(int mahd)
         {
-            bool chek = false;
-            using (ContextEntites context = new ContextEntites
-                ())
+            bool check = false;
+            using (ContextEntites con = new ContextEntites())
             {
                 try
                 {
-                    var s = context.NHANVIENs.Single(x => x.MANV == kh.MANV);
-                    s.TENNV = kh.TENNV;
-                    s.SDT = kh.SDT;
-                    s.PHAI = kh.PHAI;
-                    s.CMT = kh.CMT;
-                    s.NGAYSINH = kh.NGAYSINH;
+                    var cts = con.CTHDs.Where(x => (x.MAHD == mahd));
+                    foreach(CTHD ct in cts)
+                    {
+                        con.CTHDs.Remove(ct);
+                    }
+                    
+                    if (con.SaveChanges() >= 0)
+                    {
+                        check = true;
+                    }
+                }
+                catch (Exception ex)
+                {
+                    Console.WriteLine(ex.ToString());
+                }
+            }
+            return check;
+        }
+        public bool editCTHD(CTHD ct)
+        {
+            bool chek = false;
+            using (ContextEntites context = new ContextEntites())
+            {
+                try
+                {
+                    var s = context.CTHDs.Single(x => (x.MADC == ct.MADC && x.MAHD == ct.MAHD));
+                    s.SL = ct.SL;
                     
                     if (context.SaveChanges() >= 0)
                         chek = true;

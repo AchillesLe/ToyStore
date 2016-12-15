@@ -28,25 +28,25 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridView tbl_sp;
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(BillBanLe));
             this.QuanLiSanPham = new System.Windows.Forms.Panel();
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.tb_Sl = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.pictureBox13 = new System.Windows.Forms.PictureBox();
-            this.textBox5 = new System.Windows.Forms.TextBox();
+            this.tb_tong_tien = new System.Windows.Forms.TextBox();
+            this.tbl_sp = new System.Windows.Forms.DataGridView();
             this.bt_excel = new System.Windows.Forms.Button();
             this.list = new System.Windows.Forms.PictureBox();
             this.pictureBox12 = new System.Windows.Forms.PictureBox();
             this.pictureBox11 = new System.Windows.Forms.PictureBox();
             this.pictureBox10 = new System.Windows.Forms.PictureBox();
             this.label4 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.button1 = new System.Windows.Forms.Button();
+            this.tb_khach_tra = new System.Windows.Forms.TextBox();
+            this.btn_huy = new System.Windows.Forms.Button();
             this.bt_Luu = new System.Windows.Forms.Button();
             this.pictureBox8 = new System.Windows.Forms.PictureBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.tb_tien_du = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.pictureBox7 = new System.Windows.Forms.PictureBox();
             this.bt_In = new System.Windows.Forms.Button();
@@ -57,16 +57,16 @@
             this.Tong = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
             this.pictureBox14 = new System.Windows.Forms.PictureBox();
-            this.button2 = new System.Windows.Forms.Button();
+            this.bt_Nhap = new System.Windows.Forms.Button();
             this.cb_masp = new System.Windows.Forms.ComboBox();
-            this.bt_tang = new System.Windows.Forms.Button();
             this.bt_giam = new System.Windows.Forms.Button();
+            this.bt_tang = new System.Windows.Forms.Button();
             this.pictureBox9 = new System.Windows.Forms.PictureBox();
             this.pictureBox6 = new System.Windows.Forms.PictureBox();
-            this.textBox4 = new System.Windows.Forms.TextBox();
+            this.tb_slSP = new System.Windows.Forms.TextBox();
             this.pictureBox5 = new System.Windows.Forms.PictureBox();
             this.label3 = new System.Windows.Forms.Label();
-            this.tb_NvHd = new System.Windows.Forms.TextBox();
+            this.tb_NnHd = new System.Windows.Forms.TextBox();
             this.tb_GioHd = new System.Windows.Forms.TextBox();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
@@ -83,11 +83,10 @@
             this.Down = new System.Windows.Forms.Button();
             this.name = new System.Windows.Forms.Label();
             this.back = new System.Windows.Forms.Button();
-            tbl_sp = new System.Windows.Forms.DataGridView();
-            ((System.ComponentModel.ISupportInitialize)(tbl_sp)).BeginInit();
             this.QuanLiSanPham.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox13)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tbl_sp)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.list)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox12)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox11)).BeginInit();
@@ -104,18 +103,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
-            // tbl_sp
-            // 
-            tbl_sp.BackgroundColor = System.Drawing.Color.Gainsboro;
-            tbl_sp.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            tbl_sp.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            tbl_sp.Location = new System.Drawing.Point(2, 163);
-            tbl_sp.MultiSelect = false;
-            tbl_sp.Name = "tbl_sp";
-            tbl_sp.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.AutoSizeToFirstHeader;
-            tbl_sp.Size = new System.Drawing.Size(845, 139);
-            tbl_sp.TabIndex = 40;
-            // 
             // QuanLiSanPham
             // 
             this.QuanLiSanPham.BackColor = System.Drawing.SystemColors.Menu;
@@ -123,19 +110,19 @@
             this.QuanLiSanPham.Controls.Add(this.tb_Sl);
             this.QuanLiSanPham.Controls.Add(this.label5);
             this.QuanLiSanPham.Controls.Add(this.pictureBox13);
-            this.QuanLiSanPham.Controls.Add(this.textBox5);
-            this.QuanLiSanPham.Controls.Add(tbl_sp);
+            this.QuanLiSanPham.Controls.Add(this.tb_tong_tien);
+            this.QuanLiSanPham.Controls.Add(this.tbl_sp);
             this.QuanLiSanPham.Controls.Add(this.bt_excel);
             this.QuanLiSanPham.Controls.Add(this.list);
             this.QuanLiSanPham.Controls.Add(this.pictureBox12);
             this.QuanLiSanPham.Controls.Add(this.pictureBox11);
             this.QuanLiSanPham.Controls.Add(this.pictureBox10);
             this.QuanLiSanPham.Controls.Add(this.label4);
-            this.QuanLiSanPham.Controls.Add(this.textBox1);
-            this.QuanLiSanPham.Controls.Add(this.button1);
+            this.QuanLiSanPham.Controls.Add(this.tb_khach_tra);
+            this.QuanLiSanPham.Controls.Add(this.btn_huy);
             this.QuanLiSanPham.Controls.Add(this.bt_Luu);
             this.QuanLiSanPham.Controls.Add(this.pictureBox8);
-            this.QuanLiSanPham.Controls.Add(this.textBox3);
+            this.QuanLiSanPham.Controls.Add(this.tb_tien_du);
             this.QuanLiSanPham.Controls.Add(this.label2);
             this.QuanLiSanPham.Controls.Add(this.pictureBox7);
             this.QuanLiSanPham.Controls.Add(this.bt_In);
@@ -166,6 +153,7 @@
             this.tb_Sl.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.tb_Sl.Location = new System.Drawing.Point(628, 313);
             this.tb_Sl.Name = "tb_Sl";
+            this.tb_Sl.ReadOnly = true;
             this.tb_Sl.Size = new System.Drawing.Size(196, 15);
             this.tb_Sl.TabIndex = 47;
             this.tb_Sl.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
@@ -190,16 +178,31 @@
             this.pictureBox13.TabIndex = 42;
             this.pictureBox13.TabStop = false;
             // 
-            // textBox5
+            // tb_tong_tien
             // 
-            this.textBox5.BackColor = System.Drawing.SystemColors.Menu;
-            this.textBox5.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox5.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.textBox5.Location = new System.Drawing.Point(630, 333);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(196, 15);
-            this.textBox5.TabIndex = 41;
-            this.textBox5.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.tb_tong_tien.BackColor = System.Drawing.SystemColors.Menu;
+            this.tb_tong_tien.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.tb_tong_tien.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.tb_tong_tien.Location = new System.Drawing.Point(630, 333);
+            this.tb_tong_tien.Name = "tb_tong_tien";
+            this.tb_tong_tien.ReadOnly = true;
+            this.tb_tong_tien.Size = new System.Drawing.Size(196, 15);
+            this.tb_tong_tien.TabIndex = 41;
+            this.tb_tong_tien.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            // 
+            // tbl_sp
+            // 
+            this.tbl_sp.BackgroundColor = System.Drawing.Color.Gainsboro;
+            this.tbl_sp.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.tbl_sp.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.tbl_sp.Location = new System.Drawing.Point(2, 163);
+            this.tbl_sp.MultiSelect = false;
+            this.tbl_sp.Name = "tbl_sp";
+            this.tbl_sp.ReadOnly = true;
+            this.tbl_sp.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.AutoSizeToFirstHeader;
+            this.tbl_sp.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.tbl_sp.Size = new System.Drawing.Size(845, 139);
+            this.tbl_sp.TabIndex = 40;
             // 
             // bt_excel
             // 
@@ -219,6 +222,7 @@
             this.bt_excel.TabIndex = 39;
             this.bt_excel.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             this.bt_excel.UseVisualStyleBackColor = false;
+            this.bt_excel.Click += new System.EventHandler(this.bt_excel_Click);
             // 
             // list
             // 
@@ -272,33 +276,36 @@
             this.label4.TabIndex = 27;
             this.label4.Text = "Chi Tiết";
             // 
-            // textBox1
+            // tb_khach_tra
             // 
-            this.textBox1.BackColor = System.Drawing.SystemColors.MenuBar;
-            this.textBox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox1.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.textBox1.Location = new System.Drawing.Point(629, 362);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(196, 15);
-            this.textBox1.TabIndex = 25;
-            this.textBox1.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.tb_khach_tra.BackColor = System.Drawing.SystemColors.MenuBar;
+            this.tb_khach_tra.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.tb_khach_tra.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.tb_khach_tra.Location = new System.Drawing.Point(629, 362);
+            this.tb_khach_tra.Name = "tb_khach_tra";
+            this.tb_khach_tra.Size = new System.Drawing.Size(196, 15);
+            this.tb_khach_tra.TabIndex = 25;
+            this.tb_khach_tra.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.tb_khach_tra.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.tb_khach_tra_KeyPress);
+            this.tb_khach_tra.Leave += new System.EventHandler(this.tinh_tien_du);
             // 
-            // button1
+            // btn_huy
             // 
-            this.button1.BackColor = System.Drawing.Color.Gainsboro;
-            this.button1.FlatAppearance.BorderSize = 0;
-            this.button1.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(188)))), ((int)(((byte)(156)))));
-            this.button1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(188)))), ((int)(((byte)(156)))));
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.button1.ForeColor = System.Drawing.Color.DarkSlateGray;
-            this.button1.Location = new System.Drawing.Point(706, 410);
-            this.button1.Name = "button1";
-            this.button1.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.button1.Size = new System.Drawing.Size(50, 27);
-            this.button1.TabIndex = 24;
-            this.button1.Text = "Hủy";
-            this.button1.UseVisualStyleBackColor = false;
+            this.btn_huy.BackColor = System.Drawing.Color.Gainsboro;
+            this.btn_huy.FlatAppearance.BorderSize = 0;
+            this.btn_huy.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(188)))), ((int)(((byte)(156)))));
+            this.btn_huy.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(188)))), ((int)(((byte)(156)))));
+            this.btn_huy.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_huy.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.btn_huy.ForeColor = System.Drawing.Color.DarkSlateGray;
+            this.btn_huy.Location = new System.Drawing.Point(706, 410);
+            this.btn_huy.Name = "btn_huy";
+            this.btn_huy.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.btn_huy.Size = new System.Drawing.Size(50, 27);
+            this.btn_huy.TabIndex = 24;
+            this.btn_huy.Text = "Hủy";
+            this.btn_huy.UseVisualStyleBackColor = false;
+            this.btn_huy.Click += new System.EventHandler(this.btn_huy_Click);
             // 
             // bt_Luu
             // 
@@ -316,6 +323,7 @@
             this.bt_Luu.TabIndex = 23;
             this.bt_Luu.Text = "Lưu";
             this.bt_Luu.UseVisualStyleBackColor = false;
+            this.bt_Luu.Click += new System.EventHandler(this.bt_Luu_Click);
             // 
             // pictureBox8
             // 
@@ -326,16 +334,17 @@
             this.pictureBox8.TabIndex = 22;
             this.pictureBox8.TabStop = false;
             // 
-            // textBox3
+            // tb_tien_du
             // 
-            this.textBox3.BackColor = System.Drawing.SystemColors.MenuBar;
-            this.textBox3.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox3.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.textBox3.Location = new System.Drawing.Point(629, 386);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(196, 15);
-            this.textBox3.TabIndex = 21;
-            this.textBox3.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.tb_tien_du.BackColor = System.Drawing.SystemColors.MenuBar;
+            this.tb_tien_du.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.tb_tien_du.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.tb_tien_du.Location = new System.Drawing.Point(629, 386);
+            this.tb_tien_du.Name = "tb_tien_du";
+            this.tb_tien_du.ReadOnly = true;
+            this.tb_tien_du.Size = new System.Drawing.Size(196, 15);
+            this.tb_tien_du.TabIndex = 21;
+            this.tb_tien_du.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
             // label2
             // 
@@ -375,6 +384,7 @@
             this.bt_In.TabIndex = 19;
             this.bt_In.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             this.bt_In.UseVisualStyleBackColor = false;
+            this.bt_In.Click += new System.EventHandler(this.bt_In_Click);
             // 
             // textBox2
             // 
@@ -405,6 +415,7 @@
             this.bt_Xoa.TabIndex = 18;
             this.bt_Xoa.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             this.bt_Xoa.UseVisualStyleBackColor = false;
+            this.bt_Xoa.Click += new System.EventHandler(this.bt_Xoa_Click);
             // 
             // label1
             // 
@@ -435,6 +446,7 @@
             this.bt_moi.TabIndex = 17;
             this.bt_moi.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             this.bt_moi.UseVisualStyleBackColor = false;
+            this.bt_moi.Click += new System.EventHandler(this.bt_moi_Click);
             // 
             // Tong
             // 
@@ -450,16 +462,16 @@
             // panel2
             // 
             this.panel2.Controls.Add(this.pictureBox14);
-            this.panel2.Controls.Add(this.button2);
+            this.panel2.Controls.Add(this.bt_Nhap);
             this.panel2.Controls.Add(this.cb_masp);
-            this.panel2.Controls.Add(this.bt_tang);
             this.panel2.Controls.Add(this.bt_giam);
+            this.panel2.Controls.Add(this.bt_tang);
             this.panel2.Controls.Add(this.pictureBox9);
             this.panel2.Controls.Add(this.pictureBox6);
-            this.panel2.Controls.Add(this.textBox4);
+            this.panel2.Controls.Add(this.tb_slSP);
             this.panel2.Controls.Add(this.pictureBox5);
             this.panel2.Controls.Add(this.label3);
-            this.panel2.Controls.Add(this.tb_NvHd);
+            this.panel2.Controls.Add(this.tb_NnHd);
             this.panel2.Controls.Add(this.tb_GioHd);
             this.panel2.Controls.Add(this.pictureBox3);
             this.panel2.Controls.Add(this.pictureBox2);
@@ -485,22 +497,23 @@
             this.pictureBox14.TabIndex = 44;
             this.pictureBox14.TabStop = false;
             // 
-            // button2
+            // bt_Nhap
             // 
-            this.button2.BackColor = System.Drawing.Color.LightGray;
-            this.button2.FlatAppearance.BorderSize = 0;
-            this.button2.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(188)))), ((int)(((byte)(156)))));
-            this.button2.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(188)))), ((int)(((byte)(156)))));
-            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button2.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.button2.ForeColor = System.Drawing.SystemColors.WindowText;
-            this.button2.Location = new System.Drawing.Point(659, 86);
-            this.button2.Name = "button2";
-            this.button2.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.button2.Size = new System.Drawing.Size(58, 26);
-            this.button2.TabIndex = 43;
-            this.button2.Text = "Nhập";
-            this.button2.UseVisualStyleBackColor = false;
+            this.bt_Nhap.BackColor = System.Drawing.Color.LightGray;
+            this.bt_Nhap.FlatAppearance.BorderSize = 0;
+            this.bt_Nhap.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(188)))), ((int)(((byte)(156)))));
+            this.bt_Nhap.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(188)))), ((int)(((byte)(156)))));
+            this.bt_Nhap.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.bt_Nhap.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.bt_Nhap.ForeColor = System.Drawing.SystemColors.WindowText;
+            this.bt_Nhap.Location = new System.Drawing.Point(659, 86);
+            this.bt_Nhap.Name = "bt_Nhap";
+            this.bt_Nhap.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.bt_Nhap.Size = new System.Drawing.Size(58, 26);
+            this.bt_Nhap.TabIndex = 43;
+            this.bt_Nhap.Text = "Nhập";
+            this.bt_Nhap.UseVisualStyleBackColor = false;
+            this.bt_Nhap.Click += new System.EventHandler(this.bt_Nhap_Click);
             // 
             // cb_masp
             // 
@@ -513,25 +526,6 @@
             this.cb_masp.Size = new System.Drawing.Size(229, 26);
             this.cb_masp.TabIndex = 30;
             // 
-            // bt_tang
-            // 
-            this.bt_tang.BackColor = System.Drawing.Color.Transparent;
-            this.bt_tang.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("bt_tang.BackgroundImage")));
-            this.bt_tang.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.bt_tang.FlatAppearance.BorderSize = 0;
-            this.bt_tang.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(188)))), ((int)(((byte)(156)))));
-            this.bt_tang.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(188)))), ((int)(((byte)(156)))));
-            this.bt_tang.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.bt_tang.Font = new System.Drawing.Font("Calibri", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.bt_tang.ForeColor = System.Drawing.Color.White;
-            this.bt_tang.Location = new System.Drawing.Point(629, 103);
-            this.bt_tang.Name = "bt_tang";
-            this.bt_tang.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.bt_tang.Size = new System.Drawing.Size(10, 10);
-            this.bt_tang.TabIndex = 29;
-            this.bt_tang.TextAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.bt_tang.UseVisualStyleBackColor = false;
-            // 
             // bt_giam
             // 
             this.bt_giam.BackColor = System.Drawing.Color.Transparent;
@@ -543,13 +537,34 @@
             this.bt_giam.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.bt_giam.Font = new System.Drawing.Font("Calibri", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.bt_giam.ForeColor = System.Drawing.Color.White;
-            this.bt_giam.Location = new System.Drawing.Point(629, 88);
+            this.bt_giam.Location = new System.Drawing.Point(629, 103);
             this.bt_giam.Name = "bt_giam";
             this.bt_giam.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.bt_giam.Size = new System.Drawing.Size(10, 10);
-            this.bt_giam.TabIndex = 28;
+            this.bt_giam.TabIndex = 29;
             this.bt_giam.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             this.bt_giam.UseVisualStyleBackColor = false;
+            this.bt_giam.Click += new System.EventHandler(this.bt_giam_Click);
+            // 
+            // bt_tang
+            // 
+            this.bt_tang.BackColor = System.Drawing.Color.Transparent;
+            this.bt_tang.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("bt_tang.BackgroundImage")));
+            this.bt_tang.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.bt_tang.FlatAppearance.BorderSize = 0;
+            this.bt_tang.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(188)))), ((int)(((byte)(156)))));
+            this.bt_tang.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(188)))), ((int)(((byte)(156)))));
+            this.bt_tang.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.bt_tang.Font = new System.Drawing.Font("Calibri", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.bt_tang.ForeColor = System.Drawing.Color.White;
+            this.bt_tang.Location = new System.Drawing.Point(629, 88);
+            this.bt_tang.Name = "bt_tang";
+            this.bt_tang.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.bt_tang.Size = new System.Drawing.Size(10, 10);
+            this.bt_tang.TabIndex = 28;
+            this.bt_tang.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.bt_tang.UseVisualStyleBackColor = false;
+            this.bt_tang.Click += new System.EventHandler(this.bt_tang_Click);
             // 
             // pictureBox9
             // 
@@ -569,15 +584,16 @@
             this.pictureBox6.TabIndex = 16;
             this.pictureBox6.TabStop = false;
             // 
-            // textBox4
+            // tb_slSP
             // 
-            this.textBox4.BackColor = System.Drawing.SystemColors.MenuBar;
-            this.textBox4.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox4.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.textBox4.Location = new System.Drawing.Point(540, 91);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(90, 18);
-            this.textBox4.TabIndex = 24;
+            this.tb_slSP.BackColor = System.Drawing.SystemColors.MenuBar;
+            this.tb_slSP.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.tb_slSP.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.tb_slSP.Location = new System.Drawing.Point(540, 91);
+            this.tb_slSP.Name = "tb_slSP";
+            this.tb_slSP.Size = new System.Drawing.Size(90, 18);
+            this.tb_slSP.TabIndex = 24;
+            this.tb_slSP.KeyDown += new System.Windows.Forms.KeyEventHandler(this.tb_slSP_KeyDown);
             // 
             // pictureBox5
             // 
@@ -599,16 +615,16 @@
             this.label3.TabIndex = 23;
             this.label3.Text = "Số Lượng";
             // 
-            // tb_NvHd
+            // tb_NnHd
             // 
-            this.tb_NvHd.BackColor = System.Drawing.SystemColors.Menu;
-            this.tb_NvHd.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.tb_NvHd.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.tb_NvHd.Location = new System.Drawing.Point(540, 16);
-            this.tb_NvHd.Name = "tb_NvHd";
-            this.tb_NvHd.ReadOnly = true;
-            this.tb_NvHd.Size = new System.Drawing.Size(231, 18);
-            this.tb_NvHd.TabIndex = 13;
+            this.tb_NnHd.BackColor = System.Drawing.SystemColors.Menu;
+            this.tb_NnHd.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.tb_NnHd.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.tb_NnHd.Location = new System.Drawing.Point(540, 16);
+            this.tb_NnHd.Name = "tb_NnHd";
+            this.tb_NnHd.ReadOnly = true;
+            this.tb_NnHd.Size = new System.Drawing.Size(231, 18);
+            this.tb_NnHd.TabIndex = 13;
             // 
             // tb_GioHd
             // 
@@ -643,6 +659,7 @@
             // 
             this.txt_mahd.BackColor = System.Drawing.SystemColors.Menu;
             this.txt_mahd.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txt_mahd.Enabled = false;
             this.txt_mahd.Font = new System.Drawing.Font("Calibri", 11.25F);
             this.txt_mahd.Location = new System.Drawing.Point(165, 48);
             this.txt_mahd.Name = "txt_mahd";
@@ -663,13 +680,13 @@
             // 
             this.txt_Manv.BackColor = System.Drawing.SystemColors.Menu;
             this.txt_Manv.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txt_Manv.Enabled = false;
             this.txt_Manv.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.txt_Manv.Location = new System.Drawing.Point(165, 16);
             this.txt_Manv.Name = "txt_Manv";
             this.txt_Manv.ReadOnly = true;
             this.txt_Manv.Size = new System.Drawing.Size(231, 18);
             this.txt_Manv.TabIndex = 5;
-            this.txt_Manv.Visible = false;
             // 
             // ld_MaSp
             // 
@@ -824,11 +841,12 @@
             this.Opacity = 0.98D;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "BanHang";
-            ((System.ComponentModel.ISupportInitialize)(tbl_sp)).EndInit();
+            this.Load += new System.EventHandler(this.BillBanLe_Load);
             this.QuanLiSanPham.ResumeLayout(false);
             this.QuanLiSanPham.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox13)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tbl_sp)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.list)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox12)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox11)).EndInit();
@@ -865,7 +883,7 @@
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.PictureBox pictureBox3;
         private System.Windows.Forms.PictureBox pictureBox2;
-        private System.Windows.Forms.TextBox tb_NvHd;
+        private System.Windows.Forms.TextBox tb_NnHd;
         private System.Windows.Forms.TextBox tb_GioHd;
         private System.Windows.Forms.Label name;
         private System.Windows.Forms.Button back;
@@ -876,32 +894,33 @@
         private System.Windows.Forms.Button bt_moi;
         private System.Windows.Forms.Button bt_In;
         private System.Windows.Forms.PictureBox pictureBox8;
-        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.TextBox tb_tien_du;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.PictureBox pictureBox7;
         private System.Windows.Forms.TextBox textBox2;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.PictureBox pictureBox9;
-        private System.Windows.Forms.TextBox textBox4;
+        private System.Windows.Forms.TextBox tb_slSP;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Button bt_Luu;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.Button btn_huy;
+        private System.Windows.Forms.TextBox tb_khach_tra;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Button bt_tang;
         private System.Windows.Forms.Button bt_giam;
+        private System.Windows.Forms.Button bt_tang;
         private System.Windows.Forms.PictureBox pictureBox10;
         private System.Windows.Forms.PictureBox pictureBox11;
         private System.Windows.Forms.PictureBox pictureBox12;
         private System.Windows.Forms.PictureBox list;
         private System.Windows.Forms.Button bt_excel;
         private System.Windows.Forms.ComboBox cb_masp;
-        private System.Windows.Forms.TextBox textBox5;
+        private System.Windows.Forms.TextBox tb_tong_tien;
         private System.Windows.Forms.PictureBox pictureBox13;
         private System.Windows.Forms.PictureBox pictureBox14;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button bt_Nhap;
         private System.Windows.Forms.PictureBox pictureBox4;
         private System.Windows.Forms.TextBox tb_Sl;
         private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.DataGridView tbl_sp;
     }
 }

@@ -31,5 +31,14 @@ namespace Bus
         {
             return dcdao.editDC(dc);
         }
+        public bool reduceDCs(List<CTHD> cts)
+        {
+            bool a = true;
+            foreach(CTHD ct in cts)
+            {
+                a = (a && dcdao.reduceDC(ct.DOCHOI, (int)ct.SL));
+            }
+            return a;
+        }
     }
 }

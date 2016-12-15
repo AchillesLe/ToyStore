@@ -21,7 +21,7 @@ namespace Dto
         [Column(TypeName = "date")]
         public DateTime NGAYHD { get; set; }
 
-        public int? MAKH { get; set; }
+        //public int? MAKH { get; set; }
 
         public int MANV { get; set; }
 

@@ -14,6 +14,14 @@ namespace Bus
         {
             return HDdao.dsHoaDon();           
         }
+        public List<HOADON> DsHoaDonFromTo(DateTime datefrom, DateTime dateto)
+        {
+            return HDdao.dsHoaDonFromTo(datefrom, dateto);
+        }
+        public List<HOADON> dsHoaDonById(int id)
+        {
+            return HDdao.dsHoaDonById(id);
+        }
         public HOADON HoadonByID(int id)
         {
             return HDdao.HoaDonById(id);
@@ -24,7 +32,11 @@ namespace Bus
         }
         public bool delete(int mahd)
         {
-            return HDdao.deleteHD(mahd);
+            bool ck = true;
+            CTHDDao ctDao = new CTHDDao();
+            ck = ck && ctDao.deleteCTHD(mahd);
+            ck = ck && HDdao.deleteHD(mahd);
+            return ck;
         }
         public bool edit(HOADON hd)
         {
