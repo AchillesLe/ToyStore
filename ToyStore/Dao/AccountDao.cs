@@ -119,20 +119,20 @@ namespace Dao
         public bool checkPass(string username,string pass)
         {
             bool check = false;
-            ACCOUNT ac = new ACCOUNT();
+           
             using (ContextEntites context = new ContextEntites())
             {
                 try
                 {
-                   // ACCOUNT ac = context.ACCOUNTs.SingleOrDefault(x => x.USERNAME.Equals(username) && x.PASS.Equals(pass));
+                   ACCOUNT ac = context.ACCOUNTs.SingleOrDefault(x => x.USERNAME.Equals(username) && x.PASS.Equals(pass));
                     var query = from c in context.ACCOUNTs where c.USERNAME.Equals( username)
                                 && c.PASS.Equals( pass) select c;
-                    foreach(var a in query)
-                    {
-                        ac.ID = a.ID;
-                        ac.PASS = a.PASS;
-                        ac.USERNAME = a.USERNAME;
-                    }
+                    //foreach(var a in query)
+                    //{
+                    //    ac.ID = a.ID;
+                    //    ac.PASS = a.PASS;
+                    //    ac.USERNAME = a.USERNAME;
+                    //}
                      if (ac!= null)
                         check = true;
                 }
