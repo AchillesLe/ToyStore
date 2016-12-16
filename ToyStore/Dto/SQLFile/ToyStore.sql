@@ -1,6 +1,6 @@
 create database ToyStore
 go
-use ToyStore
+use ToyStore	
 go
 create table ACCOUNT
 (
@@ -43,7 +43,6 @@ go
 create table HOADON(
 MAHD int identity(3144100,1) not null,
 NGAYHD date not null,
-MAKH int ,
 MANV int not null,
 TRIGIA float ,
 constraint pk_HOADON primary key(MAHD)
@@ -53,6 +52,7 @@ create table CTHD(
 MAHD int not null,
 MADC int not null,
 SL int,
+GIA float,
 constraint pk_CTHD primary key(MAHD,MADC)
 )
 go
@@ -63,6 +63,18 @@ MABC int identity(66800,1) not null,
 NGAYBAOCAO date,
 TONGGIATRI float,
 constraint pk_BAOCAO primary key(MABC)
+)
+go
+
+create table NHAPKHO
+(
+	MANV int not null,
+	MADC int not null,
+	NGAYNHAP date not null,
+	GIONHAP time(0) not null,
+	SL int,
+	GIA float,
+	constraint pk_NHAPKHO primary key(MADC)
 )
 go
 
@@ -87,7 +99,7 @@ insert into DOCHOI values(600000,N'Xe HotWheels',150,N'Mỹ',N'Xe mô hình',350
 (600007,N'Xe điền khiển vô lăng tròn 6703',110,N'Việt Nam',N'Xe mô hình',340000)
 insert into ACCOUNT values
 (3114100,N'AchillesLe',N'haithanhf'),
-(3114101,N'ShinHou',N'Hau'),
+(3114101,N'ShinHaou',N'Hau'),
 (3114102,N'LuanTran',N'LuanTran')
 go
 alter table NHANVIEN add foreign key(MACV) references CHUCVU(MACV)
@@ -95,3 +107,5 @@ alter table ACCOUNT add foreign key(ID) references NHANVIEN(MANV)
 alter table CTHD add foreign key (MAHD) references HOADON(MAHD)
 alter table CTHD add foreign key (MADC) references DOCHOI(MADC)
 alter table HOADON add foreign key (MANV) references NHANVIEN(MANV)
+alter table NHAPKHO add foreign key (MANV) references NHANVIEN(MANV)
+alter table NHAPKHO add foreign key (MADC) references DOCHOI(MADC)

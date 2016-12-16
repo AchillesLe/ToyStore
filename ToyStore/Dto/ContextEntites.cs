@@ -19,6 +19,7 @@ namespace Dto
         public virtual DbSet<ACCOUNT> ACCOUNTs { get; set; }
         public virtual DbSet<NHANVIEN> NHANVIENs { get; set; }
         public virtual DbSet<CHUCVU> CHUCVUs { get; set; }
+        public virtual DbSet<NHAPKHO> NHAPKHOs { get; set; }
 
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)

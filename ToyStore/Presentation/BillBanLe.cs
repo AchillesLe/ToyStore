@@ -320,7 +320,7 @@ namespace Presentation
                     }//*/
                     //ctBus.addCTHDs(listHd.ToList<CTHD>());
 
-                    //dcBus.reduceDCs(listHd.ToList<CTHD>());
+                    dcBus.reduceDCs(listHd.ToList<CTHD>());
 
                     luu_status = true;
 

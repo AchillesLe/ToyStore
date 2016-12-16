@@ -14,23 +14,33 @@ namespace Bus
         {
             return dcdao.DSDoChoi();
         }
+
+        public List<DOCHOI> DSDoChoibyID(int madc)
+        {
+            return dcdao.DSDoChoibyID(madc);
+        }
+
         public DOCHOI DochoiById(int ID)
         {
 
             return dcdao.DochoiById(ID);
         }
+
         public int AddDoChoi(DOCHOI dc)
         {
             return dcdao.AddDoChoi(dc);
         }
+
         public bool deleteDC(int madc)
         {
             return dcdao.deleteDC(madc);
         }
+
         public bool editDC(DOCHOI dc)
         {
             return dcdao.editDC(dc);
         }
+
         public bool reduceDCs(List<CTHD> cts)
         {
             bool a = true;

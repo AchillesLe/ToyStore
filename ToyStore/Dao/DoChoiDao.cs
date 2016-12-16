@@ -30,6 +30,30 @@ namespace Dao
             }
             return listDoChoi;
         }
+
+        public List<DOCHOI> DSDoChoibyID(int madc)
+        {
+            List<DOCHOI> listDoChoi = new List<DOCHOI>();
+            using (ContextEntites context = new ContextEntites())
+            {
+                var query = (from c in context.DOCHOIs where c.MADC == madc select new { c.MADC, c.SL, c.TENDC, c.NUOCSX, c.LOAI, c.GIA });
+                foreach (var a in query)
+                {
+                    DOCHOI dc = new DOCHOI();
+                    dc.MADC = a.MADC;
+                    dc.NUOCSX = a.NUOCSX;
+                    dc.SL = a.SL;
+                    dc.TENDC = a.TENDC;
+                    dc.LOAI = a.LOAI;
+                    dc.GIA = a.GIA;
+
+                    listDoChoi.Add(dc);
+                }
+            }
+            return listDoChoi;
+        }
+
+
         public DOCHOI DochoiById(int ID)
         {
             DOCHOI dc = new DOCHOI();
@@ -115,6 +139,26 @@ namespace Dao
                 {
                     var s = context.DOCHOIs.Single(x => x.MADC == dc.MADC);
                     s.SL = dc.SL - sl;
+                    if (context.SaveChanges() >= 0)
+                        chek = true;
+                }
+                catch (Exception ec)
+                {
+                    Console.WriteLine(ec.ToString());
+                }
+            }
+            return chek;
+        }
+
+        public bool addSLDC(int madc, int sl)
+        {
+            bool chek = false;
+            using (ContextEntites context = new ContextEntites())
+            {
+                try
+                {
+                    var s = context.DOCHOIs.Single(x => x.MADC == madc);
+                    s.SL += sl;
                     if (context.SaveChanges() >= 0)
                         chek = true;
                 }

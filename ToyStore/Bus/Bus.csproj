@@ -47,6 +47,7 @@
     <Compile Include="DoChoiBus.cs" />
     <Compile Include="HoaDonBus.cs" />
     <Compile Include="NhanVienBus.cs" />
+    <Compile Include="NhapKhoBus.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

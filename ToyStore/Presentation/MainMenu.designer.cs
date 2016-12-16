@@ -53,7 +53,6 @@
             this.bt_DongY = new System.Windows.Forms.Button();
             this.pictureBox6 = new System.Windows.Forms.PictureBox();
             this.lb_ThongBao = new System.Windows.Forms.Label();
-            this.bt_CapNhatGia = new System.Windows.Forms.Button();
             this.lb_QuanLiKho = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.bt_CtSp = new System.Windows.Forms.Button();
@@ -100,9 +99,9 @@
             this.pn_menu.Controls.Add(this.bt_BaoCaoDoanhSo);
             this.pn_menu.Controls.Add(this.bt_QuanLiKho);
             this.pn_menu.Controls.Add(this.bt_BanHang);
-            this.pn_menu.Location = new System.Drawing.Point(0, 28);
+            this.pn_menu.Location = new System.Drawing.Point(0, 26);
             this.pn_menu.Name = "pn_menu";
-            this.pn_menu.Size = new System.Drawing.Size(203, 515);
+            this.pn_menu.Size = new System.Drawing.Size(203, 478);
             this.pn_menu.TabIndex = 0;
             // 
             // user
@@ -112,9 +111,9 @@
             this.user.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.user.FlatAppearance.BorderSize = 0;
             this.user.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.user.Location = new System.Drawing.Point(10, 481);
+            this.user.Location = new System.Drawing.Point(10, 447);
             this.user.Name = "user";
-            this.user.Size = new System.Drawing.Size(24, 26);
+            this.user.Size = new System.Drawing.Size(24, 24);
             this.user.TabIndex = 5;
             this.user.UseVisualStyleBackColor = false;
             // 
@@ -127,10 +126,10 @@
             this.bt_Account.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.bt_Account.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.bt_Account.ForeColor = System.Drawing.Color.Transparent;
-            this.bt_Account.Location = new System.Drawing.Point(27, 481);
+            this.bt_Account.Location = new System.Drawing.Point(27, 447);
             this.bt_Account.Name = "bt_Account";
             this.bt_Account.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.bt_Account.Size = new System.Drawing.Size(86, 26);
+            this.bt_Account.Size = new System.Drawing.Size(86, 24);
             this.bt_Account.TabIndex = 13;
             this.bt_Account.Text = "Luantran";
             this.bt_Account.UseVisualStyleBackColor = false;
@@ -141,9 +140,9 @@
             this.pn_DangXuat.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(43)))), ((int)(((byte)(43)))), ((int)(((byte)(43)))));
             this.pn_DangXuat.Controls.Add(this.bt_XemThongTin);
             this.pn_DangXuat.Controls.Add(this.bt_DangXuat);
-            this.pn_DangXuat.Location = new System.Drawing.Point(40, 388);
+            this.pn_DangXuat.Location = new System.Drawing.Point(40, 360);
             this.pn_DangXuat.Name = "pn_DangXuat";
-            this.pn_DangXuat.Size = new System.Drawing.Size(163, 87);
+            this.pn_DangXuat.Size = new System.Drawing.Size(163, 81);
             this.pn_DangXuat.TabIndex = 12;
             // 
             // bt_XemThongTin
@@ -155,9 +154,9 @@
             this.bt_XemThongTin.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.bt_XemThongTin.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.bt_XemThongTin.ForeColor = System.Drawing.SystemColors.Window;
-            this.bt_XemThongTin.Location = new System.Drawing.Point(0, 12);
+            this.bt_XemThongTin.Location = new System.Drawing.Point(0, 11);
             this.bt_XemThongTin.Name = "bt_XemThongTin";
-            this.bt_XemThongTin.Size = new System.Drawing.Size(163, 28);
+            this.bt_XemThongTin.Size = new System.Drawing.Size(163, 26);
             this.bt_XemThongTin.TabIndex = 11;
             this.bt_XemThongTin.Text = " Xem Thông Tin";
             this.bt_XemThongTin.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -173,9 +172,9 @@
             this.bt_DangXuat.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.bt_DangXuat.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.bt_DangXuat.ForeColor = System.Drawing.SystemColors.Window;
-            this.bt_DangXuat.Location = new System.Drawing.Point(0, 46);
+            this.bt_DangXuat.Location = new System.Drawing.Point(0, 43);
             this.bt_DangXuat.Name = "bt_DangXuat";
-            this.bt_DangXuat.Size = new System.Drawing.Size(163, 28);
+            this.bt_DangXuat.Size = new System.Drawing.Size(163, 26);
             this.bt_DangXuat.TabIndex = 10;
             this.bt_DangXuat.Text = " Đăng Xuất";
             this.bt_DangXuat.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -188,7 +187,7 @@
             this.label3.BackColor = System.Drawing.Color.Transparent;
             this.label3.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.label3.ForeColor = System.Drawing.Color.White;
-            this.label3.Location = new System.Drawing.Point(34, 11);
+            this.label3.Location = new System.Drawing.Point(34, 10);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(56, 22);
             this.label3.TabIndex = 9;
@@ -205,9 +204,9 @@
             this.button8.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.button8.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button8.ForeColor = System.Drawing.Color.Transparent;
-            this.button8.Location = new System.Drawing.Point(5, 13);
+            this.button8.Location = new System.Drawing.Point(5, 12);
             this.button8.Name = "button8";
-            this.button8.Size = new System.Drawing.Size(20, 22);
+            this.button8.Size = new System.Drawing.Size(20, 20);
             this.button8.TabIndex = 8;
             this.button8.UseVisualStyleBackColor = false;
             // 
@@ -220,10 +219,10 @@
             this.bt_QuanLiNhanVien.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.bt_QuanLiNhanVien.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.bt_QuanLiNhanVien.ForeColor = System.Drawing.Color.Transparent;
-            this.bt_QuanLiNhanVien.Location = new System.Drawing.Point(0, 215);
+            this.bt_QuanLiNhanVien.Location = new System.Drawing.Point(0, 200);
             this.bt_QuanLiNhanVien.Name = "bt_QuanLiNhanVien";
             this.bt_QuanLiNhanVien.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.bt_QuanLiNhanVien.Size = new System.Drawing.Size(203, 33);
+            this.bt_QuanLiNhanVien.Size = new System.Drawing.Size(203, 31);
             this.bt_QuanLiNhanVien.TabIndex = 4;
             this.bt_QuanLiNhanVien.Text = "        Quản Lí Nhân Viên";
             this.bt_QuanLiNhanVien.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -239,10 +238,10 @@
             this.bt_BaoCaoDoanhSo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.bt_BaoCaoDoanhSo.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.bt_BaoCaoDoanhSo.ForeColor = System.Drawing.Color.Transparent;
-            this.bt_BaoCaoDoanhSo.Location = new System.Drawing.Point(0, 158);
+            this.bt_BaoCaoDoanhSo.Location = new System.Drawing.Point(0, 147);
             this.bt_BaoCaoDoanhSo.Name = "bt_BaoCaoDoanhSo";
             this.bt_BaoCaoDoanhSo.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.bt_BaoCaoDoanhSo.Size = new System.Drawing.Size(203, 33);
+            this.bt_BaoCaoDoanhSo.Size = new System.Drawing.Size(203, 31);
             this.bt_BaoCaoDoanhSo.TabIndex = 2;
             this.bt_BaoCaoDoanhSo.Text = "        Báo Cáo Doanh Số";
             this.bt_BaoCaoDoanhSo.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -258,10 +257,10 @@
             this.bt_QuanLiKho.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.bt_QuanLiKho.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.bt_QuanLiKho.ForeColor = System.Drawing.Color.Transparent;
-            this.bt_QuanLiKho.Location = new System.Drawing.Point(0, 107);
+            this.bt_QuanLiKho.Location = new System.Drawing.Point(0, 99);
             this.bt_QuanLiKho.Name = "bt_QuanLiKho";
             this.bt_QuanLiKho.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.bt_QuanLiKho.Size = new System.Drawing.Size(203, 33);
+            this.bt_QuanLiKho.Size = new System.Drawing.Size(203, 31);
             this.bt_QuanLiKho.TabIndex = 1;
             this.bt_QuanLiKho.Text = "        Quản Lí Kho";
             this.bt_QuanLiKho.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -277,10 +276,10 @@
             this.bt_BanHang.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.bt_BanHang.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.bt_BanHang.ForeColor = System.Drawing.Color.Transparent;
-            this.bt_BanHang.Location = new System.Drawing.Point(0, 55);
+            this.bt_BanHang.Location = new System.Drawing.Point(0, 51);
             this.bt_BanHang.Name = "bt_BanHang";
             this.bt_BanHang.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.bt_BanHang.Size = new System.Drawing.Size(203, 33);
+            this.bt_BanHang.Size = new System.Drawing.Size(203, 31);
             this.bt_BanHang.TabIndex = 0;
             this.bt_BanHang.Text = "        Bán Hàng";
             this.bt_BanHang.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -301,7 +300,7 @@
             this.Close.ForeColor = System.Drawing.Color.White;
             this.Close.Location = new System.Drawing.Point(818, 3);
             this.Close.Name = "Close";
-            this.Close.Size = new System.Drawing.Size(20, 23);
+            this.Close.Size = new System.Drawing.Size(20, 21);
             this.Close.TabIndex = 2;
             this.Close.UseVisualStyleBackColor = false;
             this.Close.Click += new System.EventHandler(this.Close_Click);
@@ -318,7 +317,7 @@
             this.minimize.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.minimize.Location = new System.Drawing.Point(782, 3);
             this.minimize.Name = "minimize";
-            this.minimize.Size = new System.Drawing.Size(20, 23);
+            this.minimize.Size = new System.Drawing.Size(20, 21);
             this.minimize.TabIndex = 3;
             this.minimize.UseVisualStyleBackColor = false;
             // 
@@ -333,7 +332,7 @@
             this.Down.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Down.Location = new System.Drawing.Point(740, 4);
             this.Down.Name = "Down";
-            this.Down.Size = new System.Drawing.Size(20, 23);
+            this.Down.Size = new System.Drawing.Size(20, 21);
             this.Down.TabIndex = 4;
             this.Down.UseVisualStyleBackColor = false;
             this.Down.Click += new System.EventHandler(this.Down_Click);
@@ -361,7 +360,7 @@
             this.icon.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.icon.Location = new System.Drawing.Point(14, 3);
             this.icon.Name = "icon";
-            this.icon.Size = new System.Drawing.Size(17, 18);
+            this.icon.Size = new System.Drawing.Size(17, 17);
             this.icon.TabIndex = 5;
             this.icon.UseVisualStyleBackColor = false;
             // 
@@ -371,9 +370,9 @@
             this.pn_ThongBao.Controls.Add(this.panel3);
             this.pn_ThongBao.Controls.Add(this.pictureBox6);
             this.pn_ThongBao.Controls.Add(this.lb_ThongBao);
-            this.pn_ThongBao.Location = new System.Drawing.Point(541, 380);
+            this.pn_ThongBao.Location = new System.Drawing.Point(541, 353);
             this.pn_ThongBao.Name = "pn_ThongBao";
-            this.pn_ThongBao.Size = new System.Drawing.Size(261, 139);
+            this.pn_ThongBao.Size = new System.Drawing.Size(261, 129);
             this.pn_ThongBao.TabIndex = 14;
             // 
             // panel3
@@ -382,9 +381,9 @@
             this.panel3.Controls.Add(this.label1);
             this.panel3.Controls.Add(this.bt_huy);
             this.panel3.Controls.Add(this.bt_DongY);
-            this.panel3.Location = new System.Drawing.Point(0, 28);
+            this.panel3.Location = new System.Drawing.Point(0, 26);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(261, 111);
+            this.panel3.Size = new System.Drawing.Size(261, 103);
             this.panel3.TabIndex = 37;
             // 
             // label1
@@ -392,9 +391,9 @@
             this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.label1.ForeColor = System.Drawing.SystemColors.WindowText;
-            this.label1.Location = new System.Drawing.Point(52, 17);
+            this.label1.Location = new System.Drawing.Point(52, 16);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(162, 48);
+            this.label1.Size = new System.Drawing.Size(162, 45);
             this.label1.TabIndex = 13;
             this.label1.Text = "* Bạn Muốn Đăng Xuất Khỏi Hệ Thống!\r\n";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -408,9 +407,9 @@
             this.bt_huy.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(188)))), ((int)(((byte)(156)))));
             this.bt_huy.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.bt_huy.ForeColor = System.Drawing.SystemColors.WindowText;
-            this.bt_huy.Location = new System.Drawing.Point(183, 69);
+            this.bt_huy.Location = new System.Drawing.Point(183, 64);
             this.bt_huy.Name = "bt_huy";
-            this.bt_huy.Size = new System.Drawing.Size(55, 26);
+            this.bt_huy.Size = new System.Drawing.Size(55, 24);
             this.bt_huy.TabIndex = 15;
             this.bt_huy.Text = "Hủy";
             this.bt_huy.UseVisualStyleBackColor = false;
@@ -425,9 +424,9 @@
             this.bt_DongY.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(188)))), ((int)(((byte)(156)))));
             this.bt_DongY.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.bt_DongY.ForeColor = System.Drawing.SystemColors.WindowText;
-            this.bt_DongY.Location = new System.Drawing.Point(28, 69);
+            this.bt_DongY.Location = new System.Drawing.Point(28, 64);
             this.bt_DongY.Name = "bt_DongY";
-            this.bt_DongY.Size = new System.Drawing.Size(55, 26);
+            this.bt_DongY.Size = new System.Drawing.Size(55, 24);
             this.bt_DongY.TabIndex = 14;
             this.bt_DongY.Text = "Đồng ý";
             this.bt_DongY.UseVisualStyleBackColor = false;
@@ -437,7 +436,7 @@
             // 
             this.pictureBox6.BackColor = System.Drawing.Color.Gainsboro;
             this.pictureBox6.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox6.BackgroundImage")));
-            this.pictureBox6.Location = new System.Drawing.Point(-1, 28);
+            this.pictureBox6.Location = new System.Drawing.Point(-1, 26);
             this.pictureBox6.Name = "pictureBox6";
             this.pictureBox6.Size = new System.Drawing.Size(221, 1);
             this.pictureBox6.TabIndex = 36;
@@ -449,30 +448,11 @@
             this.lb_ThongBao.BackColor = System.Drawing.Color.Transparent;
             this.lb_ThongBao.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.lb_ThongBao.ForeColor = System.Drawing.SystemColors.Window;
-            this.lb_ThongBao.Location = new System.Drawing.Point(91, 8);
+            this.lb_ThongBao.Location = new System.Drawing.Point(91, 7);
             this.lb_ThongBao.Name = "lb_ThongBao";
             this.lb_ThongBao.Size = new System.Drawing.Size(70, 16);
             this.lb_ThongBao.TabIndex = 12;
             this.lb_ThongBao.Text = "Thông Báo";
-            // 
-            // bt_CapNhatGia
-            // 
-            this.bt_CapNhatGia.BackColor = System.Drawing.Color.Transparent;
-            this.bt_CapNhatGia.FlatAppearance.BorderSize = 0;
-            this.bt_CapNhatGia.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(188)))), ((int)(((byte)(156)))));
-            this.bt_CapNhatGia.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(188)))), ((int)(((byte)(156)))));
-            this.bt_CapNhatGia.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.bt_CapNhatGia.Font = new System.Drawing.Font("Arial", 12F);
-            this.bt_CapNhatGia.ForeColor = System.Drawing.Color.DarkSlateGray;
-            this.bt_CapNhatGia.Location = new System.Drawing.Point(5, 158);
-            this.bt_CapNhatGia.Name = "bt_CapNhatGia";
-            this.bt_CapNhatGia.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.bt_CapNhatGia.Size = new System.Drawing.Size(631, 32);
-            this.bt_CapNhatGia.TabIndex = 8;
-            this.bt_CapNhatGia.Text = "         Cập Nhập Thông Tin Sản Phẩm";
-            this.bt_CapNhatGia.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.bt_CapNhatGia.UseVisualStyleBackColor = false;
-            this.bt_CapNhatGia.Click += new System.EventHandler(this.bt_CapNhatGia_Click);
             // 
             // lb_QuanLiKho
             // 
@@ -480,7 +460,7 @@
             this.lb_QuanLiKho.BackColor = System.Drawing.Color.Transparent;
             this.lb_QuanLiKho.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.lb_QuanLiKho.ForeColor = System.Drawing.Color.DarkSlateGray;
-            this.lb_QuanLiKho.Location = new System.Drawing.Point(33, 11);
+            this.lb_QuanLiKho.Location = new System.Drawing.Point(33, 10);
             this.lb_QuanLiKho.Name = "lb_QuanLiKho";
             this.lb_QuanLiKho.Size = new System.Drawing.Size(125, 22);
             this.lb_QuanLiKho.TabIndex = 8;
@@ -491,9 +471,9 @@
             this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox1.BackgroundImage")));
             this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox1.Location = new System.Drawing.Point(6, -1);
+            this.pictureBox1.Location = new System.Drawing.Point(6, 5);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(30, 32);
+            this.pictureBox1.Size = new System.Drawing.Size(30, 30);
             this.pictureBox1.TabIndex = 9;
             this.pictureBox1.TabStop = false;
             // 
@@ -506,12 +486,12 @@
             this.bt_CtSp.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.bt_CtSp.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.bt_CtSp.ForeColor = System.Drawing.Color.DarkSlateGray;
-            this.bt_CtSp.Location = new System.Drawing.Point(3, 54);
+            this.bt_CtSp.Location = new System.Drawing.Point(3, 50);
             this.bt_CtSp.Name = "bt_CtSp";
             this.bt_CtSp.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.bt_CtSp.Size = new System.Drawing.Size(639, 32);
+            this.bt_CtSp.Size = new System.Drawing.Size(639, 30);
             this.bt_CtSp.TabIndex = 8;
-            this.bt_CtSp.Text = "         Xem Tồn Kho";
+            this.bt_CtSp.Text = "         Xem Kho";
             this.bt_CtSp.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.bt_CtSp.UseVisualStyleBackColor = false;
             this.bt_CtSp.Click += new System.EventHandler(this.bt_CtSp_Click);
@@ -525,10 +505,10 @@
             this.bt_CtKho.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.bt_CtKho.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.bt_CtKho.ForeColor = System.Drawing.Color.DarkSlateGray;
-            this.bt_CtKho.Location = new System.Drawing.Point(6, 104);
+            this.bt_CtKho.Location = new System.Drawing.Point(3, 97);
             this.bt_CtKho.Name = "bt_CtKho";
             this.bt_CtKho.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.bt_CtKho.Size = new System.Drawing.Size(645, 32);
+            this.bt_CtKho.Size = new System.Drawing.Size(645, 30);
             this.bt_CtKho.TabIndex = 10;
             this.bt_CtKho.Text = "         Nhập Kho";
             this.bt_CtKho.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -538,14 +518,13 @@
             // QuanLiKho
             // 
             this.QuanLiKho.BackColor = System.Drawing.SystemColors.Menu;
-            this.QuanLiKho.Controls.Add(this.bt_CapNhatGia);
             this.QuanLiKho.Controls.Add(this.bt_CtKho);
             this.QuanLiKho.Controls.Add(this.bt_CtSp);
             this.QuanLiKho.Controls.Add(this.pictureBox1);
             this.QuanLiKho.Controls.Add(this.lb_QuanLiKho);
-            this.QuanLiKho.Location = new System.Drawing.Point(226, 176);
+            this.QuanLiKho.Location = new System.Drawing.Point(226, 163);
             this.QuanLiKho.Name = "QuanLiKho";
-            this.QuanLiKho.Size = new System.Drawing.Size(281, 198);
+            this.QuanLiKho.Size = new System.Drawing.Size(281, 184);
             this.QuanLiKho.TabIndex = 7;
             this.QuanLiKho.Visible = false;
             // 
@@ -555,7 +534,7 @@
             this.lb_BaoCaoDoanhSo.BackColor = System.Drawing.Color.Transparent;
             this.lb_BaoCaoDoanhSo.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.lb_BaoCaoDoanhSo.ForeColor = System.Drawing.Color.DarkSlateGray;
-            this.lb_BaoCaoDoanhSo.Location = new System.Drawing.Point(33, 19);
+            this.lb_BaoCaoDoanhSo.Location = new System.Drawing.Point(33, 18);
             this.lb_BaoCaoDoanhSo.Name = "lb_BaoCaoDoanhSo";
             this.lb_BaoCaoDoanhSo.Size = new System.Drawing.Size(185, 22);
             this.lb_BaoCaoDoanhSo.TabIndex = 8;
@@ -566,9 +545,9 @@
             this.pictureBox4.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox4.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox4.BackgroundImage")));
             this.pictureBox4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox4.Location = new System.Drawing.Point(6, 8);
+            this.pictureBox4.Location = new System.Drawing.Point(6, 7);
             this.pictureBox4.Name = "pictureBox4";
-            this.pictureBox4.Size = new System.Drawing.Size(30, 32);
+            this.pictureBox4.Size = new System.Drawing.Size(30, 30);
             this.pictureBox4.TabIndex = 9;
             this.pictureBox4.TabStop = false;
             // 
@@ -581,10 +560,10 @@
             this.bt_XemNgay.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.bt_XemNgay.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.bt_XemNgay.ForeColor = System.Drawing.Color.DarkSlateGray;
-            this.bt_XemNgay.Location = new System.Drawing.Point(3, 64);
+            this.bt_XemNgay.Location = new System.Drawing.Point(3, 59);
             this.bt_XemNgay.Name = "bt_XemNgay";
             this.bt_XemNgay.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.bt_XemNgay.Size = new System.Drawing.Size(642, 32);
+            this.bt_XemNgay.Size = new System.Drawing.Size(642, 30);
             this.bt_XemNgay.TabIndex = 15;
             this.bt_XemNgay.Text = "         Xem Doanh Số";
             this.bt_XemNgay.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -597,9 +576,9 @@
             this.BaoCaoDoanhSo.Controls.Add(this.bt_XemNgay);
             this.BaoCaoDoanhSo.Controls.Add(this.pictureBox4);
             this.BaoCaoDoanhSo.Controls.Add(this.lb_BaoCaoDoanhSo);
-            this.BaoCaoDoanhSo.Location = new System.Drawing.Point(226, 29);
+            this.BaoCaoDoanhSo.Location = new System.Drawing.Point(226, 27);
             this.BaoCaoDoanhSo.Name = "BaoCaoDoanhSo";
-            this.BaoCaoDoanhSo.Size = new System.Drawing.Size(261, 101);
+            this.BaoCaoDoanhSo.Size = new System.Drawing.Size(261, 94);
             this.BaoCaoDoanhSo.TabIndex = 8;
             this.BaoCaoDoanhSo.Visible = false;
             // 
@@ -609,7 +588,7 @@
             this.lb_QuanLiNv.BackColor = System.Drawing.Color.Transparent;
             this.lb_QuanLiNv.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.lb_QuanLiNv.ForeColor = System.Drawing.Color.DarkSlateGray;
-            this.lb_QuanLiNv.Location = new System.Drawing.Point(33, 19);
+            this.lb_QuanLiNv.Location = new System.Drawing.Point(33, 18);
             this.lb_QuanLiNv.Name = "lb_QuanLiNv";
             this.lb_QuanLiNv.Size = new System.Drawing.Size(181, 22);
             this.lb_QuanLiNv.TabIndex = 8;
@@ -622,9 +601,9 @@
             this.pictureBox5.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.pictureBox5.ErrorImage = null;
             this.pictureBox5.InitialImage = null;
-            this.pictureBox5.Location = new System.Drawing.Point(6, 11);
+            this.pictureBox5.Location = new System.Drawing.Point(6, 10);
             this.pictureBox5.Name = "pictureBox5";
-            this.pictureBox5.Size = new System.Drawing.Size(30, 32);
+            this.pictureBox5.Size = new System.Drawing.Size(30, 30);
             this.pictureBox5.TabIndex = 9;
             this.pictureBox5.TabStop = false;
             // 
@@ -634,9 +613,9 @@
             this.QuanLiNhanVien.Controls.Add(this.bt_ThemNv);
             this.QuanLiNhanVien.Controls.Add(this.pictureBox5);
             this.QuanLiNhanVien.Controls.Add(this.lb_QuanLiNv);
-            this.QuanLiNhanVien.Location = new System.Drawing.Point(541, 29);
+            this.QuanLiNhanVien.Location = new System.Drawing.Point(541, 27);
             this.QuanLiNhanVien.Name = "QuanLiNhanVien";
-            this.QuanLiNhanVien.Size = new System.Drawing.Size(261, 101);
+            this.QuanLiNhanVien.Size = new System.Drawing.Size(261, 94);
             this.QuanLiNhanVien.TabIndex = 11;
             this.QuanLiNhanVien.Visible = false;
             // 
@@ -649,10 +628,10 @@
             this.bt_ThemNv.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.bt_ThemNv.Font = new System.Drawing.Font("Arial", 12F);
             this.bt_ThemNv.ForeColor = System.Drawing.Color.DarkSlateGray;
-            this.bt_ThemNv.Location = new System.Drawing.Point(0, 64);
+            this.bt_ThemNv.Location = new System.Drawing.Point(0, 59);
             this.bt_ThemNv.Name = "bt_ThemNv";
             this.bt_ThemNv.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.bt_ThemNv.Size = new System.Drawing.Size(631, 32);
+            this.bt_ThemNv.Size = new System.Drawing.Size(631, 30);
             this.bt_ThemNv.TabIndex = 8;
             this.bt_ThemNv.Text = "         Quản Lí Nhân Viên";
             this.bt_ThemNv.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -665,7 +644,7 @@
             this.lb_BanHang.BackColor = System.Drawing.Color.Transparent;
             this.lb_BanHang.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.lb_BanHang.ForeColor = System.Drawing.Color.DarkSlateGray;
-            this.lb_BanHang.Location = new System.Drawing.Point(31, 11);
+            this.lb_BanHang.Location = new System.Drawing.Point(31, 10);
             this.lb_BanHang.Name = "lb_BanHang";
             this.lb_BanHang.Size = new System.Drawing.Size(100, 22);
             this.lb_BanHang.TabIndex = 11;
@@ -678,7 +657,7 @@
             this.pictureBox2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.pictureBox2.Location = new System.Drawing.Point(4, 3);
             this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(30, 32);
+            this.pictureBox2.Size = new System.Drawing.Size(30, 30);
             this.pictureBox2.TabIndex = 13;
             this.pictureBox2.TabStop = false;
             // 
@@ -691,10 +670,10 @@
             this.bt_HoaDon.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.bt_HoaDon.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.bt_HoaDon.ForeColor = System.Drawing.Color.DarkSlateGray;
-            this.bt_HoaDon.Location = new System.Drawing.Point(4, 55);
+            this.bt_HoaDon.Location = new System.Drawing.Point(4, 51);
             this.bt_HoaDon.Name = "bt_HoaDon";
             this.bt_HoaDon.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.bt_HoaDon.Size = new System.Drawing.Size(636, 32);
+            this.bt_HoaDon.Size = new System.Drawing.Size(636, 30);
             this.bt_HoaDon.TabIndex = 12;
             this.bt_HoaDon.Text = "         Hóa Đơn Bán Lẻ";
             this.bt_HoaDon.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -710,10 +689,10 @@
             this.bt_CtHd.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.bt_CtHd.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.bt_CtHd.ForeColor = System.Drawing.Color.DarkSlateGray;
-            this.bt_CtHd.Location = new System.Drawing.Point(4, 107);
+            this.bt_CtHd.Location = new System.Drawing.Point(4, 99);
             this.bt_CtHd.Name = "bt_CtHd";
             this.bt_CtHd.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.bt_CtHd.Size = new System.Drawing.Size(639, 32);
+            this.bt_CtHd.Size = new System.Drawing.Size(639, 30);
             this.bt_CtHd.TabIndex = 14;
             this.bt_CtHd.Text = "         Xem Chi Tiết Hóa Đơn";
             this.bt_CtHd.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -727,19 +706,19 @@
             this.QuanLiBanHang.Controls.Add(this.bt_HoaDon);
             this.QuanLiBanHang.Controls.Add(this.pictureBox2);
             this.QuanLiBanHang.Controls.Add(this.lb_BanHang);
-            this.QuanLiBanHang.Location = new System.Drawing.Point(541, 172);
+            this.QuanLiBanHang.Location = new System.Drawing.Point(541, 160);
             this.QuanLiBanHang.Name = "QuanLiBanHang";
-            this.QuanLiBanHang.Size = new System.Drawing.Size(261, 201);
+            this.QuanLiBanHang.Size = new System.Drawing.Size(261, 187);
             this.QuanLiBanHang.TabIndex = 1;
             this.QuanLiBanHang.Visible = false;
             // 
             // MainMenu
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 14F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(160)))), ((int)(((byte)(133)))));
             this.CancelButton = this.Close;
-            this.ClientSize = new System.Drawing.Size(845, 544);
+            this.ClientSize = new System.Drawing.Size(845, 505);
             this.Controls.Add(this.pn_ThongBao);
             this.Controls.Add(this.QuanLiNhanVien);
             this.Controls.Add(this.name);
@@ -754,7 +733,7 @@
             this.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(188)))), ((int)(((byte)(156)))));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.MaximumSize = new System.Drawing.Size(845, 556);
+            this.MaximumSize = new System.Drawing.Size(845, 516);
             this.Name = "MainMenu";
             this.Opacity = 0.98D;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
@@ -809,7 +788,6 @@
         private System.Windows.Forms.Button bt_DongY;
         private System.Windows.Forms.PictureBox pictureBox6;
         private System.Windows.Forms.Label lb_ThongBao;
-        private System.Windows.Forms.Button bt_CapNhatGia;
         private System.Windows.Forms.Label lb_QuanLiKho;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Button bt_CtSp;

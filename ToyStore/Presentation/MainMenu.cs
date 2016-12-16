@@ -258,12 +258,6 @@ namespace Presentation
             TKK.ShowDialog();
            
         }
-
-        private void bt_CapNhatGia_Click(object sender, EventArgs e)
-        {
-
-        }
-       
     }
 }
     

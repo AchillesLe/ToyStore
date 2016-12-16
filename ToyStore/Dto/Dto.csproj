@@ -60,6 +60,7 @@
     <Compile Include="DOCHOI.cs" />
     <Compile Include="HOADON.cs" />
     <Compile Include="NHANVIEN.cs" />
+    <Compile Include="NHAPKHO.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
