@@ -150,11 +150,11 @@
     <Compile Include="QuanLiNhanVien.Designer.cs">
       <DependentUpon>QuanLiNhanVien.cs</DependentUpon>
     </Compile>
-    <Compile Include="ThongKeKho.cs">
+    <Compile Include="QuanLiKho.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="ThongKeKho.Designer.cs">
-      <DependentUpon>ThongKeKho.cs</DependentUpon>
+    <Compile Include="QuanLiKho.Designer.cs">
+      <DependentUpon>QuanLiKho.cs</DependentUpon>
     </Compile>
     <Compile Include="ThongTinNv.cs">
       <SubType>Form</SubType>
@@ -198,8 +198,8 @@
     <EmbeddedResource Include="QuanLiNhanVien.resx">
       <DependentUpon>QuanLiNhanVien.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="ThongKeKho.resx">
-      <DependentUpon>ThongKeKho.cs</DependentUpon>
+    <EmbeddedResource Include="QuanLiKho.resx">
+      <DependentUpon>QuanLiKho.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ThongTinNv.resx">
       <DependentUpon>ThongTinNv.cs</DependentUpon>
@@ -226,7 +226,7 @@
       <Name>Bus</Name>
     </ProjectReference>
     <ProjectReference Include="..\Dto\Dto.csproj">
-      <Project>{2a1f4739-9e20-4118-8a1f-8ec4c9533f81}</Project>
+      <Project>{19f99637-eb5b-4c3e-a969-14752926606b}</Project>
       <Name>Dto</Name>
     </ProjectReference>
   </ItemGroup>

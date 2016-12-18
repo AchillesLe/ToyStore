@@ -29,10 +29,6 @@ namespace Presentation.toolTip1
                 excel.Range cellrange;
 
                 exSheet.Name = fileName;
-
-                //List<string> field = new List<string>();
-                //field.Add("MANV"); field.Add("TENNV"); field.Add("NGAYSINH");
-                //field.Add("SDT"); field.Add("QUEQUAN"); field.Add("PHAI"); field.Add("CMT");
                 cellrange = exSheet.Range[exSheet.Cells[1, 1], exSheet.Cells[dgv.Rows.Count + 1, dgv.Columns.Count]];
                 cellrange.NumberFormat = "@";
 

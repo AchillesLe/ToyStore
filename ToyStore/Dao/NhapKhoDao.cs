@@ -17,7 +17,7 @@ namespace Dao
             {
                 using (ContextEntites context = new ContextEntites())
                 {
-                    var a = context.NHAPKHOs.Add(add);
+                    //var a = context.NHAPKHOs.Add(add);
                     s = context.SaveChanges();
                 }
             }

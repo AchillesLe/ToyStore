@@ -14,6 +14,10 @@ namespace Bus
         {
             return HDdao.dsHoaDon();           
         }
+        public List<HOADON> DsHoaDonFromTo(DateTime date)
+        {
+            return HDdao.dsHoaDon(date);
+        }
         public List<HOADON> DsHoaDonFromTo(DateTime datefrom, DateTime dateto)
         {
             return HDdao.dsHoaDonFromTo(datefrom, dateto);

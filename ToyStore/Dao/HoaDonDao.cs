@@ -28,6 +28,38 @@ namespace Dao
             }
             return listHD;
         }
+        public List<HOADON> dsHoaDon(DateTime date)
+        {
+            using (ContextEntites context = new ContextEntites())
+            {
+                List<HOADON> listhd = new List<HOADON>();
+                try
+                {
+                    var query = from c in context.HOADONs where c.NGAYHD == date select c;
+                    foreach(var a in query)
+                    {
+                        HOADON hd = new HOADON();
+                        hd.MAHD = a.MAHD;
+                        hd.MANV = a.MANV;
+                        hd.NGAYHD = a.NGAYHD;
+                        hd.TRIGIA = a.TRIGIA;
+                        listhd.Add(hd);
+                    }
+                    return listhd;
+                }
+                catch(Exception ex)
+                {
+                    HOADON hd = new HOADON();
+                    hd.MAHD = -1;
+                    hd.MANV = -1;
+                    hd.NGAYHD = DateTime.Now;
+                    hd.TRIGIA = 0;
+                    listhd.Add(hd);
+                    return listhd;
+                }
+              
+            }
+        }
         public List<HOADON> dsHoaDonFromTo(DateTime datefrom, DateTime dateto)
         {
             List<HOADON> listHD = new List<HOADON>();

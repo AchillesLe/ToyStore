@@ -34,8 +34,6 @@ namespace Presentation
         private void Close_Click(object sender, EventArgs e)
         {
             this.Close();
-            MainMenu mn = new MainMenu();
-            mn.Show();
         }
 
         private void Down_Click(object sender, EventArgs e)
@@ -163,7 +161,7 @@ namespace Presentation
                 NHAPKHO nk = new NHAPKHO();
                 nk.MANV = MainMenu.usrId;
                 nk.MADC = int.Parse(tb_masp.Text);
-                nk.GIONHAP = nk.NGAYNHAP = now;
+                //nk.GIONHAP = nk.NGAYNHAP = now;
                 nk.SL = int.Parse(tb_SL.Text);
                 nk.GIA = double.Parse(tb_GiaNhap.Text) * (double)nk.SL;
                 tong_giatri += (double)nk.GIA;

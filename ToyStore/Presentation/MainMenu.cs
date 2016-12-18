@@ -248,7 +248,7 @@ namespace Presentation
         }
         private void bt_CtSp_Click(object sender, EventArgs e)
         {
-            ThongKeKho TKK = new ThongKeKho();
+            QuanLiKho TKK = new QuanLiKho();
             TKK.ShowDialog();
             
         }

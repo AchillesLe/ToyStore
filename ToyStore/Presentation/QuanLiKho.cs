@@ -12,7 +12,7 @@ using System.Windows.Forms;
 
 namespace Presentation
 {
-    public partial class ThongKeKho : Form
+    public partial class QuanLiKho : Form
     {
 
         const int WM_NCHITTEST = 0x84;
@@ -22,7 +22,7 @@ namespace Presentation
         bool data_change_status = false;
         List<DOCHOI> listDc;
 
-        public ThongKeKho()
+        public QuanLiKho()
         {
             InitializeComponent();
         }

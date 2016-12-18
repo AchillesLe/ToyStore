@@ -57,9 +57,9 @@ namespace Dao
             }
             return ac;
         }
-        public int AddAc(ACCOUNT ac)
+        public bool AddAc(ACCOUNT ac)
         {
-            int s;
+            bool check = false;
                 using (ContextEntites context = new ContextEntites())
                 {
                     ACCOUNT kh = new ACCOUNT();
@@ -67,10 +67,10 @@ namespace Dao
                     kh.PASS = ac.PASS;
                     kh.USERNAME = ac.USERNAME;
                     context.ACCOUNTs.Add(kh);
-                    s = context.SaveChanges();
+                   if( context.SaveChanges() > 0 )
+                    check = true;
                 }
-
-            return s;
+            return check;
         }
         public bool deleteac(int AcID)
         {
@@ -127,12 +127,6 @@ namespace Dao
                    ACCOUNT ac = context.ACCOUNTs.SingleOrDefault(x => x.USERNAME.Equals(username) && x.PASS.Equals(pass));
                     var query = from c in context.ACCOUNTs where c.USERNAME.Equals( username)
                                 && c.PASS.Equals( pass) select c;
-                    //foreach(var a in query)
-                    //{
-                    //    ac.ID = a.ID;
-                    //    ac.PASS = a.PASS;
-                    //    ac.USERNAME = a.USERNAME;
-                    //}
                      if (ac!= null)
                         check = true;
                 }

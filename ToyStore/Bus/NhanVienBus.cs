@@ -20,9 +20,13 @@ namespace Bus
         {
             return nvdao.NhanVienByID(ID);
         }
-        public int AddNV(NHANVIEN nv)
+        public bool AddNV(NHANVIEN nv)
         {
             return nvdao.addNV(nv);
+        }
+        public bool add(NHANVIEN nv,ACCOUNT ac)
+        {
+            return nvdao.add(nv,ac);
         }
         public bool deleteNV(int manv)
         {

@@ -9,13 +9,14 @@ namespace Dto
     [Table("DOCHOI")]
     public partial class DOCHOI
     {
-        //[System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
         public DOCHOI()
         {
-            //CTHDs = new HashSet<CTHD>();
+            CTHDs = new HashSet<CTHD>();
         }
 
         [Key]
+        [DatabaseGenerated(DatabaseGeneratedOption.None)]
         public int MADC { get; set; }
 
         [StringLength(200)]
@@ -31,6 +32,9 @@ namespace Dto
 
         public double? GIA { get; set; }
 
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<CTHD> CTHDs { get; set; }
 
+        public virtual NHAPKHO NHAPKHO { get; set; }
     }
 }

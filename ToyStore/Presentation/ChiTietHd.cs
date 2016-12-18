@@ -72,7 +72,7 @@ namespace Presentation
             tbl_CtHd.Columns[2].ReadOnly = false;
             tbl_CtHd.Columns[3].ReadOnly = true;
 
-            dtp_from.Value = DateTime.Parse("01/01/1990");
+            dtp_from.Value = DateTime.Parse("01/01/2000");
             dtp_to.Value = DateTime.Now;
             load_DsHD_From_To(sender,e);
             

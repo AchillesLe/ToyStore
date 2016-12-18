@@ -24,7 +24,7 @@ namespace Bus
         {
             return acdao.ACCOUNTByName(name);
         }
-        public int Addac(ACCOUNT ac)
+        public bool Addac(ACCOUNT ac)
         {
             return acdao.AddAc(ac);
         }

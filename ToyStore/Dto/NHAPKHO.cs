@@ -1,4 +1,4 @@
-﻿namespace Dto
+namespace Dto
 {
     using System;
     using System.Collections.Generic;
@@ -9,29 +9,21 @@
     [Table("NHAPKHO")]
     public partial class NHAPKHO
     {
-        [Key]
-        [Column(Order = 0)]
-        [DatabaseGenerated(DatabaseGeneratedOption.None)]
         public int MANV { get; set; }
 
         [Key]
-        [Column(Order = 1)]
         [DatabaseGenerated(DatabaseGeneratedOption.None)]
         public int MADC { get; set; }
 
-        [Key]
-        [Column(Order = 2)]
-        [DatabaseGenerated(DatabaseGeneratedOption.None)]
+        [Column(TypeName = "date")]
         public DateTime NGAYNHAP { get; set; }
 
-        [Key]
-        [Column(Order = 3)]
-        [DatabaseGenerated(DatabaseGeneratedOption.None)]
-        public DateTime GIONHAP { get; set; }
-
-
         public int? SL { get; set; }
-        
+
         public double? GIA { get; set; }
+
+        public virtual DOCHOI DOCHOI { get; set; }
+
+        public virtual NHANVIEN NHANVIEN { get; set; }
     }
 }

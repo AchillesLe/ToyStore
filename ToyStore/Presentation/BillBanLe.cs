@@ -121,7 +121,7 @@ namespace Presentation
                     listHd.Add(ctHd);
 
                 so_sp += (int)ctHd.SL;
-                tien_tong += ((double)ctHd.DOCHOI.GIA*(double)ctHd.SL);
+              //  tien_tong += ((double)ctHd.DOCHOI.GIA*(double)ctHd.SL);
                 
                 setDefaultValue();
             }

@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using Dto;
+using System.Data.Objects;
 namespace Dao
 {
     public class NhanVienDao
@@ -50,11 +51,13 @@ namespace Dao
             }
             return nv;
         }
-        public int addNV(NHANVIEN nv)
+        public bool addNV(NHANVIEN nv)
         {
-            int s;
+            bool check = false;
+            
             using (ContextEntites context = new ContextEntites())
             {
+                
                 NHANVIEN  kh = new NHANVIEN();
                 kh.MANV = nv.MANV; 
                 kh.CMT = nv.CMT;
@@ -66,9 +69,37 @@ namespace Dao
                 kh.NGAYVAOLAM = nv.NGAYVAOLAM;
                 kh.TENNV = nv.TENNV;
                  context.NHANVIENs.Add(kh);
-                s = context.SaveChanges();   
+                if (context.SaveChanges() > 0) check = true; 
             }
-            return s;
+            return check;
+        }
+        public bool add(NHANVIEN nv,ACCOUNT ac)
+        {
+            bool check = false;
+            using (ContextEntites context = new ContextEntites())
+            {
+                NHANVIEN kh = new NHANVIEN();
+                kh.MANV = nv.MANV;
+                kh.CMT = nv.CMT;
+                kh.NGAYSINH = nv.NGAYSINH;
+                kh.MACV = nv.MACV;
+                kh.PHAI = nv.PHAI;
+                kh.QUEQUAN = nv.QUEQUAN;
+                kh.SDT = nv.SDT;
+                kh.NGAYVAOLAM = nv.NGAYVAOLAM;
+                kh.TENNV = nv.TENNV;
+                context.NHANVIENs.Add(kh);
+                context.SaveChanges();
+                ACCOUNT account = new ACCOUNT();
+                account.ID = kh.MANV;
+                account.PASS = ac.PASS;
+                account.USERNAME = ac.USERNAME;
+                context.ACCOUNTs.Add(account);
+                 context.SaveChanges();
+                check = true;
+
+            }
+            return check;
         }
         public bool deleteNV(int maNV)
         {
@@ -124,7 +155,8 @@ namespace Dao
             int id;
                 using (ContextEntites context = new ContextEntites())
                 {
-                    id = (from c in context.NHANVIENs select c.MANV).Max();
+
+                id = (from c in context.NHANVIENs select c.MANV).Max();
                 }
                
             return id;

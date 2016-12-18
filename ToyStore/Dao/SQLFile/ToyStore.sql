@@ -22,13 +22,13 @@ create table DOCHOI
 )
 go
 create table NHANVIEN(
-MANV int identity(3114100,1) not null,
+MANV int not null,
 TENNV nvarchar(50) not null,
-NGAYSINH date not null,
 SDT nvarchar(11)not null,
 QUEQUAN nvarchar(60),
 PHAI nvarchar(4),
 CMT nvarchar(9) ,
+NGAYSINH date not null,
 NGAYVAOLAM date not null,
 MACV Nvarchar(4) not null,
 constraint pk_NHANVIEN primary key (MANV)
@@ -71,7 +71,6 @@ create table NHAPKHO
 	MANV int not null,
 	MADC int not null,
 	NGAYNHAP date not null,
-	GIONHAP time(0) not null,
 	SL int,
 	GIA float,
 	constraint pk_NHAPKHO primary key(MADC)
@@ -84,9 +83,9 @@ insert into CHUCVU values
 ('NVTV',N'Nhân viên thời vụ')
 
 insert into NHANVIEN values
-(N'Lê Văn Bảo','8/11/1996','0165650078',N'Thanh Hóa hahh',N'Nam','174660321','11/15/1996','AD'),
-(N'Trần Phúc Hậu','9/4/1996','0157862714',N'Thành phố HCM ha',N'Nam','16557946','11/20/1996','NVBH'),
-(N'Trần văn Luân','4/16/1996','0122644971',N'Nha Trang hahha',N'Nam','19634724','11/30/1996','NVBH')
+(3114100,N'Lê Văn Bảo','0165650078',N'Thanh Hóa hahh',N'Nam','174660321','8/11/1996','11/15/2016','AD'),
+(3114101,N'Trần Phúc Hậu','0157862714',N'Thành phố HCM ha',N'Nam','16557946','9/4/1996','11/20/2016','NVBH'),
+(3114102,N'Trần văn Luân','0122644971',N'Nha Trang hahha',N'Nam','19634724','4/16/1996','11/30/2016','NVBH')
 
 
 insert into DOCHOI values(600000,N'Xe HotWheels',150,N'Mỹ',N'Xe mô hình',350000),

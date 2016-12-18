@@ -56,7 +56,15 @@ namespace Presentation
         private void loadDSNhanVien()
         {
             NhanVienBus nvBus = new NhanVienBus();
-            tbl_NhanVien.DataSource = nvBus.DSNhanVien();                    
+            tbl_NhanVien.DataSource = nvBus.DSNhanVien();
+            for (int i = 0; i < tbl_NhanVien.Columns.Count; i++)
+            {
+                if (tbl_NhanVien.Columns[i].HeaderText == "CHUCVU" || tbl_NhanVien.Columns[i].HeaderText == "HOADONs" || tbl_NhanVien.Columns[i].HeaderText == "ACCOUNT" || tbl_NhanVien.Columns[i].HeaderText == "NHAPKHOes")
+                {
+                    tbl_NhanVien.Columns.RemoveAt(i);
+                }
+            }
+
         }
         //ok
         private void bt_save_Click(object sender, EventArgs e)
@@ -112,55 +120,68 @@ namespace Presentation
             NhanVienBus nvBus = new NhanVienBus();
             ACCOUNT ac = new ACCOUNT();
             AccountBus acBus = new AccountBus();
-            nv.MANV = Int32.Parse(txt_manv.Text);
-            if (toolTip1.Validation.check_NgaySinh(DateTime.Parse(txt_ngaysinh.Text)))
+            if (!string.IsNullOrEmpty(txt_manv.Text))
             {
-                nv.NGAYSINH = DateTime.Parse(txt_ngayLam.Text);
+                nv.MANV = Int32.Parse(txt_manv.Text);
             }
-            else
-                MessageBox.Show(" Invalid NgaySinh!");
+            else nv.MANV = 1;
             if (rd_nam.Checked == true) nv.PHAI = "Nam";
             else nv.PHAI = "Nu";
-            nv.QUEQUAN = txt_DiaChi.Text;
-            if (toolTip1.Validation.check_Phone(txt_Sdt.Text))
+            if (!string.IsNullOrEmpty(txt_DiaChi.Text))
+            {
+                nv.QUEQUAN = txt_DiaChi.Text;
+            }
+            else nv.QUEQUAN = "";
+            nv.NGAYVAOLAM = DateTime.Parse(txt_ngayLam.Text);
+            ChucVuBus cvbus = new ChucVuBus();
+            nv.MACV = cvbus.GetCVbyName(cb_loaiNV.Text).MACV;
+            if (!string.IsNullOrEmpty(txt_Sdt.Text))
             {
                 nv.SDT = txt_Sdt.Text;
             }
             else
-                MessageBox.Show("Invalid Mobile Phone !");
-            nv.TENNV = txt_hoten.Text;
-            if (toolTip1.Validation.Check_cmt(txt_CMND.Text))
+                nv.SDT = "";
+            if (!string.IsNullOrEmpty(txt_hoten.Text))
+            {
+                nv.TENNV = txt_hoten.Text;
+            }
+            else
+                nv.TENNV = "";
+            if (!string.IsNullOrEmpty(txt_CMND.Text))
             {
                 nv.CMT = txt_CMND.Text;
             }
             else
-                MessageBox.Show("Invalid Identification !");
-            nv.NGAYVAOLAM =DateTime.Parse(txt_ngayLam.Text);
-            ChucVuBus cvbus = new ChucVuBus();
-            nv.MACV = cvbus.GetCVbyName(cb_loaiNV.Text).MACV;
-            if (!String.IsNullOrEmpty(txt_user.Text))
+                nv.CMT = "";
+            nv.NGAYSINH = DateTime.Parse(txt_ngayLam.Text);    
+            if (!string.IsNullOrEmpty(txt_user.Text))
             {
                 ac.ID = nv.MANV;
                 ac.USERNAME = txt_user.Text;
                 ac.PASS = txt_pass.Text;
+                    if (nvBus.add(nv,ac))//nvBus.AddNV(nv)&&acBus.Addac(ac))
+                    {
+                        MessageBox.Show("Add successted !");
+                        resettext();
+                        visiable_pass(false);
+                        loadDSNhanVien();
+                    }
+                    else MessageBox.Show("Add not successted !");                    
             }
-            try
+            else
             {
-                if (nvBus.AddNV(nv) > 0)
-                {                
-                     acBus.Addac(ac);                
-                    MessageBox.Show("Add successted !");
-                  //  manv = nv.MANV;
-                }
-                else MessageBox.Show("Add not successted !");
-                loadDSNhanVien();
-                resettext();
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show("Add not successted !");
-            }
+                    if (nvBus.AddNV(nv))
+                    {
+                        MessageBox.Show("Add successted !");
+                        loadDSNhanVien();
+                        resettext();
+                        visiable_pass(false);
+                    return;
+                    }
+                    else MessageBox.Show("Add not successted !"); 
+            }          
         }
+        //ok
         private void tbl_NhanVien_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
             ResetMouseEventArgs();
@@ -218,7 +239,7 @@ namespace Presentation
             toolTip1.ExportToExcel excel = new toolTip1.ExportToExcel();
             excel.ExportToExcelFromDatagridview(tbl_NhanVien, "Danh Sách Nhân Viên");
         }
-
+        //ok
         private void bt_In_Click(object sender, EventArgs e)
         {
             toolTip1.ExportToExcel excel = new toolTip1.ExportToExcel();
@@ -229,15 +250,17 @@ namespace Presentation
             resettext();
             Enable();
             cb_loaiNV.Refresh();
+            cb_loaiNV.SelectedIndex = 2;
             tbl_NhanVien.ClearSelection();
             NhanVienBus nvBus = new NhanVienBus();
-            txt_manv.Text = ( Int32.Parse(tbl_NhanVien.Rows[tbl_NhanVien.RowCount - 1].Cells[0].Value.ToString()) +1).ToString();
+            txt_manv.Text = (nvBus.MaNVNow()+1).ToString();
+            txt_manv.Enabled = false;
             DateTime d = Convert.ToDateTime(DateTime.Now);
             txt_ngayLam.Text = d.ToString("MM/dd/yyyy");
             cb_loaiNV.Focus();
             bt_them.Visible = true;
             bt_Luu.Visible = false;
-            txt_pass.ReadOnly = false;
+            txt_pass.ReadOnly = true;
             txt_user.ReadOnly = false;
         }
         private void Enable()
@@ -265,19 +288,18 @@ namespace Presentation
             rd_nam.Checked = true;
             visiable_user(false);
         }
-        private bool visiable_user(bool check)
+        private void visiable_user(bool check)
         {
             txt_user.Visible = check;
             lb_user.Visible = check;
             pic_user.Visible = check;
-            return check;
         }
-        private bool visiable_pass(bool check)
+        private void visiable_pass(bool check)
         {
             txt_pass.Visible = check;
             lb_pass.Visible = check;
             pic_pass.Visible = check;
-            return check;
+
         }
         public void loadCbBx()
         {
@@ -303,31 +325,21 @@ namespace Presentation
 
         private void cb_loaiNV_SelectedIndexChanged(object sender, EventArgs e)
         {
-
-            CHUCVU cv = cb_loaiNV.SelectedItem as CHUCVU;
-            if (cv.MACV == "NVBH"||cv.MACV=="AD")
+            if(cb_loaiNV.SelectedIndex==0|| cb_loaiNV.SelectedIndex==1)
             {
-                visiable_user(true);
                 visiable_pass(true);
+                visiable_user(true);
+                txt_pass.ReadOnly = true;
             }
-            else
-            {
-                visiable_user(false);
-                visiable_pass(false);
-
-            }
-
+            
         }
 
         private void txt_user_TextChanged(object sender, EventArgs e)
         {
             txt_pass.Text = "123456";
-           
+            txt_pass.ReadOnly = true;
         }
 
-        private void cb_loaiNV_TextChanged(object sender, EventArgs e)
-        {
-            //cb_loaiNV.AutoCompleteCustomSource;
-        }
+
     }
 }

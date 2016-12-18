@@ -46,7 +46,7 @@ namespace Bus
             bool a = true;
             foreach(CTHD ct in cts)
             {
-                a = (a && dcdao.reduceDC(ct.DOCHOI, (int)ct.SL));
+                //a = (a && dcdao.reduceDC(ct.DOCHOI, (int)ct.SL));
             }
             return a;
         }

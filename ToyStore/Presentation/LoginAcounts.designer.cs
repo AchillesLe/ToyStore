@@ -244,7 +244,7 @@
             this.Name = "LoginAcounts";
             this.Opacity = 0.96D;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "LoginAcount";
+            this.Text = "7";
             this.Load += new System.EventHandler(this.LoginAcounts_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
