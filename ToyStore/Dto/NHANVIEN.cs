@@ -9,13 +9,6 @@ namespace Dto
     [Table("NHANVIEN")]
     public partial class NHANVIEN
     {
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
-        public NHANVIEN()
-        {
-            //HOADONs = new HashSet<HOADON>();
-            //NHAPKHOes = new HashSet<NHAPKHO>();
-        }
-
         [Key]
         [DatabaseGenerated(DatabaseGeneratedOption.None)]
         public int MANV { get; set; }
@@ -46,15 +39,5 @@ namespace Dto
         [Required]
         [StringLength(4)]
         public string MACV { get; set; }
-
-        public virtual ACCOUNT ACCOUNT { get; set; }
-
-        public virtual CHUCVU CHUCVU { get; set; }
-
-        //[System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        //public virtual ICollection<HOADON> HOADONs { get; set; }
-
-        //[System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        //public virtual ICollection<NHAPKHO> NHAPKHOes { get; set; }
     }
 }

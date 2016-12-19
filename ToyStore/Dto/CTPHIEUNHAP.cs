@@ -6,21 +6,21 @@ namespace Dto
     using System.ComponentModel.DataAnnotations.Schema;
     using System.Data.Entity.Spatial;
 
-    [Table("CTHD")]
-    public partial class CTHD
+    [Table("CTPHIEUNHAP")]
+    public partial class CTPHIEUNHAP
     {
         [Key]
         [Column(Order = 0)]
         [DatabaseGenerated(DatabaseGeneratedOption.None)]
-        public int MAHD { get; set; }
+        public int MAPHIEU { get; set; }
 
         [Key]
         [Column(Order = 1)]
         [DatabaseGenerated(DatabaseGeneratedOption.None)]
         public int MADC { get; set; }
 
-        public int? SL { get; set; }
+        public int SL { get; set; }
 
-        public double? GIA { get; set; }
+        public double GIANHAP { get; set; }
     }
 }

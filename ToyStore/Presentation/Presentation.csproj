@@ -226,7 +226,7 @@
       <Name>Bus</Name>
     </ProjectReference>
     <ProjectReference Include="..\Dto\Dto.csproj">
-      <Project>{19f99637-eb5b-4c3e-a969-14752926606b}</Project>
+      <Project>{0cd845f2-0a93-4f69-9f48-f5ee6e1332f7}</Project>
       <Name>Dto</Name>
     </ProjectReference>
   </ItemGroup>

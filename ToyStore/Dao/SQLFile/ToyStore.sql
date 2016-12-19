@@ -66,14 +66,22 @@ constraint pk_BAOCAO primary key(MABC)
 )
 go
 
-create table NHAPKHO
+create table PHIEUNHAP
 (
+	MAPHIEU int not null,
 	MANV int not null,
-	MADC int not null,
 	NGAYNHAP date not null,
-	SL int,
-	GIA float,
-	constraint pk_NHAPKHO primary key(MADC)
+	TONGGIA float,
+	constraint pk_PHIEUNHAP primary key(MAPHIEU)
+)
+go
+create table CTPHIEUNHAP
+(
+	MAPHIEU int not null,
+	MADC int not null,
+	SL int not null,
+	GIANHAP float,
+	constraint pk_CTPHIEUNHAP primary key(MAPHIEU,MADC)
 )
 go
 
@@ -101,10 +109,3 @@ insert into ACCOUNT values
 (3114101,N'ShinHaou',N'Hau'),
 (3114102,N'LuanTran',N'LuanTran')
 go
-alter table NHANVIEN add foreign key(MACV) references CHUCVU(MACV)
-alter table ACCOUNT add foreign key(ID) references NHANVIEN(MANV)
-alter table CTHD add foreign key (MAHD) references HOADON(MAHD)
-alter table CTHD add foreign key (MADC) references DOCHOI(MADC)
-alter table HOADON add foreign key (MANV) references NHANVIEN(MANV)
-alter table NHAPKHO add foreign key (MANV) references NHANVIEN(MANV)
-alter table NHAPKHO add foreign key (MADC) references DOCHOI(MADC)

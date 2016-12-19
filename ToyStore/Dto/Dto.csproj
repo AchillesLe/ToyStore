@@ -4,7 +4,7 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{19F99637-EB5B-4C3E-A969-14752926606B}</ProjectGuid>
+    <ProjectGuid>{0CD845F2-0A93-4F69-9F48-F5EE6E1332F7}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>Dto</RootNamespace>
@@ -56,10 +56,11 @@
     <Compile Include="CHUCVU.cs" />
     <Compile Include="ContextEntites.cs" />
     <Compile Include="CTHD.cs" />
+    <Compile Include="CTPHIEUNHAP.cs" />
     <Compile Include="DOCHOI.cs" />
     <Compile Include="HOADON.cs" />
     <Compile Include="NHANVIEN.cs" />
-    <Compile Include="NHAPKHO.cs" />
+    <Compile Include="PHIEUNHAP.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

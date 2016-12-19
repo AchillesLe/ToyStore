@@ -24,7 +24,7 @@ namespace Presentation
         double tong_giatri = 0;
         DateTime now;
         List<DOCHOI> listDc;
-        BindingList<NHAPKHO> listNk;
+        //BindingList<NHAPKHO> listNk;
 
         public NhapKho()
         {
@@ -59,8 +59,8 @@ namespace Presentation
         private void NhapKho_Load(object sender, EventArgs e)
         {
             tb_Manv.Text = MainMenu.usrId.ToString();
-            listNk = new BindingList<NHAPKHO>();
-            tbl_nk.DataSource = listNk;
+            //listNk = new BindingList<NHAPKHO>();
+            //tbl_nk.DataSource = listNk;
             col_source = new AutoCompleteStringCollection();
             DoChoiBus dcBus = new DoChoiBus();
             //listDc = new List<DOCHOI>();
@@ -158,16 +158,16 @@ namespace Presentation
 
                     dcBus.AddDoChoi(dc);
                 }
-                NHAPKHO nk = new NHAPKHO();
-                nk.MANV = MainMenu.usrId;
-                nk.MADC = int.Parse(tb_masp.Text);
-                //nk.GIONHAP = nk.NGAYNHAP = now;
-                nk.SL = int.Parse(tb_SL.Text);
-                nk.GIA = double.Parse(tb_GiaNhap.Text) * (double)nk.SL;
-                tong_giatri += (double)nk.GIA;
-                tong_sl += (int)nk.SL;
+                //NHAPKHO nk = new NHAPKHO();
+                //nk.MANV = MainMenu.usrId;
+                //nk.MADC = int.Parse(tb_masp.Text);
+                ////nk.GIONHAP = nk.NGAYNHAP = now;
+                //nk.SL = int.Parse(tb_SL.Text);
+                //nk.GIA = double.Parse(tb_GiaNhap.Text) * (double)nk.SL;
+                //tong_giatri += (double)nk.GIA;
+                //tong_sl += (int)nk.SL;
 
-                listNk.Add(nk);
+                //listNk.Add(nk);
                 refreshDataGrid();
             }
             catch (Exception ex)
@@ -185,10 +185,10 @@ namespace Presentation
         {
             try
             {
-                NhapKhoBus nkBus = new NhapKhoBus();
-                nkBus.addNhapKho(listNk.ToList());
-                MessageBox.Show("Nhập thành công!!");
-                listNk.Clear();
+                //NhapKhoBus nkBus = new NhapKhoBus();
+                //nkBus.addNhapKho(listNk.ToList());
+                //MessageBox.Show("Nhập thành công!!");
+                //listNk.Clear();
                 refreshDataGrid();
                 NhapKho_Load(sender, e);
             }

@@ -99,12 +99,12 @@ namespace Presentation
             {
                 DoChoiBus dcBus = new DoChoiBus();
                 CTHD ctHd = new CTHD();
-                ctHd.DOCHOI = dcBus.DochoiById(int.Parse(cb_masp.Text));
+                //ctHd.DOCHOI = dcBus.DochoiById(int.Parse(cb_masp.Text));
 
                 ctHd.MAHD = Hd.MAHD;
                 ctHd.MADC = int.Parse(cb_masp.Text);
                 ctHd.SL = int.Parse(tb_slSP.Text);
-                ctHd.GIA = ((double)ctHd.DOCHOI.GIA * (double)ctHd.SL);
+                //ctHd.GIA = ((double)ctHd.DOCHOI.GIA * (double)ctHd.SL);
 
                 bool c = true;
                 foreach (CTHD i in listHd)

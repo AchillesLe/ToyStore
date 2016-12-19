@@ -58,13 +58,14 @@ namespace Presentation
             tbl_NhanVien.DataSource = nvBus.DSNhanVien();
             for (int i = 0; i < tbl_NhanVien.Columns.Count; i++)
             {
-                if ((tbl_NhanVien.Columns[i].HeaderText == "CHUCVU" && tbl_NhanVien.Columns[8].Visible == true) ||
-                    (tbl_NhanVien.Columns[i].HeaderText == "HOADONs" && tbl_NhanVien.Columns[9].Visible == true) ||
-                    (tbl_NhanVien.Columns[i].HeaderText == "ACCOUNT" && tbl_NhanVien.Columns[10].Visible == true) ||
-                    (tbl_NhanVien.Columns[i].HeaderText == "NHAPKHOes" && tbl_NhanVien.Columns[11].Visible == true))
-                {
-                    tbl_NhanVien.Columns.RemoveAt(i);
-                }
+                //if ((tbl_NhanVien.Columns[i].HeaderText == "CHUCVU" && tbl_NhanVien.Columns[8].Visible == true) ||
+                //    (tbl_NhanVien.Columns[i].HeaderText == "HOADONs" && tbl_NhanVien.Columns[9].Visible == true) ||
+                //    (tbl_NhanVien.Columns[i].HeaderText == "ACCOUNT" && tbl_NhanVien.Columns[10].Visible == true) ||
+                //    (tbl_NhanVien.Columns[i].HeaderText == "NHAPKHOes" && tbl_NhanVien.Columns[11].Visible == true))
+                //{
+                //    tbl_NhanVien.Columns.RemoveAt(i);
+                //}
+
             }
 
         }

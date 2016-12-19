@@ -19,7 +19,5 @@ namespace Dto
         [Required]
         [StringLength(20)]
         public string PASS { get; set; }
-
-        public virtual NHANVIEN NHANVIEN { get; set; }
     }
 }
