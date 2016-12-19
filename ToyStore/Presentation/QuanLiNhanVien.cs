@@ -40,8 +40,7 @@ namespace Presentation
         private void Close_Click(object sender, EventArgs e)
         {
             this.Close();
-            MainMenu mn = new MainMenu();
-            mn.Show();
+          
         }
 
         private void back_Click(object sender, EventArgs e)
@@ -59,7 +58,10 @@ namespace Presentation
             tbl_NhanVien.DataSource = nvBus.DSNhanVien();
             for (int i = 0; i < tbl_NhanVien.Columns.Count; i++)
             {
-                if (tbl_NhanVien.Columns[i].HeaderText == "CHUCVU" || tbl_NhanVien.Columns[i].HeaderText == "HOADONs" || tbl_NhanVien.Columns[i].HeaderText == "ACCOUNT" || tbl_NhanVien.Columns[i].HeaderText == "NHAPKHOes")
+                if ((tbl_NhanVien.Columns[i].HeaderText == "CHUCVU" && tbl_NhanVien.Columns[8].Visible == true) ||
+                    (tbl_NhanVien.Columns[i].HeaderText == "HOADONs" && tbl_NhanVien.Columns[9].Visible == true) ||
+                    (tbl_NhanVien.Columns[i].HeaderText == "ACCOUNT" && tbl_NhanVien.Columns[10].Visible == true) ||
+                    (tbl_NhanVien.Columns[i].HeaderText == "NHAPKHOes" && tbl_NhanVien.Columns[11].Visible == true))
                 {
                     tbl_NhanVien.Columns.RemoveAt(i);
                 }
@@ -72,13 +74,7 @@ namespace Presentation
             NHANVIEN nv = new NHANVIEN();
             NhanVienBus nvBus = new NhanVienBus();
             nv.MANV = Int32.Parse(txt_manv.Text);
-
-            if (toolTip1.Validation.check_NgaySinh(DateTime.Parse(txt_ngaysinh.Text)))
-            {
-                nv.NGAYSINH = DateTime.Parse(txt_ngaysinh.Text);
-            }
-            else
-                MessageBox.Show(" Invalid NgaySinh!");              
+            nv.NGAYSINH = txt_ngaysinh.Value;             
             if (rd_nam.Checked == true) nv.PHAI = "Nam";
             else nv.PHAI = "Nu";
             nv.QUEQUAN = txt_DiaChi.Text;
@@ -97,7 +93,7 @@ namespace Presentation
             {
                 MessageBox.Show("Invalid Identification !");
             }        
-            nv.NGAYVAOLAM = DateTime.Parse(txt_ngayLam.Text);
+            nv.NGAYVAOLAM = txt_ngayLam.Value;
             ChucVuBus cvbus = new ChucVuBus();
             nv.MACV = cvbus.GetCVbyName(cb_loaiNV.Text).MACV;
             try
@@ -132,7 +128,7 @@ namespace Presentation
                 nv.QUEQUAN = txt_DiaChi.Text;
             }
             else nv.QUEQUAN = "";
-            nv.NGAYVAOLAM = DateTime.Parse(txt_ngayLam.Text);
+            nv.NGAYVAOLAM = txt_ngayLam.Value;
             ChucVuBus cvbus = new ChucVuBus();
             nv.MACV = cvbus.GetCVbyName(cb_loaiNV.Text).MACV;
             if (!string.IsNullOrEmpty(txt_Sdt.Text))
@@ -153,13 +149,13 @@ namespace Presentation
             }
             else
                 nv.CMT = "";
-            nv.NGAYSINH = DateTime.Parse(txt_ngayLam.Text);    
+            nv.NGAYSINH = txt_ngaysinh.Value;   
             if (!string.IsNullOrEmpty(txt_user.Text))
             {
                 ac.ID = nv.MANV;
                 ac.USERNAME = txt_user.Text;
                 ac.PASS = txt_pass.Text;
-                    if (nvBus.add(nv,ac))//nvBus.AddNV(nv)&&acBus.Addac(ac))
+                    if (nvBus.add(nv,ac))
                     {
                         MessageBox.Show("Add successted !");
                         resettext();
@@ -187,22 +183,18 @@ namespace Presentation
             ResetMouseEventArgs();
             ChucVuBus cvbus = new ChucVuBus();
             txt_manv.Text = tbl_NhanVien.Rows[tbl_NhanVien.CurrentCell.RowIndex].Cells[0].Value.ToString();
-            txt_hoten.Text = tbl_NhanVien.Rows[tbl_NhanVien.CurrentCell.RowIndex].Cells[1].Value.ToString();
-            txt_ngaysinh.Text = tbl_NhanVien.Rows[tbl_NhanVien.CurrentCell.RowIndex].Cells[2].Value.ToString();
-            DateTime d = Convert.ToDateTime(txt_ngaysinh.Text);
-            txt_ngaysinh.Text = d.ToString("MM/dd/yyyy");
-            txt_Sdt.Text = tbl_NhanVien.Rows[tbl_NhanVien.CurrentCell.RowIndex].Cells[3].Value.ToString();
-            txt_DiaChi.Text = tbl_NhanVien.Rows[tbl_NhanVien.CurrentCell.RowIndex].Cells[4].Value.ToString();
-            string phai = tbl_NhanVien.Rows[tbl_NhanVien.CurrentCell.RowIndex].Cells[5].Value.ToString();
+            txt_hoten.Text = tbl_NhanVien.Rows[tbl_NhanVien.CurrentCell.RowIndex].Cells[1].Value.ToString();           
+            txt_Sdt.Text = tbl_NhanVien.Rows[tbl_NhanVien.CurrentCell.RowIndex].Cells[2].Value.ToString();
+            txt_DiaChi.Text = tbl_NhanVien.Rows[tbl_NhanVien.CurrentCell.RowIndex].Cells[3].Value.ToString();
+            string phai = tbl_NhanVien.Rows[tbl_NhanVien.CurrentCell.RowIndex].Cells[4].Value.ToString();
             if (phai == "Nam")
             {
                 rd_nam.Checked = true;
             }
             else rd_nu.Checked = true;
-            txt_CMND.Text = tbl_NhanVien.Rows[tbl_NhanVien.CurrentCell.RowIndex].Cells[6].Value.ToString();
-            txt_ngayLam.Text = tbl_NhanVien.Rows[tbl_NhanVien.CurrentCell.RowIndex].Cells[7].Value.ToString();
-            DateTime dm = Convert.ToDateTime(txt_ngayLam.Text);
-            txt_ngayLam.Text = dm.ToString("MM/dd/yyyy");
+            txt_CMND.Text = tbl_NhanVien.Rows[tbl_NhanVien.CurrentCell.RowIndex].Cells[5].Value.ToString();
+            txt_ngaysinh.Value = (DateTime)(tbl_NhanVien.Rows[tbl_NhanVien.CurrentCell.RowIndex].Cells[6].Value);
+            txt_ngayLam.Value = (DateTime)(tbl_NhanVien.Rows[tbl_NhanVien.CurrentCell.RowIndex].Cells[7].Value);
             string tenCV = cvbus.CHUCVUByID(tbl_NhanVien.Rows[tbl_NhanVien.CurrentCell.RowIndex].Cells[8].Value.ToString()).TENCV;
             cb_loaiNV.ResetText();
             cb_loaiNV.SelectedText = tenCV;
@@ -213,9 +205,9 @@ namespace Presentation
                 AccountBus acBus = new AccountBus();
                 txt_user.Text = acBus.ACCOUNTByID(Int32.Parse(txt_manv.Text)).USERNAME;
                 visiable_user(true);
+                visiable_pass(false);
             }
-
-            Enable();
+            Enable(true);
         }
         // Ok !
         private void bt_Xoa_Click(object sender, EventArgs e)
@@ -225,13 +217,18 @@ namespace Presentation
 
             if (DialogResult.Yes == MessageBox.Show("Bạn Muốn xóa nhân viên ?" + tbl_NhanVien.Rows[tbl_NhanVien.CurrentCell.RowIndex].Cells[1].Value.ToString(), "Comfirm", MessageBoxButtons.YesNo))
             {
-                if (nvBus.deleteNV(manv)) MessageBox.Show("Delete Successed !");
-                else MessageBox.Show("Delete not Successed !");
+                if (nvBus.deleteNV(manv))
+                    MessageBox.Show("Delete Successed !");
+                else
+                {
+                    MessageBox.Show("Delete not Successed !");
+                    return;
+                }
             }
+           
             resettext();
             tbl_NhanVien.ClearSelection();
             loadDSNhanVien();
-
         }
         //ok
         private void bt_excel_Click(object sender, EventArgs e)
@@ -248,45 +245,47 @@ namespace Presentation
         private void bt_moi_Click(object sender, EventArgs e)
         {         
             resettext();
-            Enable();
+            Enable(true);
             cb_loaiNV.Refresh();
             cb_loaiNV.SelectedIndex = 2;
             tbl_NhanVien.ClearSelection();
             NhanVienBus nvBus = new NhanVienBus();
             txt_manv.Text = (nvBus.MaNVNow()+1).ToString();
             txt_manv.Enabled = false;
-            DateTime d = Convert.ToDateTime(DateTime.Now);
-            txt_ngayLam.Text = d.ToString("MM/dd/yyyy");
+            txt_ngayLam.Value = DateTime.Now;
+            txt_ngaysinh.Value = DateTime.Parse("12/31/1996");
             cb_loaiNV.Focus();
             bt_them.Visible = true;
             bt_Luu.Visible = false;
             txt_pass.ReadOnly = true;
             txt_user.ReadOnly = false;
+
         }
-        private void Enable()
+        private void Enable(bool en)
         {
-            txt_Sdt.ReadOnly = false;
-            txt_hoten.ReadOnly = false;
-            txt_ngaysinh.ReadOnly = false;
-            txt_DiaChi.ReadOnly = false;
-            txt_CMND.ReadOnly = false;
-            txt_Sdt.ReadOnly = false;
+            txt_Sdt.Enabled = en;
+            txt_hoten.Enabled = en;
+            txt_DiaChi.Enabled = en;
+            txt_CMND.Enabled = en;
+            txt_Sdt.Enabled = en;
+            txt_ngaysinh.Enabled = en;
+            Gb_GioiTinh.Enabled = en;
+            cb_loaiNV.Enabled = en;
         }
         private void resettext()
         {
             txt_CMND.Text = "";
             txt_hoten.Text = "";
             txt_manv.Text = "";
-            txt_ngayLam.Text = "";
+            txt_ngayLam.Value = DateTime.Now ;
             txt_DiaChi.Text = "";
-            txt_ngaysinh.Text = "";
+            txt_ngaysinh.Value = DateTime.Parse("12/31/1998");
             txt_pass.Text = "";
             txt_Sdt.Text = "";
-            txt_user.Text = "";
-         
+            txt_user.Text = ""; 
             cb_loaiNV.ResetText();
             rd_nam.Checked = true;
-            visiable_user(false);
+
         }
         private void visiable_user(bool check)
         {
@@ -320,7 +319,7 @@ namespace Presentation
             loadDSNhanVien();
             bt_them.Visible = false;
             loadCbBx();
-           // manv = Int32.Parse(tbl_NhanVien.Rows[tbl_NhanVien.RowCount - 1].Cells[0].Value.ToString());
+            Enable(false);
         }
 
         private void cb_loaiNV_SelectedIndexChanged(object sender, EventArgs e)

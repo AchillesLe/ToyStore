@@ -9,10 +9,10 @@ namespace Dto
     [Table("HOADON")]
     public partial class HOADON
     {
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
+        //[System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
         public HOADON()
         {
-            CTHDs = new HashSet<CTHD>();
+            //CTHDs = new HashSet<CTHD>();
         }
 
         [Key]
@@ -25,8 +25,8 @@ namespace Dto
 
         public double? TRIGIA { get; set; }
 
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<CTHD> CTHDs { get; set; }
+        //[System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        //public virtual ICollection<CTHD> CTHDs { get; set; }
 
         public virtual NHANVIEN NHANVIEN { get; set; }
     }

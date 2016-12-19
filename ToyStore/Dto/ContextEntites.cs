@@ -23,38 +23,38 @@ namespace Dto
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
-            modelBuilder.Entity<CHUCVU>()
-                .HasMany(e => e.NHANVIENs)
-                .WithRequired(e => e.CHUCVU)
-                .WillCascadeOnDelete(false);
+            //modelBuilder.Entity<CHUCVU>()
+            //    .HasMany(e => e.NHANVIENs)
+            //    .WithRequired(e => e.CHUCVU)
+            //    .WillCascadeOnDelete(false);
 
-            modelBuilder.Entity<DOCHOI>()
-                .HasMany(e => e.CTHDs)
-                .WithRequired(e => e.DOCHOI)
-                .WillCascadeOnDelete(false);
+            //modelBuilder.Entity<DOCHOI>()
+            //    .HasMany(e => e.CTHDs)
+            //    .WithRequired(e => e.DOCHOI)
+            //    .WillCascadeOnDelete(false);
 
             modelBuilder.Entity<DOCHOI>()
                 .HasOptional(e => e.NHAPKHO)
                 .WithRequired(e => e.DOCHOI);
 
-            modelBuilder.Entity<HOADON>()
-                .HasMany(e => e.CTHDs)
-                .WithRequired(e => e.HOADON)
-                .WillCascadeOnDelete(false);
+            //modelBuilder.Entity<HOADON>()
+            //    .HasMany(e => e.CTHDs)
+            //    .WithRequired(e => e.HOADON)
+            //    .WillCascadeOnDelete(false);
 
             modelBuilder.Entity<NHANVIEN>()
                 .HasOptional(e => e.ACCOUNT)
                 .WithRequired(e => e.NHANVIEN);
 
-            modelBuilder.Entity<NHANVIEN>()
-                .HasMany(e => e.HOADONs)
-                .WithRequired(e => e.NHANVIEN)
-                .WillCascadeOnDelete(false);
+            //modelBuilder.Entity<NHANVIEN>()
+            //    .HasMany(e => e.HOADONs)
+            //    .WithRequired(e => e.NHANVIEN)
+            //    .WillCascadeOnDelete(false);
 
-            modelBuilder.Entity<NHANVIEN>()
-                .HasMany(e => e.NHAPKHOes)
-                .WithRequired(e => e.NHANVIEN)
-                .WillCascadeOnDelete(false);
+            //modelBuilder.Entity<NHANVIEN>()
+            //    .HasMany(e => e.NHAPKHOes)
+            //    .WithRequired(e => e.NHANVIEN)
+            //    .WillCascadeOnDelete(false);
         }
     }
 }

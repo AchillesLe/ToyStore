@@ -6,7 +6,8 @@ using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Windows.Forms;
-
+using Dto;
+using Bus;
 
 namespace Presentation
 {
@@ -18,7 +19,8 @@ namespace Presentation
         const int HTCAPTION = 0x2;
         public static string UserName = String.Empty;
         public static int usrId = -1;
-        
+        NhanVienBus nvbus = new NhanVienBus();
+        AccountBus ac = new AccountBus();
         public MainMenu()
         {
             InitializeComponent();    
@@ -39,6 +41,11 @@ namespace Presentation
             QuanLiBanHang.Show();
             bt_Account.Text = UserName;
             ThongTinNv.UserName_infor = bt_Account.Text;
+            int ma = ac.ACCOUNTByName(UserName).ID;
+            if(nvbus.NhanVienByID(ma).MACV=="NVBH")
+            {
+                bt_QuanLiNhanVien.Hide();
+            }
         }
         public void Hide_Visible(Panel pn)
         {
@@ -195,13 +202,6 @@ namespace Presentation
                 QuanLiNhanVien.Enabled = false;
                 BaoCaoDoanhSo.Enabled = false;
             }
-            //pn_ThongBao.BringToFront();
-            //pn_ThongBao.Location = new Point(380, 163);
-            //pn_ThongBao.Show();
-            //Form f = OutForm.ActiveForm;
-            //f.Controls.Add(pn_ThongBao);
-            //pn_DangXuat.Dock = DockStyle.Fill;
-            //f.ShowDialog();
         }
         private void bt_DongY_Click(object sender, EventArgs e)
         {

@@ -12,8 +12,8 @@ namespace Dto
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
         public NHANVIEN()
         {
-            HOADONs = new HashSet<HOADON>();
-            NHAPKHOes = new HashSet<NHAPKHO>();
+            //HOADONs = new HashSet<HOADON>();
+            //NHAPKHOes = new HashSet<NHAPKHO>();
         }
 
         [Key]
@@ -51,10 +51,10 @@ namespace Dto
 
         public virtual CHUCVU CHUCVU { get; set; }
 
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<HOADON> HOADONs { get; set; }
+        //[System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        //public virtual ICollection<HOADON> HOADONs { get; set; }
 
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<NHAPKHO> NHAPKHOes { get; set; }
+        //[System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        //public virtual ICollection<NHAPKHO> NHAPKHOes { get; set; }
     }
 }

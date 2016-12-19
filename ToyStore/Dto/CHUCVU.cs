@@ -9,10 +9,10 @@ namespace Dto
     [Table("CHUCVU")]
     public partial class CHUCVU
     {
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
+        //[System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
         public CHUCVU()
         {
-            NHANVIENs = new HashSet<NHANVIEN>();
+            //NHANVIENs = new HashSet<NHANVIEN>();
         }
 
         [Key]
@@ -23,7 +23,7 @@ namespace Dto
         [StringLength(30)]
         public string TENCV { get; set; }
 
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<NHANVIEN> NHANVIENs { get; set; }
+        //[System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        //public virtual ICollection<NHANVIEN> NHANVIENs { get; set; }
     }
 }

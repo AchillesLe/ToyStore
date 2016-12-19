@@ -47,17 +47,14 @@
             this.pic_user = new System.Windows.Forms.PictureBox();
             this.txt_user = new System.Windows.Forms.TextBox();
             this.lb_user = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
             this.pictureBox7 = new System.Windows.Forms.PictureBox();
             this.txt_Sdt = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
             this.bt_Luu = new System.Windows.Forms.Button();
-            this.label3 = new System.Windows.Forms.Label();
             this.txt_DiaChi = new System.Windows.Forms.TextBox();
             this.bt_Xoa = new System.Windows.Forms.Button();
             this.pictureBox8 = new System.Windows.Forms.PictureBox();
             this.pictureBox6 = new System.Windows.Forms.PictureBox();
-            this.txt_ngaysinh = new System.Windows.Forms.TextBox();
             this.lb_Gio = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
@@ -70,7 +67,6 @@
             this.pictureBox5 = new System.Windows.Forms.PictureBox();
             this.txt_manv = new System.Windows.Forms.TextBox();
             this.lb_MaHd = new System.Windows.Forms.Label();
-            this.txt_ngayLam = new System.Windows.Forms.TextBox();
             this.lb_TenNv = new System.Windows.Forms.Label();
             this.lb_Ngay = new System.Windows.Forms.Label();
             this.Gb_GioiTinh = new System.Windows.Forms.GroupBox();
@@ -83,6 +79,8 @@
             this.lb_DsNv = new System.Windows.Forms.Label();
             this.pictureBox10 = new System.Windows.Forms.PictureBox();
             this.Close = new System.Windows.Forms.Button();
+            this.txt_ngayLam = new System.Windows.Forms.DateTimePicker();
+            this.txt_ngaysinh = new System.Windows.Forms.DateTimePicker();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.tbl_NhanVien)).BeginInit();
             this.panel3.SuspendLayout();
@@ -230,6 +228,8 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.panel3.AutoSize = true;
+            this.panel3.Controls.Add(this.txt_ngaysinh);
+            this.panel3.Controls.Add(this.txt_ngayLam);
             this.panel3.Controls.Add(this.pictureBox11);
             this.panel3.Controls.Add(this.cb_loaiNV);
             this.panel3.Controls.Add(this.label1);
@@ -240,17 +240,14 @@
             this.panel3.Controls.Add(this.pic_user);
             this.panel3.Controls.Add(this.txt_user);
             this.panel3.Controls.Add(this.lb_user);
-            this.panel3.Controls.Add(this.label5);
             this.panel3.Controls.Add(this.pictureBox7);
             this.panel3.Controls.Add(this.txt_Sdt);
             this.panel3.Controls.Add(this.label6);
             this.panel3.Controls.Add(this.bt_Luu);
-            this.panel3.Controls.Add(this.label3);
             this.panel3.Controls.Add(this.txt_DiaChi);
             this.panel3.Controls.Add(this.bt_Xoa);
             this.panel3.Controls.Add(this.pictureBox8);
             this.panel3.Controls.Add(this.pictureBox6);
-            this.panel3.Controls.Add(this.txt_ngaysinh);
             this.panel3.Controls.Add(this.lb_Gio);
             this.panel3.Controls.Add(this.label4);
             this.panel3.Controls.Add(this.pictureBox3);
@@ -263,7 +260,6 @@
             this.panel3.Controls.Add(this.pictureBox5);
             this.panel3.Controls.Add(this.txt_manv);
             this.panel3.Controls.Add(this.lb_MaHd);
-            this.panel3.Controls.Add(this.txt_ngayLam);
             this.panel3.Controls.Add(this.lb_TenNv);
             this.panel3.Controls.Add(this.lb_Ngay);
             this.panel3.Controls.Add(this.Gb_GioiTinh);
@@ -284,7 +280,7 @@
             // cb_loaiNV
             // 
             this.cb_loaiNV.AllowDrop = true;
-            this.cb_loaiNV.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
+            this.cb_loaiNV.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest;
             this.cb_loaiNV.BackColor = System.Drawing.SystemColors.Menu;
             this.cb_loaiNV.FormattingEnabled = true;
             this.cb_loaiNV.Location = new System.Drawing.Point(161, 39);
@@ -337,7 +333,6 @@
             this.txt_pass.Font = new System.Drawing.Font("Calibri", 11.25F);
             this.txt_pass.Location = new System.Drawing.Point(564, 137);
             this.txt_pass.Name = "txt_pass";
-            this.txt_pass.ReadOnly = true;
             this.txt_pass.Size = new System.Drawing.Size(219, 19);
             this.txt_pass.TabIndex = 42;
             this.txt_pass.Tag = "";
@@ -372,7 +367,6 @@
             this.txt_user.Font = new System.Drawing.Font("Calibri", 11.25F);
             this.txt_user.Location = new System.Drawing.Point(162, 166);
             this.txt_user.Name = "txt_user";
-            this.txt_user.ReadOnly = true;
             this.txt_user.Size = new System.Drawing.Size(238, 19);
             this.txt_user.TabIndex = 39;
             this.txt_user.Tag = "";
@@ -391,18 +385,6 @@
             this.lb_user.Text = "Tên Đăng Nhập";
             this.lb_user.Visible = false;
             // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.BackColor = System.Drawing.Color.Transparent;
-            this.label5.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.label5.ForeColor = System.Drawing.Color.Gray;
-            this.label5.Location = new System.Drawing.Point(702, 73);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(109, 19);
-            this.label5.TabIndex = 37;
-            this.label5.Text = "(MM/DD/YYYY)";
-            // 
             // pictureBox7
             // 
             this.pictureBox7.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox7.BackgroundImage")));
@@ -419,7 +401,6 @@
             this.txt_Sdt.Font = new System.Drawing.Font("Calibri", 11.25F);
             this.txt_Sdt.Location = new System.Drawing.Point(564, 108);
             this.txt_Sdt.Name = "txt_Sdt";
-            this.txt_Sdt.ReadOnly = true;
             this.txt_Sdt.Size = new System.Drawing.Size(238, 19);
             this.txt_Sdt.TabIndex = 35;
             // 
@@ -450,18 +431,6 @@
             this.bt_Luu.UseVisualStyleBackColor = false;
             this.bt_Luu.Click += new System.EventHandler(this.bt_save_Click);
             // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.BackColor = System.Drawing.Color.Transparent;
-            this.label3.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.label3.ForeColor = System.Drawing.Color.Gray;
-            this.label3.Location = new System.Drawing.Point(702, 44);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(109, 19);
-            this.label3.TabIndex = 30;
-            this.label3.Text = "(MM/DD/YYYY)";
-            // 
             // txt_DiaChi
             // 
             this.txt_DiaChi.BackColor = System.Drawing.SystemColors.MenuBar;
@@ -470,7 +439,6 @@
             this.txt_DiaChi.Location = new System.Drawing.Point(163, 132);
             this.txt_DiaChi.Multiline = true;
             this.txt_DiaChi.Name = "txt_DiaChi";
-            this.txt_DiaChi.ReadOnly = true;
             this.txt_DiaChi.Size = new System.Drawing.Size(256, 20);
             this.txt_DiaChi.TabIndex = 29;
             // 
@@ -488,7 +456,7 @@
             this.bt_Xoa.TabIndex = 28;
             this.bt_Xoa.Text = "Xóa";
             this.bt_Xoa.UseVisualStyleBackColor = false;
-            this.bt_Xoa.Click += new System.EventHandler(this.bt_save_Click);
+            this.bt_Xoa.Click += new System.EventHandler(this.bt_Xoa_Click);
             // 
             // pictureBox8
             // 
@@ -507,17 +475,6 @@
             this.pictureBox6.Size = new System.Drawing.Size(259, 1);
             this.pictureBox6.TabIndex = 16;
             this.pictureBox6.TabStop = false;
-            // 
-            // txt_ngaysinh
-            // 
-            this.txt_ngaysinh.BackColor = System.Drawing.SystemColors.MenuBar;
-            this.txt_ngaysinh.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txt_ngaysinh.Font = new System.Drawing.Font("Calibri", 11.25F);
-            this.txt_ngaysinh.Location = new System.Drawing.Point(564, 75);
-            this.txt_ngaysinh.Name = "txt_ngaysinh";
-            this.txt_ngaysinh.ReadOnly = true;
-            this.txt_ngaysinh.Size = new System.Drawing.Size(143, 19);
-            this.txt_ngaysinh.TabIndex = 26;
             // 
             // lb_Gio
             // 
@@ -557,7 +514,6 @@
             this.txt_CMND.Font = new System.Drawing.Font("Calibri", 11.25F);
             this.txt_CMND.Location = new System.Drawing.Point(163, 98);
             this.txt_CMND.Name = "txt_CMND";
-            this.txt_CMND.ReadOnly = true;
             this.txt_CMND.Size = new System.Drawing.Size(256, 19);
             this.txt_CMND.TabIndex = 23;
             // 
@@ -599,7 +555,6 @@
             this.txt_hoten.Font = new System.Drawing.Font("Calibri", 11.25F);
             this.txt_hoten.Location = new System.Drawing.Point(163, 65);
             this.txt_hoten.Name = "txt_hoten";
-            this.txt_hoten.ReadOnly = true;
             this.txt_hoten.Size = new System.Drawing.Size(256, 19);
             this.txt_hoten.TabIndex = 7;
             this.txt_hoten.Tag = "";
@@ -643,17 +598,6 @@
             this.lb_MaHd.Size = new System.Drawing.Size(129, 19);
             this.lb_MaHd.TabIndex = 2;
             this.lb_MaHd.Text = "Mã Nhân Viên (ID)";
-            // 
-            // txt_ngayLam
-            // 
-            this.txt_ngayLam.BackColor = System.Drawing.SystemColors.MenuBar;
-            this.txt_ngayLam.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txt_ngayLam.Font = new System.Drawing.Font("Calibri", 11.25F);
-            this.txt_ngayLam.Location = new System.Drawing.Point(564, 44);
-            this.txt_ngayLam.Name = "txt_ngayLam";
-            this.txt_ngayLam.ReadOnly = true;
-            this.txt_ngayLam.Size = new System.Drawing.Size(143, 19);
-            this.txt_ngayLam.TabIndex = 13;
             // 
             // lb_TenNv
             // 
@@ -823,6 +767,32 @@
             this.Close.UseVisualStyleBackColor = false;
             this.Close.Click += new System.EventHandler(this.Close_Click);
             // 
+            // txt_ngayLam
+            // 
+            this.txt_ngayLam.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.txt_ngayLam.CustomFormat = "       dd - MM - yyyy";
+            this.txt_ngayLam.Enabled = false;
+            this.txt_ngayLam.Font = new System.Drawing.Font("Arial", 10F);
+            this.txt_ngayLam.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.txt_ngayLam.Location = new System.Drawing.Point(561, 43);
+            this.txt_ngayLam.MinDate = new System.DateTime(1990, 12, 31, 0, 0, 0, 0);
+            this.txt_ngayLam.Name = "txt_ngayLam";
+            this.txt_ngayLam.Size = new System.Drawing.Size(238, 23);
+            this.txt_ngayLam.TabIndex = 48;
+            // 
+            // txt_ngaysinh
+            // 
+            this.txt_ngaysinh.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.txt_ngaysinh.CustomFormat = "       dd - MM - yyyy";
+            this.txt_ngaysinh.Font = new System.Drawing.Font("Arial", 10F);
+            this.txt_ngaysinh.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.txt_ngaysinh.Location = new System.Drawing.Point(561, 72);
+            this.txt_ngaysinh.MinDate = new System.DateTime(1990, 12, 31, 0, 0, 0, 0);
+            this.txt_ngaysinh.Name = "txt_ngaysinh";
+            this.txt_ngaysinh.Size = new System.Drawing.Size(238, 23);
+            this.txt_ngaysinh.TabIndex = 48;
+            this.txt_ngaysinh.Value = new System.DateTime(1998, 12, 31, 0, 0, 0, 0);
+            // 
             // QuanLiNhanVien
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 14F);
@@ -882,7 +852,6 @@
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.PictureBox pictureBox8;
         private System.Windows.Forms.PictureBox pictureBox6;
-        private System.Windows.Forms.TextBox txt_ngaysinh;
         private System.Windows.Forms.Label lb_Gio;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.PictureBox pictureBox3;
@@ -895,17 +864,14 @@
         private System.Windows.Forms.PictureBox pictureBox5;
         private System.Windows.Forms.TextBox txt_manv;
         private System.Windows.Forms.Label lb_MaHd;
-        private System.Windows.Forms.TextBox txt_ngayLam;
         private System.Windows.Forms.Label lb_TenNv;
         private System.Windows.Forms.GroupBox Gb_GioiTinh;
         private System.Windows.Forms.RadioButton rd_nu;
         private System.Windows.Forms.RadioButton rd_nam;
         private System.Windows.Forms.TextBox txt_DiaChi;
         private System.Windows.Forms.DataGridView tbl_NhanVien;
-        private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label lb_Ngay;
         private System.Windows.Forms.Button bt_Luu;
-        private System.Windows.Forms.Label label5;
         private System.Windows.Forms.PictureBox pictureBox7;
         private System.Windows.Forms.TextBox txt_Sdt;
         private System.Windows.Forms.Label label6;
@@ -922,5 +888,7 @@
         private System.Windows.Forms.PictureBox pictureBox11;
         private System.Windows.Forms.ComboBox cb_loaiNV;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.DateTimePicker txt_ngayLam;
+        private System.Windows.Forms.DateTimePicker txt_ngaysinh;
     }
 }

@@ -69,7 +69,8 @@ namespace Dao
                 kh.NGAYVAOLAM = nv.NGAYVAOLAM;
                 kh.TENNV = nv.TENNV;
                  context.NHANVIENs.Add(kh);
-                if (context.SaveChanges() > 0) check = true; 
+                if (context.SaveChanges() > 0)
+                    check = true; 
             }
             return check;
         }
@@ -108,12 +109,27 @@ namespace Dao
             {
                 try
                 {
-                    NHANVIEN kh = con.NHANVIENs.Single(x => x.MANV == maNV);
-                    con.NHANVIENs.Remove(kh);
-                    if (con.SaveChanges() >= 0)
-                    {
+
+                    NHANVIEN kh = con.NHANVIENs.SingleOrDefault(x => x.MANV == maNV);
+                   
+                    ACCOUNT ac = con.ACCOUNTs.SingleOrDefault(x => x.ID == maNV);     
+                    if(ac!=null)
+                    {                       
+                        con.NHANVIENs.Remove(kh);
+                        //con.SaveChanges();
+                        con.ACCOUNTs.Remove(ac);
+                        con.SaveChanges();
                         check = true;
+                        return check;
+                    }    
+                    else
+                    {
+                        con.NHANVIENs.Remove(kh);
+                        con.SaveChanges();
+                        check = true;
+                        return check;
                     }
+                      
                 }
                 catch(Exception ex)
                 {
