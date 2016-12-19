@@ -870,6 +870,17 @@
   <metadata name="notifyIcon1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>17, 17</value>
   </metadata>
+  <data name="back.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAAFAAAAA+CAYAAAC875yHAAAAIGNIUk0AAHolAACAgwAA+f8AAIDpAAB1
+        MAAA6mAAADqYAAAXb5JfxUYAAAAJcEhZcwAACxMAAAsTAQCanBgAAAEpSURBVHhe7dpLasNAFAVRLyVL
+        y/43oeQNNDEluFH6o25Xw8FQ9kBcpJH8Oo5D/4BROYzKYVQOo3IYlcOoHEblMCqHUTmMymFUDqNyGJXD
+        ONkXtMfCONH3rzr1Sd8/DsZJzvHOs8SIGCd4H+88j3+cMQ52NZ53YGDp8QrGQZYfr2AcYIvxCsbOthmv
+        YOxoq/EKxk62G69g7GDL8QrGxq7Gm3noOm/B2NATx6tD13oLxoYcsAEf4QauRqxOv18Gxk62HBFjR9uN
+        iLGzrUbEOMA2I2IcZIsRMQ60/IgYB1t6RIwTXI3oS6U/eB/RO/CGc8QlxisYJ/OvHZ8Eo3IYlcOoHEbl
+        MCqHUTmMymFUDqNyGJXDqBxG5TAqh1E5jMphVA6jchiVw6jU8foBATbuE+CJTqwAAAAASUVORK5CYII=
+</value>
+  </data>
   <data name="$this.Icon" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         AAABAAEAQEAAAAEAIAAoQgAAFgAAACgAAABAAAAAgAAAAAEAIAAAAAAAAEIAAMQOAADEDgAAAAAAAAAA

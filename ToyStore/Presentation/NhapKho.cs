@@ -121,12 +121,12 @@ namespace Presentation
                     masp_avail = true;
                     tb_tenDC.Text = li.First().TENDC.ToString();
                     tb_GiaBan.Text = li.First().GIA.ToString();
-                    tb_tenDC.ReadOnly = tb_GiaBan.ReadOnly = masp_avail;
+                    tb_tenDC.ReadOnly = masp_avail;
                 }
                 else
                 {
                     masp_avail = false;
-                    tb_tenDC.ReadOnly = tb_GiaBan.ReadOnly = masp_avail;
+                    tb_tenDC.ReadOnly = masp_avail;
                     tb_tenDC.Clear();
                     tb_GiaBan.Clear();
                 }
@@ -174,10 +174,15 @@ namespace Presentation
             if (locked) return;
             try
             {
-                if (string.IsNullOrEmpty(tb_masp.Text)) return;
-
-                if (int.Parse(tb_SL.Text) == 0 || string.IsNullOrEmpty(tb_SL.Text))
+                if (string.IsNullOrEmpty(tb_masp.Text) ||
+                    string.IsNullOrEmpty(tb_tenDC.Text) || 
+                    int.Parse(tb_SL.Text) == 0 || 
+                    string.IsNullOrEmpty(tb_SL.Text))
+                {
+                    MessageBox.Show("Thiếu Dữ Liệu!");
                     return;
+                }
+                    
                 if (!masp_avail)
                 {
                     DoChoiBus dcBus = new DoChoiBus();
@@ -279,6 +284,18 @@ namespace Presentation
             bt_Luu.Visible = true;
 
             NhapKho_Load(sender, e);
+        }
+
+        private void tb_GiaNhap_TextChanged(object sender, EventArgs e)
+        {
+            if (string.IsNullOrEmpty(tb_GiaNhap.Text)) return;
+            try
+            {
+                double giaban = double.Parse(tb_GiaNhap.Text) * (1.0 / 0.78);
+                tb_GiaBan.Text = giaban.ToString("0.00");
+            }
+            catch { }
+            
         }
     }
 }

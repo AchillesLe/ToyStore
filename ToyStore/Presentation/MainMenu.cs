@@ -271,7 +271,8 @@ namespace Presentation
 
         private void btn_ThongKeKho_Click(object sender, EventArgs e)
         {
-
+            ThongKeNhapKho TKNK = new ThongKeNhapKho();
+            TKNK.ShowDialog();
         }
     }
 }

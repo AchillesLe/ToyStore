@@ -446,6 +446,7 @@
             this.Down.Size = new System.Drawing.Size(20, 21);
             this.Down.TabIndex = 78;
             this.Down.UseVisualStyleBackColor = false;
+            this.Down.Click += new System.EventHandler(this.Down_Click);
             // 
             // minimize
             // 
@@ -482,6 +483,7 @@
             this.Close.Size = new System.Drawing.Size(20, 21);
             this.Close.TabIndex = 76;
             this.Close.UseVisualStyleBackColor = false;
+            this.Close.Click += new System.EventHandler(this.Close_Click);
             // 
             // back
             // 
@@ -498,6 +500,7 @@
             this.back.Size = new System.Drawing.Size(31, 24);
             this.back.TabIndex = 80;
             this.back.UseVisualStyleBackColor = false;
+            this.back.Click += new System.EventHandler(this.back_Click);
             // 
             // name
             // 

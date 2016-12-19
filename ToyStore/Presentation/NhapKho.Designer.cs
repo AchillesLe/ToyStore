@@ -75,13 +75,13 @@
             this.ld_MaSp = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.button3 = new System.Windows.Forms.Button();
+            this.btn_lam_moi = new System.Windows.Forms.Button();
             this.lb_NhapKho = new System.Windows.Forms.Label();
             this.Close = new System.Windows.Forms.Button();
             this.minimize = new System.Windows.Forms.Button();
             this.Down = new System.Windows.Forms.Button();
             this.notifyIcon1 = new System.Windows.Forms.NotifyIcon(this.components);
-            this.btn_lam_moi = new System.Windows.Forms.Button();
+            this.back = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.tbl_nk)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
@@ -212,6 +212,7 @@
             this.tb_GiaNhap.Name = "tb_GiaNhap";
             this.tb_GiaNhap.Size = new System.Drawing.Size(229, 18);
             this.tb_GiaNhap.TabIndex = 13;
+            this.tb_GiaNhap.TextChanged += new System.EventHandler(this.tb_GiaNhap_TextChanged);
             // 
             // pictureBox4
             // 
@@ -611,6 +612,7 @@
             this.tb_GiaBan.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.tb_GiaBan.Location = new System.Drawing.Point(545, 48);
             this.tb_GiaBan.Name = "tb_GiaBan";
+            this.tb_GiaBan.ReadOnly = true;
             this.tb_GiaBan.Size = new System.Drawing.Size(229, 18);
             this.tb_GiaBan.TabIndex = 13;
             // 
@@ -678,25 +680,29 @@
             this.panel1.Controls.Add(this.btn_Huy);
             this.panel1.Controls.Add(this.btn_lam_moi);
             this.panel1.Controls.Add(this.bt_Luu);
-            this.panel1.Location = new System.Drawing.Point(0, 30);
+            this.panel1.Location = new System.Drawing.Point(0, 29);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(852, 485);
+            this.panel1.Size = new System.Drawing.Size(852, 486);
             this.panel1.TabIndex = 49;
             // 
-            // button3
+            // btn_lam_moi
             // 
-            this.button3.BackColor = System.Drawing.Color.Transparent;
-            this.button3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.button3.FlatAppearance.BorderSize = 0;
-            this.button3.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(188)))), ((int)(((byte)(156)))));
-            this.button3.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(188)))), ((int)(((byte)(156)))));
-            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button3.ForeColor = System.Drawing.Color.Transparent;
-            this.button3.Location = new System.Drawing.Point(0, 0);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(31, 24);
-            this.button3.TabIndex = 53;
-            this.button3.UseVisualStyleBackColor = false;
+            this.btn_lam_moi.BackColor = System.Drawing.Color.Gainsboro;
+            this.btn_lam_moi.FlatAppearance.BorderSize = 0;
+            this.btn_lam_moi.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(188)))), ((int)(((byte)(156)))));
+            this.btn_lam_moi.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(188)))), ((int)(((byte)(156)))));
+            this.btn_lam_moi.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_lam_moi.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.btn_lam_moi.ForeColor = System.Drawing.Color.DarkSlateGray;
+            this.btn_lam_moi.Location = new System.Drawing.Point(559, 437);
+            this.btn_lam_moi.Name = "btn_lam_moi";
+            this.btn_lam_moi.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.btn_lam_moi.Size = new System.Drawing.Size(100, 30);
+            this.btn_lam_moi.TabIndex = 23;
+            this.btn_lam_moi.Text = "Tạo Mới";
+            this.btn_lam_moi.UseVisualStyleBackColor = false;
+            this.btn_lam_moi.Visible = false;
+            this.btn_lam_moi.Click += new System.EventHandler(this.btn_lam_moi_Click);
             // 
             // lb_NhapKho
             // 
@@ -764,24 +770,22 @@
             this.notifyIcon1.Text = "notifyIcon1";
             this.notifyIcon1.Visible = true;
             // 
-            // btn_lam_moi
+            // back
             // 
-            this.btn_lam_moi.BackColor = System.Drawing.Color.Gainsboro;
-            this.btn_lam_moi.FlatAppearance.BorderSize = 0;
-            this.btn_lam_moi.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(188)))), ((int)(((byte)(156)))));
-            this.btn_lam_moi.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(188)))), ((int)(((byte)(156)))));
-            this.btn_lam_moi.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_lam_moi.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.btn_lam_moi.ForeColor = System.Drawing.Color.DarkSlateGray;
-            this.btn_lam_moi.Location = new System.Drawing.Point(559, 437);
-            this.btn_lam_moi.Name = "btn_lam_moi";
-            this.btn_lam_moi.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.btn_lam_moi.Size = new System.Drawing.Size(100, 30);
-            this.btn_lam_moi.TabIndex = 23;
-            this.btn_lam_moi.Text = "Tạo Mới";
-            this.btn_lam_moi.UseVisualStyleBackColor = false;
-            this.btn_lam_moi.Visible = false;
-            this.btn_lam_moi.Click += new System.EventHandler(this.btn_lam_moi_Click);
+            this.back.BackColor = System.Drawing.Color.Transparent;
+            this.back.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("back.BackgroundImage")));
+            this.back.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.back.FlatAppearance.BorderSize = 0;
+            this.back.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(188)))), ((int)(((byte)(156)))));
+            this.back.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(188)))), ((int)(((byte)(156)))));
+            this.back.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.back.ForeColor = System.Drawing.Color.Transparent;
+            this.back.Location = new System.Drawing.Point(2, 1);
+            this.back.Name = "back";
+            this.back.Size = new System.Drawing.Size(31, 24);
+            this.back.TabIndex = 81;
+            this.back.UseVisualStyleBackColor = false;
+            this.back.Click += new System.EventHandler(this.back_Click);
             // 
             // NhapKho
             // 
@@ -789,7 +793,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(160)))), ((int)(((byte)(133)))));
             this.ClientSize = new System.Drawing.Size(849, 514);
-            this.Controls.Add(this.button3);
+            this.Controls.Add(this.back);
             this.Controls.Add(this.lb_NhapKho);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.Close);
@@ -859,7 +863,6 @@
         private System.Windows.Forms.Label Tong;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Label lb_NhapKho;
         private System.Windows.Forms.Button Close;
         private System.Windows.Forms.Button minimize;
@@ -879,5 +882,6 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button btn_LamMoi;
         private System.Windows.Forms.Button btn_lam_moi;
+        private System.Windows.Forms.Button back;
     }
 }
