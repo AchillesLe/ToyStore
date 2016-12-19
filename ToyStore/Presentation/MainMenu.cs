@@ -258,6 +258,16 @@ namespace Presentation
             TKK.ShowDialog();
            
         }
+
+        private void pn_DangXuat_MouseLeave(object sender, EventArgs e)
+        {
+            pn_DangXuat.Hide();
+        }
+
+        private void pn_DangXuat_Leave(object sender, EventArgs e)
+        {
+            pn_DangXuat.Hide();
+        }
     }
 }
     
