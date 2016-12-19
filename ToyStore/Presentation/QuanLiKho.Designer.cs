@@ -61,10 +61,10 @@
             this.lb_SL = new System.Windows.Forms.Label();
             this.lb_Loai = new System.Windows.Forms.Label();
             this.btn_Xoa = new System.Windows.Forms.Button();
+            this.btn_huy = new System.Windows.Forms.Button();
             this.btn_Sua = new System.Windows.Forms.Button();
             this.btn_Xem = new System.Windows.Forms.Button();
             this.pictureBox9 = new System.Windows.Forms.PictureBox();
-            this.btn_huy = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tbl_DsDc)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
@@ -92,7 +92,7 @@
             this.Down.ForeColor = System.Drawing.Color.Transparent;
             this.Down.Location = new System.Drawing.Point(725, 4);
             this.Down.Name = "Down";
-            this.Down.Size = new System.Drawing.Size(20, 23);
+            this.Down.Size = new System.Drawing.Size(20, 21);
             this.Down.TabIndex = 32;
             this.Down.UseVisualStyleBackColor = false;
             this.Down.Click += new System.EventHandler(this.Down_Click);
@@ -111,7 +111,7 @@
             this.minimize.ForeColor = System.Drawing.Color.Transparent;
             this.minimize.Location = new System.Drawing.Point(767, 5);
             this.minimize.Name = "minimize";
-            this.minimize.Size = new System.Drawing.Size(20, 23);
+            this.minimize.Size = new System.Drawing.Size(20, 21);
             this.minimize.TabIndex = 31;
             this.minimize.UseVisualStyleBackColor = false;
             // 
@@ -129,7 +129,7 @@
             this.Close.ForeColor = System.Drawing.Color.Transparent;
             this.Close.Location = new System.Drawing.Point(803, 5);
             this.Close.Name = "Close";
-            this.Close.Size = new System.Drawing.Size(20, 23);
+            this.Close.Size = new System.Drawing.Size(20, 21);
             this.Close.TabIndex = 30;
             this.Close.UseVisualStyleBackColor = false;
             this.Close.Click += new System.EventHandler(this.Close_Click);
@@ -146,7 +146,7 @@
             this.back.ForeColor = System.Drawing.Color.Transparent;
             this.back.Location = new System.Drawing.Point(1, 1);
             this.back.Name = "back";
-            this.back.Size = new System.Drawing.Size(31, 26);
+            this.back.Size = new System.Drawing.Size(31, 24);
             this.back.TabIndex = 34;
             this.back.UseVisualStyleBackColor = false;
             this.back.Click += new System.EventHandler(this.back_Click);
@@ -167,7 +167,7 @@
             // 
             this.pictureBox1.BackColor = System.Drawing.Color.Gainsboro;
             this.pictureBox1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox1.BackgroundImage")));
-            this.pictureBox1.Location = new System.Drawing.Point(-2, 192);
+            this.pictureBox1.Location = new System.Drawing.Point(-2, 178);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(847, 1);
             this.pictureBox1.TabIndex = 35;
@@ -183,12 +183,12 @@
             this.tbl_DsDc.BackgroundColor = System.Drawing.Color.Gainsboro;
             this.tbl_DsDc.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.tbl_DsDc.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.tbl_DsDc.Location = new System.Drawing.Point(3, 88);
+            this.tbl_DsDc.Location = new System.Drawing.Point(3, 82);
             this.tbl_DsDc.MultiSelect = false;
             this.tbl_DsDc.Name = "tbl_DsDc";
             this.tbl_DsDc.ReadOnly = true;
             this.tbl_DsDc.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.tbl_DsDc.Size = new System.Drawing.Size(820, 216);
+            this.tbl_DsDc.Size = new System.Drawing.Size(820, 201);
             this.tbl_DsDc.TabIndex = 43;
             this.tbl_DsDc.Click += new System.EventHandler(this.tbl_DsDc_SelectionChanged);
             // 
@@ -198,7 +198,7 @@
             this.lb_DsHd.BackColor = System.Drawing.Color.Transparent;
             this.lb_DsHd.Font = new System.Drawing.Font("Calibri", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.lb_DsHd.ForeColor = System.Drawing.Color.DarkSlateGray;
-            this.lb_DsHd.Location = new System.Drawing.Point(14, 54);
+            this.lb_DsHd.Location = new System.Drawing.Point(14, 50);
             this.lb_DsHd.Name = "lb_DsHd";
             this.lb_DsHd.Size = new System.Drawing.Size(121, 21);
             this.lb_DsHd.TabIndex = 47;
@@ -215,10 +215,10 @@
             this.bt_In.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.bt_In.Font = new System.Drawing.Font("Calibri", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.bt_In.ForeColor = System.Drawing.Color.White;
-            this.bt_In.Location = new System.Drawing.Point(165, 56);
+            this.bt_In.Location = new System.Drawing.Point(165, 52);
             this.bt_In.Name = "bt_In";
             this.bt_In.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.bt_In.Size = new System.Drawing.Size(17, 18);
+            this.bt_In.Size = new System.Drawing.Size(17, 17);
             this.bt_In.TabIndex = 50;
             this.bt_In.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             this.bt_In.UseVisualStyleBackColor = false;
@@ -235,10 +235,10 @@
             this.bt_excel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.bt_excel.Font = new System.Drawing.Font("Calibri", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.bt_excel.ForeColor = System.Drawing.Color.White;
-            this.bt_excel.Location = new System.Drawing.Point(132, 53);
+            this.bt_excel.Location = new System.Drawing.Point(132, 49);
             this.bt_excel.Name = "bt_excel";
             this.bt_excel.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.bt_excel.Size = new System.Drawing.Size(25, 24);
+            this.bt_excel.Size = new System.Drawing.Size(25, 22);
             this.bt_excel.TabIndex = 51;
             this.bt_excel.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             this.bt_excel.UseVisualStyleBackColor = false;
@@ -248,7 +248,7 @@
             // 
             this.pictureBox2.BackColor = System.Drawing.Color.Gainsboro;
             this.pictureBox2.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox2.BackgroundImage")));
-            this.pictureBox2.Location = new System.Drawing.Point(3, 81);
+            this.pictureBox2.Location = new System.Drawing.Point(3, 75);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(847, 1);
             this.pictureBox2.TabIndex = 53;
@@ -258,7 +258,7 @@
             // 
             this.pictureBox3.BackColor = System.Drawing.Color.Gainsboro;
             this.pictureBox3.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox3.BackgroundImage")));
-            this.pictureBox3.Location = new System.Drawing.Point(0, 50);
+            this.pictureBox3.Location = new System.Drawing.Point(0, 46);
             this.pictureBox3.Name = "pictureBox3";
             this.pictureBox3.Size = new System.Drawing.Size(847, 1);
             this.pictureBox3.TabIndex = 54;
@@ -300,9 +300,9 @@
             this.panel1.Controls.Add(this.lb_DsHd);
             this.panel1.Controls.Add(this.tbl_DsDc);
             this.panel1.Controls.Add(this.pictureBox1);
-            this.panel1.Location = new System.Drawing.Point(0, 29);
+            this.panel1.Location = new System.Drawing.Point(0, 27);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(832, 493);
+            this.panel1.Size = new System.Drawing.Size(832, 458);
             this.panel1.TabIndex = 35;
             // 
             // lb_MaDC
@@ -310,7 +310,7 @@
             this.lb_MaDC.AutoSize = true;
             this.lb_MaDC.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.lb_MaDC.ForeColor = System.Drawing.Color.DarkSlateGray;
-            this.lb_MaDC.Location = new System.Drawing.Point(71, 12);
+            this.lb_MaDC.Location = new System.Drawing.Point(71, 11);
             this.lb_MaDC.Name = "lb_MaDC";
             this.lb_MaDC.Size = new System.Drawing.Size(86, 19);
             this.lb_MaDC.TabIndex = 87;
@@ -319,7 +319,7 @@
             // pictureBox7
             // 
             this.pictureBox7.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox7.BackgroundImage")));
-            this.pictureBox7.Location = new System.Drawing.Point(166, 30);
+            this.pictureBox7.Location = new System.Drawing.Point(166, 28);
             this.pictureBox7.Name = "pictureBox7";
             this.pictureBox7.Size = new System.Drawing.Size(230, 1);
             this.pictureBox7.TabIndex = 86;
@@ -330,7 +330,7 @@
             this.tb_MaDC.BackColor = System.Drawing.SystemColors.Menu;
             this.tb_MaDC.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.tb_MaDC.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.tb_MaDC.Location = new System.Drawing.Point(165, 13);
+            this.tb_MaDC.Location = new System.Drawing.Point(165, 12);
             this.tb_MaDC.Name = "tb_MaDC";
             this.tb_MaDC.ReadOnly = true;
             this.tb_MaDC.Size = new System.Drawing.Size(231, 18);
@@ -340,7 +340,7 @@
             // pictureBox8
             // 
             this.pictureBox8.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox8.BackgroundImage")));
-            this.pictureBox8.Location = new System.Drawing.Point(540, 346);
+            this.pictureBox8.Location = new System.Drawing.Point(540, 321);
             this.pictureBox8.Name = "pictureBox8";
             this.pictureBox8.Size = new System.Drawing.Size(230, 1);
             this.pictureBox8.TabIndex = 84;
@@ -349,7 +349,7 @@
             // pictureBox6
             // 
             this.pictureBox6.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox6.BackgroundImage")));
-            this.pictureBox6.Location = new System.Drawing.Point(540, 386);
+            this.pictureBox6.Location = new System.Drawing.Point(540, 358);
             this.pictureBox6.Name = "pictureBox6";
             this.pictureBox6.Size = new System.Drawing.Size(230, 1);
             this.pictureBox6.TabIndex = 84;
@@ -358,7 +358,7 @@
             // pictureBox5
             // 
             this.pictureBox5.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox5.BackgroundImage")));
-            this.pictureBox5.Location = new System.Drawing.Point(166, 429);
+            this.pictureBox5.Location = new System.Drawing.Point(166, 398);
             this.pictureBox5.Name = "pictureBox5";
             this.pictureBox5.Size = new System.Drawing.Size(230, 1);
             this.pictureBox5.TabIndex = 84;
@@ -367,7 +367,7 @@
             // pictureBox4
             // 
             this.pictureBox4.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox4.BackgroundImage")));
-            this.pictureBox4.Location = new System.Drawing.Point(166, 386);
+            this.pictureBox4.Location = new System.Drawing.Point(166, 358);
             this.pictureBox4.Name = "pictureBox4";
             this.pictureBox4.Size = new System.Drawing.Size(230, 1);
             this.pictureBox4.TabIndex = 84;
@@ -376,7 +376,7 @@
             // pictureBox10
             // 
             this.pictureBox10.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox10.BackgroundImage")));
-            this.pictureBox10.Location = new System.Drawing.Point(166, 346);
+            this.pictureBox10.Location = new System.Drawing.Point(166, 321);
             this.pictureBox10.Name = "pictureBox10";
             this.pictureBox10.Size = new System.Drawing.Size(230, 1);
             this.pictureBox10.TabIndex = 84;
@@ -387,8 +387,9 @@
             this.tb_SL.BackColor = System.Drawing.SystemColors.Menu;
             this.tb_SL.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.tb_SL.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.tb_SL.Location = new System.Drawing.Point(539, 328);
+            this.tb_SL.Location = new System.Drawing.Point(539, 305);
             this.tb_SL.Name = "tb_SL";
+            this.tb_SL.ReadOnly = true;
             this.tb_SL.Size = new System.Drawing.Size(231, 18);
             this.tb_SL.TabIndex = 83;
             this.tb_SL.TextChanged += new System.EventHandler(this.tb__TextChanged);
@@ -398,7 +399,7 @@
             this.tb_Gia.BackColor = System.Drawing.SystemColors.Menu;
             this.tb_Gia.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.tb_Gia.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.tb_Gia.Location = new System.Drawing.Point(539, 368);
+            this.tb_Gia.Location = new System.Drawing.Point(539, 342);
             this.tb_Gia.Name = "tb_Gia";
             this.tb_Gia.Size = new System.Drawing.Size(231, 18);
             this.tb_Gia.TabIndex = 83;
@@ -409,7 +410,7 @@
             this.tb_Loai.BackColor = System.Drawing.SystemColors.Menu;
             this.tb_Loai.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.tb_Loai.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.tb_Loai.Location = new System.Drawing.Point(165, 411);
+            this.tb_Loai.Location = new System.Drawing.Point(165, 382);
             this.tb_Loai.Name = "tb_Loai";
             this.tb_Loai.Size = new System.Drawing.Size(231, 18);
             this.tb_Loai.TabIndex = 83;
@@ -420,7 +421,7 @@
             this.tb_NuocSX.BackColor = System.Drawing.SystemColors.Menu;
             this.tb_NuocSX.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.tb_NuocSX.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.tb_NuocSX.Location = new System.Drawing.Point(165, 368);
+            this.tb_NuocSX.Location = new System.Drawing.Point(165, 342);
             this.tb_NuocSX.Name = "tb_NuocSX";
             this.tb_NuocSX.Size = new System.Drawing.Size(231, 18);
             this.tb_NuocSX.TabIndex = 83;
@@ -431,7 +432,7 @@
             this.tb_TenDC.BackColor = System.Drawing.SystemColors.Menu;
             this.tb_TenDC.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.tb_TenDC.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.tb_TenDC.Location = new System.Drawing.Point(165, 328);
+            this.tb_TenDC.Location = new System.Drawing.Point(165, 305);
             this.tb_TenDC.Name = "tb_TenDC";
             this.tb_TenDC.Size = new System.Drawing.Size(231, 18);
             this.tb_TenDC.TabIndex = 83;
@@ -442,7 +443,7 @@
             this.lb_nuocSX.AutoSize = true;
             this.lb_nuocSX.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.lb_nuocSX.ForeColor = System.Drawing.Color.DarkSlateGray;
-            this.lb_nuocSX.Location = new System.Drawing.Point(54, 367);
+            this.lb_nuocSX.Location = new System.Drawing.Point(54, 341);
             this.lb_nuocSX.Name = "lb_nuocSX";
             this.lb_nuocSX.Size = new System.Drawing.Size(105, 19);
             this.lb_nuocSX.TabIndex = 82;
@@ -453,7 +454,7 @@
             this.lb_Gia.AutoSize = true;
             this.lb_Gia.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.lb_Gia.ForeColor = System.Drawing.Color.DarkSlateGray;
-            this.lb_Gia.Location = new System.Drawing.Point(502, 367);
+            this.lb_Gia.Location = new System.Drawing.Point(502, 341);
             this.lb_Gia.Name = "lb_Gia";
             this.lb_Gia.Size = new System.Drawing.Size(31, 19);
             this.lb_Gia.TabIndex = 81;
@@ -464,7 +465,7 @@
             this.lb_tenDc.AutoSize = true;
             this.lb_tenDc.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.lb_tenDc.ForeColor = System.Drawing.Color.DarkSlateGray;
-            this.lb_tenDc.Location = new System.Drawing.Point(71, 326);
+            this.lb_tenDc.Location = new System.Drawing.Point(71, 303);
             this.lb_tenDc.Name = "lb_tenDc";
             this.lb_tenDc.Size = new System.Drawing.Size(88, 19);
             this.lb_tenDc.TabIndex = 80;
@@ -475,7 +476,7 @@
             this.lb_SL.AutoSize = true;
             this.lb_SL.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.lb_SL.ForeColor = System.Drawing.Color.DarkSlateGray;
-            this.lb_SL.Location = new System.Drawing.Point(463, 326);
+            this.lb_SL.Location = new System.Drawing.Point(463, 303);
             this.lb_SL.Name = "lb_SL";
             this.lb_SL.Size = new System.Drawing.Size(70, 19);
             this.lb_SL.TabIndex = 79;
@@ -486,7 +487,7 @@
             this.lb_Loai.AutoSize = true;
             this.lb_Loai.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.lb_Loai.ForeColor = System.Drawing.Color.DarkSlateGray;
-            this.lb_Loai.Location = new System.Drawing.Point(123, 410);
+            this.lb_Loai.Location = new System.Drawing.Point(123, 381);
             this.lb_Loai.Name = "lb_Loai";
             this.lb_Loai.Size = new System.Drawing.Size(36, 19);
             this.lb_Loai.TabIndex = 78;
@@ -501,14 +502,32 @@
             this.btn_Xoa.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_Xoa.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.btn_Xoa.ForeColor = System.Drawing.SystemColors.WindowText;
-            this.btn_Xoa.Location = new System.Drawing.Point(639, 451);
+            this.btn_Xoa.Location = new System.Drawing.Point(639, 419);
             this.btn_Xoa.Name = "btn_Xoa";
             this.btn_Xoa.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.btn_Xoa.Size = new System.Drawing.Size(148, 28);
+            this.btn_Xoa.Size = new System.Drawing.Size(148, 26);
             this.btn_Xoa.TabIndex = 65;
             this.btn_Xoa.Text = "Xóa";
             this.btn_Xoa.UseVisualStyleBackColor = false;
             this.btn_Xoa.Click += new System.EventHandler(this.btn_Xoa_Click);
+            // 
+            // btn_huy
+            // 
+            this.btn_huy.BackColor = System.Drawing.Color.LightGray;
+            this.btn_huy.FlatAppearance.BorderSize = 0;
+            this.btn_huy.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(188)))), ((int)(((byte)(156)))));
+            this.btn_huy.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(188)))), ((int)(((byte)(156)))));
+            this.btn_huy.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_huy.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.btn_huy.ForeColor = System.Drawing.SystemColors.WindowText;
+            this.btn_huy.Location = new System.Drawing.Point(331, 419);
+            this.btn_huy.Name = "btn_huy";
+            this.btn_huy.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.btn_huy.Size = new System.Drawing.Size(148, 26);
+            this.btn_huy.TabIndex = 65;
+            this.btn_huy.Text = "Hủy";
+            this.btn_huy.UseVisualStyleBackColor = false;
+            this.btn_huy.Click += new System.EventHandler(this.btn_huy_Click);
             // 
             // btn_Sua
             // 
@@ -519,10 +538,10 @@
             this.btn_Sua.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_Sua.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.btn_Sua.ForeColor = System.Drawing.SystemColors.WindowText;
-            this.btn_Sua.Location = new System.Drawing.Point(485, 451);
+            this.btn_Sua.Location = new System.Drawing.Point(485, 419);
             this.btn_Sua.Name = "btn_Sua";
             this.btn_Sua.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.btn_Sua.Size = new System.Drawing.Size(148, 28);
+            this.btn_Sua.Size = new System.Drawing.Size(148, 26);
             this.btn_Sua.TabIndex = 65;
             this.btn_Sua.Text = "Sửa";
             this.btn_Sua.UseVisualStyleBackColor = false;
@@ -537,10 +556,10 @@
             this.btn_Xem.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_Xem.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.btn_Xem.ForeColor = System.Drawing.SystemColors.WindowText;
-            this.btn_Xem.Location = new System.Drawing.Point(639, 9);
+            this.btn_Xem.Location = new System.Drawing.Point(639, 8);
             this.btn_Xem.Name = "btn_Xem";
             this.btn_Xem.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.btn_Xem.Size = new System.Drawing.Size(148, 28);
+            this.btn_Xem.Size = new System.Drawing.Size(148, 26);
             this.btn_Xem.TabIndex = 65;
             this.btn_Xem.Text = "Xem";
             this.btn_Xem.UseVisualStyleBackColor = false;
@@ -550,37 +569,19 @@
             // 
             this.pictureBox9.BackColor = System.Drawing.Color.Gainsboro;
             this.pictureBox9.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox9.BackgroundImage")));
-            this.pictureBox9.Location = new System.Drawing.Point(-2, 310);
+            this.pictureBox9.Location = new System.Drawing.Point(-2, 288);
             this.pictureBox9.Name = "pictureBox9";
             this.pictureBox9.Size = new System.Drawing.Size(847, 1);
             this.pictureBox9.TabIndex = 53;
             this.pictureBox9.TabStop = false;
             // 
-            // btn_huy
-            // 
-            this.btn_huy.BackColor = System.Drawing.Color.LightGray;
-            this.btn_huy.FlatAppearance.BorderSize = 0;
-            this.btn_huy.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(188)))), ((int)(((byte)(156)))));
-            this.btn_huy.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(188)))), ((int)(((byte)(156)))));
-            this.btn_huy.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_huy.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.btn_huy.ForeColor = System.Drawing.SystemColors.WindowText;
-            this.btn_huy.Location = new System.Drawing.Point(331, 451);
-            this.btn_huy.Name = "btn_huy";
-            this.btn_huy.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.btn_huy.Size = new System.Drawing.Size(148, 28);
-            this.btn_huy.TabIndex = 65;
-            this.btn_huy.Text = "Hủy";
-            this.btn_huy.UseVisualStyleBackColor = false;
-            this.btn_huy.Click += new System.EventHandler(this.btn_huy_Click);
-            // 
             // QuanLiKho
             // 
             this.AcceptButton = this.back;
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 14F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(188)))), ((int)(((byte)(156)))));
-            this.ClientSize = new System.Drawing.Size(832, 522);
+            this.ClientSize = new System.Drawing.Size(832, 485);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.Down);
             this.Controls.Add(this.minimize);
@@ -590,7 +591,7 @@
             this.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(188)))), ((int)(((byte)(156)))));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.MaximumSize = new System.Drawing.Size(832, 522);
+            this.MaximumSize = new System.Drawing.Size(832, 485);
             this.Name = "QuanLiKho";
             this.Load += new System.EventHandler(this.ThongKeKho_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();

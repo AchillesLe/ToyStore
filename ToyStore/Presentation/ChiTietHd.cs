@@ -77,10 +77,9 @@ namespace Presentation
             load_DsHD_From_To(sender,e);
             
         }
+        
 
-    //add on function
-
-    private void load_DsHD_From_To(object sender, EventArgs e)
+        private void load_DsHD_From_To(object sender, EventArgs e)
         {
             HoaDonBus hdBus = new HoaDonBus();
 

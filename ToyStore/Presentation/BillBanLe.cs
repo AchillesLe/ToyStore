@@ -21,9 +21,10 @@ namespace Presentation
         private double tien_tong = 0.0;
         private double tien_du = 0.0;
         private bool luu_status = false;
+
         AutoCompleteStringCollection col_source;
         HOADON Hd;
-        BindingList<CTHD> listHd;
+        BindingList<DOCHOI> listDC;
 
         public BillBanLe()
         {
@@ -64,29 +65,27 @@ namespace Presentation
             tbl_sp.Refresh();
         }
 
-
-
         private void BillBanLe_Load(object sender, EventArgs e)
         {
-            // Start "Add Hoa don" 
+            //Start "Add Hoa don"
             HoaDonBus hdBus = new HoaDonBus();
             Hd = new HOADON();
             Hd.MANV = MainMenu.usrId;
             Hd.NGAYHD = DateTime.Now;
             hdBus.AddHoaDon(Hd);
-            //   End "Add Hoa Don"
+            //End "Add Hoa Don"
 
             luu_status = false;
 
             txt_mahd.Text = Hd.MAHD.ToString();
             txt_Manv.Text = MainMenu.usrId.ToString();
-            
-            listHd = new BindingList<CTHD>();
 
-            tbl_sp.DataSource = listHd;
-            tbl_sp.Columns[0].Visible = false;
+            listDC = new BindingList<DOCHOI>();
+
+            tbl_sp.DataSource = listDC;
+            tbl_sp.Columns[3].Visible = false;
             tbl_sp.Columns[4].Visible = false;
-            tbl_sp.Columns[5].Visible = false;
+
             tbl_sp.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
 
 
@@ -98,31 +97,32 @@ namespace Presentation
             try
             {
                 DoChoiBus dcBus = new DoChoiBus();
-                CTHD ctHd = new CTHD();
-                //ctHd.DOCHOI = dcBus.DochoiById(int.Parse(cb_masp.Text));
 
-                ctHd.MAHD = Hd.MAHD;
-                ctHd.MADC = int.Parse(cb_masp.Text);
-                ctHd.SL = int.Parse(tb_slSP.Text);
-                //ctHd.GIA = ((double)ctHd.DOCHOI.GIA * (double)ctHd.SL);
+                DOCHOI dc = new DOCHOI();
+
+                dc = dcBus.DochoiById(int.Parse(cb_masp.Text));
+
+                dc.SL = int.Parse(tb_slSP.Text);
+                dc.GIA = ((double)dc.GIA * (double)dc.SL);
 
                 bool c = true;
-                foreach (CTHD i in listHd)
+                foreach (DOCHOI i in listDC)
                 {
-                    if (ctHd.MADC == i.MADC)
+                    if (dc.MADC == i.MADC)
                     {
-                        i.SL += ctHd.SL;
+                        i.SL += dc.SL;
+                        i.GIA += dc.GIA;
                         c = false;
                         break;
                     }
                 }
 
                 if (c)
-                    listHd.Add(ctHd);
+                    listDC.Add(dc);
 
-                so_sp += (int)ctHd.SL;
-              //  tien_tong += ((double)ctHd.DOCHOI.GIA*(double)ctHd.SL);
-                
+                so_sp += (int)dc.SL;
+                tien_tong += ((double)dc.GIA);
+
                 setDefaultValue();
             }
             catch (Exception ex)
@@ -151,7 +151,7 @@ namespace Presentation
 
         private void back_Click(object sender, EventArgs e)
         {
-            // hide BillBanLe Form
+            //hide BillBanLe Form
             this.Close();
             //Show MainMenuForm
             MainMenu MainMenu = new MainMenu();
@@ -161,7 +161,7 @@ namespace Presentation
         private void show()
         {
             LoginAcounts lg = new LoginAcounts();
-           
+
         }
 
         private void bt_tang_Click(object sender, EventArgs e)
@@ -169,7 +169,7 @@ namespace Presentation
             int num;
             num = int.Parse(tb_slSP.Text);
             num++;
-            tb_slSP.Text = num.ToString(); 
+            tb_slSP.Text = num.ToString();
         }
 
         private void bt_giam_Click(object sender, EventArgs e)
@@ -209,21 +209,21 @@ namespace Presentation
             HoaDonBus hdBus = new HoaDonBus();
             hdBus.delete(Hd.MAHD);
 
-            endhuy:
+        endhuy:
             this.Close();
         }
 
         private void tb_slSP_KeyDown(object sender, KeyEventArgs e)
         {
 
-            if(e.KeyCode == Keys.Up)
+            if (e.KeyCode == Keys.Up)
             {
                 int num;
                 num = int.Parse(tb_slSP.Text);
                 num++;
                 tb_slSP.Text = num.ToString();
             }
-            else if(e.KeyCode == Keys.Down)
+            else if (e.KeyCode == Keys.Down)
             {
                 int num;
                 num = int.Parse(tb_slSP.Text);
@@ -240,7 +240,7 @@ namespace Presentation
             try
             {
                 double khtra = double.Parse(tb_khach_tra.Text);
-                tien_du = khtra - tien_tong; 
+                tien_du = khtra - tien_tong;
                 tb_tien_du.Text = tien_du.ToString();
             }
             catch (Exception ex)
@@ -262,11 +262,11 @@ namespace Presentation
         {
             try
             {
-                int id = int.Parse(tbl_sp.SelectedRows[0].Cells[1].Value.ToString());
-                var itemToRemove = listHd.Where(x => x.MADC == id).ToList();
+                int id = int.Parse(tbl_sp.SelectedRows[0].Cells[0].Value.ToString());
+                var itemToRemove = listDC.Where(x => x.MADC == id).ToList();
                 foreach (var item in itemToRemove)
                 {
-                    listHd.Remove(item);
+                    listDC.Remove(item);
                 }
             }
             catch (Exception ex)
@@ -277,7 +277,7 @@ namespace Presentation
 
         private void bt_In_Click(object sender, EventArgs e)
         {
-            if(luu_status)
+            if (luu_status)
             {
                 MessageBox.Show("Chưa làm phần này !");
             }
@@ -300,33 +300,36 @@ namespace Presentation
 
         private void bt_Luu_Click(object sender, EventArgs e)
         {
-            if (!luu_status) 
+            if (!luu_status)
             {
                 try
                 {
-                    if (!(listHd.Count > 0)) return;
-                   
+                    if (!(listDC.Count > 0)) return;
+
                     HoaDonBus hdBus = new HoaDonBus();
                     Hd.TRIGIA = tien_tong;
                     hdBus.edit(Hd);
-                    //hdBus.
-
+                    
                     CTHDBus ctBus = new CTHDBus();
                     DoChoiBus dcBus = new DoChoiBus();
+                    CTHD ct = new CTHD();
                     //*/
-                    foreach(CTHD ct  in listHd)
+                    foreach (DOCHOI it in listDC)
                     {
+                        ct.MADC = it.MADC;
+                        ct.MAHD = Hd.MAHD;
+                        ct.SL = it.SL;
+                        ct.GIA = it.GIA;
                         ctBus.addCTHD(ct);
                     }//*/
-                    //ctBus.addCTHDs(listHd.ToList<CTHD>());
 
-                    dcBus.reduceDCs(listHd.ToList<CTHD>());
+                    dcBus.reduceDCs(listDC.ToList<DOCHOI>());
 
                     luu_status = true;
 
                     MessageBox.Show("Lưu thành công!");
                 }
-                catch(Exception ex)
+                catch (Exception ex)
                 {
                     MessageBox.Show(ex.Message);
                     Console.WriteLine(ex.ToString());
@@ -338,11 +341,11 @@ namespace Presentation
 
         private void bt_moi_Click(object sender, EventArgs e)
         {
-                listHd.Clear();
-                tbl_sp.Refresh();
-                so_sp = 0;
-                tien_du = 0;
-                tien_tong = 0;
+            listDC.Clear();
+            tbl_sp.Refresh();
+            so_sp = 0;
+            tien_du = 0;
+            tien_tong = 0;
             if (luu_status)
                 BillBanLe_Load(sender, e);
             else

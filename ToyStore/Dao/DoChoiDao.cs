@@ -71,18 +71,18 @@ namespace Dao
         }
         public int AddDoChoi(DOCHOI dc)
         {
-            int s;
+            int s = 0;
             using (ContextEntites context = new ContextEntites())
             {
-                //try
-                //{
+                try
+                {
                     context.DOCHOIs.Add(dc);
                     s = context.SaveChanges();
-                //}
-                //catch (Exception e)
-                //{
-                //    Console.WriteLine(e.ToString());
-                //}          
+                }
+                catch (Exception e)
+                {
+                    Console.WriteLine(e.ToString());
+                }
             }
             return s;
         }

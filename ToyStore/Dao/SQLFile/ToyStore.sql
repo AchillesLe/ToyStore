@@ -4,10 +4,10 @@ use ToyStore
 go
 create table ACCOUNT
 (
-ID int not null ,
-USERNAME Nvarchar(20) not null,
-PASS Nvarchar(20) not null,
-constraint pk_Account primary key (ID)
+	ID int not null ,
+	USERNAME Nvarchar(20) not null,
+	PASS Nvarchar(20) not null,
+	constraint pk_Account primary key (ID)
 )
 go
 create table DOCHOI
@@ -59,7 +59,7 @@ go
 
 create table BAOCAO
 (
-MABC int identity(66800,1) not null,
+MABC int  not null,
 NGAYBAOCAO date,
 TONGGIATRI float,
 constraint pk_BAOCAO primary key(MABC)
@@ -68,7 +68,7 @@ go
 
 create table PHIEUNHAP
 (
-	MAPHIEU int not null,
+	MAPHIEU int identity(1000,1) not null,
 	MANV int not null,
 	NGAYNHAP date not null,
 	TONGGIA float,

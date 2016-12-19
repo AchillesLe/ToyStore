@@ -32,18 +32,29 @@ namespace Presentation.toolTip1
                 cellrange = exSheet.Range[exSheet.Cells[1, 1], exSheet.Cells[dgv.Rows.Count + 1, dgv.Columns.Count]];
                 cellrange.NumberFormat = "@";
 
+                int r = 0;
                 for (int i = 0; i < dgv.ColumnCount; i++)
                 {
-                    exSheet.Cells[1, i + 1] = dgv.Columns[i].HeaderText;
+                    if (dgv.Columns[i].Visible)
+                    {
+                        exSheet.Cells[1, i + 1] = dgv.Columns[i].HeaderText;
+                        r++;
+                    }
                 }
 
+                
                 for (int i = 0; i < dgv.Rows.Count; i++)
                 {
+                    r = 0;
                     for (int j = 0; j < dgv.ColumnCount; j++)
                     {
                         try
                         {
-                            exSheet.Cells[i + 2, j + 1] = dgv.Rows[i].Cells[dgv.Columns[j].HeaderText].Value.ToString();
+                            if (dgv.Columns[i].Visible)
+                            {
+                                exSheet.Cells[i + 2, r + 1] = dgv.Rows[i].Cells[dgv.Columns[j].HeaderText].Value.ToString();
+                                r++;
+                            }
                         }
                         catch(Exception ex)
                         {

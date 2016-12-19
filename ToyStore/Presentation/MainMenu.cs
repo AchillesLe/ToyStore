@@ -268,6 +268,11 @@ namespace Presentation
         {
             pn_DangXuat.Hide();
         }
+
+        private void btn_ThongKeKho_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
     

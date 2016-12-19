@@ -45,10 +45,11 @@
     <Compile Include="BaoCaoBus.cs" />
     <Compile Include="ChucVuBus.cs" />
     <Compile Include="CTHDBus.cs" />
+    <Compile Include="CTPhieuNhapBus.cs" />
     <Compile Include="DoChoiBus.cs" />
     <Compile Include="HoaDonBus.cs" />
     <Compile Include="NhanVienBus.cs" />
-    <Compile Include="NhapKhoBus.cs" />
+    <Compile Include="PhieuNhapBus.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

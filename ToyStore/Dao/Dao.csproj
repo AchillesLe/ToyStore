@@ -54,10 +54,11 @@
     <Compile Include="BaoCaoDao.cs" />
     <Compile Include="ChucVuDao.cs" />
     <Compile Include="CTHDDao.cs" />
+    <Compile Include="CTPhieuNhapDao.cs" />
     <Compile Include="DoChoiDao.cs" />
     <Compile Include="HoaDonDao.cs" />
     <Compile Include="NhanVienDao.cs" />
-    <Compile Include="NhapKhoDao.cs" />
+    <Compile Include="PhieuNhapDao.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
