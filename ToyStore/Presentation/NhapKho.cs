@@ -130,15 +130,19 @@ namespace Presentation
                     tb_tenDC.Clear();
                     tb_GiaBan.Clear();
                 }
+
                 var lj = listCTPN.Where(i => (i.MADC == id));
                 if (lj.Count() > 0)
                 {
-                    if (string.IsNullOrEmpty(tb_GiaNhap.Text))
-                        tb_GiaNhap.Text = (lj.First().GIANHAP / li.First().SL).ToString(); 
+                    //if (string.IsNullOrEmpty(tb_GiaNhap.Text))
+                    tb_GiaNhap.Text = (lj.First().GIANHAP / lj.First().SL).ToString();
                     tb_GiaNhap.ReadOnly = true;
                 }
                 else
+                {
+                    tb_GiaNhap.Text = "";
                     tb_GiaNhap.ReadOnly = false;
+                }
             }
             catch (Exception ex)
             {
@@ -242,7 +246,7 @@ namespace Presentation
         {
             tb_TSL.Text = tong_sl.ToString();
             tb_tong_tien.Text = tong_giatri.ToString();
-
+            tb_masp.Clear();
             tb_GiaNhap.Clear();
             tbl_nk.Refresh();
         }

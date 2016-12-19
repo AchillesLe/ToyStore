@@ -11,6 +11,15 @@ namespace Bus
     public class PhieuNhapBus
     {
         PhieuNhapDao phDao = new PhieuNhapDao();
+        public List<PHIEUNHAP> dsPhieuNhap()
+        {
+            return phDao.dsPhieuNhap();
+        }
+
+        public List<PHIEUNHAP> dsPhieuNhap(DateTime from, DateTime to)
+        {
+            return phDao.dsPhieuNhap(from, to);
+        }
 
         public int AddPhieuNhap(PHIEUNHAP pn, List<CTPHIEUNHAP> listCt)
         {
@@ -25,6 +34,16 @@ namespace Bus
                 c += dcDao.addSLDC(it.MADC, it.SL) ? 1 : 0;
             }
             return c;
+        }
+
+        public bool deletePhieuNhap(int maPhieu)
+        {
+            CTPhieuNhapDao ctDao = new CTPhieuNhapDao();
+            bool ck = false;
+            ck = ctDao.deleteCTPhieuNhap(maPhieu);
+            ck = ck && phDao.deletePhieuNhap(maPhieu);
+            
+            return ck;
         }
     }
 }

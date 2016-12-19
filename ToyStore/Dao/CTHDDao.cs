@@ -53,7 +53,9 @@ namespace Dao
             {
                 var a = context.CTHDs.SingleOrDefault(x => x.MAHD == mahd && x.MADC==madc);
                 ct.MADC = a.MADC;
-                
+                ct.GIA = a.GIA;
+                ct.MAHD = a.MAHD;
+                ct.SL = a.SL;
             }
             return ct;//
         }

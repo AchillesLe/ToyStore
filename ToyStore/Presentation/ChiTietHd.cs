@@ -75,7 +75,6 @@ namespace Presentation
             dtp_from.Value = DateTime.Parse("01/01/2000");
             dtp_to.Value = DateTime.Now;
             load_DsHD_From_To(sender,e);
-            
         }
         
 
