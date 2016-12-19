@@ -341,7 +341,13 @@ namespace Presentation
 
         private void txt_CMND_TextChanged(object sender, EventArgs e)
         {
-
+            if(!string.IsNullOrEmpty(txt_CMND.Text))
+            {
+                if(!toolTip1.Validation.Check_cmt(txt_CMND.Text))
+                {
+                    MessageBox.Show("");
+                }
+            }
         }
 
         private void txt_Sdt_TextChanged(object sender, EventArgs e)
