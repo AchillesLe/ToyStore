@@ -39,34 +39,30 @@ namespace Presentation
 
         private void Close_Click(object sender, EventArgs e)
         {
-            this.Close();
-          
+            this.Close();   
         }
 
         private void back_Click(object sender, EventArgs e)
         {
             // hide QuanLiNv Form
             this.Close();
-            //Show MainMenuForm
-            MainMenu MainMenu = new MainMenu();
-            MainMenu.Show();
         }
 
         private void loadDSNhanVien()
         {
             NhanVienBus nvBus = new NhanVienBus();
             tbl_NhanVien.DataSource = nvBus.DSNhanVien();
-            for (int i = 0; i < tbl_NhanVien.Columns.Count; i++)
-            {
-                //if ((tbl_NhanVien.Columns[i].HeaderText == "CHUCVU" && tbl_NhanVien.Columns[8].Visible == true) ||
-                //    (tbl_NhanVien.Columns[i].HeaderText == "HOADONs" && tbl_NhanVien.Columns[9].Visible == true) ||
-                //    (tbl_NhanVien.Columns[i].HeaderText == "ACCOUNT" && tbl_NhanVien.Columns[10].Visible == true) ||
-                //    (tbl_NhanVien.Columns[i].HeaderText == "NHAPKHOes" && tbl_NhanVien.Columns[11].Visible == true))
-                //{
-                //    tbl_NhanVien.Columns.RemoveAt(i);
-                //}
+            //for (int i = 0; i < tbl_NhanVien.Columns.Count; i++)
+            //{
+            //    //if ((tbl_NhanVien.Columns[i].HeaderText == "CHUCVU" && tbl_NhanVien.Columns[8].Visible == true) ||
+            //    //    (tbl_NhanVien.Columns[i].HeaderText == "HOADONs" && tbl_NhanVien.Columns[9].Visible == true) ||
+            //    //    (tbl_NhanVien.Columns[i].HeaderText == "ACCOUNT" && tbl_NhanVien.Columns[10].Visible == true) ||
+            //    //    (tbl_NhanVien.Columns[i].HeaderText == "NHAPKHOes" && tbl_NhanVien.Columns[11].Visible == true))
+            //    //{
+            //    //    tbl_NhanVien.Columns.RemoveAt(i);
+            //    //}
 
-            }
+            //}
 
         }
         //ok
@@ -260,6 +256,8 @@ namespace Presentation
             bt_Luu.Visible = false;
             txt_pass.ReadOnly = true;
             txt_user.ReadOnly = false;
+            visiable_user(false);
+            visiable_pass(false);
 
         }
         private void Enable(bool en)
@@ -281,7 +279,7 @@ namespace Presentation
             txt_ngayLam.Value = DateTime.Now ;
             txt_DiaChi.Text = "";
             txt_ngaysinh.Value = DateTime.Parse("12/31/1998");
-            txt_pass.Text = "";
+            txt_pass.Text ="";
             txt_Sdt.Text = "";
             txt_user.Text = ""; 
             cb_loaiNV.ResetText();
@@ -325,11 +323,12 @@ namespace Presentation
 
         private void cb_loaiNV_SelectedIndexChanged(object sender, EventArgs e)
         {
+           
             if(cb_loaiNV.SelectedIndex==0|| cb_loaiNV.SelectedIndex==1)
             {
                 visiable_pass(true);
                 visiable_user(true);
-                txt_pass.ReadOnly = true;
+                txt_pass.Text = "";
             }
             
         }
@@ -340,6 +339,14 @@ namespace Presentation
             txt_pass.ReadOnly = true;
         }
 
+        private void txt_CMND_TextChanged(object sender, EventArgs e)
+        {
 
+        }
+
+        private void txt_Sdt_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

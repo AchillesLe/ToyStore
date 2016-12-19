@@ -6,5 +6,21 @@ Màu đậm : DarkSlateGray
 nhạt hơn: #375d5d
 QUản Lí Kho: Nhập Kho
 //Acount: Thay mật khẩu( xem chi tiết cá nhân)
-//Quản Lí Nv: Tạo Tài kHoản Mới: Form : ID, Pass, rePass,Tên Đăng Nhập
+//Quản Lí Nv: Tạo Tài kHoản Mới: Form : ID, Pass,Tên Đăng Nhập
 1h15 
+
+Insert INTO PHIEUNHAP VALUES
+(3114100,'12/20/2016',3510000),
+(3114101,'12/21/2016',2870400),
+(3114102,'12/22/2016',2574000)
+go
+
+insert INTO CTPHIEUNHAP VALUES
+(1000,600001,5,400000),
+(1000,600002,5,250000),
+(1000,600004,5,250000),
+(1001,600003,5,260000),
+(1001,600006,7,340000),
+(1002,600005,5,260000),
+(1002,600001,5,400000)
+go

@@ -37,6 +37,8 @@
             this.bt_moi = new System.Windows.Forms.Button();
             this.tbl_NhanVien = new System.Windows.Forms.DataGridView();
             this.panel3 = new System.Windows.Forms.Panel();
+            this.txt_ngaysinh = new System.Windows.Forms.DateTimePicker();
+            this.txt_ngayLam = new System.Windows.Forms.DateTimePicker();
             this.pictureBox11 = new System.Windows.Forms.PictureBox();
             this.cb_loaiNV = new System.Windows.Forms.ComboBox();
             this.label1 = new System.Windows.Forms.Label();
@@ -79,8 +81,6 @@
             this.lb_DsNv = new System.Windows.Forms.Label();
             this.pictureBox10 = new System.Windows.Forms.PictureBox();
             this.Close = new System.Windows.Forms.Button();
-            this.txt_ngayLam = new System.Windows.Forms.DateTimePicker();
-            this.txt_ngaysinh = new System.Windows.Forms.DateTimePicker();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.tbl_NhanVien)).BeginInit();
             this.panel3.SuspendLayout();
@@ -268,6 +268,32 @@
             this.panel3.Size = new System.Drawing.Size(821, 216);
             this.panel3.TabIndex = 42;
             // 
+            // txt_ngaysinh
+            // 
+            this.txt_ngaysinh.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.txt_ngaysinh.CustomFormat = "       dd - MM - yyyy";
+            this.txt_ngaysinh.Font = new System.Drawing.Font("Arial", 10F);
+            this.txt_ngaysinh.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.txt_ngaysinh.Location = new System.Drawing.Point(561, 72);
+            this.txt_ngaysinh.MinDate = new System.DateTime(1990, 12, 31, 0, 0, 0, 0);
+            this.txt_ngaysinh.Name = "txt_ngaysinh";
+            this.txt_ngaysinh.Size = new System.Drawing.Size(238, 23);
+            this.txt_ngaysinh.TabIndex = 48;
+            this.txt_ngaysinh.Value = new System.DateTime(1998, 12, 31, 0, 0, 0, 0);
+            // 
+            // txt_ngayLam
+            // 
+            this.txt_ngayLam.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.txt_ngayLam.CustomFormat = "       dd - MM - yyyy";
+            this.txt_ngayLam.Enabled = false;
+            this.txt_ngayLam.Font = new System.Drawing.Font("Arial", 10F);
+            this.txt_ngayLam.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.txt_ngayLam.Location = new System.Drawing.Point(561, 43);
+            this.txt_ngayLam.MinDate = new System.DateTime(1990, 12, 31, 0, 0, 0, 0);
+            this.txt_ngayLam.Name = "txt_ngayLam";
+            this.txt_ngayLam.Size = new System.Drawing.Size(238, 23);
+            this.txt_ngayLam.TabIndex = 48;
+            // 
             // pictureBox11
             // 
             this.pictureBox11.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox11.BackgroundImage")));
@@ -333,6 +359,7 @@
             this.txt_pass.Font = new System.Drawing.Font("Calibri", 11.25F);
             this.txt_pass.Location = new System.Drawing.Point(564, 137);
             this.txt_pass.Name = "txt_pass";
+            this.txt_pass.ReadOnly = true;
             this.txt_pass.Size = new System.Drawing.Size(219, 19);
             this.txt_pass.TabIndex = 42;
             this.txt_pass.Tag = "";
@@ -403,6 +430,7 @@
             this.txt_Sdt.Name = "txt_Sdt";
             this.txt_Sdt.Size = new System.Drawing.Size(238, 19);
             this.txt_Sdt.TabIndex = 35;
+            this.txt_Sdt.TextChanged += new System.EventHandler(this.txt_Sdt_TextChanged);
             // 
             // label6
             // 
@@ -516,6 +544,7 @@
             this.txt_CMND.Name = "txt_CMND";
             this.txt_CMND.Size = new System.Drawing.Size(256, 19);
             this.txt_CMND.TabIndex = 23;
+            this.txt_CMND.TextChanged += new System.EventHandler(this.txt_CMND_TextChanged);
             // 
             // CMT
             // 
@@ -766,32 +795,6 @@
             this.Close.TabIndex = 7;
             this.Close.UseVisualStyleBackColor = false;
             this.Close.Click += new System.EventHandler(this.Close_Click);
-            // 
-            // txt_ngayLam
-            // 
-            this.txt_ngayLam.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.txt_ngayLam.CustomFormat = "       dd - MM - yyyy";
-            this.txt_ngayLam.Enabled = false;
-            this.txt_ngayLam.Font = new System.Drawing.Font("Arial", 10F);
-            this.txt_ngayLam.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.txt_ngayLam.Location = new System.Drawing.Point(561, 43);
-            this.txt_ngayLam.MinDate = new System.DateTime(1990, 12, 31, 0, 0, 0, 0);
-            this.txt_ngayLam.Name = "txt_ngayLam";
-            this.txt_ngayLam.Size = new System.Drawing.Size(238, 23);
-            this.txt_ngayLam.TabIndex = 48;
-            // 
-            // txt_ngaysinh
-            // 
-            this.txt_ngaysinh.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.txt_ngaysinh.CustomFormat = "       dd - MM - yyyy";
-            this.txt_ngaysinh.Font = new System.Drawing.Font("Arial", 10F);
-            this.txt_ngaysinh.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.txt_ngaysinh.Location = new System.Drawing.Point(561, 72);
-            this.txt_ngaysinh.MinDate = new System.DateTime(1990, 12, 31, 0, 0, 0, 0);
-            this.txt_ngaysinh.Name = "txt_ngaysinh";
-            this.txt_ngaysinh.Size = new System.Drawing.Size(238, 23);
-            this.txt_ngaysinh.TabIndex = 48;
-            this.txt_ngaysinh.Value = new System.DateTime(1998, 12, 31, 0, 0, 0, 0);
             // 
             // QuanLiNhanVien
             // 
