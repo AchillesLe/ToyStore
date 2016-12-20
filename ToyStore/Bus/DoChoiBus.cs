@@ -10,7 +10,7 @@ namespace Bus
     public class DoChoiBus
     {
         DoChoiDao dcdao = new DoChoiDao();
-        public List<DOCHOI>dsDoChoi()
+        public List<DOCHOI> dsDoChoi()
         {
             return dcdao.DSDoChoi();
         }
@@ -30,7 +30,16 @@ namespace Bus
         {
             return dcdao.AddDoChoi(dc);
         }
-
+        public int AddDSDoChoi(List<DOCHOI> list)
+        {
+            int i = 0;
+            foreach (DOCHOI dc in list)
+            {
+                dcdao.AddDoChoi(dc);
+                i++;
+            }
+            return i;
+        }
         public bool deleteDC(int madc)
         {
             return dcdao.deleteDC(madc);
@@ -44,7 +53,7 @@ namespace Bus
         public bool reduceDCs(List<DOCHOI> dcs)
         {
             bool a = true;
-            foreach(DOCHOI dc in dcs)
+            foreach (DOCHOI dc in dcs)
             {
                 a = (a && dcdao.reduceDC(dc, (int)dc.SL));
             }
