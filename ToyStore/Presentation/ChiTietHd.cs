@@ -23,6 +23,8 @@ namespace Presentation
         BindingList<CTHD> listCt;
         List<CTHD> changedItem;
         List<CTHD> deletedItem;
+        NhanVienBus nvbus = new NhanVienBus();
+        int manv = MainMenu.usrId;
 
         public ChiTietHd()
         {
@@ -51,32 +53,34 @@ namespace Presentation
         {
             // hide this Form
             this.Close();
-            //Show MainMenuForm
-            MainMenu MainMenu = new MainMenu();
-            MainMenu.Show();
         }
 
         private void ChiTietHd_Load(object sender, EventArgs e)
         {
-            listHd = new List<HOADON>();
-            listCt = new BindingList<CTHD>();
-            changedItem = new List<CTHD>();
-            deletedItem = new List<CTHD>();
+            //listHd = new List<HOADON>();
+            //listCt = new BindingList<CTHD>();
+            //changedItem = new List<CTHD>();
+            //deletedItem = new List<CTHD>();
 
-            tbl_CtHd.DataSource = listCt;
-            tbl_CtHd.Columns[4].Visible = false;
-            tbl_CtHd.Columns[5].Visible = false;
+            //tbl_CtHd.DataSource = listCt;
+            //tbl_CtHd.Columns[4].Visible = false;
+            //tbl_CtHd.Columns[5].Visible = false;
 
-            tbl_CtHd.Columns[0].ReadOnly = true;
-            tbl_CtHd.Columns[1].ReadOnly = true;
-            tbl_CtHd.Columns[2].ReadOnly = false;
-            tbl_CtHd.Columns[3].ReadOnly = true;
-
-            dtp_from.Value = DateTime.Parse("01/01/2000");
+            //tbl_CtHd.Columns[0].ReadOnly = true;
+            //tbl_CtHd.Columns[1].ReadOnly = true;
+            //tbl_CtHd.Columns[2].ReadOnly = false;
+            //tbl_CtHd.Columns[3].ReadOnly = true;
+            int m = DateTime.Now.Month;
+            int yy = DateTime.Now.Year;
+            dtp_from.Value = DateTime.Parse(string.Format("{0}/1/{1}",m,yy));
             dtp_to.Value = DateTime.Now;
             load_DsHD_From_To(sender,e);
-        }
-        
+            if(nvbus.NhanVienByID(manv).MACV!="AD")
+            {
+                bt_Sua.Hide();
+                bt_Xoa.Hide();
+            }
+        }      
 
         private void load_DsHD_From_To(object sender, EventArgs e)
         {

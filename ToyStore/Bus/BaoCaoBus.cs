@@ -24,7 +24,7 @@ namespace Bus
         }
         public int AddBaoCao(BAOCAO bc)
         {
-            return bcdao.AddBAOCAO(bc);
+            return bcdao.AddBAOCAO(bc);//
         }
     }
 }

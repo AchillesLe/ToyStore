@@ -64,7 +64,7 @@ namespace Dao
             List<HOADON> listHD = new List<HOADON>();
             using (ContextEntites context = new ContextEntites())
             {
-                var query = (from c in context.HOADONs where (c.NGAYHD >= datefrom && c.NGAYHD <= dateto) select new { c.MAHD, c.MANV, c.NGAYHD, c.TRIGIA });
+                var query = (from c in context.HOADONs where (c.NGAYHD >= datefrom && c.NGAYHD <= dateto &&c.TRIGIA!=null) select new { c.MAHD, c.MANV, c.NGAYHD, c.TRIGIA });
                 foreach (var a in query)
                 {
                     HOADON hd = new HOADON();
