@@ -133,8 +133,14 @@
     <Compile Include="NhapKho.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="NhapKho.Designer.cs">
+    <Compile Include="NhapKho.designer.cs">
       <DependentUpon>NhapKho.cs</DependentUpon>
+    </Compile>
+    <Compile Include="NhapKho_2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="NhapKho_2.Designer.cs">
+      <DependentUpon>NhapKho_2.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -182,6 +188,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="NhapKho.resx">
       <DependentUpon>NhapKho.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NhapKho_2.resx">
+      <DependentUpon>NhapKho_2.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

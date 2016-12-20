@@ -254,7 +254,7 @@ namespace Presentation
         }
         private void bt_CtKho_Click(object sender, EventArgs e)
         {
-            NhapKho TKK = new NhapKho();
+            NhapKho_2 TKK = new NhapKho_2();
             TKK.ShowDialog();
            
         }

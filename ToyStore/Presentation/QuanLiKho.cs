@@ -21,7 +21,8 @@ namespace Presentation
 
         bool data_change_status = false;
         List<DOCHOI> listDc;
-
+        NhanVienBus nvbs = new NhanVienBus();
+        int manv = MainMenu.usrId;
         public QuanLiKho()
         {
             InitializeComponent();
@@ -65,6 +66,11 @@ namespace Presentation
             tb_NuocSX.Clear();
             tb_Gia.Clear();
             tb_SL.Clear();
+            if(nvbs.NhanVienByID(manv).MACV!="AD")
+            {
+                btn_Sua.Hide();
+                btn_Xoa.Hide();
+            }
         }
 
         private void tbl_DsDc_SelectionChanged(object sender, EventArgs e)

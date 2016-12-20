@@ -12,7 +12,7 @@ using System.Windows.Forms;
 
 namespace Presentation
 {
-    public partial class NhapKho : Form
+    public partial class NhapKho_2 : Form
     {
         const int WM_NCHITTEST = 0x84;
         const int HTCLIENT = 0x1;
@@ -31,7 +31,7 @@ namespace Presentation
         PHIEUNHAP phieu;
         
 
-        public NhapKho()
+        public NhapKho_2()
         {
             InitializeComponent();
         }
@@ -63,7 +63,7 @@ namespace Presentation
         {
             listCTPN = new BindingList<CTPHIEUNHAP>();
             phieu = new PHIEUNHAP();
-            
+
             tbl_nk.DataSource = listCTPN;
             tb_Manv.Text = MainMenu.usrId.ToString();
 
@@ -85,19 +85,10 @@ namespace Presentation
             tb_NgayNhap.Text = now.ToString("dd - MM - yyyy");
 
             PhieuNhapBus phBus = new PhieuNhapBus();
-            int s = phBus.dsPhieuNhap().Count;
-            if (s == 0)
-            {
-                phieu.MAPHIEU = 1000;
-            }
-            else
-            phieu.MAPHIEU = phBus.dsPhieuNhap().Last().MAPHIEU+1;
-
             phieu.MANV = MainMenu.usrId;
             phieu.NGAYNHAP = now;
             phieu.TONGGIA = 0;
 
-            tb_MaPhieu.Text = phieu.MAPHIEU.ToString();
             tb_SL.Text = "0";
             tb_TSL.Text = tong_sl.ToString();
             tb_tong_tien.Text = tong_giatri.ToString();
@@ -109,13 +100,6 @@ namespace Presentation
             now = DateTime.Now;
             phieu.NGAYNHAP = now;
             tb_NgayNhap.Text = now.ToString("dd - MM - yyyy");
-            tb_masp.Text = "";
-            tb_ncsx.Text = "";
-            tb_SL.Text = "0";
-            tb_tenDC.Text = "";
-            tb_loai.Text = "";
-            tb_GiaBan.Text = "";
-            tb_GiaNhap.Text = "";
         }
 
          private void tb_masp_TextChanged(object sender, EventArgs e)
@@ -133,19 +117,14 @@ namespace Presentation
                 if (li.Count() > 0)
                 {
                     masp_avail = true;
-                    tb_tenDC.Text = li.First().TENDC;
+                    tb_tenDC.Text = li.First().TENDC.ToString();
                     tb_GiaBan.Text = li.First().GIA.ToString();
-                    tb_loai.Text = li.First().LOAI;
-                    tb_ncsx.Text = li.First().NUOCSX;
-                    tb_GiaBan.Text = li.First().GIA.ToString();
-                    readOnly(true);
+                    tb_tenDC.ReadOnly = masp_avail;
                 }
                 else
                 {
                     masp_avail = false;
-                    readOnly(false);
-                    tb_loai.Clear();
-                    tb_ncsx.Clear();
+                    tb_tenDC.ReadOnly = false;
                     tb_tenDC.Clear();
                     tb_GiaBan.Clear();
                 }
@@ -202,70 +181,40 @@ namespace Presentation
                     return;
                 }
                 CTPHIEUNHAP ct = new CTPHIEUNHAP();
-                if (masp_avail==false)
+                if (!masp_avail)
                 {
                     DoChoiBus dcBus = new DoChoiBus();
                     DOCHOI dc = new DOCHOI();
 
                     dc.MADC = int.Parse(tb_masp.Text);
                     dc.SL = int.Parse(tb_SL.Text);//edit dc.SL=0;
-                    dc.GIA = double.Parse(tb_GiaBan.Text);
-                    dc.LOAI = tb_loai.Text;
-                    dc.NUOCSX = tb_ncsx.Text;
-                    dc.TENDC = tb_tenDC.Text;
-                   // dcBus.AddDoChoi(dc);
-
-                    listDc.Add(dc);
-
-                    ct.MADC = dc.MADC;
-                    ct.MAPHIEU = phieu.MAPHIEU;
-                    ct.SL = (int)dc.SL;
-                    ct.GIANHAP = double.Parse(tb_GiaNhap.Text)*(double)ct.SL;
-                    listCTPN.Add(ct);
-                }
-
-                else
-                {
-                    masp_avail = true;
-                    var li = listCTPN.Where(i => i.MADC == ct.MADC);
-                    if (li.Count() > 0)
-                    {
-                        li.First().SL += ct.SL;
-                        li.First().GIANHAP += ct.GIANHAP;
-                    }
-                    ct.MADC = int.Parse(tb_masp.Text);
-                    ct.MAPHIEU = phieu.MAPHIEU;
-                    ct.SL = int.Parse(tb_SL.Text);
-                    ct.GIANHAP = double.Parse(tb_GiaNhap.Text)*(double)ct.SL;
+                    dc.GIA = double.Parse(tb_GiaBan.Text);                    
+                    //listNewDC.Add(dc);
                     
-                   
-                    listCTPN.Add(ct);
                 }
 
                 ///<summary>
                 ///hậu
                 ///</summary>
-                //CTPHIEUNHAP ctph = new CTPHIEUNHAP();
-                //ctph.MAPHIEU = phieu.MAPHIEU;
-                //ctph.MADC = int.Parse(tb_masp.Text);
-                //ctph.SL = int.Parse(tb_SL.Text);
-                //ctph.GIANHAP = double.Parse(tb_GiaNhap.Text) * (double)ctph.SL;
+                CTPHIEUNHAP ctph = new CTPHIEUNHAP();
+                ctph.MAPHIEU = phieu.MAPHIEU;
+                ctph.MADC = int.Parse(tb_masp.Text);
+                ctph.SL = int.Parse(tb_SL.Text);
+                ctph.GIANHAP = double.Parse(tb_GiaNhap.Text) * (double)ctph.SL;
 
-                //tong_giatri += (double)ctph.GIANHAP;
-                //tong_sl += (int)ctph.SL;
+                tong_giatri += (double)ctph.GIANHAP;
+                tong_sl += (int)ctph.SL;
 
-                //var li = listCTPN.Where(i => i.MADC == ctph.MADC);
-                //if (li.Count() > 0)
-                //{
-                //    li.First().SL += ctph.SL;
-                //    li.First().GIANHAP += ctph.GIANHAP;
-                //}
-                //else
-                //    listCTPN.Add(ctph);
-                tong_giatri += (double)ct.GIANHAP;
-                tong_sl += (int)ct.SL;
-                refresh();
+                var li = listCTPN.Where(i => i.MADC == ctph.MADC);
+                if (li.Count() > 0)
+                {
+                    li.First().SL += ctph.SL;
+                    li.First().GIANHAP += ctph.GIANHAP;
+                }
+                else
+                    listCTPN.Add(ctph);
 
+                refreshDataGrid();
             }
             catch (Exception ex)
             {
@@ -280,23 +229,17 @@ namespace Presentation
 
         private void bt_Luu_Click(object sender, EventArgs e)
         {
-            if (listCTPN.Count<1)
-                return;
+            if (locked) return;
             try
             {
-                if (listDc.Count > 0)
-                {
-                    DoChoiBus dcbus = new DoChoiBus();
-
-                    dcbus.AddDSDoChoi(listDc);
-                }
                 PhieuNhapBus phBus = new PhieuNhapBus();
-                phieu.TONGGIA = double.Parse(tb_tong_tien.Text);
-                phBus.AddPhieuNhap(phieu, listCTPN.ToList<CTPHIEUNHAP>());
-               
-                MessageBox.Show("Nhập thành công!! \n Locked all Changes!");
-                this.Dispose();
 
+                phBus.AddPhieuNhap(phieu, listCTPN.ToList<CTPHIEUNHAP>());
+                MessageBox.Show("Nhập thành công!! \n Locked all Changes!");
+                //listNk.Clear();
+                locked = true;
+                btn_lam_moi.Visible = true;
+                bt_Luu.Visible = false;
             }
             catch(Exception ex)
             {
@@ -305,26 +248,15 @@ namespace Presentation
         }
 
         // addon
-        private void refresh()
+        private void refreshDataGrid()
         {
             tb_TSL.Text = tong_sl.ToString();
             tb_tong_tien.Text = tong_giatri.ToString();
             tb_masp.Clear();
             tb_GiaNhap.Clear();
-            tb_GiaBan.Clear();
-            tb_loai.Clear();
-            tb_tenDC.Clear();
-            tb_ncsx.Clear();
             tbl_nk.Refresh();
-            tb_SL.Text = "0";
         }
-        private void readOnly(bool e)
-        {
-            tb_ncsx.ReadOnly = e;
-            tb_tenDC.ReadOnly = e;
-            tb_loai.ReadOnly = e;
-            tb_GiaBan.ReadOnly = e;
-        }
+
         private void moveInt(int delta)
         {
             try
@@ -365,36 +297,6 @@ namespace Presentation
             }
             catch { }
             
-        }
-
-        private void bt_excel_Click(object sender, EventArgs e)
-        {
-            toolTip1.ExportToExcel excel = new toolTip1.ExportToExcel();
-            excel.ExportToExcelFromDatagridview(tbl_nk, string.Format("PhieuKho_{0}_{1}",tb_MaPhieu.Text,DateTime.Now.Date));
-            MessageBox.Show("Xuất excel thành công !");
-        }
-
-        private void bt_Xoa_Click(object sender, EventArgs e)
-        {
-            int maDC =Int32.Parse( tbl_nk.Rows[tbl_nk.CurrentCell.RowIndex].Cells[2].Value.ToString());
-            int index = tbl_nk.CurrentCell.RowIndex;
-            if(listDc.Count>0)
-            {
-                for(int i=0;i<listDc.Count;i++)
-                {
-                    if (listDc[i].MADC == maDC)
-                        listDc.RemoveAt(i);
-                }
-            }
-            if(listCTPN.Count>0)
-            {
-                listCTPN.RemoveAt(index);
-            }
-            tong_sl = tong_sl-int.Parse(tbl_nk.Rows[index].Cells[2].Value.ToString());
-            tong_giatri = tong_giatri - double.Parse(tbl_nk.Rows[index].Cells[3].Value.ToString());
-            tb_TSL.Text = tong_sl.ToString();
-            tb_tong_tien.Text = tong_giatri.ToString();
-            tbl_nk.Refresh();
         }
     }
 }
