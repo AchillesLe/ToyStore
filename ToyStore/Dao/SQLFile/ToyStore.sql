@@ -41,7 +41,7 @@ constraint pk_CHUCVU primary key (MACV)
 go
 
 create table HOADON(
-MAHD int identity(3144100,1) not null,
+MAHD int identity(310000,1) not null,
 NGAYHD date not null,
 MANV int not null,
 TRIGIA float ,
@@ -59,10 +59,9 @@ go
 
 create table BAOCAO
 (
-MABC int  not null,
-NGAYBAOCAO date,
+NGAYBAOCAO date NOT NULL,
 TONGGIATRI float,
-constraint pk_BAOCAO primary key(MABC)
+constraint pk_BAOCAO primary key(NGAYBAOCAO)
 )
 go
 

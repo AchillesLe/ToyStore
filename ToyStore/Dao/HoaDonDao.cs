@@ -122,6 +122,17 @@ namespace Dao
                 {
                     cn.HOADONs.Add(hd);
                     s = cn.SaveChanges();
+
+                     BAOCAO bc = cn.BAOCAOs.SingleOrDefault(x=>x.NGAYBAOCAO.ToShortDateString()==hd.NGAYHD.ToShortDateString());
+
+                    if (bc== null)
+                    {
+                        BAOCAO b = new BAOCAO();
+                        b.NGAYBAOCAO = hd.NGAYHD;
+                        b.TONGGIATRI = 0;
+                        cn.BAOCAOs.Add(b);
+                     int M=cn.SaveChanges();
+                    }
                 }
                 catch (Exception ex)
                 {
@@ -164,9 +175,18 @@ namespace Dao
                     s.MANV = hd.MANV;
                     s.NGAYHD = hd.NGAYHD;
                     s.TRIGIA = hd.TRIGIA;
+
                     if (context.SaveChanges() >= 0)
+                    {       
+                        var bc = context.BAOCAOs.SingleOrDefault(x => x.NGAYBAOCAO.ToShortDateString() == hd.NGAYHD.ToShortDateString());
+                        bc.NGAYBAOCAO = hd.NGAYHD;
+                        bc.TONGGIATRI += hd.TRIGIA;
+                        int m = context.SaveChanges();
                         chek = true;
-                }catch(Exception ex)
+                    }
+
+                }
+                catch(Exception ex)
                 {
                     Console.WriteLine(ex.ToString());
                 }

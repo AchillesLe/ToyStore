@@ -21,6 +21,6 @@ namespace Dto
 
         public int SL { get; set; }
 
-        public double GIANHAP { get; set; }
+        public double? GIANHAP { get; set; }
     }
 }

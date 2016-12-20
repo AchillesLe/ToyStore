@@ -441,7 +441,7 @@
             this.MaximumSize = new System.Drawing.Size(848, 417);
             this.Name = "BaoCaoDs";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "BaoCaoDs";
+            this.Text = "s";
             this.Load += new System.EventHandler(this.BaoCaoDs_Load);
             this.main.ResumeLayout(false);
             this.main.PerformLayout();

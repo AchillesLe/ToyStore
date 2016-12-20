@@ -22,10 +22,6 @@ namespace Bus
         {
             return bcdao.dsBAOCAOFromTo(dayfrom, dayto);
         }
-        public BAOCAO BAOCAOById(int mabc)
-        {
-            return bcdao.BAOCAOById(mabc);
-        }
         public int AddBaoCao(BAOCAO bc)
         {
             return bcdao.AddBAOCAO(bc);

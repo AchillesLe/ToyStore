@@ -74,7 +74,6 @@ namespace Presentation
             Hd.NGAYHD = DateTime.Now;
             hdBus.AddHoaDon(Hd);
             //End "Add Hoa Don"
-
             luu_status = false;
 
             txt_mahd.Text = Hd.MAHD.ToString();
@@ -88,7 +87,7 @@ namespace Presentation
 
             tbl_sp.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
 
-
+            
             setDefaultValue();
         }
 
@@ -153,9 +152,9 @@ namespace Presentation
         {
             //hide BillBanLe Form
             this.Close();
-            //Show MainMenuForm
-            MainMenu MainMenu = new MainMenu();
-            MainMenu.Show();
+            ////Show MainMenuForm
+            //MainMenu MainMenu = new MainMenu();
+            //MainMenu.Show();
         }
 
         private void show()
