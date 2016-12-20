@@ -4,7 +4,6 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using Dto;
-using System.Data.Objects;
 namespace Dao
 {
     public class NhanVienDao

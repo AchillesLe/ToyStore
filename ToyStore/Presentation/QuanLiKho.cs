@@ -38,8 +38,6 @@ namespace Presentation
         private void Close_Click(object sender, EventArgs e)
         {
             this.Close();
-            MainMenu mn = new MainMenu();
-            mn.Show();
         }
 
         private void Down_Click(object sender, EventArgs e)
@@ -50,8 +48,6 @@ namespace Presentation
         private void back_Click(object sender, EventArgs e)
         {
             this.Close();
-            MainMenu mn = new MainMenu();
-            mn.Show();
         }
 
         private void ThongKeKho_Load(object sender, EventArgs e)

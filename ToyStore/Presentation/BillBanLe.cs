@@ -137,10 +137,7 @@ namespace Presentation
                 btn_huy_Click(sender, e);
                 return;
             }
-
             this.Close();
-            MainMenu mn = new MainMenu();
-            mn.Show();
         }
 
         private void Down_Click(object sender, EventArgs e)
@@ -150,11 +147,12 @@ namespace Presentation
 
         private void back_Click(object sender, EventArgs e)
         {
-            //hide BillBanLe Form
+            if (!luu_status)
+            {
+                btn_huy_Click(sender, e);
+                return;
+            }
             this.Close();
-            ////Show MainMenuForm
-            //MainMenu MainMenu = new MainMenu();
-            //MainMenu.Show();
         }
 
         private void show()

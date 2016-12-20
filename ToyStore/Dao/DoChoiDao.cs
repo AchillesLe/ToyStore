@@ -138,7 +138,7 @@ namespace Dao
                 try
                 {
                     var s = context.DOCHOIs.Single(x => x.MADC == dc.MADC);
-                    s.SL = dc.SL - sl;
+                    s.SL = s.SL - sl;
                     if (context.SaveChanges() >= 0)
                         chek = true;
                 }

@@ -49,8 +49,6 @@ namespace Presentation
         private void back_Click(object sender, EventArgs e)
         {
             this.Close();
-            MainMenu mn = new MainMenu();
-            mn.Show();
         }
 
         protected override void WndProc(ref Message message)
@@ -115,7 +113,7 @@ namespace Presentation
                 else
                     return;
 
-                var li = listDc.Where(i => (i.MADC == id));
+                 var li = listDc.Where(i => (i.MADC == id));
                 if (li.Count() > 0)
                 {
                     masp_avail = true;
