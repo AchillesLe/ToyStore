@@ -4,7 +4,6 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using Dto;
-
 namespace Dao
 {
     public class HoaDonDao
@@ -115,24 +114,24 @@ namespace Dao
         }
         public int AddHoaDon(HOADON hd)
         {
-            int s;
+            int s = 0;
             using (ContextEntites cn = new ContextEntites())
             {
                 try
                 {
                     cn.HOADONs.Add(hd);
-                    s = cn.SaveChanges();
 
-                     BAOCAO bc = cn.BAOCAOs.SingleOrDefault(x=>x.NGAYBAOCAO.ToShortDateString()==hd.NGAYHD.ToShortDateString());
+                    var bc = cn.BAOCAOs.Where(x=>(x.NGAYBAOCAO == hd.NGAYHD));
 
-                    if (bc== null)
+                    if (!(bc.Count() > 0))
                     {
                         BAOCAO b = new BAOCAO();
                         b.NGAYBAOCAO = hd.NGAYHD;
                         b.TONGGIATRI = 0;
                         cn.BAOCAOs.Add(b);
-                     int M=cn.SaveChanges();
                     }
+
+                    s = cn.SaveChanges();
                 }
                 catch (Exception ex)
                 {
@@ -153,6 +152,8 @@ namespace Dao
 
                     HOADON hd = con.HOADONs.Single(x => x.MAHD == maHD);
                     con.HOADONs.Remove(hd);
+                    
+
                     if (con.SaveChanges() >= 0)
                     {
                         check = true;
@@ -178,7 +179,7 @@ namespace Dao
 
                     if (context.SaveChanges() >= 0)
                     {       
-                        var bc = context.BAOCAOs.SingleOrDefault(x => x.NGAYBAOCAO.ToShortDateString() == hd.NGAYHD.ToShortDateString());
+                        var bc = context.BAOCAOs.SingleOrDefault(x => x.NGAYBAOCAO == hd.NGAYHD );
                         bc.NGAYBAOCAO = hd.NGAYHD;
                         bc.TONGGIATRI += hd.TRIGIA;
                         int m = context.SaveChanges();
