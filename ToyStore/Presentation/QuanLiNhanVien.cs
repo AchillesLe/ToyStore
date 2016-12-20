@@ -74,32 +74,41 @@ namespace Presentation
             nv.NGAYSINH = txt_ngaysinh.Value;             
             if (rd_nam.Checked == true) nv.PHAI = "Nam";
             else nv.PHAI = "Nu";
-            nv.QUEQUAN = txt_DiaChi.Text;
-            if(toolTip1.Validation.check_Phone(txt_Sdt.Text))
+            if(!string.IsNullOrEmpty(txt_DiaChi.Text))
+            {
+                nv.QUEQUAN = txt_DiaChi.Text;
+            }
+            
+            if(!string.IsNullOrEmpty(txt_Sdt.Text))
             {
                 nv.SDT = txt_Sdt.Text;
             }
-            else
-                MessageBox.Show("Invalid Mobile Phone !");
             nv.TENNV = txt_hoten.Text;
-            if(toolTip1.Validation.Check_cmt(txt_CMND.Text))
+            if(!String.IsNullOrEmpty(txt_CMND.Text))
             {
                 nv.CMT = txt_CMND.Text;
-            }
-            else
-            {
-                MessageBox.Show("Invalid Identification !");
-            }        
+            }   
             nv.NGAYVAOLAM = txt_ngayLam.Value;
             ChucVuBus cvbus = new ChucVuBus();
             nv.MACV = cvbus.GetCVbyName(cb_loaiNV.Text).MACV;
             try
             {
-                if (nvBus.editNV(nv))
-                    MessageBox.Show("Edit successted !");
-                else MessageBox.Show("Edit not successted !");
-                loadDSNhanVien();
-                resettext();
+                if (!string.IsNullOrEmpty(nv.CMT) && !string.IsNullOrEmpty(nv.QUEQUAN) && !string.IsNullOrEmpty(nv.SDT) && !string.IsNullOrEmpty(nv.TENNV))
+                {
+                    if (nvBus.editNV(nv))
+                    {
+                        MessageBox.Show("Edit successted !");
+                        loadDSNhanVien();                     
+                    }
+                       
+                    else
+                        MessageBox.Show("Edit not successted !");
+                    resettext();
+                }
+                else
+                {
+                    MessageBox.Show("Điền đầy đủ thông tin trước khi cập nhật nhân viên !");
+                }
             }
             catch (Exception ex)
             {
@@ -117,14 +126,13 @@ namespace Presentation
             {
                 nv.MANV = Int32.Parse(txt_manv.Text);
             }
-            else nv.MANV = 1;
             if (rd_nam.Checked == true) nv.PHAI = "Nam";
             else nv.PHAI = "Nu";
             if (!string.IsNullOrEmpty(txt_DiaChi.Text))
             {
                 nv.QUEQUAN = txt_DiaChi.Text;
             }
-            else nv.QUEQUAN = "";
+            
             nv.NGAYVAOLAM = txt_ngayLam.Value;
             ChucVuBus cvbus = new ChucVuBus();
             nv.MACV = cvbus.GetCVbyName(cb_loaiNV.Text).MACV;
@@ -132,34 +140,37 @@ namespace Presentation
             {
                 nv.SDT = txt_Sdt.Text;
             }
-            else
-                nv.SDT = "";
             if (!string.IsNullOrEmpty(txt_hoten.Text))
             {
                 nv.TENNV = txt_hoten.Text;
             }
-            else
-                nv.TENNV = "";
+
             if (!string.IsNullOrEmpty(txt_CMND.Text))
             {
                 nv.CMT = txt_CMND.Text;
             }
-            else
-                nv.CMT = "";
             nv.NGAYSINH = txt_ngaysinh.Value;   
             if (!string.IsNullOrEmpty(txt_user.Text))
             {
                 ac.ID = nv.MANV;
                 ac.USERNAME = txt_user.Text;
                 ac.PASS = txt_pass.Text;
-                    if (nvBus.add(nv,ac))
+                if(!string.IsNullOrEmpty(nv.CMT)&& !string.IsNullOrEmpty(nv.QUEQUAN)&& !string.IsNullOrEmpty(nv.SDT)&& !string.IsNullOrEmpty(nv.TENNV))
+                {
+                    if (nvBus.add(nv, ac))
                     {
                         MessageBox.Show("Add successted !");
                         resettext();
                         visiable_pass(false);
                         loadDSNhanVien();
                     }
-                    else MessageBox.Show("Add not successted !");                    
+                    else MessageBox.Show("Add not successted !");
+                }  
+                else
+                {
+                    MessageBox.Show("Điền đầy đủ thông tin trước khi thêm nhân viên !");
+                    return;
+                }           
             }
             else
             {
@@ -178,21 +189,22 @@ namespace Presentation
         private void tbl_NhanVien_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
             ResetMouseEventArgs();
+            bt_them.Visible = false;
             ChucVuBus cvbus = new ChucVuBus();
-            txt_manv.Text = tbl_NhanVien.Rows[tbl_NhanVien.CurrentCell.RowIndex].Cells[0].Value.ToString();
-            txt_hoten.Text = tbl_NhanVien.Rows[tbl_NhanVien.CurrentCell.RowIndex].Cells[1].Value.ToString();           
-            txt_Sdt.Text = tbl_NhanVien.Rows[tbl_NhanVien.CurrentCell.RowIndex].Cells[2].Value.ToString();
-            txt_DiaChi.Text = tbl_NhanVien.Rows[tbl_NhanVien.CurrentCell.RowIndex].Cells[3].Value.ToString();
-            string phai = tbl_NhanVien.Rows[tbl_NhanVien.CurrentCell.RowIndex].Cells[4].Value.ToString();
+            txt_manv.Text = tbl_NhanVien.Rows[tbl_NhanVien.CurrentCell.RowIndex].Cells[0].Value.ToString();//!=null? tbl_NhanVien.Rows[tbl_NhanVien.CurrentCell.RowIndex].Cells[0].Value.ToString():"";
+            txt_hoten.Text = tbl_NhanVien.Rows[tbl_NhanVien.CurrentCell.RowIndex].Cells[1].Value.ToString();// != null ? tbl_NhanVien.Rows[tbl_NhanVien.CurrentCell.RowIndex].Cells[1].Value.ToString() : "";           
+            txt_Sdt.Text = tbl_NhanVien.Rows[tbl_NhanVien.CurrentCell.RowIndex].Cells[2].Value.ToString();//!= null ? tbl_NhanVien.Rows[tbl_NhanVien.CurrentCell.RowIndex].Cells[2].Value.ToString() : "";
+            txt_DiaChi.Text = tbl_NhanVien.Rows[tbl_NhanVien.CurrentCell.RowIndex].Cells[3].Value.ToString();//!= null ? tbl_NhanVien.Rows[tbl_NhanVien.CurrentCell.RowIndex].Cells[3].Value.ToString() : "";
+            string phai = tbl_NhanVien.Rows[tbl_NhanVien.CurrentCell.RowIndex].Cells[4].Value.ToString();// != null ? tbl_NhanVien.Rows[tbl_NhanVien.CurrentCell.RowIndex].Cells[4].Value.ToString() : "";
             if (phai == "Nam")
             {
                 rd_nam.Checked = true;
             }
             else rd_nu.Checked = true;
-            txt_CMND.Text = tbl_NhanVien.Rows[tbl_NhanVien.CurrentCell.RowIndex].Cells[5].Value.ToString();
-            txt_ngaysinh.Value = (DateTime)(tbl_NhanVien.Rows[tbl_NhanVien.CurrentCell.RowIndex].Cells[6].Value);
-            txt_ngayLam.Value = (DateTime)(tbl_NhanVien.Rows[tbl_NhanVien.CurrentCell.RowIndex].Cells[7].Value);
-            string tenCV = cvbus.CHUCVUByID(tbl_NhanVien.Rows[tbl_NhanVien.CurrentCell.RowIndex].Cells[8].Value.ToString()).TENCV;
+            txt_CMND.Text = tbl_NhanVien.Rows[tbl_NhanVien.CurrentCell.RowIndex].Cells[5].Value.ToString();// != null ? tbl_NhanVien.Rows[tbl_NhanVien.CurrentCell.RowIndex].Cells[5].Value.ToString() : "123456789";
+            txt_ngaysinh.Value = (DateTime)(tbl_NhanVien.Rows[tbl_NhanVien.CurrentCell.RowIndex].Cells[6].Value);// != null ? (DateTime)(tbl_NhanVien.Rows[tbl_NhanVien.CurrentCell.RowIndex].Cells[6].Value) : DateTime.Parse("12/31/1998");
+            txt_ngayLam.Value = (DateTime)(tbl_NhanVien.Rows[tbl_NhanVien.CurrentCell.RowIndex].Cells[7].Value);// != null ? (DateTime)(tbl_NhanVien.Rows[tbl_NhanVien.CurrentCell.RowIndex].Cells[7].Value) : DateTime.Now;
+            string tenCV = cvbus.CHUCVUByID(tbl_NhanVien.Rows[tbl_NhanVien.CurrentCell.RowIndex].Cells[8].Value.ToString()).TENCV;//!= null ? cvbus.CHUCVUByID(tbl_NhanVien.Rows[tbl_NhanVien.CurrentCell.RowIndex].Cells[8].Value.ToString()).TENCV : "NVTV";
             cb_loaiNV.ResetText();
             cb_loaiNV.SelectedText = tenCV;
 
@@ -211,21 +223,30 @@ namespace Presentation
         {
             NhanVienBus nvBus = new NhanVienBus();
             int manv = Int32.Parse(tbl_NhanVien.Rows[tbl_NhanVien.CurrentCell.RowIndex].Cells[0].Value.ToString());
-
-            if (DialogResult.Yes == MessageBox.Show("Bạn Muốn xóa nhân viên ?" + tbl_NhanVien.Rows[tbl_NhanVien.CurrentCell.RowIndex].Cells[1].Value.ToString(), "Comfirm", MessageBoxButtons.YesNo))
+            if(manv!=3114100)
             {
-                if (nvBus.deleteNV(manv))
-                    MessageBox.Show("Delete Successed !");
-                else
+                if (DialogResult.Yes == MessageBox.Show("Bạn Muốn xóa nhân viên ?" + tbl_NhanVien.Rows[tbl_NhanVien.CurrentCell.RowIndex].Cells[1].Value.ToString(), "Comfirm", MessageBoxButtons.YesNo))
                 {
-                    MessageBox.Show("Delete not Successed !");
-                    return;
+                    if (nvBus.deleteNV(manv))
+                        MessageBox.Show("Delete Successed !");
+                    else
+                    {
+                        MessageBox.Show("Delete not Successed !");
+                        return;
+                    }
                 }
+                resettext();
+                tbl_NhanVien.ClearSelection();
+                loadDSNhanVien();
+            }
+            else
+            {
+                MessageBox.Show("Không thể xoá chính bạn !");
+                return;
             }
            
-            resettext();
-            tbl_NhanVien.ClearSelection();
-            loadDSNhanVien();
+           
+           
         }
         //ok
         private void bt_excel_Click(object sender, EventArgs e)
@@ -330,6 +351,12 @@ namespace Presentation
                 visiable_user(true);
                 txt_pass.Text = "";
             }
+            else
+            {
+                visiable_pass(false);
+                visiable_user(false);
+                txt_pass.Text = "";
+            }
             
         }
 
@@ -339,20 +366,89 @@ namespace Presentation
             txt_pass.ReadOnly = true;
         }
 
-        private void txt_CMND_TextChanged(object sender, EventArgs e)
+        private void txt_CMND_KeyPress(object sender, KeyPressEventArgs e)
         {
-            if(!string.IsNullOrEmpty(txt_CMND.Text))
+            if(!char.IsDigit(e.KeyChar)&&!char.IsControl(e.KeyChar))
             {
-                if(!toolTip1.Validation.Check_cmt(txt_CMND.Text))
-                {
-                    MessageBox.Show("");
-                }
+                e.Handled = true;
             }
         }
 
-        private void txt_Sdt_TextChanged(object sender, EventArgs e)
+        private void txt_Sdt_KeyPress(object sender, KeyPressEventArgs e)
         {
+            if (!char.IsDigit(e.KeyChar) && !char.IsControl(e.KeyChar))
+            {
+                e.Handled = true;
+            }
+        }
+        private void txt_hoten_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsLetter(e.KeyChar) &&! char.IsControl(e.KeyChar))
+            {
+                e.Handled = true;
+            }
+        }
+        AccountBus acbus = new AccountBus();
+        private void txt_user_Leave(object sender, EventArgs e)
+        {
+            if(!String.IsNullOrEmpty(txt_user.Text))
+            {
+                if (acbus.ACCOUNTByName(txt_user.Text).ID>0)
+                {
+                    MessageBox.Show("Tên user đã tồn tại");
+                    txt_user.Text = "";
+                }
+            }
+            
+        }
 
+        private void txt_CMND_Leave(object sender, EventArgs e)
+        {
+            if(!string.IsNullOrEmpty(txt_CMND.Text))
+            {
+                if(txt_CMND.Text.Length!=9)
+                {
+                    MessageBox.Show("Sai định dạng số chứng minh thư !");
+                }
+            }
+            else
+            {
+                MessageBox.Show("Hãy nhập số chứng minh thư !");
+            }
+        }
+
+        private void txt_hoten_Leave(object sender, EventArgs e)
+        {
+            if(string.IsNullOrEmpty(txt_hoten.Text))
+            {
+                MessageBox.Show("Hãy nhập số họ tên !");
+            }
+               
+        }
+
+        private void txt_ngaysinh_ValueChanged(object sender, EventArgs e)
+        {
+            if ((txt_ngayLam.Value.Year - txt_ngaysinh.Value.Year) < 18)
+            {
+                MessageBox.Show("Nhân viên phải trên 18 tuổi !");
+                txt_ngaysinh.Value = DateTime.Parse("12/31/1998");
+            }
+        }
+
+        private void txt_Sdt_Leave(object sender, EventArgs e)
+        {
+            if (!string.IsNullOrEmpty(txt_Sdt.Text))
+            {
+                if (txt_Sdt.Text.Length != 10 && txt_Sdt.Text.Length != 11)
+                {
+                    MessageBox.Show("Sai định dạng số điện thoại ! ");
+                }
+            }
+            else
+            {
+                MessageBox.Show("Hãy nhập số điện thoại !");
+                txt_Sdt.Focus();
+            }
         }
     }
 }

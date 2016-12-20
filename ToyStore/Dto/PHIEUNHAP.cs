@@ -10,7 +10,6 @@ namespace Dto
     public partial class PHIEUNHAP
     {
         [Key]
-        [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public int MAPHIEU { get; set; }
 
         public int MANV { get; set; }

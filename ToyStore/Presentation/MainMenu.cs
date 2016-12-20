@@ -259,19 +259,10 @@ namespace Presentation
            
         }
 
-        private void pn_DangXuat_MouseLeave(object sender, EventArgs e)
-        {
-            pn_DangXuat.Hide();
-        }
-
-        private void pn_DangXuat_Leave(object sender, EventArgs e)
-        {
-            pn_DangXuat.Hide();
-        }
-
         private void btn_ThongKeKho_Click(object sender, EventArgs e)
         {
-
+            ThongKeNhapKho s = new ThongKeNhapKho();
+            s.ShowDialog();
         }
     }
 }

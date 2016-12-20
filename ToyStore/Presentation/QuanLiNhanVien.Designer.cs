@@ -81,6 +81,12 @@
             this.lb_DsNv = new System.Windows.Forms.Label();
             this.pictureBox10 = new System.Windows.Forms.PictureBox();
             this.Close = new System.Windows.Forms.Button();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
+            this.label7 = new System.Windows.Forms.Label();
+            this.label8 = new System.Windows.Forms.Label();
+            this.label9 = new System.Windows.Forms.Label();
+            this.label10 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.tbl_NhanVien)).BeginInit();
             this.panel3.SuspendLayout();
@@ -228,6 +234,12 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.panel3.AutoSize = true;
+            this.panel3.Controls.Add(this.label9);
+            this.panel3.Controls.Add(this.label8);
+            this.panel3.Controls.Add(this.label7);
+            this.panel3.Controls.Add(this.label10);
+            this.panel3.Controls.Add(this.label5);
+            this.panel3.Controls.Add(this.label3);
             this.panel3.Controls.Add(this.txt_ngaysinh);
             this.panel3.Controls.Add(this.txt_ngayLam);
             this.panel3.Controls.Add(this.pictureBox11);
@@ -280,6 +292,7 @@
             this.txt_ngaysinh.Size = new System.Drawing.Size(238, 23);
             this.txt_ngaysinh.TabIndex = 48;
             this.txt_ngaysinh.Value = new System.DateTime(1998, 12, 31, 0, 0, 0, 0);
+            this.txt_ngaysinh.ValueChanged += new System.EventHandler(this.txt_ngaysinh_ValueChanged);
             // 
             // txt_ngayLam
             // 
@@ -399,6 +412,7 @@
             this.txt_user.Tag = "";
             this.txt_user.Visible = false;
             this.txt_user.TextChanged += new System.EventHandler(this.txt_user_TextChanged);
+            this.txt_user.Leave += new System.EventHandler(this.txt_user_Leave);
             // 
             // lb_user
             // 
@@ -430,7 +444,8 @@
             this.txt_Sdt.Name = "txt_Sdt";
             this.txt_Sdt.Size = new System.Drawing.Size(238, 19);
             this.txt_Sdt.TabIndex = 35;
-            this.txt_Sdt.TextChanged += new System.EventHandler(this.txt_Sdt_TextChanged);
+            this.txt_Sdt.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt_Sdt_KeyPress);
+            this.txt_Sdt.Leave += new System.EventHandler(this.txt_Sdt_Leave);
             // 
             // label6
             // 
@@ -544,7 +559,8 @@
             this.txt_CMND.Name = "txt_CMND";
             this.txt_CMND.Size = new System.Drawing.Size(256, 19);
             this.txt_CMND.TabIndex = 23;
-            this.txt_CMND.TextChanged += new System.EventHandler(this.txt_CMND_TextChanged);
+            this.txt_CMND.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt_CMND_KeyPress);
+            this.txt_CMND.Leave += new System.EventHandler(this.txt_CMND_Leave);
             // 
             // CMT
             // 
@@ -587,6 +603,8 @@
             this.txt_hoten.Size = new System.Drawing.Size(256, 19);
             this.txt_hoten.TabIndex = 7;
             this.txt_hoten.Tag = "";
+            this.txt_hoten.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt_hoten_KeyPress);
+            this.txt_hoten.Leave += new System.EventHandler(this.txt_hoten_Leave);
             // 
             // pictureBox4
             // 
@@ -796,6 +814,66 @@
             this.Close.UseVisualStyleBackColor = false;
             this.Close.Click += new System.EventHandler(this.Close_Click);
             // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.ForeColor = System.Drawing.Color.Red;
+            this.label3.Location = new System.Drawing.Point(425, 43);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(11, 14);
+            this.label3.TabIndex = 49;
+            this.label3.Text = "*";
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.ForeColor = System.Drawing.Color.Red;
+            this.label5.Location = new System.Drawing.Point(425, 73);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(11, 14);
+            this.label5.TabIndex = 49;
+            this.label5.Text = "*";
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.ForeColor = System.Drawing.Color.Red;
+            this.label7.Location = new System.Drawing.Point(424, 171);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(11, 14);
+            this.label7.TabIndex = 49;
+            this.label7.Text = "*";
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.ForeColor = System.Drawing.Color.Red;
+            this.label8.Location = new System.Drawing.Point(805, 78);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(11, 14);
+            this.label8.TabIndex = 49;
+            this.label8.Text = "*";
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.ForeColor = System.Drawing.Color.Red;
+            this.label9.Location = new System.Drawing.Point(805, 113);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(11, 14);
+            this.label9.TabIndex = 49;
+            this.label9.Text = "*";
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.ForeColor = System.Drawing.Color.Red;
+            this.label10.Location = new System.Drawing.Point(425, 18);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(11, 14);
+            this.label10.TabIndex = 49;
+            this.label10.Text = "*";
+            // 
             // QuanLiNhanVien
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 14F);
@@ -893,5 +971,11 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.DateTimePicker txt_ngayLam;
         private System.Windows.Forms.DateTimePicker txt_ngaysinh;
+        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label label3;
     }
 }

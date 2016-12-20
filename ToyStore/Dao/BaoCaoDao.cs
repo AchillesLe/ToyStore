@@ -19,7 +19,6 @@ namespace Dao
                     BAOCAO bc = new BAOCAO();
                     bc.TONGGIATRI = a.TONGGIATRI;
                     bc.NGAYBAOCAO = a.NGAYBAOCAO;
-                    bc.MABC = a.MABC;
 
                     listbc.Add(bc);
                 }
@@ -37,21 +36,14 @@ namespace Dao
                     foreach (var a in query)
                     {
                         BAOCAO bc = new BAOCAO();
-                        bc.MABC = a.MABC;
                         bc.NGAYBAOCAO = a.NGAYBAOCAO;
                         bc.TONGGIATRI = a.TONGGIATRI;
                         listbc.Add(bc);
                     }
-                   
+                    return listbc;
                 }
                 catch (Exception ex)
                 {
-                    //BAOCAO bc = new BAOCAO();
-                    //bc.MABC = -1;
-                    //bc.NGAYBAOCAO = DateTime.Now;
-                    //bc.TONGGIATRI = 0;
-                    //listbc.Add(bc);
-                    //return listbc;
                     Console.WriteLine(ex.ToString());
                 }
                 return listbc;
@@ -67,25 +59,11 @@ namespace Dao
                 {
                     BAOCAO bc = new BAOCAO();
                     bc.TONGGIATRI = a.TONGGIATRI;
-                    bc.MABC = a.MABC;
                     bc.NGAYBAOCAO = a.NGAYBAOCAO;
                     listbc.Add(bc);
                 }
             }
             return listbc;
-        }
-        public BAOCAO BAOCAOById(int id)
-        {
-            BAOCAO bc = new BAOCAO();
-            using (ContextEntites context = new ContextEntites())
-            {
-                var s = context.BAOCAOs.SingleOrDefault(x => x.MABC == id);
-                bc.NGAYBAOCAO = s.NGAYBAOCAO;
-                bc.TONGGIATRI = s.TONGGIATRI;
-                bc.MABC = s.MABC;
-            }
-
-            return bc;
         }
         public int AddBAOCAO(BAOCAO bc)
         {
@@ -106,28 +84,6 @@ namespace Dao
             }
             return s;
         }
-        public bool deletebc(int mabc)
-        {
-            bool check = false;
-            using (ContextEntites con = new ContextEntites())
-            {
-                try
-                {
-
-                    BAOCAO bc = con.BAOCAOs.Single(x => x.MABC == mabc);
-                    con.BAOCAOs.Remove(bc);
-                    if (con.SaveChanges() >= 0)
-                    {
-                        check = true;
-                    }
-                }
-                catch (Exception ex)
-                {
-                    Console.WriteLine(ex.ToString());
-                }
-            }
-            return check;
-        }
         public bool editbc(BAOCAO bc)
         {
             bool chek = false;
@@ -135,10 +91,9 @@ namespace Dao
             {
                 try
                 {
-                    var s = context.BAOCAOs.Single(x => x.MABC == bc.MABC);
+                    var s = context.BAOCAOs.Single(x => x.NGAYBAOCAO == bc.NGAYBAOCAO);
                     s.NGAYBAOCAO = bc.NGAYBAOCAO;
                     s.TONGGIATRI = bc.TONGGIATRI;
-                    s.MABC = bc.MABC;
                     if (context.SaveChanges() >= 0)
                         chek = true;
                 }

@@ -10,10 +10,8 @@ namespace Dto
     public partial class BAOCAO
     {
         [Key]
-        public int MABC { get; set; }
-
         [Column(TypeName = "date")]
-        public DateTime? NGAYBAOCAO { get; set; }
+        public DateTime NGAYBAOCAO { get; set; }
 
         public double? TONGGIATRI { get; set; }
     }

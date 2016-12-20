@@ -47,6 +47,10 @@ namespace Dao
                         listCT.Add(ctph);
                     }
                 }
+                catch(Exception ex)
+                {
+
+                }
             }
             return listCT;
         }

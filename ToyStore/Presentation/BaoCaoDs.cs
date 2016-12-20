@@ -70,20 +70,20 @@ namespace Presentation
             DateTime dayfrom = txt_tuNgay.Value;
             DateTime dayto = txt_denNgay.Value;
             tbl_DsBc.Refresh();
-            if(checkbox_XemNgay.Checked)
+            if (checkbox_XemNgay.Checked)
             {
                 tbl_DsBc.DataSource = bcbus.dsBAOCAO(dayto);
             }
             else
             {
-                tbl_DsBc.DataSource=bcbus.dsBAOCAO(dayfrom,dayto);
+                tbl_DsBc.DataSource = bcbus.dsBAOCAO(dayfrom, dayto);
             }
-           
-            for(int i=0;i<tbl_DsBc.RowCount;i++)
+
+            for (int i = 0; i < tbl_DsBc.RowCount; i++)
             {
-                doanhthu += float .Parse(tbl_DsBc.Rows[i].Cells[3].Value.ToString());
+                doanhthu += float.Parse(tbl_DsBc.Rows[i].Cells[3].Value.ToString());
             }
-           
+
         }
 
         private void BaoCaoDs_Load(object sender, EventArgs e)
@@ -92,8 +92,9 @@ namespace Presentation
             txt_chonNgay.Hide();
             int m = DateTime.Now.Month;
             int y = DateTime.Now.Year;
-            tbl_DsBc.DataSource = bcbus.dsBAOCAO(DateTime.Parse(string.Format("{0}/1/{1}",m,y)), DateTime.Parse(string.Format("{0}/30/{1}", m, y)));
-           
+            tbl_DsBc.DataSource = bcbus.dsBAOCAO(DateTime.Parse(string.Format("{0}/1/{1}",m,y)), DateTime.Now);
+            txt_tuNgay.Value = DateTime.Parse(string.Format("{0}/1/{1}", m, y));
+            txt_denNgay.Value = DateTime.Now;
         }
 
         private void bt_excel_Click(object sender, EventArgs e)
