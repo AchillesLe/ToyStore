@@ -121,9 +121,9 @@ namespace Dao
                 {
                     cn.HOADONs.Add(hd);
 
-                    var bc = cn.BAOCAOs.Where(x=>(x.NGAYBAOCAO == hd.NGAYHD));
-
-                    if (!(bc.Count() > 0))
+                    var bc = cn.BAOCAOs.Where(x=>(x.NGAYBAOCAO == hd.NGAYHD.Date));
+                    Console.WriteLine(bc.Count());
+                    if ((bc.Count() == 0))
                     {
                         BAOCAO b = new BAOCAO();
                         b.NGAYBAOCAO = hd.NGAYHD;
@@ -179,10 +179,16 @@ namespace Dao
 
                     if (context.SaveChanges() >= 0)
                     {       
-                        var bc = context.BAOCAOs.SingleOrDefault(x => x.NGAYBAOCAO == hd.NGAYHD );
-                        bc.NGAYBAOCAO = hd.NGAYHD;
-                        bc.TONGGIATRI += hd.TRIGIA;
-                        int m = context.SaveChanges();
+                        var bc = context.BAOCAOs.Where(x => x.NGAYBAOCAO == hd.NGAYHD.Date );
+                        
+                        if ((bc.Count() > 0))
+                        {
+                            Console.WriteLine(bc.First().TONGGIATRI);
+                            bc.First().TONGGIATRI += hd.TRIGIA;
+                            Console.WriteLine(bc.First().TONGGIATRI);
+                        }
+
+                        context.SaveChanges();
                         chek = true;
                     }
 
