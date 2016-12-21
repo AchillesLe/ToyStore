@@ -14,7 +14,7 @@ namespace Dao
             List<PHIEUNHAP> listPhieuPhap = new List<PHIEUNHAP>();
             using (ContextEntites context = new ContextEntites())
             {
-                var query = (from c in context.PHIEUNHAPs select c);
+                var query = (from c in context.PHIEUNHAPs where c.TONGGIA>0 select c);
                 foreach (var a in query)
                 {
                     PHIEUNHAP phieu = new PHIEUNHAP();

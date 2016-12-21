@@ -102,7 +102,7 @@ namespace Presentation
         {
             toolTip1.ExportToExcel export = new toolTip1.ExportToExcel();
             export.ExportToExcelFromDatagridview(tbl_DsBc,"BaoCaoDoanhSo");
-            MessageBox.Show("Export to excel Successed !");
+            
         }
         private void tbl_DsBc_CellClick(object sender, DataGridViewCellEventArgs e)
         {

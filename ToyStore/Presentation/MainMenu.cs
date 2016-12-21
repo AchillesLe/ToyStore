@@ -208,6 +208,7 @@ namespace Presentation
             this.Hide();
             LoginAcounts logic = new LoginAcounts();
             logic.Show();
+            this.Close();
         }
         private void bt_huy_Click(object sender, EventArgs e)
         {
