@@ -80,6 +80,10 @@ namespace Presentation
                 bt_Sua.Hide();
                 bt_Xoa.Hide();
             }
+            if (BaoCaoDs.clickstatus)
+            {
+                loadhdFromBCDS(BaoCaoDs.ngaychon);
+            }
         }      
 
         private void load_DsHD_From_To(object sender, EventArgs e)
@@ -235,6 +239,14 @@ namespace Presentation
                 Console.WriteLine(ex.ToString());
             }
             
+        }
+        HoaDonBus hdbus2 = new HoaDonBus();
+        public void loadhdFromBCDS(DateTime date)
+        {
+            dtp_from.Value = date;
+            dtp_to.Value = date;
+            tbl_DsHd.DataSource = hdbus2.DsHoaDonFromTo(date);
+            tbl_DsHd.Refresh();
         }
     }
 }

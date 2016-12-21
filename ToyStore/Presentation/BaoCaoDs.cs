@@ -18,6 +18,7 @@ namespace Presentation
         const int HTCLIENT = 0x1;
         const int HTCAPTION = 0x2;
         public static DateTime ngaychon;
+        public static bool clickstatus = false;
         public BaoCaoDs()
         {
             InitializeComponent();
@@ -105,9 +106,11 @@ namespace Presentation
         }
         private void tbl_DsBc_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            ngaychon = (DateTime)tbl_DsBc.Rows[tbl_DsBc.CurrentCell.RowIndex].Cells[2].Value;
+            clickstatus = true;
+            ngaychon = (DateTime)tbl_DsBc.Rows[tbl_DsBc.CurrentCell.RowIndex].Cells[0].Value;
             ChiTietHd cthd = new ChiTietHd();
             cthd.ShowDialog();
+            this.Dispose();
         }
     }
 }
